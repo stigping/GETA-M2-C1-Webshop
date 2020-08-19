@@ -10,5 +10,32 @@
     <div id="mainContent"></div>
 
     <script src="js/model.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDhaaci8Mm5LemfCTup0LnKBbkU73PC8Vw",
+    authDomain: "lunchpower-884ee.firebaseapp.com",
+    databaseURL: "https://lunchpower-884ee.firebaseio.com",
+    projectId: "lunchpower-884ee",
+    storageBucket: "lunchpower-884ee.appspot.com",
+    messagingSenderId: "806298900538",
+    appId: "1:806298900538:web:27172f4bf13f9264d7fd03",
+    measurementId: "G-EVZGXYZLQ4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  let db = firebase.firestore()
+
+</script>
 </body>
 </html>
