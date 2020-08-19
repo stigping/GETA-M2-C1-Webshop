@@ -33,7 +33,7 @@ function addDatabase() {
             ],
         paymentModel: {vipps: {}, paypal: {}, card: {}},
         orderHistory:[
-            {username: 'karl', orderList: [], id: '0'}
+            {username: 'karl', orderList: ['test'], id: '0'}
         ],
 }, { merge:true }
     
