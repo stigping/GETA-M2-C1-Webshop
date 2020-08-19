@@ -1,0 +1,33 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+#grid-container
+{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40px 10fr 25px;
+    grid-template-areas: 
+        'header header'
+        'main main'
+        'footer footer';
+}
+#headerContent
+{
+    grid-area: header;
+    background-color: green;
+    padding: 10px;
+
+}
+#mainContent
+{
+    grid-area: main;
+    background-color: darkgreen;
+}
+#footerContent
+{
+    display: flex;
+    grid-area: footer;
+    background-color:red;
+}
