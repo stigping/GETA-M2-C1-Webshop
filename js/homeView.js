@@ -3,7 +3,7 @@ let appDiv = document.getElementById('app');
 function show() {
 appDiv.innerHTML = `
 
-<div id="prodShow">
+<div id="prodShow" class="prodShow hidden">
     <div class="prodOverlay"></div>
     <div id="productBox"></div>
 </div>
@@ -32,14 +32,14 @@ appDiv.innerHTML = `
                     <br/>
                     Kjøttkaker må vente :)</p>
                 </div>
-                <div class="grid-item2">
+                <div onclick="selectProduct()" class="grid-item2">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
                     <h3>PØLSEGRYTE</h3>
                     <p>Hei hå pølse til alle sammen!
                     <br/>
                     Kjøttkaker må vente :)</p>
                 </div>
-                <div class="grid-item3">
+                <div onclick="selectProduct()" class="grid-item3">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
                     <h3>PØLSEGRYTE</h3>
                     <p>Hei hå pølse til alle sammen!

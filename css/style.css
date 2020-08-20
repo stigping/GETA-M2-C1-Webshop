@@ -167,14 +167,18 @@ body {
     opacity: 0.5;
     
 }
-#prodShow {
+.prodShow {
     z-index: 3;
     width: 100%;
     height: 100%;
     position: fixed;
-    display:none;
+
 }
 
 .visible {
-    display: visible;
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
 }

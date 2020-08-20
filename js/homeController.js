@@ -1,5 +1,5 @@
 function selectProduct() {
-    document.getElementById('prodShow').classList.add('visible')
+    document.getElementById('prodShow').classList.toggle('hidden', false);
 }
 
 const showDialog = () => {
