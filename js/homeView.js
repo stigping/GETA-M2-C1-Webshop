@@ -25,7 +25,7 @@ appDiv.innerHTML = `
                 <div class="grid1">
                     <img onclick="selectProduct()" src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
                 </div>
-                <div class="grid-item1">
+                <div onclick="selectProduct()" class="grid-item1">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
                     <h3>PØLSEGRYTE</h3>
                     <p>Hei hå pølse til alle sammen!
@@ -46,7 +46,7 @@ appDiv.innerHTML = `
                     <br/>
                     Kjøttkaker må vente :)</p>
                 </div>
-                <div class="grid-item4">
+                <div onclick="selectProduct()" onclick="selectProduct()" class="grid-item4">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
                     <h3>PØLSEGRYTE</h3>
                     <p>Hei hå pølse til alle sammen!
