@@ -3,8 +3,8 @@ let appDiv = document.getElementById('app');
 function show() {
 appDiv.innerHTML = `
 
-<div id="prodShow" class="prodShow hidden">
-    <div class="prodOverlay"></div>
+<div  id="prodShow" class="prodShow hidden">
+    <div  onclick="deselectProduct()" class="prodOverlay"></div>
     <div id="productBox"></div>
 </div>
     <div id="grid-container">

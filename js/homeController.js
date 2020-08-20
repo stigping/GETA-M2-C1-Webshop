@@ -2,6 +2,10 @@ function selectProduct() {
     document.getElementById('prodShow').classList.toggle('hidden', false);
 }
 
+function deselectProduct() {
+    document.getElementById('prodShow').classList.toggle('hidden', true);
+}
+
 const showDialog = () => {
     document.getElementById('prodShow').classList.add('show')
     const body = document.body;
