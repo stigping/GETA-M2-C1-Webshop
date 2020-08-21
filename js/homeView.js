@@ -5,7 +5,23 @@ appDiv.innerHTML = `
 
 <div  id="prodShow" class="prodShow hidden">
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
-    <div id="productBox"></div>
+    <div id="productBox">
+        <div class="outerImages">
+            <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png"></img>
+                <div class="slideshow">
+                    <div class="slides">
+                        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
+                        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
+                        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
+                        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
+                    </div>
+                </div>
+            </div>
+        <div class="outerText">
+            <h3>Kebab</h3>
+            <p>Tom for pølse</p>
+        </div>
+    </div>
 </div>
     <div id="grid-container">
     <div id="headerContent">
