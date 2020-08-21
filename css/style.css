@@ -204,9 +204,10 @@ body {
 }
 
 .visible {
-	visibility: visible;
+	display:visible;
 }
 
 .hidden {
-	visibility: hidden;
+	display:none;
+	position:fixed;
 }
