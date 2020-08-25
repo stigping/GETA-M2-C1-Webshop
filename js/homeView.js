@@ -1,7 +1,7 @@
 let appDiv = document.getElementById('app');
 
-function show() {   
-appDiv.innerHTML = `
+function show() {
+    appDiv.innerHTML = `
 
 <div  id="prodShow" class="prodShow hidden">
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
@@ -76,4 +76,7 @@ appDiv.innerHTML = `
     </div>
 </div>
 `;
+    window.addEventListener('scroll', () => {
+        document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    })
 }
