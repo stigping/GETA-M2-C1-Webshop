@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+  }
+
 body {
 	margin: 0;
 	overflow-y: scroll;
@@ -73,6 +77,10 @@ body {
 	display: flex;
 	grid-area: footer;
 	background-color: #413746;
+	position: absolute;
+	width: 100%;
+	height: 1rem;
+	bottom: 0;
 }
 
 .footer-text {
@@ -211,7 +219,6 @@ body {
 	background-color: #8f8f8f;
 	z-index: 6;
 	opacity: 0.5;
-
 }
 
 .prodShow {
@@ -219,7 +226,6 @@ body {
 	width: 200%;
 	height: 200%;
 	position: fixed;
-
 }
 
 .hidden {
@@ -227,7 +233,15 @@ body {
 }
 
 @media only screen and (max-width: 375px) {
+	* {
+		box-sizing: border-box;
+	  }
+	
 	#productBox {width: 80vw; height: 80vh;}
-	.mainGrid {width: auto; height: auto}
+
+	.mainGrid {
+		width: auto; 
+		height: auto;
+	}
 	.menuWrap {}
 }
