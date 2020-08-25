@@ -222,11 +222,6 @@ body {
 
 }
 
-.visible {
-	display:visible;
-}
-
 .hidden {
-	display:none;
-	position:fixed;
+	visibility: hidden;
 }
