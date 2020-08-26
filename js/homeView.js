@@ -78,6 +78,7 @@ function show() {
                         </ul>
                     </div>
                 </div>
+                &nbsp;
     </div>
     <div class="mobileMenu">
         <span>
