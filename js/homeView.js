@@ -40,6 +40,7 @@ function show() {
             <div class="mainGrid">
                 <div class="grid1">
                     <img onclick="selectProduct()" src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
+                    <h3>PØLSEGRYTE</h3>
                 </div>
                 <div onclick="selectProduct()" class="grid-item1">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
@@ -71,9 +72,9 @@ function show() {
                 </div>
                     <div class="questionButtons">
                         <ul>
-                        <li><a></a>Hei på deg</li>
-                        <li><a></a>test</li>
-                        <li><a></a>ja hweisdse</li>
+                        <li><a></a>TEST</li>
+                        <li><a></a>TEST</li>
+                        <li><a></a>TEST</li>
                         </ul>
                     </div>
                 </div>
