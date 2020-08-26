@@ -1,6 +1,6 @@
 * {
 	box-sizing: border-box;
-  }
+}
 
 body {
 	margin: 0;
@@ -56,7 +56,8 @@ body {
 	display: inline-block;
 }
 
-.menuWrap ul {}
+.menuWrap ul {
+}
 
 .menuWrap li {
 	float: left;
@@ -91,7 +92,8 @@ body {
 	color: #ffffff;
 }
 
-.mainImageContainer {}
+.mainImageContainer {
+}
 
 .mainGrid {
 	display: grid;
@@ -176,7 +178,7 @@ body {
 
 #productBox {
 	z-index: 5;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	width: 300px;
 	height: 500px;
 	padding: 20px;
@@ -228,25 +230,25 @@ body {
 	visibility: hidden;
 }
 
-
-.mobileMenu
-{
+.mobileMenu {
 	display: none;
 }
-.questionButtons
-{
+.questionButtons {
 	display: none;
 }
 
 @media only screen and (max-width: 1200px) {
 	* {
 		box-sizing: border-box;
-	  }
-	
-	#productBox {width: 80vw; height: 80vh;}
+	}
+
+	#productBox {
+		width: 80vw;
+		height: 80vh;
+	}
 
 	.grid1 {
-		height: 215px;
+		height: 250px;
 		grid-column: 2 / 4;
 	}
 	.grid1 img {
@@ -264,7 +266,7 @@ body {
 	}
 
 	.mainGrid {
-		width: auto; 
+		width: auto;
 		height: 100px;
 		display: grid;
 		gap: 20px 20px;
@@ -279,24 +281,21 @@ body {
 		grid-row-end: 1px;
 		background-color: #ffffff;
 		z-index: 10;
-		white-space: nowrap;
 	}
 	.mainGrid img {
 		width: 100%;
 		height: auto;
 	}
-	#footerContent
-	{
+	#footerContent {
 		display: none;
 	}
 
 	#headerContent {
-		display:none;
+		display: none;
 	}
-	.mobileMenu
-	{
+	.mobileMenu {
 		display: flex;
-		position:fixed;
+		position: fixed;
 		bottom: 0;
 		grid-area: footer;
 		background-color: #413746;
@@ -305,22 +304,18 @@ body {
 		justify-content: center;
 		align-items: center;
 	}
-	.mobileMenu span
-	{
-		margin: 0 25px
-		
+	.mobileMenu span {
+		margin: 0 25px;
 	}
-	.mainGrid p
-	{
+	.mainGrid p {
 		display: none;
 	}
-	
-	.mainGrid h3
-	{
+
+	.mainGrid h3 {
 		margin: 0px;
 	}
 
-    .questionButtons {
+	.questionButtons {
 		width: 100%;
 		height: 238px;
 		grid-area: q;
@@ -328,20 +323,19 @@ body {
 		list-style-position: inside;
 		display: inline-block;
 	}
-	.questionButtons ul{
+	.questionButtons ul {
 		list-style-type: none;
-		margin:0;
-		padding:0;
+		margin: 0;
+		padding: 0;
 	}
-	.questionButtons li{
+	.questionButtons li {
 		border-style: solid;
 		border-radius: 3px;
 		border-width: thin;
 		padding: 9px;
 		margin: 25px;
-		background-color:rgb(197, 197, 197) ;
+		background-color: rgb(197, 197, 197);
 	}
-
 }
 
 /* MOBILE
