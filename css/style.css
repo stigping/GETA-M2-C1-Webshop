@@ -6,7 +6,7 @@ body {
 	margin: 0;
 	overflow-y: scroll;
 	/* background-color: #5DADE2; */
-	background-color: #504A73;
+	background-color: SteelBlue;
 }
 
 #grid-container {
@@ -21,13 +21,14 @@ body {
 
 #headerContent {
 	grid-area: header;
-	background-color: #e9e9e9;
+	background-color: #504A73;
 	padding: 10px;
 	text-align: left;
 }
 
 #mainContent {
 	grid-area: main;
+	background-color: hotpink;
 }
 
 .logoWrap {
@@ -106,7 +107,7 @@ body {
 		"m m m m m m"
 		"1 a b c d 2";
 	grid-row-end: 1px;
-	background-color: #ffffff;
+	background-color: #504A73;
 	z-index: 10;
 }
 
@@ -287,7 +288,7 @@ body {
 			"1 c d 2"
 			"q q q q";
 		grid-row-end: 1px;
-		background-color: #ffffff;
+		background-color: steelblue;
 		z-index: 10;
 	}
 	.mainGrid img {
