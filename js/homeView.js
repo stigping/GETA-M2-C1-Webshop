@@ -68,15 +68,28 @@ function show() {
                     <p>Hei hå pølse til alle sammen!
                     <br/>
                     Kjøttkaker må vente :)</p>
-                </div>
+                    </div>
+            </div>
+            <div class="questionButtons">
+                    
             </div>
     </div>
     <div class="mobileMenu">
-        <a href="#" class="footer-text">HOME</a>
-        <a href="#" class="footer-text">TING 2</a>
-        <a href="#" class="footer-text">TING 3</a>
-        <a href="#" class="footer-text">ACCOUNT</a>
-        <a href="#" class="footer-text">CART</a>
+        <span>
+            <a href="index.html" class="footer-text fas fa-home"></a>
+        </span>
+        <span>
+            <a href="dragon.html" class="footer-text fas fa-dragon"></a>
+        </span>
+        <span>
+            <a href="bed.html" class="footer-text fas fa-bed"></a>
+        </span>
+        <span>
+            <a href="user.html" class="footer-text fas fa-user"></a>
+        </span>
+        <span>
+            <a href="cart.html" class="footer-text fas fa-shopping-cart"></a>
+        </span>
     </div>
     <div id="footerContent">
         <a href="#" class="footer-text">LUNCHPOWER</a>
