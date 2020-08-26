@@ -71,6 +71,13 @@ function show() {
                 </div>
             </div>
     </div>
+    <div class="mobileMenu">
+        <a href="#" class="footer-text">HOME</a>
+        <a href="#" class="footer-text">TING 2</a>
+        <a href="#" class="footer-text">TING 3</a>
+        <a href="#" class="footer-text">ACCOUNT</a>
+        <a href="#" class="footer-text">CART</a>
+    </div>
     <div id="footerContent">
         <a href="#" class="footer-text">LUNCHPOWER</a>
     </div>
