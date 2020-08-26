@@ -338,7 +338,7 @@ body {
 }
 
 /* MOBILE */
-@media handheld (max-width: 375px) {
+@media (max-resolution: 1dppx) {
 	* {
 		box-sizing: border-box;
 	  }
