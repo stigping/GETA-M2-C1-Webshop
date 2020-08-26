@@ -295,13 +295,14 @@ body {
 		grid-area: footer;
 		background-color: #413746;
 		width: 100%;
-		height: 2rem;
+		height: 3rem;
 		justify-content: center;
 		align-items: center;
 	}
 	.mobileMenu span
 	{
 		margin: 0 25px
+		
 	}
 	.mainGrid p
 	{

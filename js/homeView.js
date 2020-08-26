@@ -81,19 +81,19 @@ function show() {
     </div>
     <div class="mobileMenu">
         <span>
-            <a href="index.html" class="footer-text fas fa-home"></a>
+            <a href="index.html" class="footer-text fas fa-home fa-lg"></a>
         </span>
         <span>
-            <a href="dragon.html" class="footer-text fas fa-dragon"></a>
+            <a href="dragon.html" class="footer-text fas fa-dragon fa-lg"></a>
         </span>
         <span>
-            <a href="bed.html" class="footer-text fas fa-bed"></a>
+            <a href="bed.html" class="footer-text fas fa-bed fa-lg"></a>
         </span>
         <span>
-            <a href="user.html" class="footer-text fas fa-user"></a>
+            <a href="user.html" class="footer-text fas fa-user fa-lg"></a>
         </span>
         <span>
-            <a href="cart.html" class="footer-text fas fa-shopping-cart"></a>
+            <a href="cart.html" class="footer-text fas fa-shopping-cart fa-lg"></a>
         </span>
     </div>
     <div id="footerContent">
