@@ -5,6 +5,8 @@
 body {
 	margin: 0;
 	overflow-y: scroll;
+	/* background-color: #5DADE2; */
+	background-color: #504A73;
 }
 
 #grid-container {
@@ -26,7 +28,6 @@ body {
 
 #mainContent {
 	grid-area: main;
-	background-color: #f7f7f5;
 }
 
 .logoWrap {
@@ -217,6 +218,22 @@ body {
 }
 .questionButtons {
 	display: none;
+}
+
+.basketList {
+	padding: 0px;
+}
+
+.basketList li {
+	border-style: solid;
+	border-color: black;
+	color: white;
+	height: 80px;
+	list-style-type: none;
+	list-style-position: inside;
+	background-color: #4D97DE;
+	padding:0px;
+	margin:10px;
 }
 
 @media only screen and (max-width: 1200px) {

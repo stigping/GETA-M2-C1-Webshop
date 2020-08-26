@@ -1,6 +1,4 @@
-let appDiv = document.getElementById('app');
-
-function show() {
+function showHome() {
     appDiv.innerHTML = `
 
 <div  id="prodShow" class="prodShow hidden">

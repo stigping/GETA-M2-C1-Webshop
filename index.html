@@ -14,6 +14,7 @@
     <script src="js/model.js"></script>
     <script src="js/homeView.js"></script>
     <script src="js/homeController.js"></script>
+    <script src="js/basketView.js"></script>
 
 
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
@@ -37,18 +38,13 @@
   firebase.analytics();
 
   let db = firebase.firestore()
-  
-  function updateView() {
+  let appDiv = document.getElementById('app');
 
+  updateView()
+  function updateView() {
+    showHome()
    }
-   
-   
-   
-   
-   
-   
-   
-   show()
+
 </script>
 </body>
 </html>
