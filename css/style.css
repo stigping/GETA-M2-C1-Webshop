@@ -337,7 +337,7 @@ body {
 
 }
 
-/* MOBILE */
+/* MOBILE
 @media only screen and (max-width: 10cm) {
 	* {
 		box-sizing: border-box;
@@ -432,4 +432,4 @@ body {
 		background-color:rgb(197, 197, 197) ;
 	}
 
-}
+} */
