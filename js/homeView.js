@@ -68,11 +68,15 @@ function show() {
                     <p>Hei hå pølse til alle sammen!
                     <br/>
                     Kjøttkaker må vente :)</p>
+                </div>
+                    <div class="questionButtons">
+                        <ul>
+                        <li><a></a>Hei på deg</li>
+                        <li><a></a>test</li>
+                        <li><a></a>ja hweisdse</li>
+                        </ul>
                     </div>
-            </div>
-            <div class="questionButtons">
-                    
-            </div>
+                </div>
     </div>
     <div class="mobileMenu">
         <span>

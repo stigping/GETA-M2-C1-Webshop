@@ -235,7 +235,10 @@ body {
 {
 	display: none;
 }
-
+.questionButtons
+{
+	display: none;
+}
 @media only screen and (max-width: 375px) {
 	* {
 		box-sizing: border-box;
@@ -246,7 +249,7 @@ body {
 	.grid1 {
 		width: 100%;
 		height: 215px;
-		grid-column: 1 / 2;
+		grid-column: 1 / 4;
 	}
 	.grid1 img {
 		position: absolute;
@@ -259,12 +262,13 @@ body {
 		display: grid;
 		gap: 20px 20px;
 		margin-bottom: 0px;
-		grid-template-rows: 0.5fr 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
 		grid-template-columns: 0.05fr 1fr 1fr 0.05fr;
 		grid-template-areas:
 			"m m m m"
 			"1 a b 2"
-			"1 c d 2";
+			"1 c d 2"
+			"q q q q";
 		grid-row-end: 1px;
 		background-color: #ffffff;
 		z-index: 10;
@@ -308,11 +312,25 @@ body {
 	}
 
     .questionButtons {
-		position: relative;
-		width: 200px;
-		height: 200px;
-		left: 40px;
-		bottom: 0;
+		width: 100%;
+		height: 238px;
+		grid-area: q;
+		grid-column: 1 / 5;
+		list-style-position: inside;
+		display: inline-block;
+	}
+	.questionButtons ul{
+		list-style-type: none;
+		margin:0;
+		padding:0;
+	}
+	.questionButtons li{
+		border-style: solid;
+		border-radius: 3px;
+		border-width: thin;
+		padding: 9px;
+		margin: 25px;
+		background-color:rgb(197, 197, 197) ;
 	}
 
 }
