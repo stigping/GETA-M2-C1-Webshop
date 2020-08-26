@@ -140,7 +140,7 @@ body {
 	grid-area: a;
 }
 
-.grid-item1:hover .grid-item2:hover .grid-item3:hover .grid-item4:hover {
+.grid-item1:hover, .grid-item2:hover, .grid-item3:hover, .grid-item4:hover {
 	height: auto;
 	background-color: #e9e9e5;
 	cursor: pointer;
@@ -247,7 +247,7 @@ body {
 			"footer";
 	}
 
-	.grid-item1:active .grid-item2:active .grid-item3:active .grid-item4:active {
+	.grid-item1:active, .grid-item2:active, .grid-item3:active, .grid-item4:active {
 		height: auto;
 		background-color: #e9e9e5;
 	}
