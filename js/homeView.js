@@ -37,32 +37,32 @@ function showHome() {
             <div class="mainGrid">
                 <div class="grid1">
                     <img onclick="selectProduct()" src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE</h3>
+                    <h3>PØLSEGRYTE 1</h3>
                 </div>
                 <div onclick="selectProduct()" class="grid-item1">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE</h3>
+                    <h3>PØLSEGRYTE 2</h3>
                     <p>Hei hå pølse til alle sammen!
                     <br/>
                     Kjøttkaker må vente :)</p>
                 </div>
                 <div onclick="selectProduct()" class="grid-item2">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE</h3>
+                    <h3>PØLSEGRYTE 3</h3>
                     <p>Hei hå pølse til alle sammen!
                     <br/>
                     Kjøttkaker må vente :)</p>
                 </div>
                 <div onclick="selectProduct()" class="grid-item3">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE</h3>
+                    <h3>PØLSEGRYTE 4</h3>
                     <p>Hei hå pølse til alle sammen!
                     <br/>
                     Kjøttkaker må vente :)</p>
                 </div>
-                <div onclick="selectProduct()" onclick="selectProduct()" class="grid-item4">
+                <div onclick="selectProduct()" class="grid-item4">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE</h3>
+                    <h3>PØLSEGRYTE 5</h3>
                     <p>Hei hå pølse til alle sammen!
                     <br/>
                     Kjøttkaker må vente :)</p>
@@ -103,9 +103,10 @@ function showHome() {
             </a>
         </span>
     </div>
-    <div id="footerContent">
-        <a href="#" class="footer-text">LUNCHPOWER</a>
-    </div>
+    
+<div id="footerContent">
+<a href="#" class="footer-text">LUNCHPOWER</a>
+</div>
 </div>
 
 `;
