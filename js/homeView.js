@@ -25,8 +25,8 @@ function showHome() {
         <div class='logoWrap'>LUNCHPOWER</div>
         <div class='inner-menu'>
             <ul class='menuWrap'>
-                <li class='active'><a href="javascript:showHome()">HOME</a></li>
-                <li><a href="javascript:showBasket()">CART</a></li>
+                <li class='active'><a href="javascript:showA()">HOME</a></li>
+                <li><a href="javascript:showB()">CART</a></li>
                 <li><a href="#">ACCOUNT</a></li>
                 <li><a href="#">HOW TO MAKE</a></li>
                 <li><a href="#">ABOUT US</a></li>
@@ -78,7 +78,7 @@ function showHome() {
     </div>
     <div class="mobileMenu">
         <span>
-            <a href="javascript:showHome()">
+            <a href="javascript:showA()">
                 <i class="footer-text fas fa-home fa-lg"></i>
             </a>
         </span>
@@ -98,7 +98,7 @@ function showHome() {
             </a>
         </span>
         <span>
-            <a href="javascript:showBasket()">
+            <a href="javascript:showB()">
                 <i class="footer-text fas fa-shopping-cart fa-lg"></i>
             </a>
         </span>
@@ -114,3 +114,7 @@ function showHome() {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     })
 }
+
+// https://css-tricks.com/examples/State/
+
+// https://css-tricks.com/using-the-html5-history-api/

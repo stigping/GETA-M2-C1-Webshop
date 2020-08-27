@@ -10,8 +10,6 @@
 <body>
 
     <div id='app'></div>
-    
-
 
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
@@ -55,28 +53,35 @@ db.collection('app').doc('model').get().then(
     }
 )
 
-let historyModel = []
+const pageToFunctionMap = {
+  a:showA,
+  b:showB,
+}
+
+window.onpopstate = function () {
+  const page = location.hash.substring(1);
+
+  let func = pageToFunctionMap[page];
+    if (func) {
+        func(false);
+    } else (showA)
+}
 
 showA()
 
-function showA(id) {
+function showA(addToHistory = true) {
   showHome();
-  historyModel.push('showA()');
+  if (addToHistory && location.hash.substring(1) != 'a') addHistory('a');
 }
 
-function showB(id) {
+function showB(addToHistory = true) {
   showBasket();
-  historyModel.push('showB()');
+  if (addToHistory && location.hash.substring(1) != 'b') addHistory('b');
 }
 
-
-function updateView() {
-   if (currentPage === 'Home') {
-     showHome()
-    }
-   else if (currentPage === 'Basket') {
-     showBasket()}
-   }
+function addHistory(page) {
+  history.pushState(null, null, `#${page}`)
+}
 </script>
 
 </body>

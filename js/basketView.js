@@ -26,8 +26,8 @@ function showBasket() {
     <div class='logoWrap'>LUNCHPOWER</div>
     <div class='inner-menu'>
         <ul class='menuWrap'>
-            <li class='active'><a href="javascript:showHome()">HOME</a></li>
-            <li><a href="javascript:showBasket()">CART</a></li>
+            <li class='active'><a href="javascript:showA()">HOME</a></li>
+            <li><a href="javascript:showB()">CART</a></li>
             <li><a href="#">ACCOUNT</a></li>
             <li><a href="#">HOW TO MAKE</a></li>
             <li><a href="#">ABOUT US</a></li>
@@ -44,7 +44,7 @@ function showBasket() {
 </div>
 <div class="mobileMenu">
     <span>
-        <a onclick="javascript:showHome()" class="footer-text fas fa-home fa-lg"></a>
+        <a onclick="javascript:showA()" class="footer-text fas fa-home fa-lg"></a>
     </span>
     <span>
         <a href="dragon.html" class="footer-text fas fa-dragon fa-lg"></a>
@@ -56,7 +56,7 @@ function showBasket() {
         <a href="user.html" class="footer-text fas fa-user fa-lg"></a>
     </span>
     <span>
-        <a onclick="javascript:showBasket()" class="footer-text fas fa-shopping-cart fa-lg"></a>
+        <a onclick="javascript:showB()" class="footer-text fas fa-shopping-cart fa-lg"></a>
     </span>
 </div>
 <div id="footerContent">
