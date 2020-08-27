@@ -273,7 +273,6 @@ body {
 		grid-template-areas:
 			"main"
 			"footer";
-		background-color: #add8e6;
 	}
 
 	.grid-item1:active, .grid-item2:active, .grid-item3:active, .grid-item4:active {
