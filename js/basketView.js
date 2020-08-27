@@ -38,7 +38,7 @@ function showBasket() {
 <div id="mainContent">
         
         <ul class="basketList">
-         <li onclick>Test product</li>
+         <li onclick="showProduct()">Test product</li>
          <li>Test product2</li>
         
         </ul>
