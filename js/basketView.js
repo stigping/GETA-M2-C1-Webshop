@@ -1,7 +1,6 @@
 function showBasket() {
     appDiv.innerHTML = `
     
-
 <div  id="prodShow" class="prodShow hidden">
 <div  onclick="deselectProduct()" class="prodOverlay"></div>
 <div id="productBox">

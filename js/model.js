@@ -16,6 +16,7 @@ function addDatabase() {
         orderHistory:[
             {username: 'karl', orderList: ['test'], id: '0'}
         ],
+        currentPage: 'Home',
 }, { merge:true }
     
     ).then(function () {

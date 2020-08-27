@@ -10,14 +10,10 @@
 <body>
 
     <div id='app'></div>
-    <script src="js/model.js"></script>
-    <script src="js/homeView.js"></script>
-    <script src="js/homeController.js"></script>
-    <script src="js/basketView.js"></script>
+    
 
 
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
 
 <script>
@@ -34,17 +30,54 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+
+  
 
   let db = firebase.firestore()
   let appDiv = document.getElementById('app');
 
-  updateView()
-  function updateView() {
-    showHome()
-   }
-
-
 </script>
+
+<script src="js/model.js"></script>
+<script src="js/homeView.js"></script>
+<script src="js/homeController.js"></script>
+<script src="js/basketView.js"></script>
+
+<script>
+let model = null;
+let currentPage = null;
+
+db.collection('app').doc('model').get().then(
+    function (collectionSnapshot) {
+        console.log(collectionSnapshot.data());
+        model = collectionSnapshot.data();
+        currentPage = collectionSnapshot.data().currentPage;
+    }
+)
+
+let historyModel = []
+
+showA()
+
+function showA(id) {
+  showHome();
+  historyModel.push('showA()');
+}
+
+function showB(id) {
+  showBasket();
+  historyModel.push('showB()');
+}
+
+
+function updateView() {
+   if (currentPage === 'Home') {
+     showHome()
+    }
+   else if (currentPage === 'Basket') {
+     showBasket()}
+   }
+</script>
+
 </body>
 </html>
