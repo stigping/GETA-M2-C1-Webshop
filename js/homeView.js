@@ -1,6 +1,5 @@
 function showHome() {
     appDiv.innerHTML = `
-
 <div  id="prodShow" class="prodShow hidden">
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
     <div id="productBox">
@@ -8,10 +7,10 @@ function showHome() {
             <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png"></img>
                 <div class="slideshow">
                     <div class="slides">
-                        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
-                        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
-                        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
-                        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
+                        <img src="https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png">
+                        <img src="https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png">
+                        <img src="https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png">
+                        <img src="https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png">
                     </div>
                 </div>
             </div>
@@ -26,8 +25,8 @@ function showHome() {
         <div class='logoWrap'>LUNCHPOWER</div>
         <div class='inner-menu'>
             <ul class='menuWrap'>
-                <li class='active'><a href="#">HOME</a></li>
-                <li><a href="#">CART</a></li>
+                <li class='active'><a href="javascript:showHome()">HOME</a></li>
+                <li><a href="javascript:showBasket()">CART</a></li>
                 <li><a href="#">ACCOUNT</a></li>
                 <li><a href="#">HOW TO MAKE</a></li>
                 <li><a href="#">ABOUT US</a></li>
@@ -79,25 +78,36 @@ function showHome() {
     </div>
     <div class="mobileMenu">
         <span>
-            <a href="index.html" class="footer-text fas fa-home fa-lg"></a>
+            <a href="javascript:showHome()">
+                <i class="footer-text fas fa-home fa-lg"></i>
+            </a>
         </span>
         <span>
-            <a href="dragon.html" class="footer-text fas fa-dragon fa-lg"></a>
+            <a href="javascript:_blank">
+                <i class="footer-text fas fa-dragon fa-lg"></i>
+            </a>
         </span>
         <span>
-            <a href="bed.html" class="footer-text fas fa-bed fa-lg"></a>
+            <a href="javascript:_blank">
+                <i class="footer-text fas fa-bed fa-lg"></i>
+            </a>
         </span>
         <span>
-            <a href="user.html" class="footer-text fas fa-user fa-lg"></a>
+            <a href="javascript:_blank">
+                <i class="footer-text fas fa-user fa-lg"></i>
+            </a>
         </span>
         <span>
-            <a href="cart.html" class="footer-text fas fa-shopping-cart fa-lg"></a>
+            <a href="javascript:showBasket()">
+                <i class="footer-text fas fa-shopping-cart fa-lg"></i>
+            </a>
         </span>
     </div>
     <div id="footerContent">
         <a href="#" class="footer-text">LUNCHPOWER</a>
     </div>
 </div>
+
 `;
     window.addEventListener('scroll', () => {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);

@@ -31,9 +31,10 @@ body {
 
 #headerContent {
 	grid-area: header;
-	background-color: #92bbc9;
+	background-color: #758c94;
 	padding: 10px;
 	text-align: left;
+	color: #ffffff;
 }
 
 #mainContent
@@ -44,10 +45,11 @@ body {
 #footerContent {
 	display: flex;
 	grid-area: footer;
-	background-color: #92bbc9;
+	background-color: #758c94;
 	width: 100%;
 	height: 1.1rem;
 	bottom: 0;
+	color: #ffffff;
 }
 .logoWrap {
 	float: left;
@@ -146,6 +148,7 @@ body {
 	width: 100%;
 	height: 500px;
 	grid-column: 1 / 2;
+	cursor:pointer;
 }
 
 .grid-item1 {
@@ -195,6 +198,14 @@ body {
 	height: auto;
 	float: left;
 }
+.slideshow {
+	border: thin solid black;
+	display: inline-block;
+}
+.slides {
+}
+.slides img {
+}
 #productBox h3 {
 	z-index: 4;
 	text-align: center;
@@ -221,7 +232,7 @@ body {
 }
 
 .hidden {
-	visibility: hidden;
+	display: none;
 }
 
 .mobileMenu {
@@ -264,6 +275,7 @@ body {
 	.grid1 img {
 		width: 100%;
 		top: 0;
+		cursor: none;
 	}
 
 	#grid-container {
