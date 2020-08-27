@@ -1,12 +1,22 @@
 * {
 	box-sizing: border-box;
 }
+html
+{
+	background-color: #add8e6;
+	/*
+	#8ED4E3
+	#87ceeb
+	#87cefa
+	#b0e0e6
+	#add8e6 *
+	#95D6CC går mer over i mint
+	*/
+}
 
 body {
 	margin: 0;
 	overflow-y: scroll;
-	/* background-color: #5DADE2; */
-	background-color: SteelBlue;
 }
 
 #grid-container {
@@ -21,16 +31,24 @@ body {
 
 #headerContent {
 	grid-area: header;
-	background-color: #504A73;
+	background-color: #63b4cf;
 	padding: 10px;
 	text-align: left;
 }
 
-#mainContent {
-	grid-area: main;
-	background-color: hotpink;
+#mainContent
+{
+
 }
 
+#footerContent {
+	display: flex;
+	grid-area: footer;
+	background-color: #3ca1c3;
+	width: 100%;
+	height: 1.1rem;
+	bottom: 0;
+}
 .logoWrap {
 	float: left;
 	margin-right: 20px;
@@ -76,14 +94,6 @@ body {
 	box-sizing: border-box;
 }
 
-#footerContent {
-	display: flex;
-	grid-area: footer;
-	background-color: #413746;
-	width: 100%;
-	height: 1.1rem;
-	bottom: 0;
-}
 
 .footer-text {
 	display: flex;
@@ -107,8 +117,8 @@ body {
 		"m m m m m m"
 		"1 a b c d 2";
 	grid-row-end: 1px;
-	background-color: #504A73;
 	z-index: 10;
+	grid-area: main;
 }
 
 .mainGrid img {
@@ -232,7 +242,7 @@ body {
 	height: 80px;
 	list-style-type: none;
 	list-style-position: inside;
-	background-color: #4D97DE;
+	background-color: #504A73;
 	padding:0px;
 	margin:10px;
 }
@@ -263,11 +273,12 @@ body {
 		grid-template-areas:
 			"main"
 			"footer";
+		background-color: #add8e6;
 	}
 
 	.grid-item1:active, .grid-item2:active, .grid-item3:active, .grid-item4:active {
 		height: auto;
-		background-color: #e9e9e5;
+		background-color: #e9e6e5;
 	}
 
 	.grid1:active {
@@ -288,7 +299,6 @@ body {
 			"1 c d 2"
 			"q q q q";
 		grid-row-end: 1px;
-		background-color: steelblue;
 		z-index: 10;
 	}
 	.mainGrid img {
@@ -307,7 +317,7 @@ body {
 		position: fixed;
 		bottom: 0;
 		grid-area: footer;
-		background-color: #413746;
+		background-color: #67647d;
 		width: 100%;
 		height: 2.2rem;
 		justify-content: center;
