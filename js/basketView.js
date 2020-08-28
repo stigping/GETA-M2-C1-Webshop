@@ -23,7 +23,9 @@ function showBasket() {
 </div>
 <div id="grid-container">
 <div id="headerContent">
-    <div class='logoWrap'>LUNCHPOWER</div>
+    <div class='logoWrap'>
+        <a href="javascript:showA()">LUNCHPOWER</a>
+    </div>
     <div class='inner-menu'>
         <ul class='menuWrap'>
             <li class='active'><a href="javascript:showA()">HOME</a></li>

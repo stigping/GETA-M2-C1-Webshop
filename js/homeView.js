@@ -7,10 +7,10 @@ function showHome() {
             <img src="${model.products[0].images[0]}"></img>
                 <div class="slideshow">
                     <div class="slides">
-                        <img src="${model.products[0].images[1]}">
-                        <img src="${model.products[0].images[2]}">
-                        <img src="${model.products[0].images[3]}">
-                        <img src="${model.products[0].images[4]}">
+                        <img src="${model.products[model.inputs.productShownId].images[1]}">
+                        <img src="${model.products[model.inputs.productShownId].images[2]}">
+                        <img src="${model.products[model.inputs.productShownId].images[3]}">
+                        <img src="${model.products[model.inputs.productShownId].images[4]}">
                     </div>
                 </div>
             </div>
@@ -22,7 +22,9 @@ function showHome() {
 </div>
     <div id="grid-container">
     <div id="headerContent">
-        <div class='logoWrap'>LUNCHPOWER</div>
+        <div class='logoWrap'>
+            <a href="javascript:showA()">LUNCHPOWER</a>
+        </div>
         <div class='inner-menu'>
             <ul class='menuWrap'>
                 <li class='active'><a href="javascript:showA()">HOME</a></li>

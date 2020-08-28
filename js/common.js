@@ -18,6 +18,16 @@ function deselectProduct() {
     if (model.currentPage === 'Home')showHome();
 }
 
+function shownProduct() {
+
+}
+
+
+
+
+
+
+
 // Midlertidig kode !!!
 // const selectProduct = () => {
 //     document.getElementById('prodShow').classList.toggle('hidden', false);

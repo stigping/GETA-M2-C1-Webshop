@@ -56,6 +56,10 @@ body {
 	float: left;
 	margin-right: 20px;
 }
+.logoWrap a{
+	color: #ffffff;
+	text-decoration: none;
+}
 
 .inner-menu {
 	display: inline-block;
