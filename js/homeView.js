@@ -102,8 +102,3 @@ function showHome() {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     })
 }
-  
-
-// https://css-tricks.com/examples/State/
-
-// https://css-tricks.com/using-the-html5-history-api/
