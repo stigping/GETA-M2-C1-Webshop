@@ -258,6 +258,10 @@ body {
 	padding:0px;
 	margin:10px;
 }
+.basketList li img{
+	width: 100px;
+	height: auto;
+}
 
 @media only screen and (max-width: 1200px) {
 	* {

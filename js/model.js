@@ -6,7 +6,7 @@ const model = {
             {id: 3, name: 'Lange slappe nudlær', productInfo: 'Denne smaker godt', contents: ['Nudler', 'Katt', 'Krydder'], calories: '189', price: '53', allergies: 'Katt', images: null,},
             {id: 4, name: 'Stor Fin Fisk', productInfo: 'Denne smaker godt', contents: ['Fisk', 'Bønner', 'Krydder'], calories: '999', price: '54', allergies: 'Hai'}
             ],
-        shoppingBasket: [ {username: 'karl', productId: [0, 2, 3, 3], amount: '50', priceTotal: null},
+        shoppingBasket: [ {username: 'karl', productId: [0, 2, 3, 3], amount: '13', priceTotal: null},
                           {username: 'jorn', productId: [{productName:'Kokkejævelens kyllinggryte', amount: 5, id:0}], amount: '50', priceTotal: null}],
         users: [
             {username: 'jorn', name: 'Jørn', password:'test', id:'0', isAdmin: true},
@@ -18,6 +18,6 @@ const model = {
         ],
         currentPage: 'Home',
         inputs: {
-            productShownId: '0',
+            productShownId: null,
         },
 }
