@@ -104,9 +104,9 @@ function showHome() {
         </span>
     </div>
     
-<div id="footerContent">
-<a href="#" class="footer-text">LUNCHPOWER</a>
-</div>
+    <div id="footerContent">
+        <a href="#" class="footer-text">LUNCHPOWER</a>
+    </div>
 </div>
 
 `;
