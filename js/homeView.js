@@ -4,19 +4,19 @@ function showHome() {
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
     <div id="productBox">
         <div class="outerImages">
-            <img src="${model.products[0].images[0]}"></img>
+            <img src="${model.products[model.inputs.productShownId || 0].images[0]}"></img>
                 <div class="slideshow">
                     <div class="slides">
-                        <img src="${model.products[model.inputs.productShownId].images[1]}">
-                        <img src="${model.products[model.inputs.productShownId].images[2]}">
-                        <img src="${model.products[model.inputs.productShownId].images[3]}">
-                        <img src="${model.products[model.inputs.productShownId].images[4]}">
+                        <img src="${model.products[model.inputs.productShownId || 0].images[1]}">
+                        <img src="${model.products[model.inputs.productShownId || 0].images[2]}">
+                        <img src="${model.products[model.inputs.productShownId || 0].images[3]}">
+                        <img src="${model.products[model.inputs.productShownId || 0].images[4]}">
                     </div>
                 </div>
             </div>
         <div class="outerText">
-            <h3>${model.products[0].name}</h3>
-            <p>${model.products[0].productInfo}</p>
+            <h3>${model.products[model.inputs.productShownId || 0].name}</h3>
+            <p>${model.products[model.inputs.productShownId || 0].productInfo}</p>
         </div>
     </div>
 </div>
