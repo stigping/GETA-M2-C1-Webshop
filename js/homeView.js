@@ -15,8 +15,8 @@ function showHome() {
                 </div>
             </div>
         <div class="outerText">
-            <h3>Kebab</h3>
-            <p>Tom for pølse</p>
+            <h3>${model.products[0].name}</h3>
+            <p>${model.products[0].productInfo}</p>
         </div>
     </div>
 </div>
@@ -37,35 +37,23 @@ function showHome() {
             <div class="mainGrid">
                 <div class="grid1">
                     <img onclick="selectProduct()" src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE 1</h3>
+                    <h3>${model.products[0].name}</h3>
                 </div>
                 <div onclick="selectProduct()" class="grid-item1">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE 2</h3>
-                    <p>Hei hå pølse til alle sammen!
-                    <br/>
-                    Kjøttkaker må vente :)</p>
+                    <h3>${model.products[1].name}</h3>
                 </div>
                 <div onclick="selectProduct()" class="grid-item2">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE 3</h3>
-                    <p>Hei hå pølse til alle sammen!
-                    <br/>
-                    Kjøttkaker må vente :)</p>
+                    <h3>${model.products[2].name}</h3>
                 </div>
                 <div onclick="selectProduct()" class="grid-item3">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE 4</h3>
-                    <p>Hei hå pølse til alle sammen!
-                    <br/>
-                    Kjøttkaker må vente :)</p>
+                    <h3>${model.products[3].name}</h3>
                 </div>
                 <div onclick="selectProduct()" class="grid-item4">
                     <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>PØLSEGRYTE 5</h3>
-                    <p>Hei hå pølse til alle sammen!
-                    <br/>
-                    Kjøttkaker må vente :)</p>
+                    <h3>${model.products[4].name}</h3>
                 </div>
                     <div class="questionButtons">
                         <ul>
@@ -114,6 +102,29 @@ function showHome() {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     })
 }
+
+
+// Midlertidig kode !!!
+const selectProduct = () => {
+    document.getElementById('prodShow').classList.toggle('hidden', false);
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
+  }
+  
+  const deselectProduct = () => {
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY) * -1);
+    document.getElementById('prodShow').classList.toggle('hidden', true);
+    window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    })
+  }
+  
 
 // https://css-tricks.com/examples/State/
 
