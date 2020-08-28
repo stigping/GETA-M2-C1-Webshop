@@ -4,13 +4,13 @@ function showHome() {
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
     <div id="productBox">
         <div class="outerImages">
-            <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png"></img>
+            <img src="${model.products[0].images[0]}"></img>
                 <div class="slideshow">
                     <div class="slides">
-                        <img src="https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png">
-                        <img src="https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png">
-                        <img src="https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png">
-                        <img src="https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png">
+                        <img src="${model.products[0].images[1]}">
+                        <img src="${model.products[0].images[2]}">
+                        <img src="${model.products[0].images[3]}">
+                        <img src="${model.products[0].images[4]}">
                     </div>
                 </div>
             </div>

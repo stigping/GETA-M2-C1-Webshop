@@ -37,7 +37,7 @@ function showBasket() {
 <div id="mainContent">
         
         <ul class="basketList">
-         <li onclick="selectProduct()">Test product</li>
+         <li onclick="selectProduct()">Test product           ${model.shoppingBasket[0].amount}</li>
          <li onclick="selectProduct()">Test product2</li>        
         </ul>
         
