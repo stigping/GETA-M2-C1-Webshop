@@ -18,6 +18,6 @@ const model = {
         ],
         currentPage: 'Home',
         inputs: {
-            productShownId: null,
+            productShownId: 0,
         },
 }
