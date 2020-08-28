@@ -11,48 +11,14 @@
 
     <div id='app'></div>
 
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDhaaci8Mm5LemfCTup0LnKBbkU73PC8Vw",
-    authDomain: "lunchpower-884ee.firebaseapp.com",
-    databaseURL: "https://lunchpower-884ee.firebaseio.com",
-    projectId: "lunchpower-884ee",
-    storageBucket: "lunchpower-884ee.appspot.com",
-    messagingSenderId: "806298900538",
-    appId: "1:806298900538:web:27172f4bf13f9264d7fd03",
-    measurementId: "G-EVZGXYZLQ4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  
-
-  let db = firebase.firestore()
-  let appDiv = document.getElementById('app');
-
-</script>
-
 <script src="js/model.js"></script>
 <script src="js/homeView.js"></script>
 <script src="js/homeController.js"></script>
 <script src="js/basketView.js"></script>
 
 <script>
-let model = null;
+let appDiv = document.getElementById('app');
 let currentPage = null;
-
-db.collection('app').doc('model').get().then(
-    function (collectionSnapshot) {
-        console.log(collectionSnapshot.data());
-        model = collectionSnapshot.data();
-        currentPage = collectionSnapshot.data().currentPage;
-    }
-)
-
 const pageToFunctionMap = {
   a:showA,
   b:showB,

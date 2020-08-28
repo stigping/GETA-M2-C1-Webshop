@@ -1,5 +1,4 @@
-function addDatabase() {
-    return db.collection("app").doc('model').set({
+const model = {
         products: [
             {id: 0, name: 'Kokkejævelens kyllinggryte', contents: ['Kylling', 'Fløte', 'Grønnsaker'], calories: '247', allergies: 'Melk'},
             {id: 1, name: 'Alle biffgryters bestemor', contents: ['Biff', 'Grønnsaker'], calories: '237', allergies: ''},
@@ -17,12 +16,4 @@ function addDatabase() {
             {username: 'karl', orderList: ['test'], id: '0'}
         ],
         currentPage: 'Home',
-}, { merge:true }
-    
-    ).then(function () {
-        console.log("Document successfully written!");
-    })
-        .catch(function (error) {
-            console.error("Error writing document: ", error);
-        });
 }
