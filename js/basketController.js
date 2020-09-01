@@ -1,4 +1,7 @@
+function listProducts() {
+    for (i = 0,)
 
+}
 
 
 
