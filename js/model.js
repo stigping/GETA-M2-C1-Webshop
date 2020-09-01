@@ -8,6 +8,7 @@ const model = {
             ],
         shoppingBasket: [ {username: 'karl', products: [{id: 0, amount: '13', priceTotal: 50}, {id: 1, amount: '40', priceTotal: 10}, {id: 2, amount: '40', priceTotal: 10}, {id: 3, amount: '40', priceTotal: 10}], priceTotalAll: null},
                           {username: 'jorn', products: [{id: 1, amount: '10', priceTotal: 40}, {id: 5, amount: '10', priceTotal: 40}], priceTotalAll: null}],
+        currentUser:{username: 'jorn', isAdmin: true, id:'0'},
         users: [
             {username: 'jorn', name: 'Jørn', password:'test', id:'0', isAdmin: true},
             {username: 'karl', name: 'Karl', password:'test', id:'1', isAdmin: false}
