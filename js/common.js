@@ -26,11 +26,6 @@ function shownProduct() {
 }
 
 
-
-
-
-
-
 // Midlertidig kode !!!
 // const selectProduct = () => {
 //     document.getElementById('prodShow').classList.toggle('hidden', false);

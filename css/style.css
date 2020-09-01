@@ -264,8 +264,45 @@ body {
 	margin:10px;
 }
 .basketList li img{
-	width: 100px;
-	height: auto;
+	max-height: 100%;
+	vertical-align: middle;
+}
+.basketList .frame{
+	display: inline-block;
+	height: 100%;
+	float: left;
+}
+.frame{
+	border: 1px solid #000000;
+	margin: 0 0;
+}
+.infoText{
+	display: flex;
+	height: 100%;
+}
+.itemName,
+.itemInfo,
+.itemAmount,
+.itemPrice,
+.itemTotalPrice{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+.itemName{
+	float: left!important;
+}
+.basketButtons{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: right;
+	width: 10%;
+}
+.basketButtons input{
+	width: 25px;
 }
 
 @media only screen and (max-width: 1200px) {
