@@ -1,14 +1,6 @@
 
 
 
-
-
-
-
-
-
-
-
 // function Item(name, price, amount)
 // {
 //     id

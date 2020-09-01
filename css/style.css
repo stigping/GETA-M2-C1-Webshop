@@ -237,6 +237,10 @@ body {
 	position: fixed;
 }
 
+.prodButtons {
+	justify-content: center;
+}
+
 .hidden {
 	display: none;
 }
@@ -309,7 +313,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	float: right;
-	width: 10%;
+	width: 50px;
 	border: 1px solid #000000;
 }
 .itemTotalPrice{

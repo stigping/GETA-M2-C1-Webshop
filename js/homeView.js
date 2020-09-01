@@ -20,7 +20,7 @@ function showHome() {
             <h3>${model.products[model.inputs.productShownId || 0].name}</h3>
             <p>${model.products[model.inputs.productShownId || 0].productInfo}</p>
         </div>
-        <div>
+        <div class="prodButtons">
             <input type="button" value="Add">
             <input type="button" value="Remove">
         </div>

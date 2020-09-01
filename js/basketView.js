@@ -21,7 +21,7 @@ function showBasket() {
             <h3>${product[model.inputs.productShownId || 0].name}</h3>
             <p>${product[model.inputs.productShownId || 0].productInfo}</p>
         </div>
-        <div>
+        <div class="prodButtons">
             <input type="button" value="Add">
             <input type="button" value="Remove">
         </div>
@@ -46,9 +46,10 @@ function showBasket() {
         
         <ul class="basketList">
         <div>
-         <p>Each</p>
-         <p>Total</p>
-         <p>Amount</p>
+         <p>Pris pr.stk</p>
+         <p>Moms</p>
+         <p>Totalpris</p>
+         <p>Antall</p>
          ${listProducts(0)}
         </ul>
         
@@ -82,28 +83,28 @@ window.addEventListener('scroll', () => {
 
 function listProducts(id) {
     let html = '';
-    for (i = 0; i < model.shoppingBasket[id].length; i++) {
+    for (i = 0; i < model.shoppingBasket[id].products.length; i++) {
     html += `
-<li onclick="selectProduct(${product[basket[0].products[0].id].id})">
+<li onclick="selectProduct(${i})">
     <div class="frame">
-        <img src="${product[basket[0].products[1].id].images[0]}">
+        <img src="${product[basket[id].products[i].id].images[0]}">
     </div>
     <div class="infoText">
         <div class="itemName">
-        ${product[basket[0].products[1].id].name}
+        ${product[basket[id].products[i].id].name}
         </div>
         <div class="itemPrice">
-        ${product[basket[0].products[1].id].price}
+      per - ${product[basket[id].products[i].id].price} kr
         </div>
         <div class="itemInfo">
-        ${product[1].moms}
+        ${product[i].moms}
         </div>
         <div class="itemTotalPrice">
-        ${basket[0].products[1].priceTotal}
+       T = ${basket[id].products[i].priceTotal} kr
         </div>
     <div class="basketButtons">
         <i class="fas fa-plus-square"></i>
-        <input type="text" value="${model.shoppingBasket[0].products[1].amount}"></input>
+        <input type="text" value="${model.shoppingBasket[0].products[0].amount}"></input>
         <i class="fas fa-minus-square"></i>
     </div>
 </li>`}
