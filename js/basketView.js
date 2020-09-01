@@ -43,7 +43,7 @@ function showBasket() {
                 <img src="${model.products[0].images[0]}">
                 Test product --- Amount: ${model.shoppingBasket[0].amount}, Price: ${model.products[0].price}</li>
 
-            <li onclick="selectProduct()">
+            <li onclick="selectProduct(1)">
                 <img src="${model.products[0].images[3]}">
                 Test product 2 --- Amount: ${model.shoppingBasket[1].amount}, Price: ${model.products[1].price}</li>
         </ul>

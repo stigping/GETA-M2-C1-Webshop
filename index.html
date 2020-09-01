@@ -36,13 +36,15 @@ window.onpopstate = function () {
 showA()
 
 function showA(addToHistory = true) {
-  showHome();
   if (addToHistory && location.hash.substring(1) != 'a') addHistory('a');
+  model.currentPage = 'Home';
+  showHome();
 }
 
 function showB(addToHistory = true) {
-  showBasket();
   if (addToHistory && location.hash.substring(1) != 'b') addHistory('b');
+  model.currentPage = 'Basket';
+  showBasket();
 }
 
 function addHistory(page) {

@@ -17,6 +17,7 @@ html
 body {
 	margin: 0;
 	overflow-y: scroll;
+	width: 100%;
 }
 
 #grid-container {

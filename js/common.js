@@ -5,6 +5,8 @@ function selectProduct(id) {
     body.style.position = 'fixed';
     body.style.top = `-${scrollY}`;
     if (model.currentPage === 'Home')showHome();
+    if (model.currentPage === 'Basket')showBasket();
+
 }
 
 function deselectProduct() {
@@ -16,6 +18,7 @@ function deselectProduct() {
     window.scrollTo(0, parseInt(scrollY) * -1);
     document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`)
     if (model.currentPage === 'Home')showHome();
+    if (model.currentPage === 'Basket')showBasket();
 }
 
 function shownProduct() {
