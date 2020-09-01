@@ -23,7 +23,7 @@ function showBasket() {
         </div>
         <div class="prodButtons">
             <input type="button" value="Add">
-            <input type="button" value="Remove" onclick="removeProduct()">
+            <input type="button" value="Remove">
         </div>
     </div>
 </div>
@@ -50,8 +50,7 @@ function showBasket() {
          <p>Moms</p>
          <p>Totalpris</p>
          <p>Antall</p>
-         </div>
-         ${listProducts(model.currentUser.id)}
+         ${listProducts(0)}
         </ul>
         
 </div>
