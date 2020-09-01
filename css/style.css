@@ -270,11 +270,10 @@ body {
 .basketList .frame{
 	display: inline-block;
 	height: 100%;
+	width: 140px;
 	float: left;
 }
 .frame{
-	border: 1px solid #000000;
-	margin: 0 0;
 }
 .infoText{
 	display: flex;
@@ -295,11 +294,13 @@ body {
 	border: 1px solid #000000;
 }
 .itemName{
-	width: 750px;
+	width: 100%;
 	justify-content: left;
 }
 .basketList p{
 	display: inline-flex;
+	width: 100px;
+	justify-content: center;
 	border: 1px solid #000000;
 
 }

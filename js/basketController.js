@@ -1,7 +1,4 @@
-function listProducts() {
-    for (i = 0; i < model.shoppingBasket[0].length; i++)
 
-}
 
 
 
