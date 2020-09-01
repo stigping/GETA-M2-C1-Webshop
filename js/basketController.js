@@ -1,5 +1,5 @@
 function listProducts() {
-    for (i = 0,)
+    for (i = 0; )
 
 }
 
