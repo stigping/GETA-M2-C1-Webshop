@@ -237,8 +237,8 @@ body {
 	position: fixed;
 }
 
-.prodButtons {
-	justify-content: center;
+.prodButtons input {
+	width: 150px;
 }
 
 .hidden {

@@ -22,7 +22,7 @@ function showHome() {
         </div>
         <div class="prodButtons">
             <input type="button" value="Add">
-            <input type="button" value="Remove">
+            <input type="button" value="Remove" onclick="removeProduct(${model.currentUser.id}, ${model.inputs.productShownId})">
         </div>
     </div>
 </div>
