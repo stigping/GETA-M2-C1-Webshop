@@ -1,23 +1,23 @@
 function showBasket() {
     appDiv.innerHTML = `
     
-<div  id="prodShow" class="prodShow hidden">
+<div  id="prodShow" class="prodShow" ${model.inputs.productShownId != null ? '' : 'style="visibility: hidden"'}>
 <div  onclick="deselectProduct()" class="prodOverlay"></div>
 <div id="productBox">
     <div class="outerImages">
-        <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png"></img>
+        <img src="${model.products[model.inputs.productShownId || 0].images[0]}"></img>
             <div class="slideshow">
                 <div class="slides">
-                    <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
-                    <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
-                    <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
-                    <img src="https://cdn.pixabay.com/photo/2019/12/14/15/22/bread-4695110_1280.png">
+                    <img src="${model.products[model.inputs.productShownId || 0].images[1]}">
+                    <img src="${model.products[model.inputs.productShownId || 0].images[2]}">
+                    <img src="${model.products[model.inputs.productShownId || 0].images[3]}">
+                    <img src="${model.products[model.inputs.productShownId || 0].images[4]}">
                 </div>
             </div>
         </div>
     <div class="outerText">
-        <h3>Kebab</h3>
-        <p>Tom for pølse</p>
+    <h3>${model.products[model.inputs.productShownId || 0].name}</h3>
+    <p>${model.products[model.inputs.productShownId || 0].productInfo}</p>
     </div>
 </div>
 </div>
@@ -41,11 +41,11 @@ function showBasket() {
         <ul class="basketList">
             <li onclick="selectProduct(0)">
                 <img src="${model.products[0].images[0]}">
-                Test product --- Amount: ${model.shoppingBasket[0].amount}, Price: ${model.products[0].price}</li>
+                Test Product  --- Amount: ${model.shoppingBasket[0].amount}, Price: ${model.products[0].price}</li>
 
             <li onclick="selectProduct(1)">
-                <img src="${model.products[0].images[3]}">
-                Test product 2 --- Amount: ${model.shoppingBasket[1].amount}, Price: ${model.products[1].price}</li>
+                <img src="${model.products[1].images[3]}">
+               Test Product 2 --- Amount: ${model.shoppingBasket[1].amount}, Price: ${model.products[1].price}</li>
         </ul>
         
 </div>
