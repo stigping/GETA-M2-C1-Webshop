@@ -1,4 +1,6 @@
 function showHome() {
+    const basket = model.shoppingBasket;
+    const product = model.products;
     appDiv.innerHTML = `
 <div  id="prodShow" class="prodShow" ${model.inputs.productShownId != null ? '' : 'style="visibility: hidden"'}>
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
@@ -17,6 +19,10 @@ function showHome() {
         <div class="outerText">
             <h3>${model.products[model.inputs.productShownId || 0].name}</h3>
             <p>${model.products[model.inputs.productShownId || 0].productInfo}</p>
+        </div>
+        <div>
+            <input type="button" value="Add">
+            <input type="button" value="Remove">
         </div>
     </div>
 </div>

@@ -279,6 +279,8 @@ body {
 .infoText{
 	display: flex;
 	height: 100%;
+	position: relative;
+	padding: 10px;
 }
 .itemName,
 .itemInfo,
@@ -289,10 +291,17 @@ body {
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-	width: 100%;
+	width: 100px;
+	border: 1px solid #000000;
 }
 .itemName{
-	float: left!important;
+	width: 750px;
+	justify-content: left;
+}
+.basketList p{
+	display: inline-flex;
+	border: 1px solid #000000;
+
 }
 .basketButtons{
 	display: flex;
@@ -300,6 +309,10 @@ body {
 	justify-content: center;
 	float: right;
 	width: 10%;
+	border: 1px solid #000000;
+}
+.itemTotalPrice{
+	
 }
 .basketButtons input{
 	width: 25px;

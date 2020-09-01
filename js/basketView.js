@@ -2,28 +2,29 @@ function showBasket() {
     const basket = model.shoppingBasket;
     const product = model.products;
     appDiv.innerHTML = `
-    
 <div  id="prodShow" class="prodShow" ${model.inputs.productShownId != null ? '' : 'style="visibility: hidden"'}>
-<div  onclick="deselectProduct()" class="prodOverlay"></div>
-<div id="productBox">
-    <div class="outerImages">
-        <img src="${product[model.inputs.productShownId || 0].images[0]}"></img>
-            <div class="slideshow">
-                <div class="slides">
-                    <img src="${product[model.inputs.productShownId || 0].images[1]}">
-                    <img src="${product[model.inputs.productShownId || 0].images[2]}">
-                    <img src="${product[model.inputs.productShownId || 0].images[3]}">
-                    <img src="${product[model.inputs.productShownId || 0].images[4]}">
+    <div  onclick="deselectProduct()" class="prodOverlay"></div>
+    <div id="productBox">
+        <div class="outerImages">
+            <img src="${product[model.inputs.productShownId || 0].images[0]}"></img>
+                <div class="slideshow">
+                    <div class="slides">
+                        <img src="${product[model.inputs.productShownId || 0].images[1]}">
+                        <img src="${product[model.inputs.productShownId || 0].images[2]}">
+                        <img src="${product[model.inputs.productShownId || 0].images[3]}">
+                        <img src="${product[model.inputs.productShownId || 0].images[4]}">
+                    </div>
                 </div>
             </div>
+        <div class="outerText">
+            <h3>${product[model.inputs.productShownId || 0].name}</h3>
+            <p>${product[model.inputs.productShownId || 0].productInfo}</p>
         </div>
-    <div class="outerText">
-    <!-- Hvis id = 0, get id0: Product name + amount + price. -->
-    <!--  -->
-    <h3>${product[model.inputs.productShownId || 0].name}</h3>
-    <p>${product[model.inputs.productShownId || 0].productInfo}</p>
+        <div>
+            <input type="button" value="Add">
+            <input type="button" value="Remove">
+        </div>
     </div>
-</div>
 </div>
 <div id="grid-container">
 <div id="headerContent">
@@ -43,58 +44,54 @@ function showBasket() {
 <div id="mainContent">
         
         <ul class="basketList">
-            <li onclick="selectProduct(${product[basket[0].productId[0].id].id})">
+        <div>
+         <p>Each</p>
+         <p>Total</p>
+         <p>Amount</p>
+        </div>
+            <li onclick="selectProduct(${product[basket[0].products[0].id].id})">
                 <div class="frame">
-                    <img src="${product[basket[0].productId[0].id].images[0]}">
+                    <img src="${product[basket[0].products[0].id].images[0]}">
                 </div>
                 <div class="infoText">
                 <div class="itemName">
-                ${product[basket[0].productId[0].id].name}
-                </div>
-                <div class="itemInfo">
-                ${product[basket[0].productId[0].id].info}
-                </div>
-                <div class="itemAmount">
-                ${product[basket[0].productId[0].id].amount}
+                ${product[basket[0].products[0].id].name}
                 </div>
                 <div class="itemPrice">
-                ${product[basket[0].productId[0].id].productPriceTotal}
+                ${product[basket[0].products[0].id].price}
                 </div>
-            <div class="itemInfo">
-                    Price: ${product[basket[0].productId[0].id].price}
+                <div class="itemInfo">
+                ${product[0].moms}
+                </div>
+                <div class="itemTotalPrice">
+                ${basket[0].products[0].priceTotal}
                 </div>
                 <div class="basketButtons">
                     <i class="fas fa-plus-square"></i>
-                    <input type="text" value="${model.shoppingBasket[0].productId[0].amount}"></input>
+                    <input type="text" value="${model.shoppingBasket[0].products[0].amount}"></input>
                     <i class="fas fa-minus-square"></i>
                 </div>
             </li>
             <li onclick="selectProduct(1)">
                 <div class="frame">
-                    <img src="${product[basket[0].productId[1].id].images[0]}">
+                    <img src="${product[basket[0].products[1].id].images[0]}">
                 </div>
                 <div class="infoText">
                     <div class="itemName">
-                    ${product[basket[0].productId[1].id].name}
-                    </div>
-                    <div class="itemInfo">
-                    ${product[basket[0].productId[1].id].info}
-                    </div>
-                    <div class="itemAmount">
-                    ${product[basket[0].productId[1].id].amount}
+                    ${product[basket[0].products[1].id].name}
                     </div>
                     <div class="itemPrice">
-                    ${product[basket[0].productId[1].id].productPriceTotal}
+                    ${product[basket[0].products[1].id].price}
+                    </div>
+                    <div class="itemInfo">
+                    ${product[1].moms}
                     </div>
                     <div class="itemTotalPrice">
-                    ${product[basket[0].productId[1].id].productPriceTotal}
+                    ${basket[0].products[1].priceTotal}
                     </div>
-                <div class="itemInfo">
-                    Price: ${product[1].price}
-                </div>
                 <div class="basketButtons">
                     <i class="fas fa-plus-square"></i>
-                    <input type="text" value="${model.shoppingBasket[0].productId[1].amount}"></input>
+                    <input type="text" value="${model.shoppingBasket[0].products[1].amount}"></input>
                     <i class="fas fa-minus-square"></i>
                 </div>
             </li>
