@@ -7,7 +7,7 @@ const model = {
             {id: 4, name: 'Stor Fin Fisk', productInfo: 'ersrdarsae', contents: ['Fisk', 'Bønner', 'Krydder'], moms: '0%', calories: '999', price: '54', allergies: 'Hai', images: ['https://www.hooked.no/wp-content/uploads/2017/01/Store-agn-for-stor-fisk-4.jpg', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png']}
             ],
         shoppingBasket: [ {username: 'karl', products: [{id: 0, amount: '13', priceTotal: 50}, {id: 1, amount: '40', priceTotal: 10}, {id: 2, amount: '40', priceTotal: 10}, {id: 3, amount: '40', priceTotal: 10}], priceTotalAll: null},
-                          {username: 'jorn', products: [{id: 1, amount: '10', priceTotal: 40}], priceTotalAll: null}],
+                          {username: 'jorn', products: [{id: 1, amount: '10', priceTotal: 40}, {id: 5, amount: '10', priceTotal: 40}], priceTotalAll: null}],
         users: [
             {username: 'jorn', name: 'Jørn', password:'test', id:'0', isAdmin: true},
             {username: 'karl', name: 'Karl', password:'test', id:'1', isAdmin: false}
