@@ -38,7 +38,8 @@ function showBasket() {
             <li><a href="javascript:showB()">CART</a></li>
             <li><a href="#">ACCOUNT</a></li>
             <li><a href="#">HOW TO MAKE</a></li>
-            <li><a href="javascript:showC()">ADMIN</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            ${model.currentUser.isAdmin === true ? '<li><a href="javascript:showC()">ADMIN</a></li>' : ''}
         </ul>
     </div>
 </div>
