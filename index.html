@@ -18,12 +18,14 @@
 <script src="js/homeController.js"></script>
 <script src="js/basketView.js"></script>
 <script src="js/basketController.js"></script>
+<script src="js/adminPanelView.js"></script>
 
 <script>
 let appDiv = document.getElementById('app');
 const pageToFunctionMap = {
   a:showA,
   b:showB,
+  c:showC,
 }
 
 window.onpopstate = function () {
@@ -47,6 +49,12 @@ function showB(addToHistory = true) {
   if (addToHistory && location.hash.substring(1) != 'b') addHistory('b');
   model.currentPage = 'Basket';
   showBasket();
+}
+
+function showC(addToHistory = true) {
+  if (addToHistory && location.hash.substring(1) != 'c') addHistory('c');
+  model.currentPage = 'Admin';
+  showAdmin();
 }
 
 function addHistory(page) {
