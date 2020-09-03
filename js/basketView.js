@@ -3,23 +3,23 @@ function showBasket() {
     const product = model.products;
     const productShownId = model.inputs.productShownId;
     appDiv.innerHTML = `
-<div  id="prodShow" class="prodShow" ${model.inputs.productShownId != null ? '' : 'style="visibility: hidden"'}>
+<div  id="prodShow" class="prodShow" ${productShownId != null ? '' : 'style="visibility: hidden"'}>
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
     <div id="productBox">
         <div class="outerImages">
-            <img src="${product[model.inputs.productShownId || 0].images[0]}"></img>
+            <img src="${product[productShownId || 0].images[0]}"></img>
                 <div class="slideshow">
                     <div class="slides">
-                        <img src="${product[model.inputs.productShownId || 0].images[1]}">
-                        <img src="${product[model.inputs.productShownId || 0].images[2]}">
-                        <img src="${product[model.inputs.productShownId || 0].images[3]}">
-                        <img src="${product[model.inputs.productShownId || 0].images[4]}">
+                        <img src="${product[productShownId || 0].images[1]}">
+                        <img src="${product[productShownId || 0].images[2]}">
+                        <img src="${product[productShownId || 0].images[3]}">
+                        <img src="${product[productShownId || 0].images[4]}">
                     </div>
                 </div>
             </div>
         <div class="outerText">
-            <h3>${product[model.inputs.productShownId || 0].name}</h3>
-            <p>${product[model.inputs.productShownId || 0].productInfo}</p>
+            <h3>${product[productShownId || 0].name}</h3>
+            <p>${product[productShownId || 0].productInfo}</p>
         </div>
         <div class="prodButtons">
             <input type="button" value="Add">
@@ -46,16 +46,16 @@ function showBasket() {
         
     <div class="cartInfo">
         <div class="col1">
-            <div>Pris pr.stk</div>
+            <div>Antall</div>
         </div>
         <div class="col2">
-            <div>Moms</div>
-        </div>
-        <div class="col3">
             <div>Totalpris</div>
         </div>
+        <div class="col3">
+            <div>Moms</div>
+        </div>
         <div class="col4">
-            <div>Antall</div>
+            <div>Pris pr.stk</div>
         </div>
     </div>
     <ul class="basketList">

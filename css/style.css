@@ -330,14 +330,39 @@ body {
 	justify-content: left;
 }
 .cartInfo{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 10px;
 }
 .cartInfo .col1, .col2, .col3, .col4{
 	width: 100px;
 	text-align: center;
 	border: 1px solid #000000;
+	float: right;
 }
-.cartinfo .col1{
-
+.cartInfo .col1{
+	width: 180px;
+	text-align: center;
+	border: 1px solid #000000;
+	float: right;
+}
+.cartInfo .col2{
+	width: 100px;
+	text-align: center;
+	border: 1px solid #000000;
+	float: right;
+}
+.cartInfo .col3{
+	width: 100px;
+	text-align: center;
+	border: 1px solid #000000;
+	float: right;
+}
+.cartInfo .col4{
+	width: 100px;
+	text-align: center;
+	border: 1px solid #000000;
+	float: right;
 }
 .basketButtons{
 	display: flex;

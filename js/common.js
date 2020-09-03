@@ -20,13 +20,6 @@ function deselectProduct() {
     if (model.currentPage === 'Basket')showBasket();
 }
 
-function removeProduct(user, id) {
-    index = searchProductIndex(id);
-    model.shoppingBasket[user].products.splice(index, 1);
-    console.log(index);
-    showBasket();
-}
-
 function searchProductIndex(id) {
     let search = model.shoppingBasket[0].products.findIndex(searchid => searchid['id'] === id);
     return search
