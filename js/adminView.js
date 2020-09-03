@@ -45,10 +45,31 @@ function showAdmin() {
             </a>
         </span>
     </div>
-    
+
+    <div id="mainContent">
+        
+        <div class="products">
+        
+        </div>
+
+        <div class="stats"></div>
+        
+        <div class="users">
+        ${}
+        </div>
+        
+            
+    </div>
     <div id="footerContent">
         <a href="#" class="footer-text">LUNCHPOWER</a>
     </div>
 </div>
     `;
+}
+
+function showUsers() {
+    let html = '';
+    for (i = 0; i < model.users.length; i++) {
+    html += `<li>${model.users}`
+    }
 }

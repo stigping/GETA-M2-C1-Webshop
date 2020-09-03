@@ -323,6 +323,16 @@ body {
 	width: 25px;
 }
 
+.products,
+.stats,
+.users{
+	border: 1px solid #000000;
+	background-color: rgb(67, 81, 155);
+	width: 99%;
+	height: 31%;
+	margin: 10px 10px;
+}
+
 @media only screen and (max-width: 1200px) {
 	* {
 		box-sizing: border-box;
