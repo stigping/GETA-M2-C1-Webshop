@@ -70,6 +70,6 @@ function showAdmin() {
 function showUsers() {
     let html = '';
     for (i = 0; i < model.users.length; i++) {
-    html += `<li>${model.users}`
+    html += `<li>${model.users[i].username}`
     }
 }
