@@ -1,7 +1,7 @@
-const basket = model.shoppingBasket;
-const product = model.products;
 function showBasket() {
-
+    const basket = model.shoppingBasket;
+    const product = model.products;
+    const productShownId = model.inputs.productShownId;
     appDiv.innerHTML = `
 <div  id="prodShow" class="prodShow" ${model.inputs.productShownId != null ? '' : 'style="visibility: hidden"'}>
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
@@ -23,7 +23,6 @@ function showBasket() {
         </div>
         <div class="prodButtons">
             <input type="button" value="Add">
-            <input type="button" value="Remove" onclick="removeProduct()">
         </div>
     </div>
 </div>
@@ -45,15 +44,23 @@ function showBasket() {
 </div>
 <div id="mainContent">
         
-        <ul class="basketList">
-        <div>
-         <p>Pris pr.stk</p>
-         <p>Moms</p>
-         <p>Totalpris</p>
-         <p>Antall</p>
-         </div>
-         ${listProducts(model.currentUser.id)}
-        </ul>
+    <div class="cartInfo">
+        <div class="col1">
+            <div>Pris pr.stk</div>
+        </div>
+        <div class="col2">
+            <div>Moms</div>
+        </div>
+        <div class="col3">
+            <div>Totalpris</div>
+        </div>
+        <div class="col4">
+            <div>Antall</div>
+        </div>
+    </div>
+    <ul class="basketList">
+        ${listProducts(model.currentUser.id)}
+    </ul>
         
 </div>
 <div class="mobileMenu">
@@ -73,7 +80,7 @@ function showBasket() {
         <a onclick="javascript:showB()" class="footer-text fas fa-shopping-cart fa-lg"></a>
     </span>
 </div>
-<div id="footerContent">
+<div id="footerContentNoScroll">
     <a href="#" class="footer-text">LUNCHPOWER</a>
 </div>
 </div>
@@ -84,16 +91,19 @@ window.addEventListener('scroll', () => {
 }
 
 function listProducts(id) {
+    const basket = model.shoppingBasket;
+    const product = model.products;
     let html = '';
-    for (i = 0; i < model.shoppingBasket[id].products.length; i++) {
+    for (i = 0; i < basket[id].products.length; i++) {
     html += `
-<li onclick="selectProduct(${i})">
+<li>
     <div class="frame">
-        <img src="${product[basket[id].products[i].id].images[0]}">
+        <img onclick="selectProduct(${product[basket[id].products[i].id].id})" src="${product[basket[id].products[i].id].images[0]}">
     </div>
     <div class="infoText">
         <div class="itemName">
-        ${product[basket[id].products[i].id].name}
+        <span onclick="selectProduct(${product[basket[id].products[i].id].id})">
+        ${product[basket[id].products[i].id].name}</span>
         </div>
         <div class="itemPrice">
       per - ${product[basket[id].products[i].id].price} kr
@@ -108,6 +118,7 @@ function listProducts(id) {
         <i class="fas fa-plus-square"></i>
         <input type="text" value="${model.shoppingBasket[0].products[0].amount}"></input>
         <i class="fas fa-minus-square"></i>
+        <button onclick="removeProduct(${model.currentUser.id}, ${product[basket[id].products[i].id].id})">Remove</button>
     </div>
 </li>`}
 return html

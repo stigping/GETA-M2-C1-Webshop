@@ -21,11 +21,17 @@ function deselectProduct() {
 }
 
 function removeProduct(user, id) {
-    searchProduct(id)
-    model.shoppingBasket[user].products.splice(id, 1)
+    index = searchProductIndex(id);
+    model.shoppingBasket[user].products.splice(index, 1);
+    console.log(index);
+    showBasket();
 }
 
-function searchProduct(id) {
-    let search = model.shoppingBasket[0].products.find(searchid => searchid['id'] === id);
+function searchProductIndex(id) {
+    let search = model.shoppingBasket[0].products.findIndex(searchid => searchid['id'] === id);
     return search
+}
+
+function changeProductAmount() {
+    
 }

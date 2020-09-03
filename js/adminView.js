@@ -49,27 +49,53 @@ function showAdmin() {
     <div id="mainContent">
         
         <div class="products">
-        
+            <div>
+                <h3>Products</h3>
+                <button>Add Product</button>
+            </div>
+            <div class="showproducts">
+                ${showProducts()}
+            </div>
         </div>
 
-        <div class="stats"></div>
+        <div class="stats">
+            <div>
+                <h3>Stats</h3>
+            </div>
+            <div class="showstats">
+            </div>
+        </div>
         
         <div class="users">
-        ${}
+        <div>
+            <h3>Users</h3>
+        </div>
+            <div class="showusers">
+                ${showUsers()}
+            </div>
         </div>
         
             
     </div>
-    <div id="footerContent">
+    <div id="footerContentNoScroll">
         <a href="#" class="footer-text">LUNCHPOWER</a>
     </div>
 </div>
     `;
 }
 
+function showProducts() {
+    let html = '';
+    for (i = 0; i < model.products.length; i++) {
+    html += `<li>${model.products[i].name}</li>`
+    }
+    return html
+}
+
 function showUsers() {
     let html = '';
     for (i = 0; i < model.users.length; i++) {
-    html += `<li>${model.users[i].username}`
+    html += `<li>${model.users[i].username}</li>`
     }
+    return html
 }
