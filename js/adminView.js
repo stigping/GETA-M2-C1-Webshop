@@ -62,7 +62,20 @@ function showAdmin() {
             <div>
                 <h3>Stats</h3>
             </div>
-            <div class="showstats">
+            <div class="showcgraph">
+                <svg height="150" width="150" viewBox="0 0 20 20">
+                    <circle r="10" cx="10" cy="10" fill="white" />
+                    <circle r="5" cx="10" cy="10" fill="transparent"
+                    stroke="tomato"
+                    stroke-width="10"
+                    stroke-dasharray="calc(35 * 31.4 / 100) 31.4"
+                    transform="rotate(-90) translate(-20)" />
+                </svg>
+                <br>
+                stat graph illustration
+            </div>
+            <div class="showpgraph">
+            Sett inn statistikk på hva som er mest solgt - bakend greier? 
             </div>
         </div>
         

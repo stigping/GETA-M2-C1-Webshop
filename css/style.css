@@ -65,10 +65,39 @@ body {
 	position: absolute;
 }
 .showproducts,
-.showstats,
+.showcgraph,
+.showpgraph,
 .showusers{
 	border: 1px solid #000000;
 	float: right;
+	padding: 2px;
+	background-color: #26195f;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.showcgraph {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.showproducts li {
+	border: solid #000000 1px;
+	border-radius: 3px;
+	margin: 5px;
+	padding: 2px;
+	background-color: #8da9b3;
+	width: 1200px;
+}
+
+.showusers li {
+	border: solid #000000 1px;
+	border-radius: 3px;
+	margin: 5px;
+	padding: 2px;
+	background-color: #8da9b3;
+	width: 1200px;
 }
 
 .noScroll {
@@ -387,6 +416,7 @@ body {
 	width: 99%;
 	height: 31%;
 	margin: 10px 10px;
+	padding: 10px;
 	color: white;
 }
 
