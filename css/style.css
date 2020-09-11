@@ -6,6 +6,7 @@ html, body {
 	background-color: #add8e6;
 	margin: 0;
 	overflow-y: scroll;
+	height: 100%;
 	width: 100%;
 }
 #grid-container {
@@ -522,8 +523,6 @@ html, body {
 		height: 80vh;
 	}
 	#grid-container {
-		height: 100vh;
-		display: grid;
 		grid-template-rows: 40px 10fr 2.2rem;
 		grid-template-areas:
 			"main"
@@ -705,8 +704,6 @@ html, body {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {	
 	#grid-container {
-		height: 100vh;
-		display: grid;
 		grid-template-rows: 40px 10fr 1rem;
 		grid-template-areas:
 			"header"
