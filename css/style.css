@@ -793,16 +793,12 @@ body {
 	}
 	
 	#headerContent {
+		display: initial;
 		grid-area: header;
 		background-color: #758c94;
 		padding: 10px;
 		text-align: left;
 		color: #ffffff;
-	}
-	
-	#mainContent
-	{
-	
 	}
 	
 	#footerContent {
@@ -811,7 +807,6 @@ body {
 		background-color: #758c94;
 		width: 100%;
 		height: 1.1rem;
-		bottom: 0;
 		color: #ffffff;
 		position: relative;
 	}
@@ -902,10 +897,7 @@ body {
 	.menuWrap ul li a {
 		display: inline-block;
 	}
-	
-	.menuWrap ul {
-	}
-	
+
 	.menuWrap li {
 		float: left;
 		margin-left: 25px;
@@ -929,9 +921,6 @@ body {
 		text-decoration: none;
 		justify-content: center;
 		color: #ffffff;
-	}
-	
-	.mainImageContainer {
 	}
 	
 	.mainGrid {
@@ -968,7 +957,6 @@ body {
 	}
 	
 	.grid1 img {
-		top: 0;
 		margin: auto;
 		width: 100%;
 		height: 500px;
@@ -976,8 +964,11 @@ body {
 		cursor:pointer;
 	}
 	
-	.grid-item1 {
-		grid-area: a;
+	.grid-item1,
+	.grid-item2,
+	.grid-item3,
+	.grid-item4 {
+		padding-top: initial;
 	}
 	
 	.grid-item1:hover, .grid-item2:hover, .grid-item3:hover, .grid-item4:hover {
@@ -986,6 +977,9 @@ body {
 		cursor: pointer;
 	}
 	
+	.grid-item1 {
+		grid-area: a;
+	}
 	.grid-item2 {
 		grid-area: b;
 	}
@@ -1027,10 +1021,7 @@ body {
 		border: thin solid black;
 		display: inline-block;
 	}
-	.slides {
-	}
-	.slides img {
-	}
+
 	#productBox h3 {
 		z-index: 4;
 		text-align: center;
@@ -1072,10 +1063,6 @@ body {
 		display: none;
 	}
 	
-	.basketList {
-		padding: 0px;
-	}
-	
 	.basketList li {
 		border-style: solid;
 		border-color: black;
@@ -1084,7 +1071,6 @@ body {
 		list-style-type: none;
 		list-style-position: inside;
 		background-color: #504A73;
-		padding:0px;
 		margin:10px;
 	}
 	.basketList li img{
@@ -1169,9 +1155,7 @@ body {
 		width: 180px;
 		border: 1px solid #000000;
 	}
-	.itemTotalPrice{
-		
-	}
+
 	.basketButtons input{
 		width: 25px;
 	}
