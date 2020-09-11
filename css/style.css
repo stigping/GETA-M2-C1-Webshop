@@ -1,3 +1,4 @@
+/* --- BASE CSS START --- */
 * {
 	box-sizing: border-box;
 }
@@ -64,6 +65,7 @@ body {
 	color: #ffffff;
 	position: absolute;
 }
+
 .showproducts,
 .showcgraph,
 .showpgraph,
@@ -76,10 +78,17 @@ body {
 }
 
 .showcgraph {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: none;
+	position: relative;
+	width: 10%;
+	margin: auto;
+}
+
+.cgraph {
+	width: 100%;
 }
 
 .showproducts li {
@@ -88,7 +97,6 @@ body {
 	margin: 5px;
 	padding: 2px;
 	background-color: #8da9b3;
-	width: 1200px;
 }
 
 .showusers li {
@@ -97,7 +105,6 @@ body {
 	margin: 5px;
 	padding: 2px;
 	background-color: #8da9b3;
-	width: 1200px;
 }
 
 .noScroll {
@@ -409,8 +416,8 @@ body {
 }
 
 .products,
-.stats,
-.users{
+.users,
+.stats{
 	border: 1px solid #000000;
 	background-color: rgb(67, 81, 155);
 	width: 99%;
@@ -423,16 +430,11 @@ body {
 .mainContent h3{
 	text-transform: capitalize;
 }
-
+/* --- BASE CSS END --- */
+/*
 @media only screen and (max-width: 1200px) {
-	* {
-		box-sizing: border-box;
-	}
 
-	#productBox {
-		width: 80vw;
-		height: 80vh;
-	}
+	
 
 	.grid1 {
 		height: 250px;
@@ -482,43 +484,6 @@ body {
 		width: 100%;
 		height: auto;
 	}
-	#footerContent {
-		display: none;
-		grid-area: footer;
-		background-color: #758c94;
-		width: 100%;
-		height: 1.1rem;
-		bottom: 0;
-		color: #ffffff;
-	}
-
-	#footerContentNoScroll{
-		display: none;
-		grid-area: footer;
-		background-color: #758c94;
-		width: 100%;
-		height: 1.1rem;
-		bottom: 0;
-		color: #ffffff;
-	}
-
-	#headerContent {
-		display: none;
-	}
-	.mobileMenu {
-		display: flex;
-		position: fixed;
-		bottom: 0;
-		grid-area: footer;
-		background-color: #67647d;
-		width: 100%;
-		height: 2.2rem;
-		justify-content: center;
-		align-items: center;
-	}
-	.mobileMenu span {
-		margin: 0 25px;
-	}
 	.mainGrid p {
 		display: none;
 	}
@@ -548,82 +513,137 @@ body {
 		margin: 25px;
 		background-color: rgb(197, 197, 197);
 	}
-}
 
-/* MOBILE
-@media only screen and (max-width: 10cm) {
-	* {
-		box-sizing: border-box;
-	  }
+	.showproducts,
+	.showcgraph,
+	.showpgraph,
+	.showusers{
+		border: 1px solid #000000;
+		float: right;
+		padding: 2px;
+		background-color: #26195f;
+		font-family: Arial, Helvetica, sans-serif;
+	}
 	
-	#productBox {width: 80vw; height: 80vh;}
-
-	.grid1 {
+	.showcgraph {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: none;
+		position: relative;
+		width: 10%;
+		margin: auto;
+	}
+	
+	.cgraph {
 		width: 100%;
-		height: 215px;
-		grid-column: 1 / 4;
 	}
-	.grid1 img {
-		position: absolute;
-		top: 0;
+	
+	.showproducts li {
+		border: solid #000000 1px;
+		border-radius: 3px;
+		margin: 5px;
+		padding: 2px;
+		background-color: #8da9b3;
+	}
+	
+	.showusers li {
+		border: solid #000000 1px;
+		border-radius: 3px;
+		margin: 5px;
+		padding: 2px;
+		background-color: #8da9b3;
 	}
 
+	.products,
+	.users,
+	.stats {
+		border: 1px solid #000000;
+		background-color: rgb(67, 81, 155);
+		width: 99%;
+		height: 700%;
+		margin: 10px 10px;
+		padding: 10px;
+		color: white;
+	}
+}
+*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	#headerContent {
+		display: none;
+	}
+	#productBox {
+		width: 80vw;
+		height: 80vh;
+	}
+	#grid-container {
+		height: 100vh;
+		display: grid;
+		grid-template-rows: 40px 10fr 2.2rem;
+		grid-template-areas:
+			"main"
+			"footer";
+	}
 	.mainGrid {
-		width: auto; 
+		width: auto;
 		height: 100px;
 		display: grid;
 		gap: 20px 20px;
 		margin-bottom: 0px;
 		grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
-		grid-template-columns: 0.05fr 1fr 1fr 0.05fr;
+		grid-template-columns: 0.05fr 1fr 1fr 1fr 1fr 0.05fr;
 		grid-template-areas:
-			"m m m m"
-			"1 a b 2"
-			"1 c d 2"
-			"q q q q";
+			"1 m 2"
+			"1 a 2"
+			"1 b 2"
+			"1 c 2"
+			"1 d 2"
+			"q q q"
+			"footer footer footer";
 		grid-row-end: 1px;
-		background-color: #ffffff;
 		z-index: 10;
 	}
 	.mainGrid img {
 		width: 100%;
 		height: auto;
 	}
-	#footerContent
-	{
+	.mainGrid p {
 		display: none;
 	}
-
-	#headerContent {
-		display:none;
-	}
-	.mobileMenu
-	{
-		display: flex;
-		position:fixed;
-		bottom: 0;
-		grid-area: footer;
-		background-color: #413746;
-		width: 100%;
-		height: 2rem;
-		justify-content: center;
-		align-items: center;
-	}
-	.mobileMenu span
-	{
-		margin: 0 25px
-	}
-	.mainGrid p
-	{
-		display: none;
-	}
-	
-	.mainGrid h3
-	{
+	.mainGrid h3 {
 		margin: 0px;
 	}
+	.grid1 {
+		height: 250px;
+		grid-column: 1 / 7;
+	}
+	.grid1 img {
+		width: 100%;
+		height: 250px;
+		top: 0;
+		cursor: none;
+	}
+	.grid-item1:active, .grid-item2:active, .grid-item3:active, .grid-item4:active {
+		height: auto;
+		background-color: #e9e6e5;
+	}
+	.grid1:active {
+		background-color: #e9e9e5;
+	}
+	.grid-item1,
+	.grid-item2,
+	.grid-item3,
+	.grid-item4 {
+		grid-column: 2 / 6;
+		margin: 0 auto;
+		width: 75%;
 
-    .questionButtons {
+	}
+	.grid-item1 {
+		padding-top: 25px;
+	}
+	.questionButtons {
 		width: 100%;
 		height: 238px;
 		grid-area: q;
@@ -631,18 +651,86 @@ body {
 		list-style-position: inside;
 		display: inline-block;
 	}
-	.questionButtons ul{
+	.questionButtons ul {
 		list-style-type: none;
-		margin:0;
-		padding:0;
+		margin: 0;
+		padding: 0;
 	}
-	.questionButtons li{
+	.questionButtons li {
 		border-style: solid;
 		border-radius: 3px;
 		border-width: thin;
 		padding: 9px;
 		margin: 25px;
-		background-color:rgb(197, 197, 197) ;
+		background-color: rgb(197, 197, 197);
+	}
+	.mobileMenu {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		grid-area: footer;
+		background-color: #67647d;
+		width: 100%;
+		height: 2.2rem;
+		justify-content: center;
+		align-items: center;
+	}
+	.mobileMenu span {
+		margin: 0 25px;
+	}
+	#footerContent {
+		display: none;
+		grid-area: footer;
+		background-color: #758c94;
+		width: 100%;
+		height: 1.1rem;
+		bottom: 0;
+		color: #ffffff;
+	}
+	#footerContentNoScroll{
+		display: none;
+		grid-area: footer;
+		background-color: #758c94;
+		width: 100%;
+		height: 1.1rem;
+		bottom: 0;
+		color: #ffffff;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.mainGrid {
+		width: auto;
+		height: 100px;
+		display: grid;
+		gap: 20px 20px;
+		margin-bottom: 0px;
+		grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
+		grid-template-columns: 0.05fr 1fr 1fr 0.05fr;
+		grid-template-areas:
+			"1 m m 2"
+			"1 a b 2"
+			"1 c d 2"
+			"q q q q";
+		grid-row-end: 1px;
+		z-index: 10;
+	}
+	.mainGrid img {
+		width: 100%;
+		height: auto;
+	}
+	.mainGrid p {
+		display: none;
 	}
 
-} */
+	.mainGrid h3 {
+		margin: 0px;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { ... }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
