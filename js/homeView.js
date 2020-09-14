@@ -71,6 +71,8 @@ function showHome() {
                         </ul>
                     </div>
                 </div>
+
+                ${listProducts}
     </div>
     <div class="mobileMenu">
         <span>
