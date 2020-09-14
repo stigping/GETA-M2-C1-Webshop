@@ -1,3 +1,5 @@
 function addNewProduct() {
-model.products.push()
+    model.products.push(
+        
+    )
 }
