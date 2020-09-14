@@ -33,3 +33,8 @@ function searchProductIndex(id) {
     let search = model.shoppingBasket[model.currentUser.id].products.findIndex(searchid => searchid['id'] === id);
     return search
 }
+
+function searchUserIndex(id) {
+    let search = model.users.findIndex(searchid => searchid['id'] === id);
+    return search
+}

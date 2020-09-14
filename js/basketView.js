@@ -95,18 +95,19 @@ function listProducts(id) {
     const product = model.products;
     let html = '';
     for (i = 0; i < basket[id].products.length; i++) {
+    const productsBasket = product[basket[id].products[i].id];
     html += `
 <li>
     <div class="frame">
-        <img onclick="selectProduct(${product[basket[id].products[i].id].id})" src="${product[basket[id].products[i].id].images[0]}">
+        <img onclick="selectProduct(${productsBasket.id})" src="${productsBasket.images[0]}">
     </div>
     <div class="infoText">
         <div class="itemName">
-        <span onclick="selectProduct(${product[basket[id].products[i].id].id})">
-        ${product[basket[id].products[i].id].name}</span>
+        <span onclick="selectProduct(${productsBasket.id})">
+        ${productsBasket.name}</span>
         </div>
         <div class="itemPrice">
-      per - ${product[basket[id].products[i].id].price} kr
+      per - ${productsBasket.price} kr
         </div>
         <div class="itemInfo">
         ${product[i].moms}
@@ -115,10 +116,10 @@ function listProducts(id) {
        T = ${basket[id].products[i].priceTotal} kr
         </div>
     <div class="basketButtons">
-        <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${product[basket[id].products[i].id].id})"></i>
-        <input type="text" value="${model.shoppingBasket[model.currentUser.id].products[i].amount}"></input>
-        <i class="fas fa-minus-square" onclick="changeProductAmount(false, ${product[basket[id].products[i].id].id})"></i>
-        <button onclick="removeProduct(${model.currentUser.id}, ${product[basket[id].products[i].id].id})">Remove</button>
+        <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${productsBasket.id})"></i>
+        <input type="text" value="${model.shoppingBasket[model.currentUser.id].products[i].amount}" onchange="changeProductAmount2(this.value, ${productsBasket.id})"></input>
+        <i class="fas fa-minus-square" onclick="changeProductAmount(false, ${productsBasket.id})"></i>
+        <button onclick="removeProduct(${model.currentUser.id}, ${productsBasket.id})">Remove</button>
     </div>
 </li>`}
 return html

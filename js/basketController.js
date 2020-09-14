@@ -5,13 +5,21 @@ function removeProduct(user, id) {
     showBasket();
 }
 
-function changeProductAmount(add, prodId) {
-    productIndex = searchProductIndex(prodId);
+function changeProductAmount(add, id) {
+    productIndex = searchProductIndex(id);
     if(add === true) {
     model.shoppingBasket[model.currentUser.id].products[productIndex].amount++
     }
-    if(add === false || model.shoppingBasket[model.currentUser.id].products[productIndex].amount !< 0) {
+    if(add === false) {
     model.shoppingBasket[model.currentUser.id].products[productIndex].amount--
     }
-    showB()
+    if (model.shoppingBasket[model.currentUser.id].products[productIndex].amount === 0) removeProduct(model.currentUser.id, id)
+    showBasket()
+}
+
+function changeProductAmount2(amount, id) {
+    productIndex = searchProductIndex(id);
+    model.shoppingBasket[model.currentUser.id].products[productIndex].amount = amount;
+    if (amount <= 0) removeProduct(model.currentUser.id, id)
+    showBasket()
 }
