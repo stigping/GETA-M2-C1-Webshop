@@ -14,3 +14,7 @@ function addNewProduct() {
         model.inputs.newProductInputs.id++;
         showAdmin()
 }
+
+function adminRemoveProduct() {
+    model.products.splice()
+}

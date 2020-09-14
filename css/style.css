@@ -51,15 +51,39 @@ html, body {
 .showpgraph,
 .showusers{
 	border: 1px solid #000000;
-	float: right;
 	padding: 2px;
 	background-color: #26195f;
 	font-family: Arial, Helvetica, sans-serif;
 }
-
+#addProductDiv {
+	width: 500px;
+	background-color: #26195f;
+	border: 1px solid #000000;
+	float: left;
+	position: relative;
+	top: -20px;
+}
+#addProductDiv input{
+	width: 100%;
+}
+.showproducts ul{
+	width: 100%;
+	list-style-type: none;
+}
+.showproducts ul li button{
+	float: right;
+}
 .showproducts {
 	overflow-y: scroll;
-	max-height: 150px;
+	height: 207px;
+	max-height: 450px;
+	width: 498px;
+	max-width: 500px;
+	float: right;
+	list-style-type: none;
+	display: flex;
+	position: relative;
+	top: -20px;
 }
 .showcgraph {
 	display: flex;
@@ -400,6 +424,13 @@ html, body {
 	margin: 10px 10px;
 	padding: 10px;
 	color: white;
+}
+.products h3,
+.users h3,
+.stats h3{
+	top: -25px;
+	left: -5px;
+	position: relative;
 }
 
 .mainContent h3{

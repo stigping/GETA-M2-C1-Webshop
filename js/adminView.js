@@ -51,18 +51,22 @@ function showAdmin() {
         <div class="products">
             <h3>Products</h3>
             <div id="addProductDiv">
-                <button onclick="addNewProduct()">Add Product</button>
-                <input placeholder="name" onchange="model.inputs.newProductInputs.name = this.value" required></input>
-                <input placeholder="productInfo" onchange="model.inputs.newProductInputs.productInfo = this.value" required></input>
-                <input placeholder="contents" onchange="model.inputs.newProductInputs.contents = this.value" required></input> <br>
-                <input placeholder="price" onchange="model.inputs.newProductInputs.price = this.value" required></input>
-                <input placeholder="calories" onchange="model.inputs.newProductInputs.calories = this.value" required></input>
-                <input placeholder="allergies" onchange="model.inputs.newProductInputs.allergies = this.value" required></input>
-                <input placeholder="moms" onchange="model.inputs.newProductInputs.moms = this.value" required></input>
-                <input type="file">Upload images</input>
+                <form>
+                    <button type="button" onclick="addNewProduct()">Add Product</button>
+                    <input type="text" placeholder="name" onchange="model.inputs.newProductInputs.name = this.value"></input>
+                    <input type="text" placeholder="productInfo" onchange="model.inputs.newProductInputs.productInfo = this.value"></input>
+                    <input type="text" placeholder="contents" onchange="model.inputs.newProductInputs.contents = this.value"></input> <br>
+                    <input type="text" placeholder="price" onchange="model.inputs.newProductInputs.price = this.value"></input>
+                    <input type="text" placeholder="calories" onchange="model.inputs.newProductInputs.calories = this.value"></input>
+                    <input type="text" placeholder="allergies" onchange="model.inputs.newProductInputs.allergies = this.value"></input>
+                    <input type="text" placeholder="moms" onchange="model.inputs.newProductInputs.moms = this.value"></input>
+                    <input type="file">Upload images</input>
+                </form>
             </div>
             <div class="showproducts">
+                <ul>
                 ${showProducts()}
+                </ul>
             </div>
         </div>
 
@@ -108,7 +112,7 @@ function showAdmin() {
 function showProducts() {
     let html = '';
     for (i = 0; i < model.products.length; i++) {
-    html += `<li>${model.products[i].name}</li>`
+    html += `<li>${model.products[i].name} <button>Remove</button></li> `
     }
     return html
 }

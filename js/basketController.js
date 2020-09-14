@@ -1,12 +1,12 @@
 function removeProduct(user, id) {
-    index = searchProductIndex(id);
+    index = searchBasketProductIndex(id);
     model.shoppingBasket[user].products.splice(index, 1);
     console.log(index);
     showBasket();
 }
 
 function changeProductAmount(add, id) {
-    productIndex = searchProductIndex(id);
+    productIndex = searchBasketProductIndex(id);
     if(add === true) {
     model.shoppingBasket[model.currentUser.id].products[productIndex].amount++
     }
@@ -18,8 +18,9 @@ function changeProductAmount(add, id) {
 }
 
 function changeProductAmount2(amount, id) {
-    productIndex = searchProductIndex(id);
+    productIndex = searchBasketProductIndex(id);
     model.shoppingBasket[model.currentUser.id].products[productIndex].amount = amount;
     if (amount <= 0) removeProduct(model.currentUser.id, id)
     showBasket()
 }
+

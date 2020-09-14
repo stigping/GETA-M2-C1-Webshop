@@ -6,8 +6,8 @@ const model = {
             {id: 3, name: 'Lange slappe nudlær', productInfo: 'Jadadas', contents: ['Nudler', 'Katt', 'Krydder'], moms: '0%', calories: '189', price: '53', allergies: 'Katt', images: ['https://www.tine.no/_/recipeimage/w_1280%2Ch_720%2Cc_fill%2Cx_1500%2Cy_1124%2Cg_xy_center/recipeimage/349406.jpg', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png']},
             {id: 4, name: 'Stor Fin Fisk', productInfo: 'ersrdarsae', contents: ['Fisk', 'Bønner', 'Krydder'], moms: '0%', calories: '999', price: '54', allergies: 'Hai', images: ['https://www.hooked.no/wp-content/uploads/2017/01/Store-agn-for-stor-fisk-4.jpg', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png']}
             ],
-        shoppingBasket: [ {username: 'karl', products: [], priceTotalAll: null, id: '1'},
-                          {username: 'jorn', products: [{id: 1, amount: 10, priceTotal: 40}, {id: 4, amount: 10, priceTotal: 40}], priceTotalAll: null, id: '0'}],
+        shoppingBasket: [ {username: 'jorn', products: [], priceTotalAll: null, id: '0'},
+                          {username: 'karl', products: [{id: 1, amount: 10, priceTotal: 40}, {id: 4, amount: 10, priceTotal: 40}], priceTotalAll: null, id: '1'}],
         currentUser:{username: 'jorn', isAdmin: true, id:'0'},
         users: [
             {username: 'jorn', name: 'Jørn', password:'test', id:'0', isAdmin: true},

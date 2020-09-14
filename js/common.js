@@ -1,8 +1,8 @@
 function addProduct(prodId) {
-    if (searchProductIndex(prodId) === -1) {
+    if (searchBasketProductIndex(prodId) === -1) {
        return model.shoppingBasket[model.currentUser.id].products.push({id: prodId, amount: 1, priceTotal: null})
     } else {
-        productIndex = searchProductIndex(prodId);
+        productIndex = searchBasketProductIndex(prodId);
         model.shoppingBasket[model.currentUser.id].products[productIndex].amount++
     }
 }
@@ -29,7 +29,7 @@ function deselectProduct() {
     if (model.currentPage === 'Basket')showBasket();
 }
 
-function searchProductIndex(id) {
+function searchBasketProductIndex(id) {
     let search = model.shoppingBasket[model.currentUser.id].products.findIndex(searchid => searchid['id'] === id);
     return search
 }
@@ -38,3 +38,4 @@ function searchUserIndex(id) {
     let search = model.users.findIndex(searchid => searchid['id'] === id);
     return search
 }
+
