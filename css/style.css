@@ -1,11 +1,13 @@
 /* --- BASE CSS START --- */
+	/* GENERAL */
+	/* HOME */
 * {
 	box-sizing: border-box;
 }
 html, body {
 	background-color: #add8e6;
 	margin: 0;
-	overflow-y: scroll;
+	overflow-y: auto;
 	height: 100%;
 	width: 100%;
 }
@@ -391,7 +393,7 @@ html, body {
 	border: 1px solid #000000;
 	background-color: rgb(67, 81, 155);
 	width: 99%;
-	height: 31%;
+	height: 300px;
 	margin: 10px 10px;
 	padding: 10px;
 	color: white;
@@ -400,10 +402,15 @@ html, body {
 .mainContent h3{
 	text-transform: capitalize;
 }
+/* CART */
+
+/* ADMIN */
 /* --- BASE CSS END --- */
 
 /* For all sizes up to 576 */
 @media (max-width: 575.99px) {
+	/* GENERAL */
+	/* HOME */
 	#headerContent {
 		display: none;
 	}
@@ -511,10 +518,14 @@ html, body {
 	#footerContentNoScroll{
 		display: none;
 	}
+	/* CART */
+	/* ADMIN */	
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+	/* GENERAL */
+	/* HOME */
 	#headerContent {
 		display: none;
 	}
@@ -623,10 +634,14 @@ html, body {
 	#footerContentNoScroll{
 		display: none;
 	}
+	/* CART */
+	/* ADMIN */	
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	/* GENERAL */
+	/* HOME */
 	.mainGrid {
 		grid-template-areas:
 			"1 m m 2"
@@ -660,10 +675,14 @@ html, body {
 	.questionButtons {
 		grid-column: 2 / 6;
 	}
+	/* CART */
+	/* ADMIN */	
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+	/* GENERAL */
+	/* HOME */
 	.mainGrid {
 		grid-template-columns: 0.05fr 1fr 1fr 1fr 1fr 0.05fr;
 		grid-template-areas:
@@ -699,10 +718,26 @@ html, body {
 	.questionButtons {
 		grid-column: 2 / 6;
 	}
+	/* CART */
+
+	/* ADMIN */
+	.products,
+	.users,
+	.stats{
+		border: 1px solid #000000;
+		background-color: rgb(67, 81, 155);
+		width: 99%;
+		height: 300px;
+		margin: 10px 10px;
+		padding: 10px;
+		color: white;
+	}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {	
+@media (min-width: 1200px) {
+	/* GENERAL */
+	/* HOME */
 	#grid-container {
 		grid-template-rows: 40px 10fr 1rem;
 		grid-template-areas:
@@ -1066,7 +1101,7 @@ html, body {
 		border: 1px solid #000000;
 		background-color: rgb(67, 81, 155);
 		width: 99%;
-		height: 31%;
+		height: 300px;
 		margin: 10px 10px;
 		padding: 10px;
 		color: white;
@@ -1075,4 +1110,6 @@ html, body {
 	.mainContent h3{
 		text-transform: capitalize;
 	}
+	/* CART */
+	/* ADMIN */	
 }
