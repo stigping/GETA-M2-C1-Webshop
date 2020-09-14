@@ -1,5 +1,5 @@
 function addProduct(id) {
-model.
+model.shoppingBasket.
 }
 
 function selectProduct(id) {
