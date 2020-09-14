@@ -30,5 +30,5 @@ function searchProductIndex(id) {
 }
 
 function changeProductAmount() {
-    //dette er jo bundet med add product, så denne må jo være i stand til 
+    //dette er jo bundet med add product, så denne må jo være i stand til å søke og sjekke hva som er i basket arrayet? 
 }
