@@ -1,6 +1,9 @@
 function addProduct(prodId) {
     if (searchProductIndex(prodId) === -1) {
-        model.shoppingBasket[model.currentUser.id].products.push({id: prodId, amount: 1, priceTotal: null})
+       return model.shoppingBasket[model.currentUser.id].products.push({id: prodId, amount: 1, priceTotal: null})
+    } else {
+        productIndex = searchProductIndex(prodId);
+        model.shoppingBasket[model.currentUser.id].products[productIndex].amount++
     }
 }
 
@@ -29,8 +32,4 @@ function deselectProduct() {
 function searchProductIndex(id) {
     let search = model.shoppingBasket[model.currentUser.id].products.findIndex(searchid => searchid['id'] === id);
     return search
-}
-
-function changeProductAmount() {
-    
 }
