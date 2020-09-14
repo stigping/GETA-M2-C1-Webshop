@@ -116,7 +116,7 @@ function listProducts(id) {
         </div>
     <div class="basketButtons">
         <i class="fas fa-plus-square"></i>
-        <input type="text" value="${model.shoppingBasket[0].products[0].amount}"></input>
+        <input type="text" value="${model.shoppingBasket[model.currentUser.id].products[id].amount}"></input>
         <i class="fas fa-minus-square"></i>
         <button onclick="removeProduct(${model.currentUser.id}, ${product[basket[id].products[i].id].id})">Remove</button>
     </div>

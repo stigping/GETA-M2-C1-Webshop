@@ -1,5 +1,7 @@
-function addProduct(id, product) {
-    model.shoppingBasket[id].products.push(product)
+function addProduct(prodId) {
+    if (searchProductIndex(prodId) === -1) {
+        model.shoppingBasket[model.currentUser.id].products.push({id: prodId, amount: 1, priceTotal: null})
+    }
 }
 
 function selectProduct(id) {
@@ -25,10 +27,10 @@ function deselectProduct() {
 }
 
 function searchProductIndex(id) {
-    let search = model.shoppingBasket[0].products.findIndex(searchid => searchid['id'] === id);
+    let search = model.shoppingBasket[model.currentUser.id].products.findIndex(searchid => searchid['id'] === id);
     return search
 }
 
 function changeProductAmount() {
-    //dette er jo bundet med add product, så denne må jo være i stand til å søke og sjekke hva som er i basket arrayet? 
+    
 }
