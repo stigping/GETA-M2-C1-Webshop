@@ -721,17 +721,6 @@ html, body {
 	/* CART */
 
 	/* ADMIN */
-	.products,
-	.users,
-	.stats{
-		border: 1px solid #000000;
-		background-color: rgb(67, 81, 155);
-		width: 99%;
-		height: 300px;
-		margin: 10px 10px;
-		padding: 10px;
-		color: white;
-	}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -1093,18 +1082,6 @@ html, body {
 
 	.basketButtons input{
 		width: 25px;
-	}
-	
-	.products,
-	.users,
-	.stats{
-		border: 1px solid #000000;
-		background-color: rgb(67, 81, 155);
-		width: 99%;
-		height: 300px;
-		margin: 10px 10px;
-		padding: 10px;
-		color: white;
 	}
 	
 	.mainContent h3{
