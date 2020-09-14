@@ -56,7 +56,7 @@ function showAdmin() {
                 <input placeholder="productInfo"></input>
                 <input placeholder="contents"></input> <br>
                 <input placeholder="price"></input>
-                <input placeholder="callories"></input>
+                <input placeholder="calories"></input>
                 <input placeholder="allergies"></input>
                 <input placeholder="moms"></input>
                 <button>Upload images</button>
