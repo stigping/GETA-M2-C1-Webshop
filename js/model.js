@@ -20,5 +20,6 @@ const model = {
         currentPage: 'Home',
         inputs: {
             productShownId: null,
+            
         },
 }
