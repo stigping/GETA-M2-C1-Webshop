@@ -1,4 +1,4 @@
-function addNewProduct() {
+function adminAddNewProduct() {
     model.products.push({
         id: model.inputs.newProductInputs.id,
         name: model.inputs.newProductInputs.name,
@@ -15,6 +15,14 @@ function addNewProduct() {
         showAdmin()
 }
 
-function adminRemoveProduct() {
-    model.products.splice()
+function adminRemoveProduct(id) {
+    index = searchProductIndex(id);
+    model.products.splice(index, 1);
+    console.log(index);
+    showAdmin();
+}
+
+function searchProductIndex(id) {
+    let search = model.products.findIndex(searchid => searchid['id'] === id);
+    return search
 }

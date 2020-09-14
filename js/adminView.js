@@ -52,7 +52,7 @@ function showAdmin() {
             <h3>Products</h3>
             <div id="addProductDiv">
                 <form>
-                    <button type="button" onclick="addNewProduct()">Add Product</button>
+                    <button type="button" onclick="adminAddNewProduct()">Add Product</button>
                     <input type="text" placeholder="name" onchange="model.inputs.newProductInputs.name = this.value"></input>
                     <input type="text" placeholder="productInfo" onchange="model.inputs.newProductInputs.productInfo = this.value"></input>
                     <input type="text" placeholder="contents" onchange="model.inputs.newProductInputs.contents = this.value"></input> <br>
