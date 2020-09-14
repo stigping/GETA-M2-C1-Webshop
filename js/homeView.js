@@ -21,7 +21,7 @@ function showHome() {
             <p>${product[productShownId || 0].productInfo}</p>
         </div>
         <div class="prodButtons">
-            <input type="button" value="Add">
+            <input type="button" value="Add" onclick="addProduct(${product[productShownId]})">
         </div>
     </div>
 </div>
