@@ -1,3 +1,7 @@
+function addProduct(id) {
+model.
+}
+
 function selectProduct(id) {
     const body = document.body;
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
