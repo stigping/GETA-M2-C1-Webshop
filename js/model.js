@@ -21,7 +21,7 @@ const model = {
         inputs: {
             productShownId: null,
             newProductInputs: {
-            id: null,
+            id: 5,
             name: null,
             moms: null,
             productInfo: null,

@@ -52,13 +52,13 @@ function showAdmin() {
             <h3>Products</h3>
             <div id="addProductDiv">
                 <button onclick="addNewProduct()">Add Product</button>
-                <input placeholder="name"></input>
-                <input placeholder="productInfo"></input>
-                <input placeholder="contents"></input> <br>
-                <input placeholder="price"></input>
-                <input placeholder="calories"></input>
-                <input placeholder="allergies"></input>
-                <input placeholder="moms"></input>
+                <input placeholder="name" onchange="model.inputs.newProductInputs.name = this.value" required></input>
+                <input placeholder="productInfo" onchange="model.inputs.newProductInputs.productInfo = this.value" required></input>
+                <input placeholder="contents" onchange="model.inputs.newProductInputs.contents = this.value" required></input> <br>
+                <input placeholder="price" onchange="model.inputs.newProductInputs.price = this.value" required></input>
+                <input placeholder="calories" onchange="model.inputs.newProductInputs.calories = this.value" required></input>
+                <input placeholder="allergies" onchange="model.inputs.newProductInputs.allergies = this.value" required></input>
+                <input placeholder="moms" onchange="model.inputs.newProductInputs.moms = this.value" required></input>
                 <input type="file">Upload images</input>
             </div>
             <div class="showproducts">
