@@ -70,9 +70,10 @@ function showHome() {
                         <li><a></a>TEST</li>
                         </ul>
                     </div>
+                    ${listProducts(model.currentUser.id)}
                 </div>
 
-                ${listProducts}
+                
     </div>
     <div class="mobileMenu">
         <span>
@@ -111,4 +112,39 @@ function showHome() {
     window.addEventListener('scroll', () => {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     })
+}
+
+function listProducts(id) {
+    const basket = model.shoppingBasket;
+    const product = model.products;
+    let html = '';
+    for (i = 0; i < basket[id].products.length; i++) {
+    const productsBasket = product[basket[id].products[i].id];
+    html += `
+<li>
+    <div class="frame">
+        <img onclick="selectProduct(${productsBasket.id})" src="${productsBasket.images[0]}">
+    </div>
+    <div class="infoText">
+        <div class="itemName">
+        <span onclick="selectProduct(${productsBasket.id})">
+        ${productsBasket.name}</span>
+        </div>
+        <div class="itemPrice">
+      per - ${productsBasket.price} kr
+        </div>
+        <div class="itemInfo">
+        ${product[i].moms}
+        </div>
+        <div class="itemTotalPrice">
+       T = ${basket[id].products[i].priceTotal} kr
+        </div>
+    <div class="basketButtons">
+        <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${productsBasket.id})"></i>
+        <input type="text" value="${model.shoppingBasket[model.currentUser.id].products[i].amount}" onchange="changeProductAmount2(this.value, ${productsBasket.id})"></input>
+        <i class="fas fa-minus-square" onclick="changeProductAmount(false, ${productsBasket.id})"></i>
+        <button onclick="removeProduct(${model.currentUser.id}, ${productsBasket.id})">Remove</button>
+    </div>
+</li>`}
+return html
 }
