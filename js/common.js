@@ -1,5 +1,5 @@
-function addProduct(id) {
-model.shoppingBasket.
+function addProduct(id, product) {
+    model.shoppingBasket[id].products.push(product)
 }
 
 function selectProduct(id) {
@@ -30,5 +30,5 @@ function searchProductIndex(id) {
 }
 
 function changeProductAmount() {
-    
+    //dette er jo bundet med add product, så denne må jo være i stand til 
 }
