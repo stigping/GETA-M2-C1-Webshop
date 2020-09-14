@@ -55,7 +55,7 @@ function showAdmin() {
                 <input placeholder="name"></input>
                 <input placeholder="productInfo"></input>
                 <input placeholder="contents"></input> <br>
-                <input placeholder="price"></input>
+                <input placeholder="price" value="${model.inputs.newProductInputs.price}"></input>
                 <input placeholder="calories"></input>
                 <input placeholder="allergies"></input>
                 <input placeholder="moms"></input>
