@@ -51,7 +51,7 @@ function showAdmin() {
         <div class="products">
             <h3>Products</h3>
             <div id="addProductDiv">
-                <button>Add Product</button>
+                <button onclick="addNewProduct()">Add Product</button>
                 <input placeholder="name"></input>
                 <input placeholder="productInfo"></input>
                 <input placeholder="contents"></input> <br>
