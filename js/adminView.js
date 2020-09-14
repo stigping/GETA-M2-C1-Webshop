@@ -52,6 +52,10 @@ function showAdmin() {
             <div>
                 <h3>Products</h3>
                 <button>Add Product</button>
+                <input placeholder="name"></input>
+                <input placeholder="productInfo"></input>
+                <input placeholder="contents"></input> <br>
+                <input placeholder="price"></input>
             </div>
             <div class="showproducts">
                 ${showProducts()}
