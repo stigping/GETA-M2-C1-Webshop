@@ -41,20 +41,20 @@ function adminEditProduct(id, update) {
     showAdmin();
 }
 
-// function adminAddUser() {
-//     const newUserInputs = model.inputs.newUserInputs;
-//     model.users.push({
-//         username: newUserInputs.username, 
-//         name: newUserInputs.name, 
-//         surname: model.inputs.newUserInputs.surname, 
-//         email: model.inputs.newUserInputs.email, 
-//         password: model.inputs.newUserInputs.password, 
-//         id: model.inputs.newUserInputs.id, 
-//         isAdmin: model.inputs.newUserInputs.isAdmin
-//     });
-//     showAdmin();
+function adminAddUser() {
+    const newUserInputs = model.inputs.newUserInputs;
+    model.users.push({
+        username: newUserInputs.username, 
+        name: newUserInputs.name, 
+        surname: newUserInputs.surname, 
+        email: newUserInputs.email, 
+        password: newUserInputs.password, 
+        id: newUserInputs.id, 
+        isAdmin: newUserInputs.isAdmin
+    });
+    showAdmin();
     
-// }
+}
 
 function adminRemoveUser(id) {
     index = searchUserIndex(id);
