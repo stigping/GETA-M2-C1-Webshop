@@ -1,14 +1,15 @@
 function adminAddNewProduct() {
+    const newProductInputs = model.inputs.newProductInputs;
     model.products.push({
-        id: model.inputs.newProductInputs.id,
-        name: model.inputs.newProductInputs.name,
-        moms: model.inputs.newProductInputs.moms,
-        productInfo: model.inputs.newProductInputs.productInfo,
-        contents: model.inputs.newProductInputs.contents,
-        calories: model.inputs.newProductInputs.calories,
-        allergies: model.inputs.newProductInputs.allergies,
-        price: model.inputs.newProductInputs.price,
-        images: model.inputs.newProductInputs.images,
+        id: newProductInputs.id,
+        name: newProductInputs.name,
+        moms: newProductInputs.moms,
+        productInfo: newProductInputs.productInfo,
+        contents: newProductInputs.contents,
+        calories: newProductInputs.calories,
+        allergies: newProductInputs.allergies,
+        price: newProductInputs.price,
+        images: newProductInputs.images,
         });
         
         model.inputs.newProductInputs.id++;
@@ -19,7 +20,7 @@ function adminRemoveProduct(id) {
     index = searchProductIndex(id);
     model.products.splice(index, 1);
     console.log(index);
-    showAdmin();
+    return showAdmin();
 }
 
 function adminEditProduct(id, update) {
@@ -41,6 +42,7 @@ function adminEditProduct(id, update) {
 }
 
 // function adminAddUser() {
+//     const newUserInputs = model.inputs.newUserInputs;
 //     model.users.push({
 //         username: model.inputs.newUserInputs.username, 
 //         name: model.inputs.newUserInputs.name, 

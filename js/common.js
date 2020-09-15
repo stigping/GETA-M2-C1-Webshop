@@ -1,9 +1,10 @@
 function addProduct(prodId) {
+    const shoppingBasket = model.shoppingBasket[model.currentUser.id].products;
     if (searchBasketProductIndex(prodId) === -1) {
-       return model.shoppingBasket[model.currentUser.id].products.push({id: prodId, amount: 1, priceTotal: null})
+       return shoppingBasket.push({id: prodId, amount: 1, priceTotal: null})
     } else {
         productIndex = searchBasketProductIndex(prodId);
-        model.shoppingBasket[model.currentUser.id].products[productIndex].amount++
+        shoppingBasket[productIndex].amount++
     }
 }
 
