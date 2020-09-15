@@ -22,6 +22,10 @@ function adminRemoveProduct(id) {
     showAdmin();
 }
 
+function adminEditProduct() {
+
+}
+
 function searchProductIndex(id) {
     let search = model.products.findIndex(searchid => searchid['id'] === id);
     return search
