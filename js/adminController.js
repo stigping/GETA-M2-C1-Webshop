@@ -44,8 +44,8 @@ function adminEditProduct(id, update) {
 // function adminAddUser() {
 //     const newUserInputs = model.inputs.newUserInputs;
 //     model.users.push({
-//         username: model.inputs.newUserInputs.username, 
-//         name: model.inputs.newUserInputs.name, 
+//         username: newUserInputs.username, 
+//         name: newUserInputs.name, 
 //         surname: model.inputs.newUserInputs.surname, 
 //         email: model.inputs.newUserInputs.email, 
 //         password: model.inputs.newUserInputs.password, 
