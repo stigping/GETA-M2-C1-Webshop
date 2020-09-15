@@ -65,7 +65,7 @@ function showAdmin() {
             </div>
             <div id="editProductDiv" ${model.isEditing === false ? 'style="display: none"' : ''}>
                 <button type="button" onclick="adminAddNewProduct()">Add Product</button>
-                <input type="text" placeholder="name" onchange="model.inputs.editProductInputs.name = this.value"></input>
+                <input type="text" placeholder="name" ></input>
                 <input type="text" placeholder="productInfo" onchange="model.inputs.editProductInputs.productInfo = this.value"></input>
                 <input type="text" placeholder="contents" onchange="model.inputs.editProductInputs.contents = this.value"></input> <br>
                 <input type="text" placeholder="price" onchange="model.inputs.editProductInputs.price = this.value"></input>

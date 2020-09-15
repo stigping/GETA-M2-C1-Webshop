@@ -11,10 +11,10 @@ const model = {
         currentUser:{username: 'jorn', isAdmin: true, id:'0'},
         users: [
             {username: 'jorn', name: 'Jørn', surname: 'Ost', email: 'gmail@mail.no', password:'test', id: 0, isAdmin: true},
-            {username: 'karl', name: 'Karl', surname: 'Ost', email: 'gmail@mail.no', password:'test', id: 1, isAdmin: false},
-            {username: 'johan', name: 'Johan', surname: 'Ost', email: 'gmail@mail.no', password:'test', id: 2, isAdmin: false},
-            {username: 'bonna', name: 'Bønna', surname: 'Ost', email: 'gmail@mail.no', password:'test', id: 3, isAdmin: false},
-            {username: 'kake', name: 'Kake', surname: 'Ost', email: 'gmail@mail.no', password:'test', id: 4, isAdmin: false}
+            {username: 'karl', name: 'Karl', surname: 'Nor', email: 'gmail@mail.no', password:'test', id: 1, isAdmin: false},
+            {username: 'johan', name: 'Johan', surname: 'Hansen', email: 'gmail@mail.no', password:'test', id: 2, isAdmin: false},
+            {username: 'bent', name: 'Bent', surname: 'Johansen', email: 'gmail@mail.no', password:'test', id: 3, isAdmin: false},
+            {username: 'knut', name: 'Knut', surname: 'Haraldsen', email: 'gmail@mail.no', password:'test', id: 4, isAdmin: false}
             ],
         paymentModel: {vipps: {}, paypal: {}, card: {}},
         orderHistory:[
