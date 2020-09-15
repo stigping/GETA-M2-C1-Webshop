@@ -29,8 +29,7 @@ function adminEditProduct(id, update) {
         model.isEditing = false;
         model.inputs.editProductInputs = [];
         return showAdmin()
-    }
-    if (update === true) {
+    } else {
         model.isEditing = false;
         model.products[index] = model.inputs.editProductInputs;
         return showAdmin()
