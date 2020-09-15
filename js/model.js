@@ -10,11 +10,11 @@ const model = {
                           {username: 'karl', products: [{id: 1, amount: 10, priceTotal: 40}, {id: 4, amount: 10, priceTotal: 40}], priceTotalAll: null, id: '1'}],
         currentUser:{username: 'jorn', isAdmin: true, id:'0'},
         users: [
-            {username: 'jorn', name: 'Jørn', surname: 'Ost', email: 'gmail@mail.no', password:'test', id: 0, isAdmin: true},
-            {username: 'karl', name: 'Karl', surname: 'Nor', email: 'gmail@mail.no', password:'test', id: 1, isAdmin: false},
-            {username: 'johan', name: 'Johan', surname: 'Hansen', email: 'gmail@mail.no', password:'test', id: 2, isAdmin: false},
+            {username: 'jorn', name: 'Jørn', surname: 'Haga', email: 'gmail@mail.no', password:'test', id: 0, isAdmin: true},
+            {username: 'karl', name: 'Karl', surname: 'Johann', email: 'gmail@mail.no', password:'test', id: 1, isAdmin: false},
+            {username: 'ola', name: 'Ola', surname: 'Normann', email: 'gmail@mail.no', password:'test', id: 2, isAdmin: false},
             {username: 'bent', name: 'Bent', surname: 'Johansen', email: 'gmail@mail.no', password:'test', id: 3, isAdmin: false},
-            {username: 'knut', name: 'Knut', surname: 'Haraldsen', email: 'gmail@mail.no', password:'test', id: 4, isAdmin: false}
+            {username: 'knut', name: 'Knut', surname: 'Knudsen', email: 'gmail@mail.no', password:'test', id: 4, isAdmin: false}
             ],
         paymentModel: {vipps: {}, paypal: {}, card: {}},
         orderHistory:[
