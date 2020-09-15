@@ -10,7 +10,7 @@ function addProduct(prodId) {
 function selectProduct(id) {
     const body = document.body;
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    model.inputs.productShownId = id;
+    model.productShownId = id;
     body.style.position = 'fixed';
     body.style.top = `-${scrollY}`;
     if (model.currentPage === 'Home')showHome();
@@ -20,7 +20,7 @@ function selectProduct(id) {
 function deselectProduct() {
     const body = document.body;
     const scrollY = body.style.top;
-    model.inputs.productShownId = null;
+    model.productShownId = null;
     body.style.position = '';
     body.style.top = '';
     window.scrollTo(0, parseInt(scrollY) * -1);

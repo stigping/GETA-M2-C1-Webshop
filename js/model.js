@@ -22,9 +22,9 @@ const model = {
         ],
         currentPage: 'Home',
         isEditing: false,
+        productShownId: null,
         inputs: {
-            productShownId: null,
-            editProductInputs: {
+                editProductInputs: {
                 name: null,
                 moms: null,
                 productInfo: null,

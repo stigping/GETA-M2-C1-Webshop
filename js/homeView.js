@@ -1,24 +1,25 @@
 function showHome() {
     const product = model.products;
-    const productShownId = model.inputs.productShownId;
+    const productShownId = model.productShownId;
+    const productsLength = model.products.length;
     appDiv.innerHTML = `
 <div  id="prodShow" class="prodShow" ${productShownId != null ? '' : 'style="visibility: hidden"'}>
     <div  onclick="deselectProduct()" class="prodOverlay"></div>
     <div id="productBox">
         <div class="outerImages">
-            <img src="${product[productShownId || 0].images[0]}"></img>
+            <img src="${productsLength <= 0 ? '' : product[productShownId || 0].images[0]}"></img>
                 <div class="slideshow">
                     <div class="slides">
-                        <img src="${product[productShownId || 0].images[1]}">
-                        <img src="${product[productShownId || 0].images[2]}">
-                        <img src="${product[productShownId || 0].images[3]}">
-                        <img src="${product[productShownId || 0].images[4]}">
+                        <img src="${productsLength <= 0 ? '' : product[productShownId || 0].images[1]}">
+                        <img src="${productsLength <= 0 ? '' : product[productShownId || 0].images[2]}">
+                        <img src="${productsLength <= 0 ? '' : product[productShownId || 0].images[3]}">
+                        <img src="${productsLength <= 0 ? '' : product[productShownId || 0].images[4]}">
                     </div>
                 </div>
             </div>
         <div class="outerText">
-            <h3>${product[productShownId || 0].name}</h3>
-            <p>${product[productShownId || 0].productInfo}</p>
+            <h3>${productsLength < 0 ? '' : product[productShownId || 0].name}</h3>
+            <p>${productsLength < 0 ? '' : product[productShownId || 0].productInfo}</p>
         </div>
         <div class="prodButtons">
             <input type="button" value="Add" onclick="addProduct(${productShownId || 0})">
@@ -43,26 +44,7 @@ function showHome() {
     </div>
     <div id="mainContent">
             <div class="mainGrid">
-                <div class="grid1">
-                    <img onclick="selectProduct(0)" src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>${product[0].name}</h3>
-                </div>
-                <div onclick="selectProduct(1)" class="grid-item1">
-                    <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>${product[1].name}</h3>
-                </div>
-                <div onclick="selectProduct(2)" class="grid-item2">
-                    <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>${product[2].name}</h3>
-                </div>
-                <div onclick="selectProduct(3)" class="grid-item3">
-                    <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>${product[3].name}</h3>
-                </div>
-                <div onclick="selectProduct(4)" class="grid-item4">
-                    <img src="https://www.aldireviewer.com/wp-content/uploads/2018/08/Aldi-press-release-2.jpg"></img>
-                    <h3>${product[4].name}</h3>
-                </div>
+                    ${showProductsList()}
 
                     <div class="questionButtons">
                         <ul>
@@ -114,6 +96,22 @@ function showHome() {
     })
 }
 
-function showProducts() {
-    
+const showProductsList = () => {
+    const product = model.products;
+    if (model.products.length <= 0) return '';
+    let html = `
+        <div class="grid1">
+        <img onclick="selectProduct(0)" src="${model.products[0].images[0]}"></img>
+        <h3>${product[0].name}</h3>
+        </div>
+    `;
+    for (i = 1; i < model.products.length; i++) {
+        html += `
+        <div class="grid-item${i}">
+        <img onclick="selectProduct(${i})" src="${model.products[i].images === null ? '' : model.products[i].images[0]}"></img>
+        <h3>${product[i].name}</h3>
+        </div>
+        `;
+    }
+    return html
 }
