@@ -24,7 +24,7 @@ function adminRemoveProduct(id) {
 
 function adminEditProduct(id) {
     index = searchUserIndex(id);
-    model.inputs.newProductInputs = model.products[index];
+    model.inputs.editProductInputs = model.products[index];
     model.isEditing = true;
     console.log(index);
     showAdmin();
