@@ -18,8 +18,8 @@ function showHome() {
                 </div>
             </div>
         <div class="outerText">
-            <h3>${productsLength < 0 ? '' : product[productShownId || 0].name}</h3>
-            <p>${productsLength < 0 ? '' : product[productShownId || 0].productInfo}</p>
+            <h3>${productsLength <= 0 ? '' : product[productShownId || 0].name}</h3>
+            <p>${productsLength <= 0 ? '' : product[productShownId || 0].productInfo}</p>
         </div>
         <div class="prodButtons">
             <input type="button" value="Add" onclick="addProduct(${productShownId || 0})">
@@ -114,4 +114,8 @@ const showProductsList = () => {
         `;
     }
     return html
+}
+
+const prodShowList = () => {
+
 }
