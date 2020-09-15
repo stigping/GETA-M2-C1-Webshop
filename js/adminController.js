@@ -22,11 +22,24 @@ function adminRemoveProduct(id) {
     showAdmin();
 }
 
-function adminEditProduct() {
+function adminEditProduct(id) {
+    index = searchUserIndex(id);
+    model.inputs.newProductInputs = model.products[index];
+    model.isEditing = true;
+    console.log(index);
+    showAdmin();
+}
 
+function adminAddUser() {
+    
 }
 
 function searchProductIndex(id) {
     let search = model.products.findIndex(searchid => searchid['id'] === id);
+    return search
+}
+
+function searchUserIndex(id) {
+    let search = model.users.findIndex(searchid => searchid['id'] === id);
     return search
 }

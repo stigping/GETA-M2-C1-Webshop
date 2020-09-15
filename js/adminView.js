@@ -51,7 +51,7 @@ function showAdmin() {
         <div class="products">
             <h3>Products</h3>
             <div id="addProductDiv">
-                <form>
+                <form ${model.isEditing === true ? 'style="display: none"' : ''}>
                     <button type="button" onclick="adminAddNewProduct()">Add Product</button>
                     <input type="text" placeholder="name" onchange="model.inputs.newProductInputs.name = this.value"></input>
                     <input type="text" placeholder="productInfo" onchange="model.inputs.newProductInputs.productInfo = this.value"></input>
@@ -62,6 +62,17 @@ function showAdmin() {
                     <input type="text" placeholder="moms" onchange="model.inputs.newProductInputs.moms = this.value"></input>
                     <input type="file">Upload images</input>
                 </form>
+            </div>
+            <div id="editProductDiv" ${model.isEditing === false ? 'style="display: none"' : ''}>
+                <button type="button" onclick="adminAddNewProduct()">Add Product</button>
+                <input type="text" placeholder="name" onchange="model.inputs.editProductInputs.name = this.value"></input>
+                <input type="text" placeholder="productInfo" onchange="model.inputs.editProductInputs.productInfo = this.value"></input>
+                <input type="text" placeholder="contents" onchange="model.inputs.editProductInputs.contents = this.value"></input> <br>
+                <input type="text" placeholder="price" onchange="model.inputs.editProductInputs.price = this.value"></input>
+                <input type="text" placeholder="calories" onchange="model.inputs.editProductInputs.calories = this.value"></input>
+                <input type="text" placeholder="allergies" onchange="model.inputs.editProductInputs.allergies = this.value"></input>
+                <input type="text" placeholder="moms" onchange="model.inputs.editProductInputs.moms = this.value"></input>
+                <input type="file">Upload images</input>
             </div>
             <div class="showproducts">
                 <ul>
@@ -94,9 +105,21 @@ function showAdmin() {
         <div class="users">
         <div>
             <h3>Users</h3>
+            <div id="addUsersDiv">
+                <form>
+                    <button type="button" onclick="adminAddUser()">Add User</button>
+                    <input type="text" placeholder="First name" onchange="model.inputs.newProductInputs.name = this.value"></input>
+                    <input type="text" placeholder="Surname" onchange="model.inputs.newProductInputs.productInfo = this.value"></input>
+                    <input type="text" placeholder="E-mail" onchange="model.inputs.newProductInputs.contents = this.value"></input> <br>
+                    <input type="text" placeholder="Password" onchange="model.inputs.newProductInputs.price = this.value"></input>
+                    <input type="text" placeholder="Admin" onchange="model.inputs.newProductInputs.calories = this.value"></input>
+                </form>
+            </div>
         </div>
             <div class="showusers">
+                <ul>
                 ${showUsers()}
+                </ul>
             </div>
         </div>
         
@@ -112,7 +135,10 @@ function showAdmin() {
 function showProducts() {
     let html = '';
     for (i = 0; i < model.products.length; i++) {
-    html += `<li>${model.products[i].name} <button onclick="adminRemoveProduct(${model.products[i].id})">Remove</button> <button onclick="adminEditProduct()">Edit</button></li>  `
+    html += `<li>${model.products[i].name} 
+             <button onclick="adminRemoveProduct(${model.products[i].id})">Remove</button> 
+             <button onclick="adminEditProduct(${model.products[i].id})">Edit</button>
+             </li>`
     }
     return html
 }
@@ -120,7 +146,7 @@ function showProducts() {
 function showUsers() {
     let html = '';
     for (i = 0; i < model.users.length; i++) {
-    html += `<li>${model.users[i].username}</li>`
+    html += `<li>${model.users[i].name+' '+model.users[i].surname} <button onclick="">Remove</button> <button onclick="">Edit</button></li>`
     }
     return html
 }
