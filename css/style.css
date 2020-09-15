@@ -52,22 +52,17 @@ html, body {
 .showusers{
 	font-family: Arial, Helvetica, sans-serif;
 }
-#addProductDiv {
+#addProductDiv,
+#addUsersDiv,
+#editProductDiv {
 	width: 500px;
 	float: left;
 	position: relative;
 	top: -20px;
 }
-#addProductDiv input{
-	width: 100%;
-}
-#addUsersDiv {
-	width: 500px;
-	float: left;
-	position: relative;
-	top: -20px;
-}
-#addUsersDiv input{
+#addProductDiv input,
+#addUsersDiv input,
+#editProductDiv input{
 	width: 100%;
 }
 

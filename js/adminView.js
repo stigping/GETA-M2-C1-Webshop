@@ -64,17 +64,17 @@ function showAdmin() {
                 </form>
             </div>
             <div id="editProductDiv">
-            <form ${model.isEditing === false ? 'style="display: none"' : ''}>
-                <button type="button" onclick="adminAddNewProduct()">Add Product</button>
-                <input type="text" placeholder="name" value="${model.inputs.editProductInputs.name}"></input>
-                <input type="text" placeholder="productInfo" value="${model.inputs.editProductInputs.productInfo}"></input>
-                <input type="text" placeholder="contents" value="${model.inputs.editProductInputs.contents}"></input> <br>
-                <input type="text" placeholder="price" value="${model.inputs.editProductInputs.price}"></input>
-                <input type="text" placeholder="calories" value="${model.inputs.editProductInputs.calories}"></input>
-                <input type="text" placeholder="allergies" value="${model.inputs.editProductInputs.allergies}"></input>
-                <input type="text" placeholder="moms" value="${model.inputs.editProductInputs.moms}"></input>
-            </form>
-                <input type="file">Upload images</input>
+                <form ${model.isEditing === false ? 'style="display: none"' : ''}>
+                    <button type="button" onclick="adminAddNewProduct()">Add Product</button>
+                    <input type="text" placeholder="name" value="${model.inputs.editProductInputs.name}"></input>
+                    <input type="text" placeholder="productInfo" value="${model.inputs.editProductInputs.productInfo}"></input>
+                    <input type="text" placeholder="contents" value="${model.inputs.editProductInputs.contents}"></input> <br>
+                    <input type="text" placeholder="price" value="${model.inputs.editProductInputs.price}"></input>
+                    <input type="text" placeholder="calories" value="${model.inputs.editProductInputs.calories}"></input>
+                    <input type="text" placeholder="allergies" value="${model.inputs.editProductInputs.allergies}"></input>
+                    <input type="text" placeholder="moms" value="${model.inputs.editProductInputs.moms}"></input>
+                    <input type="file">Upload images</input>
+                </form>
             </div>
             <div class="showproducts">
                 <ul>
