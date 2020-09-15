@@ -73,6 +73,7 @@ function showAdmin() {
                 <input type="text" placeholder="calories" value="${model.inputs.editProductInputs.calories}"></input>
                 <input type="text" placeholder="allergies" value="${model.inputs.editProductInputs.allergies}"></input>
                 <input type="text" placeholder="moms" value="${model.inputs.editProductInputs.moms}"></input>
+            </form>
                 <input type="file">Upload images</input>
             </div>
             <div class="showproducts">
