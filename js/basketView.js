@@ -59,7 +59,7 @@ function showBasket() {
         </div>
     </div>
     <ul class="basketList">
-        ${listProducts(model.currentUser.id)}
+        ${listBasketProducts(model.currentUser.id)}
     </ul>
         
 </div>
@@ -90,7 +90,7 @@ window.addEventListener('scroll', () => {
 })
 }
 
-function listProducts(id) {
+function listBasketProducts(id) {
     const basket = model.shoppingBasket;
     const product = model.products;
     let html = '';

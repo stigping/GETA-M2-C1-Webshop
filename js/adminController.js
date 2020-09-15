@@ -22,16 +22,47 @@ function adminRemoveProduct(id) {
     showAdmin();
 }
 
-function adminEditProduct(id) {
+function adminEditProduct(id, update) {
     index = searchUserIndex(id);
+    if (update === false) {
+        model.isEditing = false;
+        model.inputs.editProductInputs = [];
+        return showAdmin()
+    }
+    if (update === true) {
+        model.isEditing = false;
+        model.products[index] = model.inputs.editProductInputs;
+        return showAdmin()
+    }
     model.inputs.editProductInputs = model.products[index];
     model.isEditing = true;
     console.log(index);
     showAdmin();
 }
 
-function adminAddUser() {
+// function adminAddUser() {
+//     model.users.push({
+//         username: model.inputs.newUserInputs.username, 
+//         name: model.inputs.newUserInputs.name, 
+//         surname: model.inputs.newUserInputs.surname, 
+//         email: model.inputs.newUserInputs.email, 
+//         password: model.inputs.newUserInputs.password, 
+//         id: model.inputs.newUserInputs.id, 
+//         isAdmin: model.inputs.newUserInputs.isAdmin
+//     });
+//     showAdmin();
     
+// }
+
+function adminRemoveUser(id) {
+    index = searchUserIndex(id);
+    model.users.splice(index, 1);
+    console.log(index);
+    showAdmin();
+}
+
+function adminEditUser() {
+
 }
 
 function searchProductIndex(id) {

@@ -65,14 +65,14 @@ function showAdmin() {
             </div>
             <div id="editProductDiv">
                 <form ${model.isEditing === false ? 'style="display: none"' : ''}>
-                    <button type="button" onclick="adminAddNewProduct()">Add Product</button>
-                    <input type="text" placeholder="name" value="${model.inputs.editProductInputs.name}"></input>
-                    <input type="text" placeholder="productInfo" value="${model.inputs.editProductInputs.productInfo}"></input>
-                    <input type="text" placeholder="contents" value="${model.inputs.editProductInputs.contents}"></input> <br>
-                    <input type="text" placeholder="price" value="${model.inputs.editProductInputs.price}"></input>
-                    <input type="text" placeholder="calories" value="${model.inputs.editProductInputs.calories}"></input>
-                    <input type="text" placeholder="allergies" value="${model.inputs.editProductInputs.allergies}"></input>
-                    <input type="text" placeholder="moms" value="${model.inputs.editProductInputs.moms}"></input>
+                    <button type="button" onclick="adminEditProduct('', true)">Edit Product</button> <button type="button" onclick="adminEditProduct('', false)">Cancel</button>
+                    <input type="text" placeholder="name" value="${model.inputs.editProductInputs.name}" onchange="model.inputs.editProductInputs.name = this.value"></input>
+                    <input type="text" placeholder="productInfo" value="${model.inputs.editProductInputs.productInfo}" onchange="model.inputs.editProductInputs.productInfo = this.value"></input>
+                    <input type="text" placeholder="contents" value="${model.inputs.editProductInputs.contents}" onchange="model.inputs.editProductInputs.contents = this.value"></input> <br>
+                    <input type="text" placeholder="price" value="${model.inputs.editProductInputs.price}" onchange="model.inputs.editProductInputs.price = this.value"></input>
+                    <input type="text" placeholder="calories" value="${model.inputs.editProductInputs.calories}" onchange="model.inputs.editProductInputs.calories = this.value"></input>
+                    <input type="text" placeholder="allergies" value="${model.inputs.editProductInputs.allergies}" onchange="model.inputs.editProductInputs.allergies = this.value"></input>
+                    <input type="text" placeholder="moms" value="${model.inputs.editProductInputs.moms}" onchange="model.inputs.editProductInputs.moms = this.value"></input>
                     <input type="file">Upload images</input>
                 </form>
             </div>

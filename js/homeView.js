@@ -113,3 +113,7 @@ function showHome() {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     })
 }
+
+function showProducts() {
+    
+}

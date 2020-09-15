@@ -45,5 +45,14 @@ const model = {
                 price: null,
                 images: null
             },
+            newUserInputs: {
+                username: null, 
+                name: null, 
+                surname: null, 
+                email: null, 
+                password: null, 
+                id: 5, 
+                isAdmin: null,
+            }
         },
 }
