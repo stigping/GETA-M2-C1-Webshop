@@ -112,7 +112,7 @@ function showAdmin() {
 function showProducts() {
     let html = '';
     for (i = 0; i < model.products.length; i++) {
-    html += `<li>${model.products[i].name} <button onclick="adminRemoveProduct(${model.products[i].id})">Remove</button> <button>Edit</button></li>  `
+    html += `<li>${model.products[i].name} <button onclick="adminRemoveProduct(${model.products[i].id})">Remove</button> <button onclick="adminEditProduct()">Edit</button></li>  `
     }
     return html
 }
