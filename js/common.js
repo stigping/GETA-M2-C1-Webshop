@@ -23,6 +23,7 @@ function deselectProduct() {
     const scrollY = body.style.top;
     model.productShowBox.productShownId = null;
     model.productShowBox.currentImage = 0;
+    model.productShowBox.currentTab = 0;
     body.style.position = '';
     body.style.top = '';
     window.scrollTo(0, parseInt(scrollY) * -1);

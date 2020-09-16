@@ -22,9 +22,17 @@ function productShow() {
             </div>
         <div class="outerText">
         <h3>${productsLength <= 0 ? '' : product[productShownId || 0].name} ${productsLength <= 0 ? '' : product[productShownId || 0].price}kr</h3>
-        <button>Innhold</button>  <button>Næringsinnhold</button>  <button>Alternativer</button>
-            <div ${model.productShowBox.currentTab === 0 ? '' : 'style="display: none"'}>
+        <button onclick="changeTab(0)">Innhold</button>  <button onclick="changeTab(1)">Næringsinnhold</button>  <button onclick="changeTab(2)">Alternativer</button>
+            <div id="productInfo" ${model.productShowBox.currentTab === 0 ? '' : 'style="display: none"'}>
                 <p>${productsLength <= 0 ? '' : product[productShownId || 0].productInfo}</p> 
+            </div>
+            
+            <div id="content" ${model.productShowBox.currentTab === 1 ? '' : 'style="display: none"'}>
+            <p> ${productsLength <= 0 ? '' : product[productShownId || 0].contents}</p>
+            </div>
+
+            <div id="alternatives" ${model.productShowBox.currentTab === 2 ? '' : 'style="display: none"'}>
+            Her skal bli alts
             </div>
         </div>
         <div class="prodButtons">

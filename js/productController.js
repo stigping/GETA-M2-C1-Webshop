@@ -1,10 +1,9 @@
 function changeImage(num) {
     model.productShowBox.currentImage = num;
-    
-    if (model.currentPage === 'Home')showHome();
-    if (model.currentPage === 'Basket')showBasket();
+    model.currentPage === 'Basket' ? showBasket() : showHome();
 }
 
 function changeTab(num) {
     model.productShowBox.currentTab = num;
+    model.currentPage === 'Basket' ? showBasket() : showHome();
 }
