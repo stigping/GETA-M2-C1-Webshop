@@ -16,11 +16,15 @@ function showAccount() {
 </div>
 <div id="mainContent">
     <div id="accountInfo">
-        <ul>${model.currentUser.username}</ul>
+        <ul>
+            ${model.currentUser.username}
+        </ul>
     </div>
 
     <div id="orderHistory">
-        <ul style="list-style-type: none">${listOrderHistory()}</ul>
+        <ul style="list-style-type: none">
+            ${listOrderHistory()}
+        </ul>
     </div>
 </div>
 
