@@ -16,7 +16,7 @@ function showHowTo() {
     </div>
 </div>
 <div id="mainContent">
-    
+    weeeeeeeeeeeeeeeeeeee
 </div>
 <div class="mobileMenu">
     <span>
