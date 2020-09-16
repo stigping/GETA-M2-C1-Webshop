@@ -17,34 +17,6 @@ function showAdmin() {
             </ul>
         </div>
     </div>
-    
-    <div class="mobileMenu">
-        <span>
-            <a href="javascript:showA()">
-                <i class="footer-text fas fa-home fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-dragon fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-bed fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-user fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:showB()">
-                <i class="footer-text fas fa-shopping-cart fa-lg"></i>
-            </a>
-        </span>
-    </div>
 
     <div id="mainContent">
         
@@ -98,9 +70,11 @@ function showAdmin() {
                 </svg>
                 <br>
             </div>
-            <div>stat graph illustration</div>
+            <div>
+                <p>stat graph illustration</p>
+            </div>
             <div class="showpgraph">
-            Sett inn statistikk på hva som er mest solgt - bakend greier? 
+                <p>Sett inn statistikk på hva som er mest solgt - bakend greier?</p>
             </div>
         </div>
         
@@ -125,7 +99,34 @@ function showAdmin() {
             </div>
         </div>
         
-            
+    <div class="mobileMenu">
+        <span>
+            <a href="javascript:showA()">
+                <i class="footer-text fas fa-home fa-lg"></i>
+            </a>
+        </span>
+        <span>
+            <a href="javascript:_blank">
+                <i class="footer-text fas fa-dragon fa-lg"></i>
+            </a>
+        </span>
+        <span>
+            <a href="javascript:_blank">
+                <i class="footer-text fas fa-bed fa-lg"></i>
+            </a>
+        </span>
+        <span>
+            <a href="javascript:_blank">
+                <i class="footer-text fas fa-user fa-lg"></i>
+            </a>
+        </span>
+        <span>
+            <a href="javascript:showB()">
+                <i class="footer-text fas fa-shopping-cart fa-lg"></i>
+            </a>
+        </span>
+    </div>    
+        
     </div>
     <div id="footerContentNoScroll">
         <a href="#" class="footer-text">LUNCHPOWER</a>
@@ -138,8 +139,8 @@ function showProducts() {
     let html = '';
     for (i = 0; i < model.products.length; i++) {
     html += `<li>${model.products[i].name} 
-             <button onclick="adminRemoveProduct(${model.products[i].id})">Remove</button> 
-             <button onclick="adminEditProduct(${model.products[i].id})">Edit</button>
+             <button class="removeBtn" onclick="adminRemoveProduct(${model.products[i].id})">Remove</button> 
+             <button class="editBtn" onclick="adminEditProduct(${model.products[i].id})">Edit</button>
              </li>`
     }
     return html
@@ -148,7 +149,7 @@ function showProducts() {
 function showUsers() {
     let html = '';
     for (i = 0; i < model.users.length; i++) {
-    html += `<li>${model.users[i].name+' '+model.users[i].surname} <button onclick="">Remove</button> <button onclick="">Edit</button></li>`
+    html += `<li>${model.users[i].name+' '+model.users[i].surname} <button class="removeBtn" onclick="">Remove</button> <button class="editBtn" onclick="">Edit</button></li>`
     }
     return html
 }

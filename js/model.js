@@ -1,6 +1,6 @@
 const model = {
         products: [
-            {id: 0, name: 'Kokkejævelens kyllinggryte', productInfo: 'Denne smaker godt', contents: ['Kylling', 'Fløte', 'Grønnsaker'], moms: '0%', calories: '247', price: '50', allergies: 'Melk', stock: '995', purchaseHistory: '0', images: ['https://dbstatic.no/71605105.jpg?imageId=71605105&panow=0&panoh=0&panox=0&panoy=0&heightw=0&heighth=0&heightx=0&heighty=0&width=1200&height=630', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png']},
+            {id: 0, name: 'Kokkejævelens kyllinggryte', productInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.', contents: ['Kylling', 'Fløte', 'Grønnsaker'], moms: '0%', calories: '247', price: '50', allergies: 'Melk', stock: '995', purchaseHistory: '0', images: ['https://dbstatic.no/71605105.jpg?imageId=71605105&panow=0&panoh=0&panox=0&panoy=0&heightw=0&heighth=0&heightx=0&heighty=0&width=1200&height=630', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png']},
             {id: 1, name: 'Alle biffgryters bestemor', productInfo: 'Denne også', contents: ['Biff', 'Grønnsaker'], moms: '0%', calories: '237', price: '51', allergies: '', stock: '15', purchaseHistory: '0', images: ['https://i2.wp.com/gavehjelp.org/wp-content/uploads/2018/06/gave-til-bestemor.png?resize=1280%2C720&ssl=1', 'https://www.nordichosting.com/u/toff-bestemor.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png']},
             {id: 2, name: 'Tom Peng Pong Asiatisk gryte', productInfo: 'Denne er kjempe god asiatisk', contents: ['Biff', 'Høns', 'Hund'], moms: '0%', calories: '247', price: '52', allergies: '', stock: '56', purchaseHistory: '0', images: ['https://gfx.nrk.no/GBL_8EDDXL-ywLiIiV4lgQDpFDWKScAK4oSyJSmpbuIQ.jpg', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png']},
             {id: 3, name: 'Lange slappe nudlær', productInfo: 'Jadadas', contents: ['Nudler', 'Katt', 'Krydder'], moms: '0%', calories: '189', price: '53', allergies: 'Katt', stock: '53', purchaseHistory: '0', images: ['https://www.tine.no/_/recipeimage/w_1280%2Ch_720%2Cc_fill%2Cx_1500%2Cy_1124%2Cg_xy_center/recipeimage/349406.jpg', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png']},
@@ -20,9 +20,13 @@ const model = {
         orderHistory:[
             {username: 'karl', orderList: ['test'], id: '0'}
         ],
+        productShowBox: {
+            productShownId: null,
+            currentImage: 0,
+            currentTab: 0,
+        },
         currentPage: 'Home',
         isEditing: false,
-        productShownId: null,
         inputs: {
                 editProductInputs: {
                 name: null,

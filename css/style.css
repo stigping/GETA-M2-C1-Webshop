@@ -8,7 +8,6 @@ html, body {
 	background-color: #add8e6;
 	margin: 0;
 	height: 100%;
-	width: 100%;
 }
 #grid-container {
 	height: 100vh;
@@ -33,6 +32,9 @@ html, body {
 	width: 100%;
 	height: 1.1rem;
 	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 150;
 	color: #ffffff;
 	position: fixed;
 }
@@ -530,18 +532,43 @@ html, body {
 	.grid-item1 {
 		padding-top: 25px;
 	}
+	.products,
+	.users,
+	.stats{
+		font-size: 14px;
+		border: 1px solid #000000;
+		background-color: rgb(67, 81, 155);
+		width: 100vw;
+		height: 500px;
+		margin: 10px 0 10px 0;
+		padding: -10px;
+		color: white;
+	}
+	.products h3,
+	.users h3,
+	.stats h3{
+		top: -25px;
+		position: relative;
+		text-align: center;
+	}
+	.products p,
+	.users p,
+	.stats p{
+		text-align: center;
+	}
 	.showproducts {
-		background-color: #504A73;
+		background-color: #5ce992;
 		overflow-y: scroll;
-		height: 207px;
-		max-height: 450px;
-		width: 325px;
-		max-width: 500px;
-		float: right;
+		height: 235px;
+		max-height: 235px;
+		width: 300px;
+		float: none;
 		list-style-type: none;
 		display: flex;
 		position: relative;
-		top: -20px;
+		top: -18px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.showproducts ul{
 		width: 100%;
@@ -555,6 +582,19 @@ html, body {
 	.showproducts ul li button{
 		float: right;
 	}
+	.editBtn,
+	.removeBtn{
+		display: block;
+		float: right;
+		font-size: 10px;
+		padding: 0;
+	}
+	.editBtn{
+		width: 30px;
+	}
+	.removeBtn{
+		width: 50px;
+	}
 	
 	.showcgraph {
 		display: flex;
@@ -562,8 +602,9 @@ html, body {
 		align-items: center;
 		float: none;
 		position: relative;
-		width: 10%;
-		margin: auto;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	
 	.cgraph {
@@ -571,17 +612,18 @@ html, body {
 	}
 	
 	.showusers {
-		background-color: #504A73;
+		background-color: #5ce992;
 		overflow-y: scroll;
-		height: 207px;
-		max-height: 450px;
-		width: 325px;
-		max-width: 500px;
-		float: right;
+		height: 235px;
+		max-height: 235px;
+		width: 300px;
+		float: none;
 		list-style-type: none;
 		display: flex;
 		position: relative;
-		top: -20px;
+		top: -18px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.showusers ul{
 		width: 100%;
@@ -598,14 +640,20 @@ html, body {
 	#addProductDiv,
 	#addUsersDiv,
 	#editProductDiv {
-		width: 200px;
-		float: left;
+		width: 300px;
+		float: none;
 		position: relative;
 		top: -20px;
+		margin: 0 auto;
 	}
 	#addProductDiv input,
 	#addUsersDiv input,
 	#editProductDiv input{
+		width: 100%;
+	}
+	#addProductDiv form,
+	#addUsersDiv form,
+	#editProductDiv form{
 		width: 100%;
 	}
 	.questionButtons {
@@ -641,7 +689,7 @@ html, body {
 		align-items: center;
 	}
 	.mobileMenu span {
-		margin: 0 25px;
+		margin: 0 20px;
 	}
 	#footerContent {
 		display: none;
@@ -723,6 +771,127 @@ html, body {
 	}
 	.grid-item1 {
 		padding-top: 25px;
+	}
+	.products,
+	.users,
+	.stats{
+		font-size: 14px;
+		border: 1px solid #000000;
+		background-color: rgb(67, 81, 155);
+		width: 100vw;
+		height: 500px;
+		margin: 10px 0 10px 0;
+		padding: -10px;
+		color: white;
+	}
+	.products h3,
+	.users h3,
+	.stats h3{
+		top: -25px;
+		left: 0;
+		position: relative;
+		text-align: center;
+	}
+	.products p,
+	.users p,
+	.stats p{
+		text-align: center;
+	}
+	.showproducts {
+		background-color: #5ce992;
+		overflow-y: scroll;
+		height: 235px;
+		max-height: 235px;
+		width: 500px;
+		float: none;
+		list-style-type: none;
+		display: flex;
+		position: relative;
+		top: -18px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.showproducts ul{
+		width: 100%;
+		list-style-type: none;
+	}
+	.showproducts li {
+		margin: 5px;
+		padding: 2px;
+		background-color: #8da9b3;
+	}
+	.showproducts ul li button{
+		float: right;
+	}
+	.editBtn,
+	.removeBtn{
+		display: block;
+		float: right;
+		font-size: 10px;
+		padding: 0;
+	}
+	.editBtn{
+		width: 30px;
+	}
+	.removeBtn{
+		width: 50px;
+	}
+	
+	.showcgraph {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: none;
+		position: relative;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.showusers {
+		background-color: #5ce992;
+		overflow-y: scroll;
+		height: 235px;
+		max-height: 235px;
+		width: 500px;
+		float: none;
+		list-style-type: none;
+		display: flex;
+		position: relative;
+		top: -18px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.showusers ul{
+		width: 100%;
+		list-style-type: none;
+	}
+	.showusers li {
+		margin: 5px;
+		padding: 2px;
+		background-color: #8da9b3;
+	}
+	.showusers ul li button{
+		float: right;
+	}
+	#addProductDiv,
+	#addUsersDiv,
+	#editProductDiv {
+		width: 300px;
+		float: none;
+		position: relative;
+		top: -20px;
+		margin: 0 auto;
+	}
+	#addProductDiv input,
+	#addUsersDiv input,
+	#editProductDiv input{
+		width: 100%;
+	}
+	#addProductDiv form,
+	#addUsersDiv form,
+	#editProductDiv form{
+		width: 100%;
 	}
 	.questionButtons {
 		width: 100%;
@@ -1036,8 +1205,8 @@ html, body {
 	}
 	#productBox img {
 		z-index: 4;
-		width: 100%;
-		height: auto;
+		width: 455.63px;
+		height: 239.2px;
 	}
 	#productBox .slides img {
 		z-index: 4;
