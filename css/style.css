@@ -9,7 +9,7 @@ html, body {
 	margin: 0;
 	height: 100%;
 }
-#grid-container {
+#grid-container {javascript:showB()
 	height: 100vh;
 	display: grid;
 	grid-template-rows: 40px 10fr 1rem;
@@ -572,7 +572,7 @@ html, body {
 	.prodBtns {
 		width: 300px;
 		padding: 0;
-		margin: 0 auto;
+		margin: 0;
 	}
 	#productBox .innholdBtn {
 		z-index: 4;
