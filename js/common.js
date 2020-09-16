@@ -1,10 +1,14 @@
 function addProduct(prodId) {
     const shoppingBasket = model.shoppingBasket[model.currentUser.id].products;
     if (searchBasketProductIndex(prodId) === -1) {
-       return shoppingBasket.push({id: prodId, amount: 1, priceTotal: null})
+       shoppingBasket.push({id: prodId, amount: 1, priceTotal: null});
+       model.productShowBox.productShownId = null;
+       return showB()
     } else {
         productIndex = searchBasketProductIndex(prodId);
         shoppingBasket[productIndex].amount++
+        model.productShowBox.productShownId = null;
+        return showB()
     }
 }
 
@@ -12,10 +16,9 @@ function selectProduct(id) {
     const body = document.body;
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     model.productShowBox.productShownId = id;
-    body.style.position = 'fixed';
+    // body.style.position = 'fixed';
     body.style.top = `-${scrollY}`;
-    if (model.currentPage === 'Home')showHome();
-    if (model.currentPage === 'Basket')showBasket();
+    model.currentPage === 'Basket' ? showBasket() : showHome();
 }
 
 function deselectProduct() {
@@ -28,8 +31,7 @@ function deselectProduct() {
     body.style.top = '';
     window.scrollTo(0, parseInt(scrollY) * -1);
     document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`)
-    if (model.currentPage === 'Home')showHome();
-    if (model.currentPage === 'Basket')showBasket();
+    model.currentPage === 'Basket' ? showBasket() : showHome();
 }
 
 function searchBasketProductIndex(id) {

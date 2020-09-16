@@ -11,7 +11,7 @@ function showAdmin() {
                 <li class='active'><a href="javascript:showA()">HOME</a></li>
                 <li><a href="javascript:showB()">CART</a></li>
                 <li><a href="#">ACCOUNT</a></li>
-                <li><a href="#">HOW TO MAKE</a></li>
+                <li><a href="javascript:showD()">HOW TO MAKE</a></li>
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="javascript:showC()">ADMIN</a></li>
             </ul>

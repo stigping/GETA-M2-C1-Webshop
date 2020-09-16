@@ -21,14 +21,18 @@ function productShow() {
                 </div>
             </div>
         <div class="outerText">
-        <h3>${productsLength <= 0 ? '' : product[productShownId || 0].name} ${productsLength <= 0 ? '' : product[productShownId || 0].price}kr</h3>
-        <button onclick="changeTab(0)">Innhold</button>  <button onclick="changeTab(1)">Næringsinnhold</button>  <button onclick="changeTab(2)">Alternativer</button>
+            <h3>${productsLength <= 0 ? '' : product[productShownId || 0].name} ${productsLength <= 0 ? '' : product[productShownId || 0].price}kr</h3>
+            <div class="prodBtns">
+                <button class="innholdBtn" onclick="changeTab(0)">Innhold</button>  <button class="naeringBtn" onclick="changeTab(1)">Næringsinnhold</button>  <button class="altBtn" onclick="changeTab(2)">Alternativer</button>
+            </div>
             <div id="productInfo" ${model.productShowBox.currentTab === 0 ? '' : 'style="display: none"'}>
                 <p>${productsLength <= 0 ? '' : product[productShownId || 0].productInfo}</p> 
             </div>
             
             <div id="content" ${model.productShowBox.currentTab === 1 ? '' : 'style="display: none"'}>
-            <p> ${productsLength <= 0 ? '' : product[productShownId || 0].contents}</p>
+            <ul style="list-style-type: none">
+            ${showContents()}
+            </ul>
             </div>
 
             <div id="alternatives" ${model.productShowBox.currentTab === 2 ? '' : 'style="display: none"'}>
@@ -37,9 +41,21 @@ function productShow() {
         </div>
         <div class="prodButtons">
             <input type="button" value="Add" onclick="addProduct(${productShownId || 0})">
+            <input type="button" value="Continue shopping" onclick="deselectProduct()">
         </div>
     </div>
 </div>`;
 
-return html
+    return html
+}
+
+function showContents() {
+    const product = model.products;
+    const productShownId = model.productShowBox.productShownId;
+    let html = '';
+    if (model.products.length <= 0) return
+    for (i = 0; i < product[productShownId || 0].contents.length; i++) {
+        html += `<li>${product[productShownId || 0].contents[i]}</li> <br>`
+    }
+    return html
 }
