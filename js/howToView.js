@@ -16,19 +16,7 @@ function showHowTo() {
     </div>
 </div>
 <div id="mainContent">
-        <div class="mainGrid">
-                ${showProductsList()}
 
-                <div class="questionButtons">
-                    <ul>
-                    <li><a></a>TEST 1</li>
-                    <li><a></a>TEST</li>
-                    <li><a></a>TEST</li>
-                    </ul>
-                </div>
-            </div>
-
-            
 </div>
 <div class="mobileMenu">
     <span>
