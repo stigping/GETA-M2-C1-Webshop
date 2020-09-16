@@ -283,7 +283,7 @@ html, body {
 }
 #productBox .slides img {
 	z-index: 4;
-	width: 25%;
+	width: 143.75;
 	height: auto;
 	float: left;
 }
@@ -971,6 +971,127 @@ html, body {
 	.grid-item3,
 	.grid-item4 {
 		padding-top: 25px;
+	}
+	.products,
+	.users,
+	.stats{
+		font-size: 14px;
+		border: 1px solid #000000;
+		background-color: rgb(67, 81, 155);
+		width: 100vw;
+		height: 500px;
+		margin: 10px 0 10px 0;
+		padding: -10px;
+		color: white;
+	}
+	.products h3,
+	.users h3,
+	.stats h3{
+		top: -25px;
+		left: 0;
+		position: relative;
+		text-align: center;
+	}
+	.products p,
+	.users p,
+	.stats p{
+		text-align: center;
+	}
+	.showproducts {
+		background-color: #5ce992;
+		overflow-y: scroll;
+		height: 235px;
+		max-height: 235px;
+		width: 600px;
+		float: none;
+		list-style-type: none;
+		display: flex;
+		position: relative;
+		top: -12px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.showproducts ul{
+		width: 100%;
+		list-style-type: none;
+	}
+	.showproducts li {
+		margin: 5px;
+		padding: 2px;
+		background-color: #8da9b3;
+	}
+	.showproducts ul li button{
+		float: right;
+	}
+	.editBtn,
+	.removeBtn{
+		display: block;
+		float: right;
+		font-size: 10px;
+		padding: 0;
+	}
+	.editBtn{
+		width: 30px;
+	}
+	.removeBtn{
+		width: 50px;
+	}
+	
+	.showcgraph {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: none;
+		position: relative;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.showusers {
+		background-color: #5ce992;
+		overflow-y: scroll;
+		height: 235px;
+		max-height: 235px;
+		width: 600px;
+		float: none;
+		list-style-type: none;
+		display: flex;
+		position: relative;
+		top: -12px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.showusers ul{
+		width: 100%;
+		list-style-type: none;
+	}
+	.showusers li {
+		margin: 5px;
+		padding: 2px;
+		background-color: #8da9b3;
+	}
+	.showusers ul li button{
+		float: right;
+	}
+	#addProductDiv,
+	#addUsersDiv,
+	#editProductDiv {
+		width: 300px;
+		float: none;
+		position: relative;
+		top: -20px;
+		margin: 0 auto;
+	}
+	#addProductDiv input,
+	#addUsersDiv input,
+	#editProductDiv input{
+		width: 100%;
+	}
+	#addProductDiv form,
+	#addUsersDiv form,
+	#editProductDiv form{
+		width: 100%;
 	}
 	.questionButtons {
 		grid-column: 2 / 6;

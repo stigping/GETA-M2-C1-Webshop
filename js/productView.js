@@ -21,10 +21,9 @@ function productShow() {
                 </div>
             </div>
         <div class="outerText">
+        <h3>${productsLength <= 0 ? '' : product[productShownId || 0].name} ${productsLength <= 0 ? '' : product[productShownId || 0].price}kr</h3>
         <button>Innhold</button>  <button>Næringsinnhold</button>  <button>Alternativer</button>
-        
-            <div ${model.productShowBox.currentTab === 0 ? '' : }>
-                <h3>${productsLength <= 0 ? '' : product[productShownId || 0].name} ${productsLength <= 0 ? '' : product[productShownId || 0].price}kr</h3>
+            <div ${model.productShowBox.currentTab === 0 ? '' : 'style="display: none"'}>
                 <p>${productsLength <= 0 ? '' : product[productShownId || 0].productInfo}</p> 
             </div>
         </div>
