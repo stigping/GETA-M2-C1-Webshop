@@ -39,7 +39,7 @@ function productShow() {
             Her skal bli alts
             </div>
         </div>
-        <div class="prodButtons">
+        <div class="prodBtns">
             <input type="button" value="Add" onclick="addProduct(${productShownId || 0})">
             <input type="button" value="Continue shopping" onclick="deselectProduct()">
         </div>

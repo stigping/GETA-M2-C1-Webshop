@@ -1,4 +1,4 @@
-function showHowTo() {
+function showAccount() {
     appDiv.innerHTML = `<div id="grid-container">
 <div id="headerContent">
     <div class='logoWrap'>
@@ -15,19 +15,15 @@ function showHowTo() {
     </div>
 </div>
 <div id="mainContent">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oRzlU0ryKcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<video controls><source src=""></video>
-    <div id="howToSteps">
-        <p>Step 1</p>
-            <p>Varm vann</p>
-        <p>Step 2</p>
-            <p>Hell vann i kopp med pulver</p>
-        <p>Step 3</p>
-            <p>???</p>
-        <p>Step 4</p>
-            <p>Profit!</p>
+    <div id="accountInfo">
+        <ul>${model.currentUser.username}</ul>
+    </div>
+
+    <div id="orderHistory">
+        <ul style="list-style-type: none">${listOrderHistory()}</ul>
     </div>
 </div>
+
 <div class="mobileMenu">
     <span>
         <a href="javascript:showA()">
@@ -60,6 +56,13 @@ function showHowTo() {
     <a href="#" class="footer-text">LUNCHPOWER</a>
 </div>
 </div>
-
 `
+}
+
+function listOrderHistory() {
+    let html = '';
+    for (i = 0; i < model.orderHistory[0].orderList.length; i++) {
+        html += `<li>${model.orderHistory[0].orderList[i]}</li>`
+    }
+    return html
 }

@@ -271,9 +271,7 @@ html, body {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	border: #000000;
-	border-style: solid;
-	border-width: 2.2px;
+	border: solid 2.2px #000000;
 	transform: translate(-50%, -50%);
 }
 #productBox img {
@@ -288,7 +286,6 @@ html, body {
 	float: left;
 }
 .slideshow {
-	border: thin solid black;
 	display: inline-block;
 }
 
@@ -533,33 +530,37 @@ html, body {
 	.grid-item1 {
 		padding-top: 25px;
 	}
-
 	#productBox {
 		z-index: 5;
 		background-color: #ffffff;
 		width: 270px;
 		height: 400px;
-		padding: 20px;
+		padding: 0px;
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		border: #000000;
-		border-style: solid;
-		border-width: 2.2px;
+		border: solid 2.2px #000000;
 		transform: translate(-50%, -50%);
 	}
 	#productBox img {
 		z-index: 4;
-		width: 100%;
-		height: auto;
+		width: 265.63px;
+		height: 158.45px;
+		padding: 20px;
 	}
 	#productBox .slides img {
 		z-index: 4;
 		width: 54px;
 		height: 50px;
 		float: left;
+		padding: 0px;
 	}
-	
+	#productBox .slides {
+		padding-left: 25px;
+	}
+	.slideshow {
+		display: inline-block;
+	}
 	#productBox h3 {
 		z-index: 4;
 		text-align: center;
@@ -569,10 +570,20 @@ html, body {
 		z-index: 4;
 		text-align: center;
 	}
+	#productBox li {
+		z-index: 4;
+		font-size: 14px;
+		margin: -5px 0;
+	}
 	.prodBtns {
-		width: 300px;
+		width: 100%;
 		padding: 0;
 		margin: 0;
+		display: flex;
+		justify-content: center;
+	}
+	#productBox #productInfo {
+		font-size: 14px;
 	}
 	#productBox .innholdBtn {
 		z-index: 4;
@@ -1518,9 +1529,7 @@ html, body {
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		border: #000000;
-		border-style: solid;
-		border-width: 2.2px;
+		border: solid 2.2px #000000;
 		transform: translate(-50%, -50%);
 	}
 	#productBox img {
