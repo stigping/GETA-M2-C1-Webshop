@@ -37,8 +37,10 @@ function showAccount() {
             </a>
         </span>
     </ul>
+${showAccountBox()}
 
 </div>
+
 ${showMobileMenu()}
 
 <div id="footerContent">
@@ -48,22 +50,11 @@ ${showMobileMenu()}
 `
 }
 
-function listOrderHistory() {
-    let html = '';
-    for (i = 0; i < model.orderHistory[0].orderList.length; i++) {
-        html += `<li>${model.orderHistory[0].orderList[i]}</li>`
-    }
-    return html
+function showAccountBox() {
+    html = `
+    <div>
+    <h1>${model.currentUser.username}</h1>
+    </div>
+    `;
+
 }
-
-{/* <div id="accountInfo">
-<ul>
-    ${model.currentUser.username}
-</ul>
-</div>
-
-<div id="orderHistory">
-<ul style="list-style-type: none">
-    ${listOrderHistory()}
-</ul>
-</div>*/}
