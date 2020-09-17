@@ -59,7 +59,7 @@ function showAdmin() {
                 <h3>Stats</h3>
             </div>
             <div class="showchart">
-                <canvas id="myChart" width="400" height="3"></canvas>
+                <canvas id="myChart" width="400" height="100"></canvas>
                 <br>
             </div>
             <div>
