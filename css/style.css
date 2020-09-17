@@ -451,8 +451,20 @@ html, body {
 	text-transform: capitalize;
 }
 
-#howToSteps{
-	
+#howToSteps {
+	border: 1px solid #000000;
+	background-color: rgb(67, 81, 155);
+	width: 85%;
+	height: 290px;
+	margin: 10px 10px;
+	padding: 10px;
+	color: white;
+}
+
+
+
+#optionsList {
+
 }
 
 /* CART */

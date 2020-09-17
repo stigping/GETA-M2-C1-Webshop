@@ -53,16 +53,17 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    let list = '<h1>Bestilte Varer</h1>';
-    for (i = 0; i < model.orderHistory[model.currentUser.id].orderList.length; i++) {
+    const orderList = model.orderHistory[model.currentUser.id].orderList;
+    let list = '';
+    for (i = 0; i < orderList.length; i++) {
         list += ` 
-    <p>Liste Nummer ${i + 1}</p>
-    <p>Produkt Navn</p>
-    <li>${model.products[0].name}</li>
-    <p>Mengde</p>
+    <h2>Liste Nummer ${i + 1}</h2>
+    <p>Produkt Navn:</p>
+    <li>${model.products[orderList[i].id].name}</li>
+    <p>Mengde:</p>
     <li>${model.orderHistory[model.currentUser.id].orderList[i].amount}</li>
-    <p>Levert</p>
-    <li>${model.orderHistory[model.currentUser.id].orderList[i].delivered}</li>
+    <p>Levert:</p>
+    <li>${model.orderHistory[model.currentUser.id].orderList[i].delivered === true ? 'Ja' : 'Nei'}</li>
     `
     }
 
@@ -70,6 +71,7 @@ function showOrderHistory() {
     <div>
         <h1>${model.users[model.currentUser.id].name}</h1>
         <div id="orderHistory">
+            <h1>Bestilte Varer</h1>
             <ul>
                 ${list}
             </ul>
@@ -83,13 +85,13 @@ function showOrderHistory() {
 function showContactInformation() {
     html = `
     <p>Navn</p>
-    <li>${model.users[model.currentUser.id].name} ${model.users[model.currentUser.id].surname}</li>
+    <input value="${model.users[model.currentUser.id].name} ${model.users[model.currentUser.id].surname}">
     <p>Email</p>
-    <li>${model.users[model.currentUser.id].email}
-    </li>
+    <input value="${model.users[model.currentUser.id].email}">
     <p>Mobil Nummer</p>
-    <li>${model.users[model.currentUser.id].phoneNumber}
-    </li>
+    <input value="${model.users[model.currentUser.id].phoneNumber}"> <br>
+    <button>Lagre</button>
+
     `;
     document.getElementById('optionsBox').innerHTML = html
 }
@@ -97,7 +99,8 @@ function showContactInformation() {
 function showChangePassword() {
     html = `
     <input placeholder="Gammelt Passord"></input> <br>
-    <input placeholder="Nytt Passord"></input>
+    <input placeholder="Nytt Passord"></input> <br>
+    <button>Lagre</button>
     `;
 
     document.getElementById('optionsBox').innerHTML = html

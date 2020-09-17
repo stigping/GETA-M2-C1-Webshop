@@ -15,18 +15,19 @@ function showHowTo() {
     </div>
 </div>
 <div id="mainContent">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oRzlU0ryKcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<video controls><source src=""></video>
-    <div id="howToSteps">
-        <p>Step 1</p>
-            Varm vann
-        <p>Step 2</p>
-            Hell vann i kopp med pulver
-        <p>Step 3</p>
-            ???
-        <p>Step 4</p>
-            Profit!
+    <div id="videoContent">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oRzlU0ryKcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+        <div id="howToSteps">
+            <p>Step 1</p>
+                Varm vann
+            <p>Step 2</p>
+                Hell vann i kopp med pulver
+            <p>Step 3</p>
+                ???
+            <p>Step 4</p>
+                Profit!
+        </div>
 </div>
 
 ${showMobileMenu()}
