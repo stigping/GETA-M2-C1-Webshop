@@ -56,7 +56,7 @@ function showAccountBox() {
     <div>
         <h1>${model.currentUser.username}</h1>
         <div id="orderHistory">
-        ${model.orderHistory[model.currentUser.id].order}
+        ${model.orderHistory[model.currentUser.id].orderList}
         </div>
     </div>
     `;
