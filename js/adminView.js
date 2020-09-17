@@ -66,7 +66,6 @@ function showAdmin() {
                 <p>stat graph illustration</p>
             </div>
             <div class="showpgraph">
-                <p>Sett inn statistikk på hva som er mest solgt - bakend greier?</p>
             </div>
         </div>
         
@@ -140,6 +139,12 @@ function showChart() {
 
     // Configuration options go here
     options: {
+        legend: {
+            display: true,
+            labels: {
+                fontColor: '#ffffff'
+            }
+        },
         maintainAspectRatio: false
     }
 });

@@ -53,17 +53,12 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    const orderList = model.orderHistory[model.currentUser.id].orderList;
     let list = '';
-    for (i = 0; i < orderList.length; i++) {
-        list += ` 
-    <h2>Liste Nummer ${i + 1}</h2>
-    <p>Produkt Navn:</p>
-    <li>${model.products[orderList[i].id].name}</li>
-    <p>Mengde:</p>
-    <li>${model.orderHistory[model.currentUser.id].orderList[i].amount}</li>
-    <p>Levert:</p>
-    <li>${model.orderHistory[model.currentUser.id].orderList[i].delivered === true ? 'Ja' : 'Nei'}</li>
+    for (i = 0; i < model.orderHistory[model.currentUser.id].orderList.length; i++) {
+        list += `
+            <h3>Liste Nummer ${i + 1}</h3>
+            <li>${model.orderHistory[model.currentUser.id].orderList[i].productsId[0]}</li>
+            <li>${model.orderHistory[model.currentUser.id].orderList[i].productsAmount[0]}</li>
     `
     }
 

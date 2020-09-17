@@ -18,7 +18,12 @@ const model = {
             ],
         paymentModel: {vipps: {}, paypal: {}, card: {}},
         orderHistory:[
-            {username: 'jorn', orderList: [{orderId: 0, delivered: true, products: [{id: 0, amount: 10,}, {id: 1, amount: 5,}],}], id: 0}
+            {username: 'jorn', 
+             orderList: [{orderId: 0, delivered: true, productsId: [0, 1], productsAmount: [5, 10]}], 
+            id: 0},
+            {username: 'karl', 
+            orderList: [{}], 
+            id: 1},
         ],
         productShowBox: {
             productShownId: null,
@@ -28,7 +33,7 @@ const model = {
         currentPage: 'Home',
         isEditing: false,
         inputs: {
-                editProductInputs: {
+            editProductInputs: {
                 name: null,
                 moms: null,
                 productInfo: null,
