@@ -9,7 +9,7 @@ html, body {
 	margin: 0;
 	height: 100%;
 }
-#grid-container {javascript:showB()
+#grid-container {
 	height: 100vh;
 	display: grid;
 	grid-template-rows: 40px 10fr 1rem;
