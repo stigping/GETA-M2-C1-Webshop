@@ -15,7 +15,7 @@ function showAccount() {
     </div>
 </div>
 <div id="mainContent">
-    <ul>
+    <ul id="optionsList">
         <span>
             <a href="javascript:showA()">
                 <li>Dine Bestillinger</li>
@@ -52,11 +52,18 @@ ${showMobileMenu()}
 }
 
 function showAccountBox() {
+    let list = '';
+    for(i = 0; i < model.orderHistory[model.currentUser.id].orderList.length; i++) {
+        list += `<li>${model.orderHistory[model.currentUser.id].orderList[i]}</li>`
+    }
+    
     html = `
     <div>
         <h1>${model.currentUser.username}</h1>
         <div id="orderHistory">
-        ${model.orderHistory[model.currentUser.id].orderList}
+        <ul>
+           ${list}
+        </ul>
         </div>
     </div>
     `;

@@ -10,7 +10,7 @@ function showAdmin() {
             <ul class='menuWrap'>
                 <li class='active'><a href="javascript:showA()">HOME</a></li>
                 <li><a href="javascript:showB()">CART</a></li>
-                <li><a href="#">ACCOUNT</a></li>
+                <li><a href="javascript:showF()">ACCOUNT</a></li>
                 <li><a href="javascript:showD()">HOW TO MAKE</a></li>
                 <li><a href="javascript:showC()">ADMIN</a></li>
             </ul>
@@ -58,15 +58,8 @@ function showAdmin() {
             <div>
                 <h3>Stats</h3>
             </div>
-            <div class="showcgraph">
-                <svg id="cgraph" height="150" width="150" viewBox="0 0 20 20">
-                    <circle r="10" cx="10" cy="10" fill="white" />
-                    <circle r="5" cx="10" cy="10" fill="transparent"
-                    stroke="tomato"
-                    stroke-width="10"
-                    stroke-dasharray="calc(35 * 31.4 / 100) 31.4"
-                    transform="rotate(-90) translate(-20)" />
-                </svg>
+            <div class="showchart">
+                <canvas id="myChart" width="400" height="3"></canvas>
                 <br>
             </div>
             <div>
@@ -105,6 +98,7 @@ function showAdmin() {
     </div>
 </div>
     `;
+    showChart();
 }
 
 function showProducts() {
@@ -124,4 +118,28 @@ function showUsers() {
     html += `<li>${model.users[i].name+' '+model.users[i].surname} <button class="removeBtn" onclick="">Remove</button> <button class="editBtn" onclick="">Edit</button></li>`
     }
     return html
+}
+
+function showChart() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        maintainAspectRatio: false
+    }
+});
 }
