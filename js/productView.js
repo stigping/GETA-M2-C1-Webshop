@@ -55,7 +55,7 @@ function showContents() {
     let html = '';
     if (model.products.length <= 0) return
     for (i = 0; i < product[productShownId || 0].contents.length; i++) {
-        html += `<li>${product[productShownId || 0].contents[i]}</li> <br>`
+        html += `<li>${product[productShownId || 0].contents[i]}</li>`
     }
     return html
 }
