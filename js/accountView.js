@@ -53,13 +53,9 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    const orderList = model.orderHistory[model.currentUser.id].orderList;
-    let list = '';
-    for (i = 0; i < orderList.length; i++) {
-        list += `
-            <li>${getProductName(orderList[i].productsId[i])}</li>
-            <li>${orderList[i].productsAmount[i]}</li>
-    `
+    let list = getOrderList(0);
+    for (i = 0; i < 5; i++) {
+        list += ``;
     }
 
     html = `
@@ -77,10 +73,10 @@ function showOrderHistory() {
     document.getElementById('optionsBox').innerHTML = html
 }
 
-function getProductName(id) {
- product = model.products[id];
- productArray = Object.values(product);
- return productArray[1]
+function getOrderList(id) {
+ list = model.orderHistory[id];
+ listArray = Object.values(list);
+ return listArray[1]
 }
 
 function showContactInformation() {
