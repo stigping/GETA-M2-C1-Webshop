@@ -32,7 +32,7 @@ function showAccount() {
                 </a>
             </span>
             <span>
-                <a href="javascript:showA()">
+                <a href="javascript:showChangePassword()">
                     <li>Endre Passord</li>
                 </a>
             </span>
@@ -91,5 +91,14 @@ function showContactInformation() {
     <li>${model.users[model.currentUser.id].phoneNumber}
     </li>
     `;
+    document.getElementById('optionsBox').innerHTML = html
+}
+
+function showChangePassword() {
+    html = `
+    <input placeholder="Gammelt Passord"></input> <br>
+    <input placeholder="Nytt Passord"></input>
+    `;
+
     document.getElementById('optionsBox').innerHTML = html
 }
