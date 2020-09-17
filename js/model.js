@@ -18,7 +18,7 @@ const model = {
             ],
         paymentModel: {vipps: {}, paypal: {}, card: {}},
         orderHistory:[
-            {username: 'jorn', orderList: [{id: 1, amount: 10, delivered: true}, {id: 0, amount: 5, delivered: false}], id: 0}
+            {username: 'jorn', orderList: [{orderId: 0, delivered: true, products: [{id: 0, amount: 10,}, {id: 1, amount: 5,}],}], id: 0}
         ],
         productShowBox: {
             productShownId: null,
