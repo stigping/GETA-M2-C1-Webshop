@@ -53,9 +53,9 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    let list = getOrderList(0);
+    let list = getOrderList(model.currentUser.id);
     for (i = 0; i < 5; i++) {
-        list += ``;
+        list += `<p></p>`;
     }
 
     html = `
@@ -75,8 +75,10 @@ function showOrderHistory() {
 
 function getOrderList(id) {
  list = model.orderHistory[id];
- listArray = Object.values(list);
- return listArray[0]
+ mainArray = Object.values(list);
+ listArray = mainArray[1]
+
+ return listArray
 }
 
 function showContactInformation() {
