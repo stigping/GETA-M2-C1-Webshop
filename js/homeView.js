@@ -20,45 +20,24 @@ function showHome() {
             <div class="mainGrid">
                     ${showProductsList()}
 
-                    <div class="questionButtons">
-                        <ul>
-                        <li><a></a>TEST 1</li>
+                <div class="questionButtons">
+                    <ul>
+                        <span>
+                            <a href="javascript:showD()">
+                                <li>How To Make</li>
+                            </a>
+                        </span>
                         <li><a></a>TEST</li>
                         <li><a></a>TEST</li>
-                        </ul>
-                    </div>
+                     </ul>
                 </div>
+            </div>
 
                 
     </div>
-    <div class="mobileMenu">
-        <span>
-            <a href="javascript:showA()">
-                <i class="footer-text fas fa-home fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-dragon fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-bed fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-user fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:showB()">
-                <i class="footer-text fas fa-shopping-cart fa-lg"></i>
-            </a>
-        </span>
-    </div>
-    
+        
+    ${showMobileMenu()}
+        
     <div id="footerContent">
         <a href="#" class="footer-text">LUNCHPOWER</a>
     </div>

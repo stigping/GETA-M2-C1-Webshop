@@ -533,8 +533,8 @@ html, body {
 	#productBox {
 		z-index: 5;
 		background-color: #ffffff;
-		width: 270px;
-		height: 400px;
+		width: 290px;
+		height: 480px;
 		padding: 0px;
 		position: fixed;
 		top: 50%;
@@ -548,6 +548,11 @@ html, body {
 		height: 158.45px;
 		padding: 20px;
 	}
+	#productBox .topProdImg {
+		z-index: 4;
+		display: flex;
+		justify-content: center;
+	}
 	#productBox .slides img {
 		z-index: 4;
 		width: 54px;
@@ -555,8 +560,9 @@ html, body {
 		float: left;
 		padding: 0px;
 	}
-	#productBox .slides {
-		padding-left: 25px;
+	#productBox .slideshow {
+		display: flex;
+		justify-content: center;
 	}
 	.slideshow {
 		display: inline-block;
@@ -577,11 +583,15 @@ html, body {
 	}
 	.prodBtns {
 		width: 100%;
-		padding: 0;
-		margin: 0;
-		bottom: 0;
 		display: flex;
 		justify-content: center;
+	}
+	.shopBtns {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		bottom: 0;
 	}
 	#productBox #productInfo {
 		font-size: 14px;
@@ -983,6 +993,90 @@ html, body {
 	#editProductDiv form{
 		width: 100%;
 	}
+	#productBox {
+		z-index: 5;
+		background-color: #ffffff;
+		width: 450px;
+		height: 600px;
+		padding: 0px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		border: solid 2.2px #000000;
+		transform: translate(-50%, -50%);
+	}
+	#productBox img {
+		z-index: 4;
+		width: 445.63px;
+		height: 216px;
+		padding: 20px;
+	}
+	#productBox .topProdImg {
+		z-index: 4;
+		display: flex;
+		justify-content: center;
+	}
+	#productBox .slides img {
+		z-index: 4;
+		width: 98px;
+		height: 80px;
+		float: left;
+		padding: 0px;
+	}
+	#productBox .slideshow {
+		display: flex;
+		justify-content: center;
+	}
+	.slideshow {
+		display: inline-block;
+	}
+	#productBox h3 {
+		z-index: 4;
+		text-align: center;
+		font-size: 24px;
+	}
+	#productBox p {
+		z-index: 4;
+		text-align: center;
+	}
+	#productBox li {
+		z-index: 4;
+		font-size: 18px;
+		margin: -5px 0;
+	}
+	.prodBtns {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.shopBtns {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		bottom: 0;
+	}
+	#productBox #productInfo, #content, #alternatives {
+		font-size: 18px;
+	}
+	#productBox .innholdBtn {
+		z-index: 4;
+		text-align: center;
+		font-size: 16px;
+		width: 80px;
+	}
+	#productBox .naeringBtn {
+		z-index: 4;
+		text-align: center;
+		font-size: 16px;
+		width: 125px;
+	}
+	#productBox .altBtn {
+		z-index: 4;
+		text-align: center;
+		font-size: 16px;
+		width: 100px;
+	}
 	.questionButtons {
 		width: 100%;
 		height: 238px;
@@ -1025,6 +1119,9 @@ html, body {
 		display: none;
 	}
 	/* CART */
+
+	
+
 	/* ADMIN */	
 }
 

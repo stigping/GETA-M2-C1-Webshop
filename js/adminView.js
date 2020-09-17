@@ -97,36 +97,9 @@ function showAdmin() {
                 </ul>
             </div>
         </div>
-        
-    <div class="mobileMenu">
-        <span>
-            <a href="javascript:showA()">
-                <i class="footer-text fas fa-home fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-dragon fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-bed fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:_blank">
-                <i class="footer-text fas fa-user fa-lg"></i>
-            </a>
-        </span>
-        <span>
-            <a href="javascript:showB()">
-                <i class="footer-text fas fa-shopping-cart fa-lg"></i>
-            </a>
-        </span>
-    </div>    
-        
-    </div>
+
+        ${showMobileMenu()} 
+
     <div id="footerContentNoScroll">
         <a href="#" class="footer-text">LUNCHPOWER</a>
     </div>

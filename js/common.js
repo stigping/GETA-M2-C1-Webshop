@@ -1,9 +1,13 @@
 function addProduct(prodId) {
     const shoppingBasket = model.shoppingBasket[model.currentUser.id].products;
     if (searchBasketProductIndex(prodId) === -1) {
-       shoppingBasket.push({id: prodId, amount: 1, priceTotal: null});
-       model.productShowBox.productShownId = null;
-       return showB()
+        shoppingBasket.push({
+            id: prodId,
+            amount: 1,
+            priceTotal: null
+        });
+        model.productShowBox.productShownId = null;
+        return showB()
     } else {
         productIndex = searchBasketProductIndex(prodId);
         shoppingBasket[productIndex].amount++
@@ -37,4 +41,38 @@ function deselectProduct() {
 function searchBasketProductIndex(id) {
     let search = model.shoppingBasket[model.currentUser.id].products.findIndex(searchid => searchid['id'] === id);
     return search
+}
+
+function showMobileMenu() {
+    html = `     
+<div class="mobileMenu">
+    <span>
+        <a href="javascript:showA()">
+            <i class="footer-text fas fa-home fa-lg"></i>
+        </a>
+    </span>
+    <span>
+        <a href="javascript:_blank">
+            <i class="footer-text fas fa-dragon fa-lg"></i>
+        </a>
+    </span>
+    <span>
+        <a href="javascript:_blank">
+            <i class="footer-text fas fa-bed fa-lg"></i>
+        </a>
+    </span>
+    <span>
+        <a href="javascript:showF()">
+            <i class="footer-text fas fa-user fa-lg"></i>
+        </a>
+    </span>
+    <span>
+        <a href="javascript:showB()">
+            <i class="footer-text fas fa-shopping-cart fa-lg"></i>
+        </a>
+    </span>
+</div>
+`;
+
+    return html
 }

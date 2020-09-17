@@ -40,23 +40,9 @@ ${productShow()}
     </ul>
         
 </div>
-<div class="mobileMenu">
-    <span>
-        <a onclick="javascript:showA()" class="footer-text fas fa-home fa-lg"></a>
-    </span>
-    <span>
-        <a href="dragon.html" class="footer-text fas fa-dragon fa-lg"></a>
-    </span>
-    <span>
-        <a href="bed.html" class="footer-text fas fa-bed fa-lg"></a>
-    </span>
-    <span>
-        <a href="user.html" class="footer-text fas fa-user fa-lg"></a>
-    </span>
-    <span>
-        <a onclick="javascript:showB()" class="footer-text fas fa-shopping-cart fa-lg"></a>
-    </span>
-</div>
+
+    ${showMobileMenu()}
+
 <div id="footerContentNoScroll">
     <a href="#" class="footer-text">LUNCHPOWER</a>
 </div>
