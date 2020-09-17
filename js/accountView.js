@@ -61,9 +61,9 @@ function showAccountBox() {
     <div>
         <h1>${model.currentUser.username}</h1>
         <div id="orderHistory">
-        <ul>
-           ${list}
-        </ul>
+            <ul>
+                ${list}
+            </ul>
         </div>
     </div>
     `;
