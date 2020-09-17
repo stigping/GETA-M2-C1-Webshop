@@ -56,8 +56,8 @@ html, body {
 }
 .showchart {
 	position: relative;
-	height: 40vh;
-	width: 80vw;
+	height: 30vh;
+	width: 40vw;
 }
 #addProductDiv,
 #addUsersDiv,
@@ -450,6 +450,11 @@ html, body {
 .mainContent h3{
 	text-transform: capitalize;
 }
+
+#howToSteps{
+	
+}
+
 /* CART */
 
 /* ADMIN */

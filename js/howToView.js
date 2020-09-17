@@ -19,13 +19,13 @@ function showHowTo() {
 <video controls><source src=""></video>
     <div id="howToSteps">
         <p>Step 1</p>
-            <p>Varm vann</p>
+            Varm vann
         <p>Step 2</p>
-            <p>Hell vann i kopp med pulver</p>
+            Hell vann i kopp med pulver
         <p>Step 3</p>
-            <p>???</p>
+            ???
         <p>Step 4</p>
-            <p>Profit!</p>
+            Profit!
     </div>
 </div>
 

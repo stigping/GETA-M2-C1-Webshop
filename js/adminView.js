@@ -59,7 +59,7 @@ function showAdmin() {
                 <h3>Stats</h3>
             </div>
             <div class="showchart">
-                <canvas id="myChart" width="400" height="100"></canvas>
+                <canvas id="myChart"></canvas>
                 <br>
             </div>
             <div>
@@ -124,16 +124,17 @@ function showChart() {
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
     // The type of chart we want to create
-    type: 'line',
+    type: 'bar',
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Kokkejævelens kyllinggryte', 'Alle biffgryters bestemor', 'Tom Peng Pong Asiatisk gryte', 'Lange slappe nudlær', 'Stor Fin Fisk'],
         datasets: [{
-            label: 'My First dataset',
+            label: 'Antall Salg',
             backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            hoverBorderColor: '#000000',
+            hoverBorderWidth: '1',
+            data: [model.products[0].purchaseHistory, model.products[1].purchaseHistory, model.products[2].purchaseHistory, model.products[3].purchaseHistory, model.products[4].purchaseHistory]
         }]
     },
 
