@@ -37,7 +37,8 @@ function showAccount() {
             </a>
         </span>
     </ul>
-${showAccountBox()}
+
+    ${showAccountBox()}
 
 </div>
 
@@ -53,8 +54,13 @@ ${showMobileMenu()}
 function showAccountBox() {
     html = `
     <div>
-    <h1>${model.currentUser.username}</h1>
+        <h1>${model.currentUser.username}</h1>
+        <div id="orderHistory">
+        ${model.orderHistory[model.currentUser.id].order}
+        </div>
     </div>
     `;
+
+    return html
 
 }

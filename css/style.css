@@ -591,6 +591,7 @@ html, body {
 		display: flex;
 		justify-content: center;
 		position: absolute;
+		left: 0;
 		bottom: 0;
 	}
 	#productBox #productInfo {
@@ -1054,6 +1055,7 @@ html, body {
 		display: flex;
 		justify-content: center;
 		position: absolute;
+		left: 0;
 		bottom: 0;
 	}
 	#productBox #productInfo, #content, #alternatives {
@@ -1699,6 +1701,7 @@ html, body {
 		display: flex;
 		justify-content: center;
 		position: absolute;
+		left: 0;
 		bottom: 0;
 	}
 	#productBox #productInfo, #content, #alternatives {
