@@ -53,12 +53,12 @@ function showAccount() {
 }
 
 function showOrderHistory() {
+    const orderList = model.orderHistory[model.currentUser.id].orderList;
     let list = '';
-    for (i = 0; i < model.orderHistory[model.currentUser.id].orderList.length; i++) {
+    for (i = 0; i < orderList.length; i++) {
         list += `
-            <h3>Liste Nummer ${i + 1}</h3>
-            <li>${model.orderHistory[model.currentUser.id].orderList[i].productsId[0]}</li>
-            <li>${model.orderHistory[model.currentUser.id].orderList[i].productsAmount[0]}</li>
+            <li>${getProductName(orderList[i].productsId[i])}</li>
+            <li>${orderList[i].productsAmount[i]}</li>
     `
     }
 
@@ -75,6 +75,12 @@ function showOrderHistory() {
     `;
 
     document.getElementById('optionsBox').innerHTML = html
+}
+
+function getProductName(id) {
+ product = model.products[id];
+ productArray = Object.values(product);
+ return productArray[1]
 }
 
 function showContactInformation() {
