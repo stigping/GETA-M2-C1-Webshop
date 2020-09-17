@@ -58,7 +58,7 @@ function showOrderHistory() {
         list += ` 
     <p>Liste Nummer ${i + 1}</p>
     <p>Produkt Navn</p>
-    <li>${model.products[model.orderHistory[model.currentUser.id]].name}</li>
+    <li>${model.products[0].name}</li>
     <p>Mengde</p>
     <li>${model.orderHistory[model.currentUser.id].orderList[i].amount}</li>
     <p>Levert</p>
