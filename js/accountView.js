@@ -76,7 +76,7 @@ function showOrderHistory() {
 function getOrderList(id) {
  list = model.orderHistory[id];
  listArray = Object.values(list);
- return listArray[1]
+ return listArray[0]
 }
 
 function showContactInformation() {
