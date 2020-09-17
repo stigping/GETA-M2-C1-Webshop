@@ -42,8 +42,8 @@ function productShow() {
             </div>
         </div>
         <div class="shopBtns">
-            <input type="button" value="Add" onclick="addProduct(${productShownId || 0})">
-            <input type="button" value="Continue shopping" onclick="deselectProduct()">
+            <input class="addBtn" type="button" value="Add" onclick="addProduct(${productShownId || 0})">
+            <input class="continueBtn" type="button" value="Continue shopping" onclick="deselectProduct()">
         </div>
     </div>
 </div>`;

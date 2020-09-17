@@ -15,19 +15,30 @@ function showAccount() {
     </div>
 </div>
 <div id="mainContent">
-    <div id="accountInfo">
-        <ul>
-            ${model.currentUser.username}
-        </ul>
-    </div>
+    <ul>
+        <span>
+            <a href="javascript:showA()">
+                <li>Dine Bestillinger</li>
+            </a>
+        </span>
+        <span>
+            <a href="javascript:showA()">
+                <li>Kontakt Informasjon</li>
+            </a>
+        </span>
+        <span>
+            <a href="javascript:showA()">
+                <li>Betaling</li>
+            </a>
+        </span>
+        <span>
+            <a href="javascript:showA()">
+                <li>Endre Passord</li>
+            </a>
+        </span>
+    </ul>
 
-    <div id="orderHistory">
-        <ul style="list-style-type: none">
-            ${listOrderHistory()}
-        </ul>
-    </div>
 </div>
-
 ${showMobileMenu()}
 
 <div id="footerContent">
@@ -44,3 +55,15 @@ function listOrderHistory() {
     }
     return html
 }
+
+{/* <div id="accountInfo">
+<ul>
+    ${model.currentUser.username}
+</ul>
+</div>
+
+<div id="orderHistory">
+<ul style="list-style-type: none">
+    ${listOrderHistory()}
+</ul>
+</div>*/}
