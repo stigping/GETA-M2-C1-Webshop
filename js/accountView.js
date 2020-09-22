@@ -53,7 +53,7 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    let list = getOrderList(model.currentUser.id);
+    let list = getOrderList();
     for (i = 0; i < 5; i++) {
         list += `<p></p>`;
     }
@@ -75,12 +75,10 @@ function showOrderHistory() {
     document.getElementById('optionsBox').innerHTML = html
 }
 
-function getOrderList(id) {
- list = model.orderHistory[id];
- mainArray = Object.values(list);
- listArray = mainArray[1]
-
- return listArray
+function getOrderList() {
+    test = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList[0]
+    console.log(test)
+    return test
 }
 
 function showContactInformation() {
