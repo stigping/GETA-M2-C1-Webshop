@@ -77,8 +77,10 @@ function showOrderHistory() {
 }
 
 function test() {
-    orderList = model.orderHistory[0].orderList.productsId[0];
-    return orderList
+    const orderList = model.orderHistory[model.currentUser.id].orderList;
+    for (i = 0; i < orderList.length; i++) {
+        console.log(model.orderHistory[model.currentUser.id].orderList[i].productsId[i])
+    }
 }
 
 function getOrderList() {
