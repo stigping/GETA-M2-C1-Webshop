@@ -85,3 +85,5 @@ function adminEditUser(id) {
     console.log(index);
     showAdmin();
 }
+
+function updateUser()

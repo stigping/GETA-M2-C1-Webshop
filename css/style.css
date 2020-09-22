@@ -463,11 +463,10 @@ html, body {
 	color: white;
 	justify-content: center;
 	align-items: center;
-	
 }
 
 #howToSteps h1 {
-	font-size: 18;
+	font-size: 14;
 }
 
 iframe {
