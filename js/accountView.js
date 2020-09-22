@@ -53,7 +53,7 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    // orderList = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList;
+    products = test();
     let list = '';
     for (i = 0; i < 2; i++) {
         list += `<p></p>`;
@@ -79,7 +79,7 @@ function showOrderHistory() {
 function test() {
     const orderList = model.orderHistory[model.currentUser.id].orderList;
     for (i = 0; i < orderList.length; i++) {
-        console.log(model.orderHistory[model.currentUser.id].orderList[i].productsId[i])
+        console.log(orderList[i].productsId[i])
     }
 }
 
