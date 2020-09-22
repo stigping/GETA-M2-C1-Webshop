@@ -28,7 +28,7 @@ function showAccount() {
             </span>
             <span>
                 <a href="javascript:showA()">
-                    <li>Betaling</li>
+                    <li>Lagrede Betalings Metoder</li>
                 </a>
             </span>
             <span>
@@ -59,8 +59,8 @@ function showOrderHistory() {
     }
 
     html = `
-    <div>
-        <h1>${model.users[model.currentUser.id].name}</h1>
+    <div class="accountBox">
+        <h1>Bruker: ${model.users[model.currentUser.id].name}</h1>
         <div id="orderHistory">
             <h1>Bestilte Varer</h1>
             <ul>
@@ -83,23 +83,26 @@ function getOrderList(id) {
 
 function showContactInformation() {
     html = `
-    <p>Navn</p>
-    <input value="${model.users[model.currentUser.id].name} ${model.users[model.currentUser.id].surname}">
-    <p>Email</p>
-    <input value="${model.users[model.currentUser.id].email}">
-    <p>Mobil Nummer</p>
-    <input value="${model.users[model.currentUser.id].phoneNumber}"> <br>
-    <button>Lagre</button>
-
+    <div class="accountBox">
+        <p>Navn</p>
+        <input value="${model.users[model.currentUser.id].name} ${model.users[model.currentUser.id].surname}">
+        <p>Email</p>
+        <input value="${model.users[model.currentUser.id].email}">
+        <p>Mobil Nummer</p>
+        <input value="${model.users[model.currentUser.id].phoneNumber}"> <br>
+        <button>Lagre</button>
+    </div>
     `;
     document.getElementById('optionsBox').innerHTML = html
 }
 
 function showChangePassword() {
     html = `
-    <input placeholder="Gammelt Passord"></input> <br>
-    <input placeholder="Nytt Passord"></input> <br>
-    <button>Lagre</button>
+    <div class="accountBox">
+        <input placeholder="Gammelt Passord"></input> <br>
+        <input placeholder="Nytt Passord"></input> <br>
+        <button>Lagre</button>
+    </div>
     `;
 
     document.getElementById('optionsBox').innerHTML = html

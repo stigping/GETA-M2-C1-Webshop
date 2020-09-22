@@ -801,6 +801,18 @@ iframe {
 	#footerContentNoScroll{
 		display: none;
 	}
+	.accountBox{
+		width: 100%;
+		height: 400px;
+		font-size: 12px;
+		border: 1px solid #000000;
+		background-color: #67647d;
+		text-align: center;
+		overflow-y: scroll;
+	}
+	.accountBox h3{
+		font-size: 14px;
+	}
 	/* CART */
 	/* ADMIN */	
 }
@@ -1124,6 +1136,18 @@ iframe {
 	#footerContentNoScroll{
 		display: none;
 	}
+	.accountBox{
+		width: 100%;
+		height: 400px;
+		font-size: 12px;
+		border: 1px solid #000000;
+		background-color: #67647d;
+		text-align: center;
+		overflow-y: scroll;
+	}
+	.accountBox h3{
+		font-size: 14px;
+	}
 	/* CART */
 
 	#cartInfo {
@@ -1279,6 +1303,21 @@ iframe {
 	}
 	.questionButtons {
 		grid-column: 2 / 6;
+	}
+	.accountBox{
+		width: 500px;
+		height: 400px;
+		font-size: 12px;
+		border: 1px solid #000000;
+		background-color: #67647d;
+		text-align: center;
+		overflow-y: scroll;
+		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.accountBox h3{
+		font-size: 14px;
 	}
 	/* CART */
 	/* ADMIN */	

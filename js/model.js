@@ -31,7 +31,8 @@ const model = {
             currentTab: 0,
         },
         currentPage: 'Home',
-        isEditing: false,
+        productIsEditing: false,
+        userIsEditing: false,
         inputs: {
             editProductInputs: {
                 name: null,
@@ -61,6 +62,14 @@ const model = {
                 email: null, 
                 password: null, 
                 id: 5, 
+                isAdmin: null,
+            },
+            editUserInputs: {
+                username: null, 
+                name: null, 
+                surname: null, 
+                email: null, 
+                password: null,
                 isAdmin: null,
             }
         },
