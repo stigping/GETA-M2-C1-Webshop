@@ -78,8 +78,9 @@ function showOrderHistory() {
 
 function test() {
     const orderList = model.orderHistory[model.currentUser.id].orderList;
+    products = null;
     for (i = 0; i < orderList.length; i++) {
-        console.log(orderList[i].productsId[i])
+       products += orderList[i].productsId[i]
     }
 }
 
