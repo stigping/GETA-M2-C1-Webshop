@@ -76,9 +76,11 @@ function showOrderHistory() {
 }
 
 function getOrderList() {
-    test = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList[0]
-    console.log(test)
-    return test
+    test = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList;
+    for (i = 0; i < test.length; i++) {
+        html += `<p></p>`
+    }
+    return console.log(test.length)
 }
 
 function showContactInformation() {
@@ -107,3 +109,8 @@ function showChangePassword() {
 
     document.getElementById('optionsBox').innerHTML = html
 }
+
+
+
+
+// model.orderHistory[0].orderId
