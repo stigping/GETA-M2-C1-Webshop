@@ -86,6 +86,6 @@ function adminEditUser(id) {
     showAdmin();
 }
 
-function updateUser() {
-    
+function updateUser(really) {
+
 }
