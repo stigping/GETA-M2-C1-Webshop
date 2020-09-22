@@ -10,7 +10,7 @@ function showHome() {
             <ul class='menuWrap'>
                 <li class='active'><a href="javascript:showA()">HOME</a></li>
                 <li><a href="javascript:showB()">CART</a></li>
-                <li><a href="javascript:showF()">ACCOUNT</a></li>
+                ${searchUserIndex(model.currentUser.id) === -1 ? '<li><a href="javascript:showHome()">Logg inn</a></li>' : '<li><a href="javascript:showF()">ACCOUNT</a></li>'}
                 <li><a href="javascript:showD()">HOW TO MAKE</a></li>
                 ${model.currentUser.isAdmin === true ? '<li><a href="javascript:showC()">ADMIN</a></li>' : ''}
             </ul>
@@ -18,7 +18,8 @@ function showHome() {
     </div>
     <div id="mainContent">
             <div class="mainGrid">
-                    ${showProductsList()}
+                    
+                ${showProductsList()}
 
                 <div class="questionButtons">
                     <ul>

@@ -27,7 +27,7 @@ function showAccount() {
                 </a>
             </span>
             <span>
-                <a href="javascript:showA()">
+                <a href="javascript:showPaymentMethods()">
                     <li>Lagrede Betalings Metoder</li>
                 </a>
             </span>
@@ -53,21 +53,22 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    products = test();
+    const orderList = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList;
     let list = '';
-    for (i = 0; i < 2; i++) {
-        list += `<p></p>`;
+    if (orderList.length <= 0) {
+        list = `<p>Du har ingen bestillinger</p>`
+    } else {
+        for (index = 0; index < orderList.length; index++) {
+            list += getOrderList(index)
+        }
     }
-
     html = `
     <div class="accountBox">
         <h1>Bruker: ${model.users[model.currentUser.id].name}</h1>
         <div id="orderHistory">
             <h1>Bestilte Varer</h1>
             <div>
-                <ul>
-                    ${list}
-                </ul>
+                ${list}
             </div>
         </div>
     </div>
@@ -76,24 +77,28 @@ function showOrderHistory() {
     document.getElementById('optionsBox').innerHTML = html
 }
 
-function test() {
-    const orderList = model.orderHistory[model.currentUser.id].orderList;
-    products = null;
-    for (i = 0; i < orderList.length; i++) {
-       products += orderList[i].productsId[i]
+function getOrderList(id) {
+    const orderList = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList;
+    let list = `
+    <h1>Order Number: ${orderList[id].orderId + 1}</h1>`;
+    for (i = 0; i < orderList[id].productsId.length; i++) {
+        list += `
+             <p>Produkt ${i + 1}: ${model.products[orderList[id].productsId[i]].name}</p>
+             <p>Mengde: ${orderList[id].productsAmount[i]}</p>
+             `;
     }
+    list += `<p>Delivered: ${orderList[id].delivered}</p>`
+    return list
 }
 
-function getOrderList() {
-    test = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList;
-    for (i = 0; i < test.length; i++) {
-        html += `<p></p>`
-    }
-    return console.log(test.length)
+function showPaymentMethods() {
+    let html = `<div>Hei</div>`;
+    
+    document.getElementById('optionsBox').innerHTML = html
 }
 
 function showContactInformation() {
-    html = `
+    let html = `
     <div class="accountBox">
         <p>Navn</p>
         <input value="${model.users[model.currentUser.id].name} ${model.users[model.currentUser.id].surname}">
@@ -108,7 +113,7 @@ function showContactInformation() {
 }
 
 function showChangePassword() {
-    html = `
+    let html = `
     <div class="accountBox">
         <input placeholder="Gammelt Passord"></input> <br>
         <input placeholder="Nytt Passord"></input> <br>
