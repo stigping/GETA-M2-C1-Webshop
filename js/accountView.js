@@ -63,9 +63,11 @@ function showOrderHistory() {
         <h1>Bruker: ${model.users[model.currentUser.id].name}</h1>
         <div id="orderHistory">
             <h1>Bestilte Varer</h1>
-            <ul>
-                ${list}
-            </ul>
+            <div>
+                <ul>
+                    ${list}
+                </ul>
+            </div>
         </div>
     </div>
     `;

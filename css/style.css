@@ -61,6 +61,7 @@ html, body {
 }
 #addProductDiv,
 #addUsersDiv,
+#editUsersDiv,
 #editProductDiv {
 	width: 500px;
 	float: left;
@@ -69,6 +70,7 @@ html, body {
 }
 #addProductDiv input,
 #addUsersDiv input,
+#editUsersDiv input,
 #editProductDiv input{
 	width: 100%;
 }
@@ -1305,8 +1307,8 @@ iframe {
 		grid-column: 2 / 6;
 	}
 	.accountBox{
-		width: 500px;
-		height: 400px;
+		width: 750px;
+		height: 800px;
 		font-size: 12px;
 		border: 1px solid #000000;
 		background-color: #67647d;
@@ -1472,6 +1474,14 @@ iframe {
 	}
 	.questionButtons {
 		grid-column: 2 / 6;
+	}
+	.accountBox{
+		width: 950px;
+		height: 800px;
+		font-size: 12px;
+	}
+	.accountBox h3{
+		font-size: 14px;
 	}
 	/* CART */
 
@@ -1818,6 +1828,14 @@ iframe {
 	
 	.mainContent h3{
 		text-transform: capitalize;
+	}
+	.accountBox{
+		width: 1200px;
+		height: 800px;
+		font-size: 12px;
+	}
+	.accountBox h3{
+		font-size: 14px;
 	}
 	/* CART */
 	/* ADMIN */	
