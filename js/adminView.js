@@ -89,8 +89,8 @@ function showAdmin() {
                         <button type="button" onclick="adminAddUser()">Add User</button>
                         <input type="text" placeholder="Username" value="${model.inputs.editUsersInputs.username}" onchange="model.inputs.editUserInputs.username = this.value"></input>
                         <input type="text" placeholder="First name" value="${model.inputs.editUsersInputs.name}" onchange="model.inputs.editUserInputs.name = this.value"></input>
-                        <input type="text" placeholder="Surname" onchange="model.inputs.editUserInputs.surname = this.value"></input>
-                        <input type="text" placeholder="E-mail" onchange="model.inputs.editUserInputs.email = this.value"></input>
+                        <input type="text" placeholder="Surname" value="${model.inputs.editUsersInputs.surname}" onchange="model.inputs.editUserInputs.surname = this.value"></input>
+                        <input type="text" placeholder="E-mail" value="${model.inputs.editUsersInputs.isAdmin}" onchange="model.inputs.editUserInputs.email = this.value"></input>
                         <input type="text" placeholder="Phone Number" onchange="model.inputs.editUserInputs.phoneNumber = this.value"></input>
                         <input type="text" placeholder="Password" onchange="model.inputs.editUserInputs.password = this.value"></input>
                         <input type="text" placeholder="Admin" value="${model.inputs.editUsersInputs.isAdmin}" onchange="model.inputs.editUserInputs.isAdmin = this.value"></input>
