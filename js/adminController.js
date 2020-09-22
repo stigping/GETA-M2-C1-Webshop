@@ -70,22 +70,22 @@ function adminRemoveUser(id) {
 
 function adminEditUser(id) {
     index = searchUserIndex(id);
-    if (update === false) {
-        model.userIsEditing = false;
-        model.inputs.editProductInputs = [];
-        return showAdmin()
-    }
-    if (update === true) {
-        model.userIsEditing = false;
-        model.products[index] = model.inputs.editProductInputs;
-        return showAdmin()
-    }
-    model.inputs.editUserInputs = model.users[index];
+    stringified = JSON.stringify(model.users[index]);
+    parsed = JSON.parse(stringified);
+    model.inputs.editUserInputs = parsed;
     model.userIsEditing = true;
     console.log(index);
     showAdmin();
 }
 
 function updateUser(really) {
-
+    if (really === true) {
+        model.userIsEditing = false;
+        model.users[index] = model.inputs.editUserInputs;
+        }   
+    if (really === false) {
+        model.userIsEditing = false;
+        model.inputs.editUserInputs = [];
+        }
+    showAdmin()
 }

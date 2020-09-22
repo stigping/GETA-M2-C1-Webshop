@@ -457,16 +457,10 @@ html, body {
 	border: 1px solid #000000;
 	background-color: rgb(67, 81, 155);
 	width: 85%;
-	height: 290px;
+	height: 325px;
 	margin: 10px 10px;
-	padding: 10px;
+	padding: 5px;
 	color: white;
-	justify-content: center;
-	align-items: center;
-}
-
-#howToSteps h1 {
-	font-size: 14;
 }
 
 iframe {

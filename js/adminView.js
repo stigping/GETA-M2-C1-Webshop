@@ -86,7 +86,7 @@ function showAdmin() {
             </div>
             <div id="editUsersDiv">
                 <form ${model.userIsEditing === false ? 'style="display: none"' : ''}>
-                        <button type="button" onclick="adminEditUser('', true)">Edit User</button> <button type="button" onclick="adminEditUser('', false)">Cancel</button>
+                        <button type="button" onclick="updateUser(true)">Edit User</button> <button type="button" onclick="updateUser(false)">Cancel</button>
                         <input type="text" placeholder="Username" value="${model.inputs.editUserInputs.username}" onchange="model.inputs.editUserInputs.username = this.value"></input>
                         <input type="text" placeholder="First name" value="${model.inputs.editUserInputs.name}" onchange="model.inputs.editUserInputs.name = this.value"></input>
                         <input type="text" placeholder="Surname" value="${model.inputs.editUserInputs.surname}" onchange="model.inputs.editUserInputs.surname = this.value"></input>
