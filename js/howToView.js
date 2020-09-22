@@ -17,13 +17,16 @@ function showHowTo() {
 <div id="mainContent">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/oRzlU0ryKcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div id="howToSteps">
-            <p>Step 1</p>
+            <h1>Step 1</h1>
                 Varm vann
-            <p>Step 2</p>
+            <br>
+            <h1>Step 2</h1>
                 Hell vann i kopp med pulver
-            <p>Step 3</p>
+            <br>
+            <h1>Step 3</h1>
                 ???
-            <p>Step 4</p>
+            <br>
+            <h1>Step 4</h1>
                 Profit!
         </div>
 </div>

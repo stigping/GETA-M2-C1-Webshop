@@ -23,24 +23,26 @@ function adminRemoveProduct(id) {
     return showAdmin();
 }
 
-function adminEditProduct(id, update) {
+function adminEditProduct(id) {
     index = searchProductIndex(id);
-    if (update === false) {
-        model.productIsEditing = false;
-        model.inputs.editProductInputs = [];
-        return showAdmin()
-    }
-    if (update === true) {
-        model.productIsEditing = false;
-        model.products[index] = model.inputs.editProductInputs;
-        return showAdmin()
-    }
-    // stringified = JSON.stringify(model.inputs.editProductInputs);
-    // parsed = JSON.parse(stringified);
-    model.inputs.editProductInputs = model.products[index]; 
+    stringified = JSON.stringify(model.products[index]);
+    parsed = JSON.parse(stringified);
+    model.inputs.editProductInputs = parsed; 
     model.productIsEditing = true;
     console.log(index);
     showAdmin();
+}
+
+function updateProduct(really) {
+    if (really === true) {
+    model.productIsEditing = false;
+    model.products[index] = model.inputs.editProductInputs;
+    }   
+    if (really === false) {
+    model.productIsEditing = false;
+    model.inputs.editProductInputs = [];
+    }
+    showAdmin()
 }
 
 function adminAddUser() {
@@ -66,7 +68,7 @@ function adminRemoveUser(id) {
     showAdmin();
 }
 
-function adminEditUser(id, update) {
+function adminEditUser(id) {
     index = searchUserIndex(id);
     if (update === false) {
         model.userIsEditing = false;
