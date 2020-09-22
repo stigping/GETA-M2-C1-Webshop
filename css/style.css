@@ -808,12 +808,14 @@ iframe {
 		height: 400px;
 		font-size: 12px;
 		border: 1px solid #000000;
-		background-color: #67647d;
+		background-color: #43319B;
 		text-align: center;
 		overflow-y: scroll;
+		color: #ffffff;
 	}
 	.accountBox h3{
 		font-size: 14px;
+		color: #ffffff;
 	}
 	/* CART */
 	/* ADMIN */	
@@ -1141,14 +1143,22 @@ iframe {
 	.accountBox{
 		width: 100%;
 		height: 400px;
-		font-size: 12px;
+		font-size: 18px;
 		border: 1px solid #000000;
-		background-color: #67647d;
+		background-color: #43319B;
 		text-align: center;
 		overflow-y: scroll;
+		color: #ffffff;
 	}
-	.accountBox h3{
-		font-size: 14px;
+	.accountBox h1{
+		font-size: 28px;
+		color: #ffffff;
+		font
+	}
+	.accountBox h3,
+	.accountBox p{
+		font-size: 22px;
+		color: #ffffff;
 	}
 	/* CART */
 
@@ -1311,7 +1321,7 @@ iframe {
 		height: 800px;
 		font-size: 12px;
 		border: 1px solid #000000;
-		background-color: #67647d;
+		background-color: #43319B;
 		text-align: center;
 		overflow-y: scroll;
 		margin: auto;
