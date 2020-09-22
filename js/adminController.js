@@ -35,9 +35,9 @@ function adminEditProduct(id, update) {
         model.products[index] = model.inputs.editProductInputs;
         return showAdmin()
     }
-    stringified = JSON.stringify(model.inputs.editProductInputs);
-    parsed = JSON.parse(model.products[index]);
-    model.products[index] = parsed;
+    // stringified = JSON.stringify(model.inputs.editProductInputs);
+    // parsed = JSON.parse(stringified);
+    model.inputs.editProductInputs = model.products[index]; 
     model.productIsEditing = true;
     console.log(index);
     showAdmin();
