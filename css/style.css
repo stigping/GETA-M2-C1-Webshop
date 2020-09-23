@@ -5,9 +5,10 @@
 	box-sizing: border-box;
 }
 html, body {
-	background-color: #add8e6;
 	margin: 0;
 	height: 100%;
+	color: #413746;
+	background-color: #ffffff;
 }
 #grid-container {
 	height: 100vh;
@@ -20,15 +21,25 @@ html, body {
 }
 #headerContent {
 	grid-area: header;
-	background-color: #758c94;
-	padding: 10px;
-	text-align: left;
-	color: #ffffff;
+    position: relative;
+    left: 0;
+    width: auto;
+    margin: 0;
+	padding: 0;
+	background-color:#023EA5;
+}
+#headerContent li a{
+	grid-area: header;
+	padding: 0;
+	color: #fff;
+	font-weight: 500;
+	line-height: 64px;
+	font-size: 16px;
 }
 #footerContent {
 	display: flex;
 	grid-area: footer;
-	background-color: #758c94;
+	background-color: #023EA5;
 	width: 100%;
 	height: 1.1rem;
 	bottom: 0;
@@ -41,7 +52,7 @@ html, body {
 #footerContentNoScroll {
 	display: flex;
 	grid-area: footer;
-	background-color: #758c94;
+	background-color: #023EA5;
 	width: 100%;
 	height: 1.1rem;
 	bottom: 0;
@@ -107,7 +118,7 @@ html, body {
 }
 
 .showusers {
-	background-color: #504A73;
+	background-color: #ffa514;
 	overflow-y: scroll;
 	height: 207px;
 	max-height: 450px;
@@ -127,7 +138,6 @@ html, body {
 .showusers li {
 	margin: 5px;
 	padding: 2px;
-	background-color: #8da9b3;
 }
 .showusers ul li button{
 	float: right;
@@ -142,7 +152,7 @@ html, body {
 	margin-right: 20px;
 }
 .logoWrap a{
-	color: #ffffff;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -177,7 +187,6 @@ html, body {
 .menuWrap a {
 	display: inline-block;
 	text-decoration: none;
-	color: inherit;
 	height: 25px;
 	line-height: 25px;
 }
@@ -186,7 +195,6 @@ html, body {
 .footer-text {
 	display: flex;
 	width: 100%;
-	color: inherit;
 	text-decoration: none;
 	justify-content: center;
 	color: #ffffff;
@@ -328,17 +336,16 @@ html, body {
 }
 
 .basketList {
-	padding: 0px;
+		background-color: rgb(67, 81, 155);
+		padding: 0px;
 }
 
 .basketList li {
 	border-style: solid;
 	border-color: black;
-	color: white;
 	height: 80px;
 	list-style-type: none;
 	list-style-position: inside;
-	background-color: #504A73;
 	padding:0px;
 	margin:10px;
 }
@@ -438,7 +445,6 @@ html, body {
 	height: 295px;
 	margin: 10px 10px;
 	padding: 10px;
-	color: white;
 }
 .products h3,
 .users h3,
@@ -455,12 +461,11 @@ html, body {
 
 #howToSteps {
 	border: 1px solid #000000;
-	background-color: rgb(67, 81, 155);
+	background-color: #e9e9e9;
 	width: 85%;
 	height: 325px;
 	margin: 10px 10px;
 	padding: 5px;
-	color: white;
 }
 
 iframe {
@@ -654,12 +659,11 @@ iframe {
 	.stats{
 		font-size: 14px;
 		border: 1px solid #000000;
-		background-color: rgb(67, 81, 155);
+		background-color: #e9e9e9;
 		width: 100%;
 		height: 500px;
 		margin: 10px 0 10px 0;
 		padding: -10px;
-		color: white;
 	}
 	.products h3,
 	.users h3,
@@ -674,7 +678,7 @@ iframe {
 		text-align: center;
 	}
 	.showproducts {
-		background-color: #5ce992;
+		background-color: #ffa514;
 		overflow-y: scroll;
 		height: 235px;
 		max-height: 235px;
@@ -694,7 +698,7 @@ iframe {
 	.showproducts li {
 		margin: 5px;
 		padding: 2px;
-		background-color: #8da9b3;
+		background-color: #e4e4e4;
 	}
 	.showproducts ul li button{
 		float: right;
@@ -718,7 +722,7 @@ iframe {
 	}
 	
 	.showusers {
-		background-color: #5ce992;
+		background-color: #ffa514;
 		overflow-y: scroll;
 		height: 235px;
 		max-height: 235px;
@@ -738,7 +742,7 @@ iframe {
 	.showusers li {
 		margin: 5px;
 		padding: 2px;
-		background-color: #8da9b3;
+		background-color: #e4e4e4;
 	}
 	.showusers ul li button{
 		float: right;
@@ -788,7 +792,7 @@ iframe {
 		position: fixed;
 		bottom: 0;
 		grid-area: footer;
-		background-color: #67647d;
+		background-color: #023EA5;
 		width: 100%;
 		height: 2.2rem;
 		justify-content: center;
@@ -808,14 +812,16 @@ iframe {
 		height: 400px;
 		font-size: 12px;
 		border: 1px solid #000000;
-		background-color: #43319B;
+		background-color: #f7f7f5;
+		/* background-color: rgb(67, 81, 155); */
 		text-align: center;
 		overflow-y: scroll;
-		color: #ffffff;
 	}
 	.accountBox h3{
 		font-size: 14px;
-		color: #ffffff;
+	}
+	.orderDiv{
+		background-color: #322285
 	}
 	/* CART */
 	/* ADMIN */	
@@ -897,12 +903,11 @@ iframe {
 	.stats{
 		font-size: 14px;
 		border: 1px solid #000000;
-		background-color: rgb(67, 81, 155);
+		background-color: #e9e9e9;
 		width: 100%;
 		height: 500px;
 		margin: 10px 0 10px 0;
 		padding: -10px;
-		color: white;
 	}
 	.products h3,
 	.users h3,
@@ -918,7 +923,7 @@ iframe {
 		text-align: center;
 	}
 	.showproducts {
-		background-color: #5ce992;
+		background-color: #ffa514;
 		overflow-y: scroll;
 		height: 235px;
 		max-height: 235px;
@@ -938,7 +943,7 @@ iframe {
 	.showproducts li {
 		margin: 5px;
 		padding: 2px;
-		background-color: #8da9b3;
+		background-color: #e4e4e4;
 	}
 	.showproducts ul li button{
 		float: right;
@@ -958,7 +963,7 @@ iframe {
 	}
 	
 	.showusers {
-		background-color: #5ce992;
+		background-color: #ffa514;
 		overflow-y: scroll;
 		height: 235px;
 		max-height: 235px;
@@ -978,7 +983,7 @@ iframe {
 	.showusers li {
 		margin: 5px;
 		padding: 2px;
-		background-color: #8da9b3;
+		background-color: #e4e4e4;
 	}
 	.showusers ul li button{
 		float: right;
@@ -1125,7 +1130,7 @@ iframe {
 		position: fixed;
 		bottom: 0;
 		grid-area: footer;
-		background-color: #67647d;
+		background-color: #023EA5;
 		width: 100%;
 		height: 2.2rem;
 		justify-content: center;
@@ -1145,21 +1150,23 @@ iframe {
 		height: 400px;
 		font-size: 18px;
 		border: 1px solid #000000;
-		background-color: #43319B;
+		background-color: #f7f7f5;
+		/* background-color: rgb(67, 81, 155); */
 		text-align: center;
 		overflow-y: scroll;
-		color: #ffffff;
 	}
 	.accountBox h1{
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 28px;
-		color: #ffffff;
 	}
 	.accountBox h3,
 	.accountBox p{
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 21px;
-		color: #ffffff;
+	}
+	.orderDiv{
+		background-color: #f7f7f5;
+		/* background-color: #43319B; */
 	}
 	/* CART */
 
@@ -1209,12 +1216,10 @@ iframe {
 	.stats{
 		font-size: 14px;
 		border: 1px solid #000000;
-		background-color: rgb(67, 81, 155);
 		width: 100%;
 		height: 500px;
 		margin: 10px 0 10px 0;
 		padding: -10px;
-		color: white;
 	}
 	.products h3,
 	.users h3,
@@ -1230,7 +1235,6 @@ iframe {
 		text-align: center;
 	}
 	.showproducts {
-		background-color: #5ce992;
 		overflow-y: scroll;
 		height: 235px;
 		max-height: 235px;
@@ -1250,7 +1254,6 @@ iframe {
 	.showproducts li {
 		margin: 5px;
 		padding: 2px;
-		background-color: #8da9b3;
 	}
 	.showproducts ul li button{
 		float: right;
@@ -1270,7 +1273,6 @@ iframe {
 	}
 	
 	.showusers {
-		background-color: #5ce992;
 		overflow-y: scroll;
 		height: 235px;
 		max-height: 235px;
@@ -1290,7 +1292,6 @@ iframe {
 	.showusers li {
 		margin: 5px;
 		padding: 2px;
-		background-color: #8da9b3;
 	}
 	.showusers ul li button{
 		float: right;
@@ -1322,7 +1323,6 @@ iframe {
 		height: 800px;
 		font-size: 12px;
 		border: 1px solid #000000;
-		background-color: #43319B;
 		text-align: center;
 		overflow-y: scroll;
 		margin: auto;
@@ -1377,12 +1377,10 @@ iframe {
 	.stats{
 		font-size: 14px;
 		border: 1px solid #000000;
-		background-color: rgb(67, 81, 155);
 		width: 100%;
 		height: 500px;
 		margin: 10px 0 10px 0;
 		padding: -10px;
-		color: white;
 	}
 	.products h3,
 	.users h3,
@@ -1398,7 +1396,6 @@ iframe {
 		text-align: center;
 	}
 	.showproducts {
-		background-color: #5ce992;
 		overflow-y: scroll;
 		height: 207px;
 		max-height: 450px;
@@ -1419,7 +1416,6 @@ iframe {
 	.showproducts li {
 		margin: 5px;
 		padding: 2px;
-		background-color: #8da9b3;
 	}
 	.showproducts ul li button{
 		float: right;
@@ -1439,7 +1435,6 @@ iframe {
 	}
 	
 	.showusers {
-		background-color: #5ce992;
 		overflow-y: scroll;
 		height: 207px;
 		max-height: 450px;
@@ -1460,7 +1455,6 @@ iframe {
 	.showusers li {
 		margin: 5px;
 		padding: 2px;
-		background-color: #8da9b3;
 	}
 	.showusers ul li button{
 		float: right;
@@ -1536,7 +1530,6 @@ iframe {
 		margin-right: 20px;
 	}
 	.logoWrap a{
-		color: #ffffff;
 		text-decoration: none;
 	}
 	
@@ -1571,7 +1564,6 @@ iframe {
 	.menuWrap a {
 		display: inline-block;
 		text-decoration: none;
-		color: inherit;
 		height: 25px;
 		line-height: 25px;
 	}
@@ -1580,10 +1572,8 @@ iframe {
 	.footer-text {
 
 		width: 100%;
-		color: inherit;
 		text-decoration: none;
 		justify-content: center;
-		color: #ffffff;
 	}
 	
 	.mainGrid {
@@ -1743,11 +1733,10 @@ iframe {
 	.basketList li {
 		border-style: solid;
 		border-color: black;
-		color: white;
 		height: 80px;
 		list-style-type: none;
 		list-style-position: inside;
-		background-color: #504A73;
+		background-color: rgb(67, 81, 155);
 		margin:10px;
 	}
 	.basketList li img{

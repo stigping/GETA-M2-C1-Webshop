@@ -80,14 +80,14 @@ function showOrderHistory() {
 function getOrderList(id) {
     const orderList = model.orderHistory[searchUserIndex(model.currentUserId)].orderList;
     let list = `
-    <h1>Order Number: ${orderList[id].orderId + 1}</h1>`;
+    <div class="orderDiv"><h1>Order Number: ${orderList[id].orderId + 1}</h1>`;
     for (i = 0; i < orderList[id].productsId.length; i++) {
         list += `
              <p>Produkt ${i + 1}: ${model.products[orderList[id].productsId[i]].name}</p>
              <p>Mengde: ${orderList[id].productsAmount[i]}</p>
              `;
     }
-    list += `<p>Delivered: ${orderList[id].delivered}</p>`
+    list += `<p>Delivered: ${orderList[id].delivered}</p></div>`
     return list
 }
 
@@ -133,8 +133,3 @@ function showChangePassword() {
 
     document.getElementById('accountBox').innerHTML = html
 }
-
-
-
-
-// model.orderHistory[0].orderId
