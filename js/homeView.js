@@ -1,5 +1,7 @@
 function showHome() {
     appDiv.innerHTML = `
+    
+    
     ${productShow()}
     <div id="grid-container">
     <div id="headerContent">
