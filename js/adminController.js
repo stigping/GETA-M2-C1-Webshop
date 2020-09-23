@@ -1,7 +1,7 @@
 function adminAddNewProduct() {
     const newProductInputs = model.inputs.admin.newProductInputs;
     model.products.push({
-        id: newProductInputs.id,
+        id: model.inputs.newProductId,
         name: newProductInputs.name,
         moms: newProductInputs.moms,
         productInfo: newProductInputs.productInfo,
@@ -12,7 +12,7 @@ function adminAddNewProduct() {
         images: newProductInputs.images,
         });
         
-        newProductInputs.id++;
+        model.inputs.newProductId++
         showAdmin()
 }
 
@@ -44,6 +44,7 @@ function updateProduct(really) {
 function adminAddUser() {
     const newUserInputs = model.inputs.admin.newUserInputs;
     model.users.push({
+        id: model.inputs.newUserId, 
         username: newUserInputs.username, 
         name: newUserInputs.name, 
         surname: newUserInputs.surname, 
@@ -51,10 +52,10 @@ function adminAddUser() {
         phoneNumber: newUserInputs.phoneNumber,
         password: newUserInputs.password, 
         isAdmin: newUserInputs.isAdmin,
-        id: newUserInputs.id, 
     });
+
+    model.inputs.newUserId++
     showAdmin();
-    
 }
 
 function adminRemoveUser(id) {

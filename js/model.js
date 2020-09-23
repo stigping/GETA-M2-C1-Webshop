@@ -9,21 +9,23 @@ const model = {
     shoppingBasket: { products: [], priceTotalAll: null },
     currentUser: { username: null, isAdmin: true, id: 0 },
     users: [
-        { username: 'jorn', name: 'Jørn', surname: 'Haga', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Gokrysset 6', password: 'test', id: 0, isAdmin: true },
-        { username: 'karl', name: 'Karl', surname: 'Johann', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Krølveien 4', password: 'test', id: 1, isAdmin: false },
-        { username: 'ola', name: 'Ola', surname: 'Normann', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Bøgata 50', password: 'test', id: 2, isAdmin: false },
-        { username: 'bent', name: 'Bent', surname: 'Johansen', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Snikkers', password: 'test', id: 3, isAdmin: false },
-        { username: 'knut', name: 'Knut', surname: 'Knudsen', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Grøldal', password: 'test', id: 4, isAdmin: false }
+        { id: 0, username: 'jorn', name: 'Jørn', surname: 'Haga', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Gokrysset 6', password: 'test', isAdmin: true },
+        { id: 1, username: 'karl', name: 'Karl', surname: 'Johann', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Krølveien 4', password: 'test', isAdmin: false },
+        { id: 2, username: 'ola', name: 'Ola', surname: 'Normann', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Bøgata 50', password: 'test', isAdmin: false },
+        { id: 3, username: 'bent', name: 'Bent', surname: 'Johansen', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Snikkers', password: 'test', isAdmin: false },
+        { id: 4, username: 'knut', name: 'Knut', surname: 'Knudsen', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Grøldal', password: 'test', isAdmin: false }
     ],
     paymentModel: { vipps: {}, paypal: {}, card: {} },
     orderHistory: [
         {
+            id: 0,
             username: 'jorn',
-            orderList: [{ orderId: 0, delivered: true, productsId: [0], productsAmount: [5] }, { orderId: 1, delivered: false, productsId: [4, 3], productsAmount: [43, 14] }, { orderId: 2, delivered: false, productsId: [2, 4, 1], productsAmount: [76, 3, 5] }], id: 0
+            orderList: [{ orderId: 0, delivered: true, productsId: [0], productsAmount: [5] }, { orderId: 1, delivered: false, productsId: [4, 3], productsAmount: [43, 14] }, { orderId: 2, delivered: false, productsId: [2, 4, 1], productsAmount: [76, 3, 5] }],
         },
         {
+            id: 1,
             username: 'karl',
-            orderList: [], id: 1
+            orderList: [],
         },
     ],
     productShowBox: {
@@ -33,6 +35,8 @@ const model = {
     },
     currentPage: 'Home',
     inputs: {
+        newUserId: 5,
+        newProductId: 5,
         user: {
             userIsEditing: false,
             newUserInputs: {
@@ -41,7 +45,6 @@ const model = {
                 surname: null,
                 email: null,
                 password: null,
-                id: 5,
                 isAdmin: null,
             },
         },
@@ -59,7 +62,6 @@ const model = {
                 images: null
             },
             newProductInputs: {
-                id: 5,
                 name: null,
                 moms: null,
                 productInfo: null,
@@ -75,7 +77,6 @@ const model = {
                 surname: null,
                 email: null,
                 password: null,
-                id: 5,
                 isAdmin: null,
             },
             editUserInputs: {
