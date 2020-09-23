@@ -20,27 +20,22 @@ const model = {
     orderHistory: [
         {
             id: 0,
-            username: 'jorn',
             orderList: [{ orderId: 0, delivered: true, productsId: [0], productsAmount: [5] }, { orderId: 1, delivered: false, productsId: [4, 3], productsAmount: [43, 14] }, { orderId: 2, delivered: false, productsId: [2, 4, 1], productsAmount: [76, 3, 5] }],
         },
         {
             id: 1,
-            username: 'karl',
             orderList: [],
         },
         {
             id: 2,
-            username: 'ola',
             orderList: [],
         },
         {
             id: 3,
-            username: 'bent',
             orderList: [],
         },
         {
             id: 4,
-            username: 'knut',
             orderList: [],
         },
     ],
