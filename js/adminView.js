@@ -24,26 +24,26 @@ function showAdmin() {
             <div id="addProductDiv">
                 <form ${model.productIsEditing === true ? 'style="display: none"' : ''}>
                     <button type="button" onclick="adminAddNewProduct()">Add Product</button>
-                    <input type="text" placeholder="name" onchange="model.inputs.newProductInputs.name = this.value"></input>
-                    <input type="text" placeholder="productInfo" onchange="model.inputs.newProductInputs.productInfo = this.value"></input>
-                    <input type="text" placeholder="contents" onchange="model.inputs.newProductInputs.contents = this.value"></input> <br>
-                    <input type="text" placeholder="price" onchange="model.inputs.newProductInputs.price = this.value"></input>
-                    <input type="text" placeholder="calories" onchange="model.inputs.newProductInputs.calories = this.value"></input>
-                    <input type="text" placeholder="allergies" onchange="model.inputs.newProductInputs.allergies = this.value"></input>
-                    <input type="text" placeholder="moms" onchange="model.inputs.newProductInputs.moms = this.value"></input>
+                    <input type="text" placeholder="name" onchange="model.inputs.admin.newProductInputs.name = this.value"></input>
+                    <input type="text" placeholder="productInfo" onchange="model.inputs.admin.newProductInputs.productInfo = this.value"></input>
+                    <input type="text" placeholder="contents" onchange="model.inputs.admin.newProductInputs.contents = this.value"></input> <br>
+                    <input type="text" placeholder="price" onchange="model.inputs.admin.newProductInputs.price = this.value"></input>
+                    <input type="text" placeholder="calories" onchange="model.inputs.admin.newProductInputs.calories = this.value"></input>
+                    <input type="text" placeholder="allergies" onchange="model.inputs.admin.newProductInputs.allergies = this.value"></input>
+                    <input type="text" placeholder="moms" onchange="model.inputs.admin.newProductInputs.moms = this.value"></input>
                     <input type="file">Upload images</input>
                 </form>
             </div>
             <div id="editProductDiv">
                 <form ${model.productIsEditing === false ? 'style="display: none"' : ''}>
                     <button type="button" onclick="updateProduct(true)">Edit Product</button> <button type="button" onclick="updateProduct(false)">Cancel</button>
-                    <input type="text" placeholder="name" value="${model.inputs.editProductInputs.name}" onchange="model.inputs.editProductInputs.name = this.value"></input>
-                    <input type="text" placeholder="productInfo" value="${model.inputs.editProductInputs.productInfo}" onchange="model.inputs.editProductInputs.productInfo = this.value"></input>
-                    <input type="text" placeholder="contents" value="${model.inputs.editProductInputs.contents}" onchange="model.inputs.editProductInputs.contents = this.value"></input> <br>
-                    <input type="text" placeholder="price" value="${model.inputs.editProductInputs.price}" onchange="model.inputs.editProductInputs.price = this.value"></input>
-                    <input type="text" placeholder="calories" value="${model.inputs.editProductInputs.calories}" onchange="model.inputs.editProductInputs.calories = this.value"></input>
-                    <input type="text" placeholder="allergies" value="${model.inputs.editProductInputs.allergies}" onchange="model.inputs.editProductInputs.allergies = this.value"></input>
-                    <input type="text" placeholder="moms" value="${model.inputs.editProductInputs.moms}" onchange="model.inputs.editProductInputs.moms = this.value"></input>
+                    <input type="text" placeholder="name" value="${model.inputs.admin.editProductInputs.name}" onchange="model.inputs.admin.editProductInputs.name = this.value"></input>
+                    <input type="text" placeholder="productInfo" value="${model.inputs.admin.editProductInputs.productInfo}" onchange="model.inputs.admin.editProductInputs.productInfo = this.value"></input>
+                    <input type="text" placeholder="contents" value="${model.inputs.admin.editProductInputs.contents}" onchange="model.inputs.admin.editProductInputs.contents = this.value"></input> <br>
+                    <input type="text" placeholder="price" value="${model.inputs.admin.editProductInputs.price}" onchange="model.inputs.admin.editProductInputs.price = this.value"></input>
+                    <input type="text" placeholder="calories" value="${model.inputs.admin.editProductInputs.calories}" onchange="model.inputs.admin.editProductInputs.calories = this.value"></input>
+                    <input type="text" placeholder="allergies" value="${model.inputs.admin.editProductInputs.allergies}" onchange="model.inputs.admin.editProductInputs.allergies = this.value"></input>
+                    <input type="text" placeholder="moms" value="${model.inputs.admin.editProductInputs.moms}" onchange="model.inputs.admin.editProductInputs.moms = this.value"></input>
                     <input type="file">Upload images</input>
                 </form>
             </div>
@@ -75,25 +75,25 @@ function showAdmin() {
             <div id="addUsersDiv">
                 <form ${model.userIsEditing === true ? 'style="display: none"' : ''}>
                     <button type="button" onclick="adminAddUser()">Add User</button>
-                    <input type="text" placeholder="Username" onchange="model.inputs.newUserInputs.username = this.value"></input>
-                    <input type="text" placeholder="First name" onchange="model.inputs.newUserInputs.name = this.value"></input>
-                    <input type="text" placeholder="Surname" onchange="model.inputs.newUserInputs.surname = this.value"></input>
-                    <input type="text" placeholder="E-mail" onchange="model.inputs.newUserInputs.email = this.value"></input>
-                    <input type="text" placeholder="Phone Number" onchange="model.inputs.newUserInputs.phoneNumber = this.value"></input>
-                    <input type="text" placeholder="Password" onchange="model.inputs.newUserInputs.password = this.value"></input>
-                    <input type="text" placeholder="Admin" onchange="model.inputs.newUserInputs.isAdmin = this.value"></input>
+                    <input type="text" placeholder="Username" onchange="model.inputs.admin.newUserInputs.username = this.value"></input>
+                    <input type="text" placeholder="First name" onchange="model.inputs.admin.newUserInputs.name = this.value"></input>
+                    <input type="text" placeholder="Surname" onchange="model.inputs.admin.newUserInputs.surname = this.value"></input>
+                    <input type="text" placeholder="E-mail" onchange="model.inputs.admin.newUserInputs.email = this.value"></input>
+                    <input type="text" placeholder="Phone Number" onchange="model.inputs.admin.newUserInputs.phoneNumber = this.value"></input>
+                    <input type="text" placeholder="Password" onchange="model.inputs.admin.newUserInputs.password = this.value"></input>
+                    <input type="text" placeholder="Admin" onchange="model.inputs.admin.newUserInputs.isAdmin = this.value"></input>
                 </form>
             </div>
             <div id="editUsersDiv">
                 <form ${model.userIsEditing === false ? 'style="display: none"' : ''}>
                         <button type="button" onclick="updateUser(true)">Edit User</button> <button type="button" onclick="updateUser(false)">Cancel</button>
-                        <input type="text" placeholder="Username" value="${model.inputs.editUserInputs.username}" onchange="model.inputs.editUserInputs.username = this.value"></input>
-                        <input type="text" placeholder="First name" value="${model.inputs.editUserInputs.name}" onchange="model.inputs.editUserInputs.name = this.value"></input>
-                        <input type="text" placeholder="Surname" value="${model.inputs.editUserInputs.surname}" onchange="model.inputs.editUserInputs.surname = this.value"></input>
-                        <input type="text" placeholder="E-mail" value="${model.inputs.editUserInputs.email}" onchange="model.inputs.editUserInputs.email = this.value"></input>
-                        <input type="text" placeholder="Phone Number" value="${model.inputs.editUserInputs.phoneNumber}" onchange="model.inputs.editUserInputs.phoneNumber = this.value"></input>
-                        <input type="text" placeholder="Password" value="${model.inputs.editUserInputs.password}" onchange="model.inputs.editUserInputs.password = this.value"></input>
-                        <input type="text" placeholder="Admin" value="${model.inputs.editUserInputs.isAdmin}" onchange="model.inputs.editUserInputs.isAdmin = this.value"></input>
+                        <input type="text" placeholder="Username" value="${model.inputs.admin.editUserInputs.username}" onchange="model.inputs.admin.editUserInputs.username = this.value"></input>
+                        <input type="text" placeholder="First name" value="${model.inputs.admin.editUserInputs.name}" onchange="model.inputs.admin.editUserInputs.name = this.value"></input>
+                        <input type="text" placeholder="Surname" value="${model.inputs.admin.editUserInputs.surname}" onchange="model.inputs.admin.editUserInputs.surname = this.value"></input>
+                        <input type="text" placeholder="E-mail" value="${model.inputs.admin.editUserInputs.email}" onchange="model.inputs.admin.editUserInputs.email = this.value"></input>
+                        <input type="text" placeholder="Phone Number" value="${model.inputs.admin.editUserInputs.phoneNumber}" onchange="model.inputs.admin.editUserInputs.phoneNumber = this.value"></input>
+                        <input type="text" placeholder="Password" value="${model.inputs.admin.editUserInputs.password}" onchange="model.inputs.admin.editUserInputs.password = this.value"></input>
+                        <input type="text" placeholder="Admin" value="${model.inputs.admin.editUserInputs.isAdmin}" onchange="model.inputs.admin.editUserInputs.isAdmin = this.value"></input>
                 </form>
             </div>
         </div>

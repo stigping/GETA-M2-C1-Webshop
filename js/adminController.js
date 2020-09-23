@@ -1,5 +1,5 @@
 function adminAddNewProduct() {
-    const newProductInputs = model.inputs.newProductInputs;
+    const newProductInputs = model.inputs.admin.newProductInputs;
     model.products.push({
         id: newProductInputs.id,
         name: newProductInputs.name,
@@ -12,7 +12,7 @@ function adminAddNewProduct() {
         images: newProductInputs.images,
         });
         
-        model.inputs.newProductInputs.id++;
+        model.inputs.admin.newProductInputs.id++;
         showAdmin()
 }
 
@@ -27,7 +27,7 @@ function adminEditProduct(id) {
     index = searchProductIndex(id);
     stringified = JSON.stringify(model.products[index]);
     parsed = JSON.parse(stringified);
-    model.inputs.editProductInputs = parsed; 
+    model.inputs.admin.editProductInputs = parsed; 
     model.productIsEditing = true;
     console.log(index);
     showAdmin();
@@ -36,17 +36,17 @@ function adminEditProduct(id) {
 function updateProduct(really) {
     if (really === true) {
     model.productIsEditing = false;
-    model.products[index] = model.inputs.editProductInputs;
+    model.products[index] = model.inputs.admin.editProductInputs;
     }   
     if (really === false) {
     model.productIsEditing = false;
-    model.inputs.editProductInputs = [];
+    model.inputs.admin.editProductInputs = [];
     }
     showAdmin()
 }
 
 function adminAddUser() {
-    const newUserInputs = model.inputs.newUserInputs;
+    const newUserInputs = model.inputs.admin.newUserInputs;
     model.users.push({
         username: newUserInputs.username, 
         name: newUserInputs.name, 
@@ -72,7 +72,7 @@ function adminEditUser(id) {
     index = searchUserIndex(id);
     stringified = JSON.stringify(model.users[index]);
     parsed = JSON.parse(stringified);
-    model.inputs.editUserInputs = parsed;
+    model.inputs.admin.editUserInputs = parsed;
     model.userIsEditing = true;
     console.log(index);
     showAdmin();
@@ -81,11 +81,11 @@ function adminEditUser(id) {
 function updateUser(really) {
     if (really === true) {
         model.userIsEditing = false;
-        model.users[index] = model.inputs.editUserInputs;
+        model.users[index] = model.inputs.admin.editUserInputs;
         }   
     if (really === false) {
         model.userIsEditing = false;
-        model.inputs.editUserInputs = [];
+        model.inputs.admin.editUserInputs = [];
         }
     showAdmin()
 }
