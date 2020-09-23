@@ -1,6 +1,6 @@
 function addProduct(prodId) {
-    const shoppingBasket = model.shoppingBasket.products;
-    if (searchBasketProductIndexNew(prodId) === -1) {
+    const shoppingBasket = model.shoppingBasket[model.currentUser.id].products;
+    if (searchBasketProductIndex(prodId) === -1) {
         shoppingBasket.push({
             id: prodId,
             amount: 1,
@@ -9,7 +9,7 @@ function addProduct(prodId) {
         model.productShowBox.productShownId = null;
         return showB()
     } else {
-        productIndex = searchBasketProductIndexNew(prodId);
+        productIndex = searchBasketProductIndex(prodId);
         shoppingBasket[productIndex].amount++
         model.productShowBox.productShownId = null;
         return showB()

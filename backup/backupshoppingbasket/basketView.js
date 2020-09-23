@@ -57,8 +57,8 @@ function listBasketProducts(id) {
     const basket = model.shoppingBasket;
     const product = model.products;
     let html = '';
-    for (i = 0; i < basket.products.length; i++) {
-    const productsBasket = product[basket.products[i].id];
+    for (i = 0; i < basket[id].products.length; i++) {
+    const productsBasket = product[basket[id].products[i].id];
     html += `
 <li>
     <div class="frame">
@@ -76,13 +76,13 @@ function listBasketProducts(id) {
         ${product[i].moms}
         </div>
         <div class="itemTotalPrice">
-       T = ${basket.products[i].priceTotal} kr
+       T = ${basket[id].products[i].priceTotal} kr
         </div>
     <div class="basketButtons">
         <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${productsBasket.id})"></i>
-        <input type="text" value="${model.shoppingBasket.products[i].amount}" onchange="changeProductAmount2(this.value, ${productsBasket.id})"></input>
+        <input type="text" value="${model.shoppingBasket[model.currentUser.id].products[i].amount}" onchange="changeProductAmount2(this.value, ${productsBasket.id})"></input>
         <i class="fas fa-minus-square" onclick="changeProductAmount(false, ${productsBasket.id})"></i>
-        <button onclick="removeProduct(${productsBasket.id})">Remove</button>
+        <button onclick="removeProduct(${model.currentUser.id}, ${productsBasket.id})">Remove</button>
     </div>
 </li>`}
 return html
