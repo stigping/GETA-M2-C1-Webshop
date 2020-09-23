@@ -92,7 +92,11 @@ function getOrderList(id) {
 }
 
 function showPaymentMethods() {
-    let html = `<div>Hei</div>`;
+    let html = `
+    <div class="accountBox">
+        Hei
+    </div>
+    `;
     
     document.getElementById('optionsBox').innerHTML = html
 }
