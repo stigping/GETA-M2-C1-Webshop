@@ -7,7 +7,7 @@ const model = {
         { id: 4, name: 'Stor Fin Fisk', productInfo: 'Hei jeg er en test setning! Hei jeg er en test setning! Hei jeg er en test setning! Hei jeg er en test setning!', contents: ['Fisk', 'Bønner', 'Krydder'], moms: '0%', calories: '999', price: '54', allergies: 'Hai', stock: '6', purchaseHistory: '20', images: ['https://www.hooked.no/wp-content/uploads/2017/01/Store-agn-for-stor-fisk-4.jpg', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png'] }
     ],
     shoppingBasket: { products: [], priceTotalAll: null },
-    currentUser: { username: null, isAdmin: true, id: 0 },
+    currentUserId: 2,
     users: [
         { id: 0, username: 'jorn', name: 'Jørn', surname: 'Haga', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Gokrysset 6', password: 'test', isAdmin: true },
         { id: 1, username: 'karl', name: 'Karl', surname: 'Johann', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Krølveien 4', password: 'test', isAdmin: false },
@@ -25,6 +25,21 @@ const model = {
         {
             id: 1,
             username: 'karl',
+            orderList: [],
+        },
+        {
+            id: 2,
+            username: 'ola',
+            orderList: [],
+        },
+        {
+            id: 3,
+            username: 'bent',
+            orderList: [],
+        },
+        {
+            id: 4,
+            username: 'knut',
             orderList: [],
         },
     ],

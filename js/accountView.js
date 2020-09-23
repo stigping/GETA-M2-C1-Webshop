@@ -10,7 +10,7 @@ function showAccount() {
                 <li><a href="javascript:showB()">CART</a></li>
                 <li><a href="javascript:showD()">HOW TO MAKE</a></li>
                 <li><a href="javascript:showF()">ACCOUNT</a></li>
-                ${model.currentUser.isAdmin === true ? '<li><a href="javascript:showC()">ADMIN</a></li>' : ''}
+                ${model.users[searchUserIndex(model.currentUserId)].isAdmin === true ? '<li><a href="javascript:showC()">ADMIN</a></li>' : ''}
             </ul>
         </div>
     </div>
@@ -53,7 +53,7 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    const orderList = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList;
+    const orderList = model.orderHistory[searchUserIndex(model.currentUserId)].orderList;
     let list = '';
     if (orderList.length <= 0) {
         list = `<p>Du har ingen bestillinger</p>`
@@ -64,7 +64,7 @@ function showOrderHistory() {
     }
     html = `
     <div class="accountBox">
-        <h1>Bruker: ${model.users[model.currentUser.id].name}</h1>
+        <h1>Bruker: ${model.users[model.currentUserId].name}</h1>
         <div id="orderHistory">
             <h1>Bestilte Varer</h1>
             <div>
@@ -78,7 +78,7 @@ function showOrderHistory() {
 }
 
 function getOrderList(id) {
-    const orderList = model.orderHistory[searchUserIndex(model.currentUser.id)].orderList;
+    const orderList = model.orderHistory[searchUserIndex(model.currentUserId)].orderList;
     let list = `
     <h1>Order Number: ${orderList[id].orderId + 1}</h1>`;
     for (i = 0; i < orderList[id].productsId.length; i++) {
@@ -105,17 +105,17 @@ function showContactInformation() {
     let html = `
     <div class="accountBox">
         <p>Brukernavn</p>  
-        <input value="${model.users[model.currentUser.id].username}">
+        <input value="${model.users[model.currentUserId].username}">
         <p>Navn</p>
-        <input value="${model.users[model.currentUser.id].name}">
+        <input value="${model.users[model.currentUserId].name}">
         <p>Etternavn</p>
-        <input value="${model.users[model.currentUser.id].surname}">
+        <input value="${model.users[model.currentUserId].surname}">
         <p>Leverings Adresse</p>
-        <input value="${model.users[model.currentUser.id].address}">
+        <input value="${model.users[model.currentUserId].address}">
         <p>Email</p>
-        <input value="${model.users[model.currentUser.id].email}">
+        <input value="${model.users[model.currentUserId].email}">
         <p>Mobil Nummer</p>
-        <input value="${model.users[model.currentUser.id].phoneNumber}"> <br>
+        <input value="${model.users[model.currentUserId].phoneNumber}"> <br>
         <button>Lagre</button>
     </div>
     `;

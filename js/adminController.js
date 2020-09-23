@@ -54,12 +54,19 @@ function adminAddUser() {
         isAdmin: newUserInputs.isAdmin,
     });
 
+    model.orderHistory.push({
+        id: model.inputs.newUserId,
+        username: newUserInputs.username,
+        orderList: [],
+    })
+
     model.inputs.newUserId++
     showAdmin();
 }
 
 function adminRemoveUser(id) {
-    index = searchUserIndex(id);
+    userIndex = searchUserIndex(id);
+    orderIndex =
     model.users.splice(index, 1);
     console.log(index);
     showAdmin();

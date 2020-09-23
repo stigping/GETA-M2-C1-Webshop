@@ -1,6 +1,6 @@
 function addProduct(prodId) {
     const shoppingBasket = model.shoppingBasket.products;
-    if (searchBasketProductIndexNew(prodId) === -1) {
+    if (searchBasketProductIndex(prodId) === -1) {
         shoppingBasket.push({
             id: prodId,
             amount: 1,
@@ -48,12 +48,12 @@ function searchUserIndex(id) {
 }
 
 function searchBasketProductIndex(id) {
-    let search = model.shoppingBasket[model.currentUser.id].products.findIndex(searchid => searchid['id'] === id);
+    let search = model.shoppingBasket.products.findIndex(searchid => searchid['id'] === id);
     return search
 }
 
-function searchBasketProductIndexNew(id) {
-    let search = model.shoppingBasket.products.findIndex(searchid => searchid['id'] === id);
+function searchOrderHistoryIndex(id) {
+    let search = model.orderHistory.findIndex(searchid => searchid['id'] === id);
     return search
 }
 
