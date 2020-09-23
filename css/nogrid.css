@@ -9,6 +9,27 @@
 /* For all sizes up to 576 */
 @media (max-width: 575.99px) {
 /* --- GENERAL --- */
+* {
+    box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+	display: block;
+	color: #413746;
+	background-color: #ffffff;
+	margin: 0;
+	font-weight: 400;
+	font-family: "Walsheim","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+}
 /* --- HOME --- */
 /* --- CART --- */
 /* --- ADMIN --- */	
