@@ -32,8 +32,6 @@ const model = {
         currentTab: 0,
     },
     currentPage: 'Home',
-    productIsEditing: false,
-    userIsEditing: false,
     inputs: {
         user: {
             newUserInputs: {
@@ -47,6 +45,8 @@ const model = {
             },
         },
         admin: {
+            productIsEditing: false,
+            userIsEditing: false,
             editProductInputs: {
                 name: null,
                 moms: null,

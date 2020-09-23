@@ -24,18 +24,20 @@ function adminRemoveProduct(id) {
 }
 
 function adminEditProduct(id) {
+    const adminInputs = model.inputs.admin;
     index = searchProductIndex(id);
     stringified = JSON.stringify(model.products[index]);
     parsed = JSON.parse(stringified);
-    model.inputs.admin.editProductInputs = parsed; 
-    model.productIsEditing = true;
+    adminInputs.editProductInputs = parsed; 
+    adminInputs.productIsEditing = true;
     console.log(index);
     showAdmin();
 }
 
 function updateProduct(really) {
-    really === true ? model.products[index] = model.inputs.admin.editProductInputs : model.inputs.admin.editProductInputs = [];
-    model.productIsEditing = false;
+    const adminInputs = model.inputs.admin;
+    really === true ? model.products[index] = adminInputs.editProductInputs : adminInputs.editProductInputs = [];
+    adminInputs.productIsEditing = false;
     showAdmin()
 }
 
@@ -63,17 +65,19 @@ function adminRemoveUser(id) {
 }
 
 function adminEditUser(id) {
+    const adminInputs = model.inputs.admin;
     index = searchUserIndex(id);
     stringified = JSON.stringify(model.users[index]);
     parsed = JSON.parse(stringified);
-    model.inputs.admin.editUserInputs = parsed;
-    model.userIsEditing = true;
+    adminInputs.editUserInputs = parsed;
+    adminInputs.userIsEditing = true;
     console.log(index);
     showAdmin();
 }
 
 function updateUser(really) {
-    really === true ? model.users[index] = model.inputs.admin.editUserInputs : model.inputs.admin.editUserInputs = [];
-    model.userIsEditing = false;
+    const adminInputs = model.inputs.admin;
+    really === true ? model.users[index] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];
+    adminInputs.userIsEditing = false;
     showAdmin()
 }

@@ -22,7 +22,7 @@ function showAdmin() {
         <div class="products">
             <h3>Products</h3>
             <div id="addProductDiv">
-                <form ${model.productIsEditing === true ? 'style="display: none"' : ''}>
+                <form ${model.inputs.admin.productIsEditing === true ? 'style="display: none"' : ''}>
                     <button type="button" onclick="adminAddNewProduct()">Add Product</button>
                     <input type="text" placeholder="name" onchange="model.inputs.admin.newProductInputs.name = this.value"></input>
                     <input type="text" placeholder="productInfo" onchange="model.inputs.admin.newProductInputs.productInfo = this.value"></input>
@@ -35,7 +35,7 @@ function showAdmin() {
                 </form>
             </div>
             <div id="editProductDiv">
-                <form ${model.productIsEditing === false ? 'style="display: none"' : ''}>
+                <form ${model.inputs.admin.productIsEditing === false ? 'style="display: none"' : ''}>
                     <button type="button" onclick="updateProduct(true)">Edit Product</button> <button type="button" onclick="updateProduct(false)">Cancel</button>
                     <input type="text" placeholder="name" value="${model.inputs.admin.editProductInputs.name}" onchange="model.inputs.admin.editProductInputs.name = this.value"></input>
                     <input type="text" placeholder="productInfo" value="${model.inputs.admin.editProductInputs.productInfo}" onchange="model.inputs.admin.editProductInputs.productInfo = this.value"></input>
@@ -73,7 +73,7 @@ function showAdmin() {
         <div>
             <h3>Users</h3>
             <div id="addUsersDiv">
-                <form ${model.userIsEditing === true ? 'style="display: none"' : ''}>
+                <form ${model.inputs.admin.userIsEditing === true ? 'style="display: none"' : ''}>
                     <button type="button" onclick="adminAddUser()">Add User</button>
                     <input type="text" placeholder="Username" onchange="model.inputs.admin.newUserInputs.username = this.value"></input>
                     <input type="text" placeholder="First name" onchange="model.inputs.admin.newUserInputs.name = this.value"></input>
@@ -85,7 +85,7 @@ function showAdmin() {
                 </form>
             </div>
             <div id="editUsersDiv">
-                <form ${model.userIsEditing === false ? 'style="display: none"' : ''}>
+                <form ${model.inputs.admin.userIsEditing === false ? 'style="display: none"' : ''}>
                         <button type="button" onclick="updateUser(true)">Edit User</button> <button type="button" onclick="updateUser(false)">Cancel</button>
                         <input type="text" placeholder="Username" value="${model.inputs.admin.editUserInputs.username}" onchange="model.inputs.admin.editUserInputs.username = this.value"></input>
                         <input type="text" placeholder="First name" value="${model.inputs.admin.editUserInputs.name}" onchange="model.inputs.admin.editUserInputs.name = this.value"></input>
