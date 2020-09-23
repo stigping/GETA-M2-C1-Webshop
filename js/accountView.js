@@ -38,7 +38,7 @@ function showAccount() {
             </span>
         </ul>
 
-        <div id="optionsBox"></div>
+        <div id="accountBox"></div>
 
     </div>
 
@@ -74,7 +74,7 @@ function showOrderHistory() {
     </div>
     `;
 
-    document.getElementById('optionsBox').innerHTML = html
+    document.getElementById('accountBox').innerHTML = html
 }
 
 function getOrderList(id) {
@@ -98,7 +98,7 @@ function showPaymentMethods() {
     </div>
     `;
     
-    document.getElementById('optionsBox').innerHTML = html
+    document.getElementById('accountBox').innerHTML = html
 }
 
 function showContactInformation() {
@@ -119,7 +119,7 @@ function showContactInformation() {
         <button>Lagre</button>
     </div>
     `;
-    document.getElementById('optionsBox').innerHTML = html
+    document.getElementById('accountBox').innerHTML = html
 }
 
 function showChangePassword() {
@@ -131,7 +131,7 @@ function showChangePassword() {
     </div>
     `;
 
-    document.getElementById('optionsBox').innerHTML = html
+    document.getElementById('accountBox').innerHTML = html
 }
 
 
