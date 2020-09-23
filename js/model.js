@@ -34,6 +34,7 @@ const model = {
     currentPage: 'Home',
     inputs: {
         user: {
+            userIsEditing: false,
             newUserInputs: {
                 username: null,
                 name: null,
