@@ -100,8 +100,14 @@ function showPaymentMethods() {
 function showContactInformation() {
     let html = `
     <div class="accountBox">
+        <p>Brukernavn</p>  
+        <input value="${model.users[model.currentUser.id].username}">
         <p>Navn</p>
-        <input value="${model.users[model.currentUser.id].name} ${model.users[model.currentUser.id].surname}">
+        <input value="${model.users[model.currentUser.id].name}">
+        <p>Etternavn</p>
+        <input value="${model.users[model.currentUser.id].surname}">
+        <p>Leverings Adresse</p>
+        <input value="${model.users[model.currentUser.id].address}">
         <p>Email</p>
         <input value="${model.users[model.currentUser.id].email}">
         <p>Mobil Nummer</p>

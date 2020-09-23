@@ -52,6 +52,10 @@ function searchBasketProductIndex(id) {
     return search
 }
 
+function newUserCreate() {
+    
+}
+
 function showMobileMenu() {
     html = `     
 <div class="mobileMenu">
