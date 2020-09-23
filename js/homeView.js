@@ -73,5 +73,15 @@ const showProductsList = () => {
 }
 
 function showRestProductsList() {
-    
+    const product = model.products;
+    if (product.length <= 0) return '';
+    let html = `<div class="grid-box">`;
+    for (i = 5; i < product.length; i++) {
+        html += `
+        <img src="${product[i].images === null ? '' : product[i].images[0]}"></img>
+        <h3>${product[i].name}</h3>
+        `;
+    }
+    html += `</div>`;
+    return html
 }

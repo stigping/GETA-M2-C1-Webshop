@@ -28,13 +28,25 @@ html, body {
 	padding: 0;
 	background-color:#023EA5;
 }
+#headerContent li{
+	float:left;
+}
 #headerContent li a{
 	grid-area: header;
 	padding: 0;
 	color: #fff;
 	font-weight: 500;
-	line-height: 64px;
+	line-height: 40px;
+	margin-right: 18px;
 	font-size: 16px;
+}
+.logoWrap {
+	line-height: 40px;
+	margin-left: 18px;
+}
+.logoWrap a{
+	color: #fff;
+	text-decoration: none;
 }
 #footerContent {
 	display: flex;
@@ -147,15 +159,6 @@ html, body {
 	position: absolute;
 }
 
-.logoWrap {
-	float: left;
-	margin-right: 20px;
-}
-.logoWrap a{
-	color: #fff;
-	text-decoration: none;
-}
-
 .inner-menu {
 	display: inline-block;
 	float: right;
@@ -211,7 +214,8 @@ html, body {
 	grid-template-columns: 0.05fr 1fr 1fr 1fr 1fr 0.05fr;
 	grid-template-areas:
 		"m m m m m m"
-		"1 a b c d 2";
+		"1 a b c d 2"
+		"g g g g g g";
 	grid-row-end: 1px;
 	z-index: 10;
 	grid-area: main;
@@ -265,6 +269,23 @@ html, body {
 
 .grid-item4 {
 	grid-area: d;
+}
+
+.grid-box {
+	grid-area: g;
+	grid-column: 3 / 4;
+	margin-bottom: 50px;
+}
+
+.grid-box2 {
+	grid-area: g;
+	grid-column: 4 / 5;
+	margin-bottom: 50px;
+}
+
+.grid-box img {
+	width: 25px;
+	height: 25px;
 }
 
 #productBox {
@@ -336,7 +357,7 @@ html, body {
 }
 
 .basketList {
-		background-color: rgb(67, 81, 155);
+		background-color: rgb(78, 61, 155);
 		padding: 0px;
 }
 
@@ -897,6 +918,11 @@ iframe {
 	}
 	.grid-item1 {
 		padding-top: 25px;
+	}
+	.grid-box {
+	}
+	
+	.grid-box img {
 	}
 	.products,
 	.users,
