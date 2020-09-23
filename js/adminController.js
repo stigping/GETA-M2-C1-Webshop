@@ -12,7 +12,7 @@ function adminAddNewProduct() {
         images: newProductInputs.images,
         });
         
-        model.inputs.admin.newProductInputs.id++;
+        newProductInputs.id++;
         showAdmin()
 }
 
@@ -34,14 +34,8 @@ function adminEditProduct(id) {
 }
 
 function updateProduct(really) {
-    if (really === true) {
+    really === true ? model.products[index] = model.inputs.admin.editProductInputs : model.inputs.admin.editProductInputs = [];
     model.productIsEditing = false;
-    model.products[index] = model.inputs.admin.editProductInputs;
-    }   
-    if (really === false) {
-    model.productIsEditing = false;
-    model.inputs.admin.editProductInputs = [];
-    }
     showAdmin()
 }
 
@@ -79,13 +73,7 @@ function adminEditUser(id) {
 }
 
 function updateUser(really) {
-    if (really === true) {
-        model.userIsEditing = false;
-        model.users[index] = model.inputs.admin.editUserInputs;
-        }   
-    if (really === false) {
-        model.userIsEditing = false;
-        model.inputs.admin.editUserInputs = [];
-        }
+    really === true ? model.users[index] = model.inputs.admin.editUserInputs : model.inputs.admin.editUserInputs = [];
+    model.userIsEditing = false;
     showAdmin()
 }
