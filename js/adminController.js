@@ -44,8 +44,9 @@ function updateProduct(really) {
 
 function adminAddUser() {
     const newUserInputs = model.inputs.admin.newUserInputs;
+    const newUserId = model.inputs.newUserId;
     model.users.push({
-        id: model.inputs.newUserId, 
+        id: newUserId, 
         username: newUserInputs.username, 
         name: newUserInputs.name, 
         surname: newUserInputs.surname, 
@@ -56,12 +57,11 @@ function adminAddUser() {
     });
 
     model.orderHistory.push({
-        id: model.inputs.newUserId,
-        username: newUserInputs.username,
+        id: newUserId,
         orderList: [],
     })
 
-    model.inputs.newUserId++
+    newUserId++
     showAdmin();
 }
 
