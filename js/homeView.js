@@ -1,6 +1,10 @@
 function showHome() {
-    document.body.innerHTML = `
-    <div>test</div>
+    appDiv.innerHTML = `
+
+    <div class="wide-container navbar-wrapper" style="border-bottom: 1px solid #e9e9e9">
+        <nav class="navbar navbar-default top-menu">
+        </nav>
+    </div>
     
     ${productShow()}
     <div id="grid-container">
