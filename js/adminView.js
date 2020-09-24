@@ -63,9 +63,6 @@ function showAdmin() {
                 <canvas id="myChart"></canvas>
                 <br>
             </div>
-            <div>
-                <p>stat graph illustration</p>
-            </div>
             <div class="showpgraph">
             </div>
         </div>
