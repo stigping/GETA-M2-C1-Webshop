@@ -23,17 +23,26 @@ function changeProductAmount2(amount, id) {
 
 function orderProducts() {
     model.orderHistory[model.currentUserId].orderList.push({
-        orderId: null,
+        orderId: model.orderHistory[model.currentUserId].nextOrderId,
         delivered: false,
         productsId: getBasketProductsId(),
-        productsAmount: [],
+        productsAmount: getBasketProductAmount(),
     })
+    model.orderHistory[model.currentUserId].nextOrderId++
 }
 
 function getBasketProductsId() {
     let idList = [];
     for (index = 0; index < model.shoppingBasket.products.length; index++) {
         idList.push(model.shoppingBasket.products[index].id)
+    }
+    return idList
+}
+
+function getBasketProductAmount() {
+    let idList = [];
+    for (index = 0; index < model.shoppingBasket.products.length; index++) {
+        idList.push(model.shoppingBasket.products[index].amount)
     }
     return idList
 }

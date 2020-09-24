@@ -21,22 +21,27 @@ const model = {
         {
             id: 0,
             orderList: [{ orderId: 0, delivered: true, productsId: [0], productsAmount: [5] }, { orderId: 1, delivered: false, productsId: [4, 3], productsAmount: [43, 14] }, { orderId: 2, delivered: false, productsId: [2, 4, 1], productsAmount: [76, 3, 5] }],
+            nextOrderId: 3,
         },
         {
             id: 1,
             orderList: [],
+            nextOrderId: 0,
         },
         {
             id: 2,
             orderList: [],
+            nextOrderId: 0,
         },
         {
             id: 3,
             orderList: [],
+            nextOrderId: 0,
         },
         {
             id: 4,
             orderList: [],
+            nextOrderId: 0,
         },
     ],
     productShowBox: {

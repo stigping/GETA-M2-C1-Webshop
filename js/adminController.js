@@ -58,6 +58,7 @@ function adminAddUser() {
     model.orderHistory.push({
         id: model.inputs.newUserId,
         orderList: [],
+        nextOrderId: 0,
     })
 
     model.inputs.newUserId++
