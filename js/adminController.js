@@ -44,7 +44,7 @@ function updateProduct(really) {
 
 function adminAddUser() {
     const newUserInputs = model.inputs.admin.newUserInputs;
-    const newUserId = model.inputs.newUserId;
+    let newUserId = model.inputs.newUserId;
     model.users.push({
         id: newUserId, 
         username: newUserInputs.username, 
