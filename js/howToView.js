@@ -36,7 +36,7 @@ function showHowTo() {
                 <h3>STEP 4</h3>
                     profit
             </div>
-            <br>
+            <br><br>
         </div>
 </div>
 
