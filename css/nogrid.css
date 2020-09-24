@@ -32,41 +32,18 @@ body {
 }
 #app {
 	min-height: 75%;
-}
-.wide-container {
-    position: relative;
-    left: 0;
-    width: auto;
-    margin: 0;
-    padding: 0;
-}
-.navbar-wrapper {
-
-}
-.top-menu {
-    z-index: 500;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    background-color: #fbfbfa;
-}
-.navbar {
-    position: relative;
-    min-height: 64px;
-    margin-bottom: 0;
-    border: 1px solid transparent;
+	margin: 0;
 }
 /* --- HOME --- */
 /* --- CART --- */
 /* --- ADMIN --- */	
 }
 
-/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 /* --- GENERAL --- */
 /* --- HOME --- */
 /* --- CART --- */
-/* --- ADMIN --- */	
+/* --- ADMIN --- */
 }
 
 /* Medium devices (tablets, 768px and up) */
