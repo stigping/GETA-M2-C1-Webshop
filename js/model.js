@@ -97,6 +97,7 @@ const model = {
                 name: null,
                 surname: null,
                 email: null,
+                phoneNumber: null,
                 password: null,
                 isAdmin: null,
             },
@@ -106,6 +107,7 @@ const model = {
                 name: null,
                 surname: null,
                 email: null,
+                phoneNumber: null,
                 password: null,
                 isAdmin: null,
             }

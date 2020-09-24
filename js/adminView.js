@@ -79,7 +79,8 @@ function showAdmin() {
                     <input type="text" placeholder="E-mail" onchange="model.inputs.admin.newUserInputs.email = this.value"></input>
                     <input type="text" placeholder="Phone Number" onchange="model.inputs.admin.newUserInputs.phoneNumber = this.value"></input>
                     <input type="text" placeholder="Password" onchange="model.inputs.admin.newUserInputs.password = this.value"></input>
-                    <input type="text" placeholder="Admin" onchange="model.inputs.admin.newUserInputs.isAdmin = this.value"></input>
+                    <input type="checkbox" id="adminCheckboxNew" ></input>
+                    <label for="admin">Admin</label>
                 </form>
             </div>
             <div id="editUsersDiv">
@@ -91,7 +92,8 @@ function showAdmin() {
                         <input type="text" placeholder="E-mail" value="${adminInputs.editUserInputs.email}" onchange="model.inputs.admin.editUserInputs.email = this.value"></input>
                         <input type="text" placeholder="Phone Number" value="${adminInputs.editUserInputs.phoneNumber}" onchange="model.inputs.admin.editUserInputs.phoneNumber = this.value"></input>
                         <input type="text" placeholder="Password" value="${adminInputs.editUserInputs.password}" onchange="model.inputs.admin.editUserInputs.password = this.value"></input>
-                        <input type="text" placeholder="Admin" value="${adminInputs.editUserInputs.isAdmin}" onchange="model.inputs.admin.editUserInputs.isAdmin = this.value"></input>
+                        <input type="checkbox" id="adminCheckboxEdit" ${adminInputs.editUserInputs.isAdmin === true ? 'checked' : ''}></input>
+                        <label for="admin">Admin</label>
                 </form>
             </div>
         </div>
@@ -115,7 +117,7 @@ function showAdmin() {
 function showProducts() {
     let html = '';
     for (i = 0; i < model.products.length; i++) {
-    html += `<li>${model.products[i].name} 
+        html += `<li>${model.products[i].name} 
              <button class="removeBtn" onclick="adminRemoveProduct(${model.products[i].id})">Remove</button> 
              <button class="editBtn" onclick="adminEditProduct(${model.products[i].id})">Edit</button>
              </li>`
@@ -126,7 +128,7 @@ function showProducts() {
 function showUsers() {
     let html = '';
     for (i = 0; i < model.users.length; i++) {
-    html += `<li>${model.users[i].name+' '+model.users[i].surname} 
+        html += `<li>${model.users[i].name + ' ' + model.users[i].surname} 
              <button class="removeBtn" onclick="adminRemoveUser(${model.users[i].id})">Remove</button> 
              <button class="editBtn" onclick="adminEditUser(${model.users[i].id})">Edit</button></li>`
     }
@@ -136,30 +138,30 @@ function showUsers() {
 function showChart() {
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'bar',
+        // The type of chart we want to create
+        type: 'bar',
 
-    // The data for our dataset
-    data: {
-        labels: ['Kokkejævelens kyllinggryte', 'Alle biffgryters bestemor', 'Tom Peng Pong Asiatisk gryte', 'Lange slappe nudlær', 'Stor Fin Fisk'],
-        datasets: [{
-            label: 'Antall Salg',
-            backgroundColor: 'rgb(255, 99, 132)',
-            hoverBorderColor: '#000000',
-            hoverBorderWidth: '1',
-            data: [model.products[0].purchaseHistory, model.products[1].purchaseHistory, model.products[2].purchaseHistory, model.products[3].purchaseHistory, model.products[4].purchaseHistory]
-        }]
-    },
-
-    // Configuration options go here
-    options: {
-        legend: {
-            display: true,
-            labels: {
-                fontColor: '#ffffff'
-            }
+        // The data for our dataset
+        data: {
+            labels: ['Kokkejævelens kyllinggryte', 'Alle biffgryters bestemor', 'Tom Peng Pong Asiatisk gryte', 'Lange slappe nudlær', 'Stor Fin Fisk'],
+            datasets: [{
+                label: 'Antall Salg',
+                backgroundColor: 'rgb(255, 99, 132)',
+                hoverBorderColor: '#000000',
+                hoverBorderWidth: '1',
+                data: [model.products[0].purchaseHistory, model.products[1].purchaseHistory, model.products[2].purchaseHistory, model.products[3].purchaseHistory, model.products[4].purchaseHistory]
+            }]
         },
-        maintainAspectRatio: false
-    }
-});
+
+        // Configuration options go here
+        options: {
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: '#ffffff'
+                }
+            },
+            maintainAspectRatio: false
+        }
+    });
 }

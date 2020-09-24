@@ -1,7 +1,8 @@
 function adminAddNewProduct() {
     const newProductInputs = model.inputs.admin.newProductInputs;
+    let newProductId = model.inputs.newProductId;
     model.products.push({
-        id: model.inputs.newProductId,
+        id: newProductId,
         name: newProductInputs.name,
         moms: newProductInputs.moms,
         productInfo: newProductInputs.productInfo,
@@ -12,7 +13,7 @@ function adminAddNewProduct() {
         images: newProductInputs.images,
         });
         
-        model.inputs.newProductId++
+        newProductId++
         showAdmin()
 }
 
@@ -53,7 +54,7 @@ function adminAddUser() {
         email: newUserInputs.email, 
         phoneNumber: newUserInputs.phoneNumber,
         password: newUserInputs.password, 
-        isAdmin: newUserInputs.isAdmin,
+        isAdmin: document.getElementById('adminCheckboxNew').checked ? true : false,
     });
 
     model.orderHistory.push({
@@ -86,6 +87,7 @@ function adminEditUser(id) {
 function updateUser(really) {
     const adminInputs = model.inputs.admin;
     let userIndex = searchUserIndex(adminInputs.editUserInputs.id);
+    document.getElementById('adminCheckboxEdit').checked ? adminInputs.editUserInputs.isAdmin = true : adminInputs.editUserInputs.isAdmin = false;
     really === true ? model.users[userIndex] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];
     adminInputs.userIsEditing = false;
     showAdmin()
