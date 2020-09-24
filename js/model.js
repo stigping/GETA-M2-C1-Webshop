@@ -21,7 +21,7 @@ const model = {
         {
             id: 0,
             orderList: [{ orderId: 0, delivered: true, productsId: [0], productsAmount: [5] }],
-            nextOrderId: 0,
+            nextOrderId: 1,
         },
         {
             id: 1,

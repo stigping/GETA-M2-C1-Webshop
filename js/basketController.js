@@ -31,6 +31,7 @@ function orderProducts() {
     model.orderHistory[model.currentUserId].nextOrderId++;
     model.shoppingBasket = { products: [], priceTotalAll: null };
     showBasket();
+    alert('Takk for kjøpet!');
 }
 
 function getBasketProductsId() {
