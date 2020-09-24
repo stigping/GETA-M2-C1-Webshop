@@ -25,15 +25,15 @@ function orderProducts() {
     model.orderHistory[model.currentUserId].orderList.push({
         orderId: null,
         delivered: false,
-        productsId: [model.shoppingBasket.products[0].id],
+        productsId: getBasketProductsId(),
         productsAmount: [],
     })
 }
 
-function getProductsId() {
+function getBasketProductsId() {
     let idList = [];
     for (index = 0; index < model.shoppingBasket.products.length; index++) {
-       idList += [model.shoppingBasket.products[index].id] + ' '
+        idList.push(model.shoppingBasket.products[index].id)
     }
     return idList
 }
