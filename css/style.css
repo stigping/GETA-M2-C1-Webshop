@@ -93,7 +93,7 @@ html, body {
 
 .showproducts {
 	background-color: #504A73;
-	overflow-y: scroll;
+	overflow-y: auto;
 	height: 207px;
 	max-height: 450px;
 	width: 498px;
@@ -124,7 +124,7 @@ html, body {
 
 .showusers {
 	background-color: #ffa514;
-	overflow-y: scroll;
+	overflow-y: auto;
 	height: 207px;
 	max-height: 450px;
 	width: 498px;
@@ -601,7 +601,7 @@ iframe {
 	}
 	.showproducts {
 		background-color: #ffa514;
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 235px;
 		max-height: 235px;
 		width: 300px;
@@ -645,7 +645,7 @@ iframe {
 	
 	.showusers {
 		background-color: #ffa514;
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 235px;
 		max-height: 235px;
 		width: 300px;
@@ -790,7 +790,7 @@ iframe {
 	}
 	.showproducts {
 		background-color: #ffa514;
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 235px;
 		max-height: 235px;
 		width: 500px;
@@ -830,7 +830,7 @@ iframe {
 	
 	.showusers {
 		background-color: #ffa514;
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 235px;
 		max-height: 235px;
 		width: 500px;
@@ -1083,7 +1083,7 @@ iframe {
 		text-align: center;
 	}
 	.showproducts {
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 235px;
 		max-height: 235px;
 		width: 600px;
@@ -1121,7 +1121,7 @@ iframe {
 	}
 	
 	.showusers {
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 235px;
 		max-height: 235px;
 		width: 600px;
@@ -1216,7 +1216,7 @@ iframe {
 		text-align: center;
 	}
 	.showproducts {
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 207px;
 		max-height: 450px;
 		width: 498px;
@@ -1255,7 +1255,7 @@ iframe {
 	}
 	
 	.showusers {
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 207px;
 		max-height: 450px;
 		width: 498px;
