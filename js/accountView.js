@@ -106,17 +106,17 @@ function showContactInformation() {
     let html = `
     <div class="accountBox">
         <p>Brukernavn</p>  
-        <input id="usernameInput" value="${currentUser.username}">
+        <input value="${currentUser.username}">
         <p>Navn</p>
-        <input id="nameInput" value="${currentUser.name}">
+        <input value="${currentUser.name}">
         <p>Etternavn</p>
-        <input id="surnameInput" value="${currentUser.surname}">
+        <input value="${currentUser.surname}">
         <p>Leverings Adresse</p>
-        <input id="addressInput" value="${currentUser.address}">
+        <input value="${currentUser.address}">
         <p>Email</p>
-        <input id="emailInput" value="${currentUser.email}">
+        <input value="${currentUser.email}">
         <p>Mobil Nummer</p>
-        <input id="phoneNumberInput" value="${currentUser.phoneNumber}"> <br>
+        <input value="${currentUser.phoneNumber}"> <br>
         <button onclick="updateContactInformation()">Lagre</button>
     </div>
     `;
@@ -126,9 +126,9 @@ function showContactInformation() {
 function showChangePassword() {
     let html = `
     <div class="accountBox">
-        <input placeholder="Gammelt Passord"></input> <br>
-        <input placeholder="Nytt Passord"></input> <br>
-        <button>Lagre</button>
+        <input id="oldPassword" placeholder="Gammelt Passord"></input> <br>
+        <input id="newPassword" placeholder="Nytt Passord"></input> <br>
+        <button onclick="updatePassword()">Lagre</button>
     </div>
     `;
 

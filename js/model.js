@@ -49,13 +49,21 @@ const model = {
         newProductId: 5,
         user: {
             userIsEditing: false,
+            editUserInput: {
+                username: null,
+                name: null,
+                surname: null,
+                email: null,
+                password: null,
+                phoneNumber: null,
+            },
             newUserInputs: {
                 username: null,
                 name: null,
                 surname: null,
                 email: null,
                 password: null,
-                isAdmin: null,
+                phoneNumber: null,
             },
         },
         admin: {
