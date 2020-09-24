@@ -1,19 +1,7 @@
 function showHome() {
     appDiv.innerHTML = `
 
-    <div class="header-wrapper" style="border-bottom: 1px solid #e9e9e9">
-        <nav class="navbar top-menu">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle">
-                    <span class="sr-only">Vis/skjul meny</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-        </nav>
-    </div>
-
+    
 `;
     window.addEventListener('scroll', () => {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
