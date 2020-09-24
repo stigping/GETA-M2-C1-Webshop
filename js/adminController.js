@@ -1,8 +1,7 @@
 function adminAddNewProduct() {
     const newProductInputs = model.inputs.admin.newProductInputs;
-    let newProductId = model.inputs.newProductId;
     model.products.push({
-        id: newProductId,
+        id: model.inputs.newProductId,
         name: newProductInputs.name,
         moms: newProductInputs.moms,
         productInfo: newProductInputs.productInfo,
@@ -13,7 +12,7 @@ function adminAddNewProduct() {
         images: newProductInputs.images,
         });
         
-        newProductId++
+        model.inputs.newProductId++
         showAdmin()
 }
 
@@ -45,9 +44,8 @@ function updateProduct(really) {
 
 function adminAddUser() {
     const newUserInputs = model.inputs.admin.newUserInputs;
-    let newUserId = model.inputs.newUserId;
     model.users.push({
-        id: newUserId, 
+        id: model.inputs.newUserId, 
         username: newUserInputs.username, 
         name: newUserInputs.name, 
         surname: newUserInputs.surname, 
@@ -58,11 +56,11 @@ function adminAddUser() {
     });
 
     model.orderHistory.push({
-        id: newUserId,
+        id: model.inputs.newUserId,
         orderList: [],
     })
 
-    newUserId++
+    model.inputs.newUserId++
     showAdmin();
 }
 
