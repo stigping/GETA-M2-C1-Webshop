@@ -1,56 +1,18 @@
 function showHome() {
     appDiv.innerHTML = `
 
-    <div class="wide-container navbar-wrapper" style="border-bottom: 1px solid #e9e9e9">
-        <nav class="navbar navbar-default top-menu">
+    <div class="header-wrapper" style="border-bottom: 1px solid #e9e9e9">
+        <nav class="navbar top-menu">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Vis/skjul meny</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
         </nav>
     </div>
-    
-    ${productShow()}
-    <div id="grid-container">
-    <div id="headerContent">
-        <div class='logoWrap'>
-            <a href="javascript:showA()">LUNCHPOWER</a>
-        </div>
-        <div class='inner-menu'>
-            <ul class='menuWrap'>
-                <li class='active'><a href="javascript:showA()">HOME</a></li>
-                <li><a href="javascript:showB()">CART</a></li>
-                <li><a href="javascript:showD()">HOW TO MAKE</a></li>
-                ${searchUserIndex(model.currentUserId) === -1 ? '<li><a href="javascript:showG()">Logg inn</a></li>' : '<li><a href="javascript:showF()">ACCOUNT</a></li>'}
-                ${model.users[searchUserIndex(model.currentUserId)].isAdmin ? '<li><a href="javascript:showC()">ADMIN</a></li>' : ''}
-            </ul>
-        </div>
-    </div>
-    <div id="mainContent">
-            <div class="mainGrid">
-                    
-                ${showProductsList()}
-
-                ${showRestProductsList()}
-
-                <div class="questionButtons">
-                    <ul>
-                        <span>
-                            <a href="javascript:showD()">
-                                <li>How To Make</li>
-                            </a>
-                        </span>
-                        <li><a></a>TEST</li>
-                        <li><a></a>TEST</li>
-                     </ul>
-                </div>
-            </div>
-
-                
-    </div>
-        
-    ${showMobileMenu()}
-        
-    <div id="footerContent">
-        <a href="#" class="footer-text">LUNCHPOWER</a>
-    </div>
-</div>
 
 `;
     window.addEventListener('scroll', () => {
