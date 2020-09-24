@@ -5,10 +5,6 @@
 /* --- CART --- */
 /* --- ADMIN --- */	
 /* --- BASE CSS END --- */
-
-/* For all sizes up to 576 */
-@media (max-width: 575.99px) {
-/* --- GENERAL --- */
 * {
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -42,10 +38,88 @@ body {
     margin: 0;
     padding: 0;
 }
+.navbar {
+    position: relative;
+    min-height: 64px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+}
+.top-menu {
+    z-index: 500;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    background-color: #fbfbfa;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+.top-menu .navbar-header {
+    height: 64px;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding-left: 10px;
+    margin-right: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	font-size: 24px;
+}
+.collapsed {
+
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button, select {
+    text-transform: none;
+}
+button {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+.top-menu .navbar-collapsed-buttons {
+    float: right;
+}
+.navbar-btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+a {
+    color: #1bb776;
+	text-decoration: none;
+	background-color: transparent;
+}
+.cart-icon {
+	position: relative;
+	font-size: 24px;
+	color: #413746;
+    height: 64px;
+}
+.cart-count {
+	position: relative;
+	font-size: 14px;
+	color: #413746;
+    height: 64px;
+}
 /* --- HOME --- */
 /* --- CART --- */
-/* --- ADMIN --- */	
-}
+/* --- ADMIN --- */
 
 @media (min-width: 576px) {
 /* --- GENERAL --- */
@@ -54,6 +128,12 @@ body {
 /* --- ADMIN --- */
 }
 
+@media (max-width: 767px) {
+	.top-menu .navbar-toggle {
+		margin-left: 5px;
+		border: 0;
+	}
+}
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	.navbar {
