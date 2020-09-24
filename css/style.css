@@ -154,8 +154,6 @@ html, body {
 .users label {
 	display: flex;
 }
-.users input[type=checkbox] {
-}
 .inner-menu {
 	display: inline-block;
 	float: right;
