@@ -28,7 +28,9 @@ function orderProducts() {
         productsId: getBasketProductsId(),
         productsAmount: getBasketProductAmount(),
     })
-    model.orderHistory[model.currentUserId].nextOrderId++
+    model.orderHistory[model.currentUserId].nextOrderId++;
+    model.shoppingBasket = { products: [], priceTotalAll: null };
+    showBasket();
 }
 
 function getBasketProductsId() {
