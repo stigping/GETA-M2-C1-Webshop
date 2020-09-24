@@ -49,6 +49,10 @@ const model = {
         newProductId: 5,
         user: {
             userIsEditing: false,
+            editPassword: {
+                oldPassword: '',
+                newPassword: '',
+            },
             editUserInput: {
                 id: null,
                 username: null,

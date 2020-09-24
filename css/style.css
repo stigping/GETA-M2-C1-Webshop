@@ -1,6 +1,4 @@
 /* --- BASE CSS START --- */
-	/* GENERAL */
-	/* HOME */
 * {
 	box-sizing: border-box;
 }
@@ -9,6 +7,7 @@ html, body {
 	height: 100%;
 	color: #413746;
 	background-color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
 }
 #grid-container {
 	height: 100vh;
@@ -28,10 +27,10 @@ html, body {
 	padding: 0;
 	background-color:#023EA5;
 }
-#headerContent li{
+#headerContent li {
 	float:left;
 }
-#headerContent li a{
+#headerContent li a {
 	grid-area: header;
 	padding: 0;
 	color: #fff;
@@ -44,7 +43,7 @@ html, body {
 	line-height: 40px;
 	margin-left: 18px;
 }
-.logoWrap a{
+.logoWrap a {
 	color: #fff;
 	text-decoration: none;
 }
@@ -70,12 +69,6 @@ html, body {
 	bottom: 0;
 	color: #ffffff;
 	position: fixed;
-}
-.showproducts,
-.showcgraph,
-.showpgraph,
-.showusers{
-	font-family: Arial, Helvetica, sans-serif;
 }
 .showchart {
 	position: relative;
@@ -158,7 +151,11 @@ html, body {
 .noScroll {
 	position: absolute;
 }
-
+.users label {
+	display: flex;
+}
+.users input[type=checkbox] {
+}
 .inner-menu {
 	display: inline-block;
 	float: right;
@@ -372,6 +369,20 @@ html, body {
 	width: 25px;
 }
 
+#orderButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	width: 140px;
+	height: 40px;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	color: #8da9b3;
+	font-size: 18px;
+	background-color: #023EA5;
+}
+
 .products,
 .users,
 .stats{
@@ -395,10 +406,6 @@ html, body {
 	text-transform: capitalize;
 }
 
-.showchart {
-	align-items: center;
-}
-
 .stepsDiv {
 	border: 2px solid #afafaf;
 	border-radius: 3px;
@@ -411,7 +418,6 @@ html, body {
 }
 
 .stepsDiv h3 {
-	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bolder;
 }
 
@@ -422,16 +428,10 @@ iframe {
 	margin: 0 auto ;
 	padding: 15px;
 }
-
-/* CART */
-
-/* ADMIN */
 /* --- BASE CSS END --- */
 
 /* For all sizes up to 576 */
 @media (max-width: 575.99px) {
-	/* GENERAL */
-	/* HOME */
 	#headerContent {
 		display: none;
 	}
@@ -673,6 +673,7 @@ iframe {
 	}
 	#addProductDiv,
 	#addUsersDiv,
+	#editUsersDiv,
 	#editProductDiv {
 		width: 300px;
 		float: none;
@@ -739,7 +740,7 @@ iframe {
 		background-color: #f7f7f5;
 		/* background-color: rgb(67, 81, 155); */
 		text-align: center;
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 	.accountBox h3{
 		font-size: 14px;
@@ -747,14 +748,10 @@ iframe {
 	.orderDiv{
 		background-color: #322285
 	}
-	/* CART */
-	/* ADMIN */	
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-	/* GENERAL */
-	/* HOME */
 	#headerContent {
 		display: none;
 	}
@@ -1024,34 +1021,23 @@ iframe {
 		background-color: #f7f7f5;
 		/* background-color: rgb(67, 81, 155); */
 		text-align: center;
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 	.accountBox h1{
-		font-family: Arial, Helvetica, sans-serif;
 		font-size: 28px;
 	}
 	.accountBox h3,
 	.accountBox p{
-		font-family: Arial, Helvetica, sans-serif;
 		font-size: 21px;
 	}
 	.orderDiv{
 		background-color: #f7f7f5;
 		/* background-color: #43319B; */
 	}
-	/* CART */
-
-	#cartInfo {
-
-	}
-
-	/* ADMIN */	
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	/* GENERAL */
-	/* HOME */
 	
 	.mainImage {
 		height: 300px;
@@ -1188,7 +1174,7 @@ iframe {
 		font-size: 12px;
 		border: 1px solid #000000;
 		text-align: center;
-		overflow-y: scroll;
+		overflow-y: auto;
 		margin: auto;
 		margin-left: auto;
 		margin-right: auto;
@@ -1196,20 +1182,25 @@ iframe {
 	.accountBox h3{
 		font-size: 14px;
 	}
-	/* CART */
-	/* ADMIN */	
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	/* GENERAL */
-	/* HOME */
 	.users,
 	.stats{
 		font-size: 14px;
 		border: 1px solid #000000;
 		width: 100%;
 		height: 500px;
+		margin: 10px 0 10px 0;
+		padding: -10px;
+	}
+	.products,
+	.users{
+		font-size: 14px;
+		border: 1px solid #000000;
+		width: 100%;
+		height: 300px;
 		margin: 10px 0 10px 0;
 		padding: -10px;
 	}
@@ -1319,15 +1310,10 @@ iframe {
 	.accountBox h3{
 		font-size: 14px;
 	}
-	/* CART */
-
-	/* ADMIN */
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-	/* GENERAL */
-	/* HOME */
 	#grid-container {
 		grid-template-rows: 40px 10fr 1rem;
 		grid-template-areas:
@@ -1359,9 +1345,6 @@ iframe {
 	.logoWrap {
 		float: left;
 		margin-right: 20px;
-	}
-	.logoWrap a{
-		text-decoration: none;
 	}
 	
 	.inner-menu {
@@ -1633,6 +1616,4 @@ iframe {
 	.accountBox h3{
 		font-size: 14px;
 	}
-	/* CART */
-	/* ADMIN */	
 }

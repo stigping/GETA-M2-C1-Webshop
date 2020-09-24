@@ -103,9 +103,7 @@ function showPaymentMethods() {
 
 function showContactInformation() {
     const currentUser = model.users[model.currentUserId];
-    (function () {
-        model.inputs.user.editUserInput = currentUser;
-    })();
+    model.inputs.user.editUserInput = currentUser;
     let html = `
     <div class="accountBox">
         <p>Brukernavn</p>  
@@ -129,8 +127,8 @@ function showContactInformation() {
 function showChangePassword() {
     let html = `
     <div class="accountBox">
-        <input placeholder="Gammelt Passord"></input> <br>
-        <input placeholder="Nytt Passord"></input> <br>
+        <input placeholder="Gammelt Passord" value="" onchange="model.inputs.user.editPassword.oldPassword = this.value"></input> <br>
+        <input placeholder="Nytt Passord" value="" onchange="model.inputs.user.editPassword.newPassword = this.value"></input> <br>
         <button onclick="updatePassword()">Lagre</button>
     </div>
     `;

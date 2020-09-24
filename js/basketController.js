@@ -20,3 +20,20 @@ function changeProductAmount2(amount, id) {
     if (amount <= 0) removeProduct(id)
     showBasket()
 }
+
+function orderProducts() {
+    model.orderHistory[model.currentUserId].orderList.push({
+        orderId: null,
+        delivered: false,
+        productsId: [model.shoppingBasket.products[0].id],
+        productsAmount: [],
+    })
+}
+
+function getProductsId() {
+    let idList = [];
+    for (index = 0; index < model.shoppingBasket.products.length; index++) {
+       idList += [model.shoppingBasket.products[index].id] + ' '
+    }
+    return idList
+}
