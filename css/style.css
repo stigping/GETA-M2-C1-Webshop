@@ -1424,15 +1424,16 @@ iframe {
 		margin-top: 19px;
 		margin-bottom: 19px;
 	}
+
+	.gridImages img {
+		width: 100%;
+		height: 74%;
+	}
 	
 	.gridImages img:hover {
 		background-color: lightgrey;
 		cursor: pointer;
 		opacity: 0.8;
-	}
-	
-	.gridImages img {
-		width: 100%;
 	}
 	
 	#productBox {
