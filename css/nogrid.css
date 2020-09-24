@@ -34,9 +34,8 @@ body {
 }
 #app {
 	min-height: 75%;
-	margin: 0;
 }
-.header-container {
+.header-wrapper {
     position: relative;
     left: 0;
     width: auto;
