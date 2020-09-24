@@ -1,7 +1,9 @@
 function showHome() {
     appDiv.innerHTML = `
 
-    
+    <div class="navbar-wrapper" style="border-bottom: 1px solid #e9e9e9"></div>
+    <div class="content-wrapper"></div>
+    <div class="footer-wrapper"></div>
 `;
     window.addEventListener('scroll', () => {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
