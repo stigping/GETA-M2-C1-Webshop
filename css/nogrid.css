@@ -10,6 +10,8 @@
 @media (max-width: 575.99px) {
 /* --- GENERAL --- */
 * {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 html, body {
@@ -34,6 +36,13 @@ body {
 	min-height: 75%;
 	margin: 0;
 }
+.header-container {
+    position: relative;
+    left: 0;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
 /* --- HOME --- */
 /* --- CART --- */
 /* --- ADMIN --- */	
@@ -48,6 +57,18 @@ body {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	.navbar {
+		border-radius: 0;
+	}
+	.navbar-header {
+		float: left;
+	}
+	.navbar-toggle {
+		display: none;
+	}
+	.top-menu .navbar-collapsed-buttons {
+		display: none;
+	}
 /* --- GENERAL --- */
 /* --- HOME --- */
 /* --- CART --- */
