@@ -1,7 +1,26 @@
 function showHome() {
     appDiv.innerHTML = `
 
-    <div class="navbar-wrapper" style="border-bottom: 1px solid #e9e9e9"></div>
+    <div class="navbar-wrapper" style="border-bottom: 1px solid #e9e9e9">
+        <nav class="navbar top-menu">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span><i class="fas fa-bars"></i></span>
+                </button>
+                <span class="navbar-collapsed-buttons">
+                    <a title="Cart" class="btn navbar-btn" href="#cart">
+                        <i class="cart-icon fas fa-shopping-cart"></i>
+                        <span class="cart-count">
+                            0
+                            <span class="sr-only">varer i handlekurven</span>                   
+                        </span>
+                    </a>
+                </span>
+                <a title="LunchPower" class="navbar-brand" href="/">
+                </a>
+            </div>
+        </nav>
+    </div>
     <div class="content-wrapper"></div>
     <div class="footer-wrapper"></div>
 `;
