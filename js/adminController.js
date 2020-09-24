@@ -17,7 +17,7 @@ function adminAddNewProduct() {
 }
 
 function adminRemoveProduct(id) {
-    index = searchProductIndex(id);
+    let index = searchProductIndex(id);
     model.products.splice(index, 1);
     console.log(index);
     return showAdmin();
@@ -25,9 +25,9 @@ function adminRemoveProduct(id) {
 
 function adminEditProduct(id) {
     const adminInputs = model.inputs.admin;
-    index = searchProductIndex(id);
-    stringified = JSON.stringify(model.products[index]);
-    parsed = JSON.parse(stringified);
+    let index = searchProductIndex(id);
+    let stringified = JSON.stringify(model.products[index]);
+    let parsed = JSON.parse(stringified);
     adminInputs.editProductInputs = parsed; 
     adminInputs.productIsEditing = true;
     console.log(index);
@@ -36,6 +36,7 @@ function adminEditProduct(id) {
 
 function updateProduct(really) {
     const adminInputs = model.inputs.admin;
+    let index = searchProductIndex(adminInputs.editProductInputs.id);
     really === true ? model.products[index] = adminInputs.editProductInputs : adminInputs.editProductInputs = [];
     adminInputs.productIsEditing = false;
     showAdmin()
@@ -65,27 +66,27 @@ function adminAddUser() {
 }
 
 function adminRemoveUser(id) {
-    userIndex = searchUserIndex(id);
-    orderIndex =
-    model.users.splice(index, 1);
-    console.log(index);
+    let userIndex = searchUserIndex(id);
+    model.users.splice(userIndex, 1);
+    console.log(userIndex);
     showAdmin();
 }
 
 function adminEditUser(id) {
     const adminInputs = model.inputs.admin;
-    index = searchUserIndex(id);
-    stringified = JSON.stringify(model.users[index]);
-    parsed = JSON.parse(stringified);
+    let userIndex = searchUserIndex(id);
+    let stringified = JSON.stringify(model.users[userIndex]);
+    let parsed = JSON.parse(stringified);
     adminInputs.editUserInputs = parsed;
     adminInputs.userIsEditing = true;
-    console.log(index);
+    console.log(userIndex);
     showAdmin();
 }
 
 function updateUser(really) {
     const adminInputs = model.inputs.admin;
-    really === true ? model.users[index] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];
+    let userIndex = searchUserIndex(adminInputs.editUserInputs.id);
+    really === true ? model.users[userIndex] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];
     adminInputs.userIsEditing = false;
     showAdmin()
 }

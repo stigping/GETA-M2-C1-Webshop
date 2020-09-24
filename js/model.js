@@ -50,6 +50,7 @@ const model = {
         user: {
             userIsEditing: false,
             editUserInput: {
+                id: null,
                 username: null,
                 name: null,
                 surname: null,
@@ -58,6 +59,7 @@ const model = {
                 phoneNumber: null,
             },
             newUserInputs: {
+                id: null,
                 username: null,
                 name: null,
                 surname: null,
@@ -70,6 +72,7 @@ const model = {
             productIsEditing: false,
             userIsEditing: false,
             editProductInputs: {
+                id: null,
                 name: null,
                 moms: null,
                 productInfo: null,
@@ -77,9 +80,10 @@ const model = {
                 calories: null,
                 allergies: null,
                 price: null,
-                images: null
+                images: null,
             },
             newProductInputs: {
+                id: null,
                 name: null,
                 moms: null,
                 productInfo: null,
@@ -87,9 +91,10 @@ const model = {
                 calories: null,
                 allergies: null,
                 price: null,
-                images: null
+                images: null,
             },
             newUserInputs: {
+                id: null,
                 username: null,
                 name: null,
                 surname: null,
@@ -98,6 +103,7 @@ const model = {
                 isAdmin: null,
             },
             editUserInputs: {
+                id: null,
                 username: null,
                 name: null,
                 surname: null,

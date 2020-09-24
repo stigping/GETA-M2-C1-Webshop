@@ -97,26 +97,29 @@ function showPaymentMethods() {
         Hei
     </div>
     `;
-    
+
     document.getElementById('accountBox').innerHTML = html
 }
 
 function showContactInformation() {
     const currentUser = model.users[model.currentUserId];
+    (function () {
+        model.inputs.user.editUserInput = currentUser;
+    })();
     let html = `
     <div class="accountBox">
         <p>Brukernavn</p>  
-        <input value="${currentUser.username}">
+        <input value="${currentUser.username}" onchange="model.inputs.user.editUserInput.username = this.value">
         <p>Navn</p>
-        <input value="${currentUser.name}">
+        <input value="${currentUser.name}" onchange="model.inputs.user.editUserInput.name = this.value">>
         <p>Etternavn</p>
-        <input value="${currentUser.surname}">
+        <input value="${currentUser.surname}" onchange="model.inputs.user.editUserInput.surname = this.value">>
         <p>Leverings Adresse</p>
-        <input value="${currentUser.address}">
+        <input value="${currentUser.address}" onchange="model.inputs.user.editUserInput.address = this.value">>
         <p>Email</p>
-        <input value="${currentUser.email}">
+        <input value="${currentUser.email}" onchange="model.inputs.user.editUserInput.email = this.value">>
         <p>Mobil Nummer</p>
-        <input value="${currentUser.phoneNumber}"> <br>
+        <input value="${currentUser.phoneNumber}" onchange="model.inputs.user.editUserInput.phoneNumber = this.value">> <br>
         <button onclick="updateContactInformation()">Lagre</button>
     </div>
     `;
@@ -126,8 +129,8 @@ function showContactInformation() {
 function showChangePassword() {
     let html = `
     <div class="accountBox">
-        <input id="oldPassword" placeholder="Gammelt Passord"></input> <br>
-        <input id="newPassword" placeholder="Nytt Passord"></input> <br>
+        <input placeholder="Gammelt Passord"></input> <br>
+        <input placeholder="Nytt Passord"></input> <br>
         <button onclick="updatePassword()">Lagre</button>
     </div>
     `;
