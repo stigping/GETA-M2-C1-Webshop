@@ -102,21 +102,22 @@ function showPaymentMethods() {
 }
 
 function showContactInformation() {
+    const currentUser = model.users[model.currentUserId];
     let html = `
     <div class="accountBox">
         <p>Brukernavn</p>  
-        <input value="${model.users[model.currentUserId].username}">
+        <input id="usernameInput" value="${currentUser.username}">
         <p>Navn</p>
-        <input value="${model.users[model.currentUserId].name}">
+        <input id="nameInput" value="${currentUser.name}">
         <p>Etternavn</p>
-        <input value="${model.users[model.currentUserId].surname}">
+        <input id="surnameInput" value="${currentUser.surname}">
         <p>Leverings Adresse</p>
-        <input value="${model.users[model.currentUserId].address}">
+        <input id="addressInput" value="${currentUser.address}">
         <p>Email</p>
-        <input value="${model.users[model.currentUserId].email}">
+        <input id="emailInput" value="${currentUser.email}">
         <p>Mobil Nummer</p>
-        <input value="${model.users[model.currentUserId].phoneNumber}"> <br>
-        <button>Lagre</button>
+        <input id="phoneNumberInput" value="${currentUser.phoneNumber}"> <br>
+        <button onclick="updateContactInformation()">Lagre</button>
     </div>
     `;
     document.getElementById('accountBox').innerHTML = html
