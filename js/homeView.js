@@ -17,11 +17,11 @@ function showHome() {
         </div>
     </div>
     <div id="mainContent">
-            <div class="mainGrid">
+
                     
                 ${showProductsList()}
 
-                ${showRestProductsList()}
+
 
                 <div class="questionButtons">
                     <ul>
@@ -37,7 +37,7 @@ function showHome() {
             </div>
 
                 
-    </div>
+
         
     ${showMobileMenu()}
         
@@ -56,26 +56,29 @@ const showProductsList = () => {
     const product = model.products;
     if (product.length <= 0) return '';
     let html = `
-        <div class="grid1">
+        <div class="mainImage">
         <img onclick="selectProduct(0)" src="${product[0].images[0]}"></img>
         <h3>${product[0].name}</h3>
         </div>
+        <div class="gridImages">
     `;
-    for (i = 1; i < 5; i++) {
+    for (i = 1; i < product.length; i++) {
         html += `
-        <div class="grid-item${i}">
+        <div>
         <img onclick="selectProduct(${i})" src="${product[i].images === null ? '' : product[i].images[0]}"></img>
         <h3>${product[i].name}</h3>
         </div>
         `;
     }
+
+    html += `</div>`
     return html
 }
 
 function showRestProductsList() {
     const product = model.products;
     if (product.length <= 0) return '';
-    let html = `<div class="grid-box">`;
+    let html = `<div class="grid-item5">`;
     for (i = 5; i < product.length; i++) {
         html += `
         <img src="${product[i].images === null ? '' : product[i].images[0]}"></img>
