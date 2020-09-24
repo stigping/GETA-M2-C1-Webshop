@@ -59,7 +59,6 @@ const model = {
                 phoneNumber: null,
             },
             newUserInputs: {
-                id: null,
                 username: null,
                 name: null,
                 surname: null,
@@ -94,7 +93,6 @@ const model = {
                 images: null,
             },
             newUserInputs: {
-                id: null,
                 username: null,
                 name: null,
                 surname: null,
