@@ -17,17 +17,26 @@ function showHowTo() {
 <div id="mainContent">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/oRzlU0ryKcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div id="howToSteps">
-            <h3>Step 1</h3>
-                Varm vann
+            <div class="stepsDiv">
+                <h3>STEP 1</h3>
+                    Varm vann
+            </div>
             <br>
-            <h3>Step 2</h3>
-                Hell vann i kopp med pulver
+            <div class="stepsDiv">
+                <h3>STEP 2</h3>
+                    Bland sammen i kopp
+            </div>
             <br>
-            <h3>Step 3</h3>
-                ???
+            <div class="stepsDiv">
+                <h3>STEP 3</h3>
+                    ???
+            </div>
             <br>
-            <h3>Step 4</h3>
-                Profit!
+            <div class="stepsDiv">
+                <h3>STEP 4</h3>
+                    profit
+            </div>
+            <br>
         </div>
 </div>
 
