@@ -5,7 +5,7 @@ function login() {
             return showF()
         }
     }
-    alert('Du har skrevet feil!')
+    alert('Brukeren er ikke gjenkjent eller du har skrivd feil!')
 }
 
 function createUser() {

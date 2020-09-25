@@ -51,10 +51,10 @@ function loginMenu() {
     let html = `
     <div ${model.inputs.user.createNewUserEdit === false ? '' : 'style="display:none;"'} id="loginMenu">
         <div class="createNewUserDiv">
-            <form>
-                <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.loginInput.username = this.value"></input>
-                <input type="password" placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value"></input>
-                <button type="button" onclick="login()">Log inn</button>
+            <form onsubmit="return login()">
+                <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.loginInput.username = this.value" required></input>
+                <input type="password" placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value" required></input>
+                <button type="submit">Log inn</button>
                 <button type="button" onclick="changeMenu(false, true)">Lag ny bruker</button>
             </form>
         </div>
@@ -62,15 +62,15 @@ function loginMenu() {
 
     <div ${model.inputs.user.createNewUserEdit === true ? '' : 'style="display:none;"'} id="createUserMenu">
         <div class="createNewUserDiv">
-            <form>
-                <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.newUserInput.username = this.value"></input>
-                <input type="password" placeholder="Passord" onchange="model.inputs.user.newUserInput.password = this.value"></input>
-                <input type="text" placeholder="Fornavn" onchange="model.inputs.user.newUserInput.name = this.value"></input>
-                <input type="text" placeholder="Etternavn" onchange="model.inputs.user.newUserInput.surname = this.value"></input>
-                <input type="text" placeholder="Email" onchange="model.inputs.user.newUserInput.email = this.value"></input>
-                <input type="text" placeholder="Telefon nummer" onchange="model.inputs.user.newUserInput.phoneNumber = this.value"></input>
-                <input type="text" placeholder="Addresse" onchange="model.inputs.user.newUserInput.address = this.value"></input>
-                <button type="button" onclick="createUser()">Lag bruker</button>
+            <form onsubmit="return createUser()">
+                <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.newUserInput.username = this.value" required></input>
+                <input type="password" placeholder="Passord" onchange="model.inputs.user.newUserInput.password = this.value" required></input>
+                <input type="text" placeholder="Fornavn" onchange="model.inputs.user.newUserInput.name = this.value" required></input>
+                <input type="text" placeholder="Etternavn" onchange="model.inputs.user.newUserInput.surname = this.value" required></input>
+                <input type="text" placeholder="Email" onchange="model.inputs.user.newUserInput.email = this.value" required></input>
+                <input type="text" placeholder="Telefon nummer" onchange="model.inputs.user.newUserInput.phoneNumber = this.value" required></input>
+                <input type="text" placeholder="Addresse" onchange="model.inputs.user.newUserInput.address = this.value" required></input>
+                <button type="submit">Lag bruker</button>
                 <button type="button" onclick="changeMenu(true, false)">Logg inn istedenfor?</button>
             </form>
         </div>

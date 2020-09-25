@@ -1,4 +1,5 @@
 function orderProducts() {
+    if (model.currentUserId === null) return alert('Du er ikke logga inn! (Bytt denne if setninga seinere)')
     if (model.shoppingBasket.products.length <= 0) return alert('Du har ikke lagt til noen varer!')
     model.orderHistory[model.currentUserId].orderList.push({
         orderId: model.orderHistory[model.currentUserId].nextOrderId,

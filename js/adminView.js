@@ -86,15 +86,15 @@ function showAdmin() {
                 </form>
             </div>
             <div id="editUsersDiv">
-                <form ${adminInputs.userIsEditing === false ? 'style="display: none"' : ''}>
-                        <button type="button" onclick="updateUser(true)">Edit User</button> <button type="button" onclick="updateUser(false)">Cancel</button>
-                        <input type="text" placeholder="Username" value="${adminInputs.editUserInputs.username}" onchange="model.inputs.admin.editUserInputs.username = this.value"></input>
-                        <input type="text" placeholder="First name" value="${adminInputs.editUserInputs.name}" onchange="model.inputs.admin.editUserInputs.name = this.value"></input>
-                        <input type="text" placeholder="Surname" value="${adminInputs.editUserInputs.surname}" onchange="model.inputs.admin.editUserInputs.surname = this.value"></input>
-                        <input type="text" placeholder="E-mail" value="${adminInputs.editUserInputs.email}" onchange="model.inputs.admin.editUserInputs.email = this.value"></input>
-                        <input type="text" placeholder="Phone Number" value="${adminInputs.editUserInputs.phoneNumber}" onchange="model.inputs.admin.editUserInputs.phoneNumber = this.value"></input>
-                        <input type="text" placeholder="Address" value="${adminInputs.editUserInputs.address}" onchange="model.inputs.admin.editUserInputs.address = this.value"></input>
-                        <input type="text" placeholder="Password" value="${adminInputs.editUserInputs.password}" onchange="model.inputs.admin.editUserInputs.password = this.value"></input>
+                <form onsubmit="return updateUser(true)" ${adminInputs.userIsEditing === false ? 'style="display: none"' : ''}>
+                        <button type="submit">Edit User</button> <button type="button" onclick="updateUser(false)">Cancel</button>
+                        <input type="text" placeholder="Username" value="${adminInputs.editUserInputs.username}" onchange="model.inputs.admin.editUserInputs.username = this.value" required></input>
+                        <input type="text" placeholder="First name" value="${adminInputs.editUserInputs.name}" onchange="model.inputs.admin.editUserInputs.name = this.value" required></input>
+                        <input type="text" placeholder="Surname" value="${adminInputs.editUserInputs.surname}" onchange="model.inputs.admin.editUserInputs.surname = this.value" required></input>
+                        <input type="text" placeholder="E-mail" value="${adminInputs.editUserInputs.email}" onchange="model.inputs.admin.editUserInputs.email = this.value" required></input>
+                        <input type="text" placeholder="Phone Number" value="${adminInputs.editUserInputs.phoneNumber}" onchange="model.inputs.admin.editUserInputs.phoneNumber = this.value" required></input>
+                        <input type="text" placeholder="Address" value="${adminInputs.editUserInputs.address}" onchange="model.inputs.admin.editUserInputs.address = this.value" required></input>
+                        <input type="text" placeholder="Password" value="${adminInputs.editUserInputs.password}" onchange="model.inputs.admin.editUserInputs.password = this.value" required></input>
                         <label for="adminCheckboxEdit">Admin
                         <input type="checkbox" id="adminCheckboxEdit" ${adminInputs.editUserInputs.isAdmin === true ? 'checked' : ''}>
                         </label>
@@ -109,7 +109,7 @@ function showAdmin() {
 
             <div class="showUsersOrders">
                 <ul>
-                <li>Hei</li>
+                    <li>Hei</li>
                 </ul>
             </div>
         </div>

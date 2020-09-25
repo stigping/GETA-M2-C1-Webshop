@@ -87,10 +87,10 @@ function adminEditUser(id) {
 
 function updateUser(really) {
     const adminInputs = model.inputs.admin;
-    const adminInputsEditUser = adminInputs.editUserInputs;
-    let userIndex = searchUserIndex(adminInputsEditUser.id);
-    document.getElementById('adminCheckboxEdit').checked ? adminInputsEditUser.isAdmin = true : adminInputsEditUser.isAdmin = false;
-    really === true ? model.users[userIndex] = adminInputsEditUser : adminInputsEditUser = [];
+
+    let userIndex = searchUserIndex(adminInputs.editUserInputs.id);
+    document.getElementById('adminCheckboxEdit').checked ? adminInputs.editUserInputs.isAdmin = true : adminInputs.editUserInputs.isAdmin = false;
+    really === true ? model.users[userIndex] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];
     adminInputs.userIsEditing = false;
     showAdmin()
 }
