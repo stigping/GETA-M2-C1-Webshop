@@ -51,7 +51,7 @@ function loginMenu() {
     let html = `
     <div ${model.inputs.user.createNewUserEdit === false ? '' : 'style="display:none;"'} id="loginMenu">
         <div class="createNewUserDiv">
-            <form onsubmit="return login()">
+            <form action="javascript:login()">
                 <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.loginInput.username = this.value" required></input>
                 <input type="password" placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value" required></input>
                 <button type="submit">Log inn</button>
@@ -62,7 +62,7 @@ function loginMenu() {
 
     <div ${model.inputs.user.createNewUserEdit === true ? '' : 'style="display:none;"'} id="createUserMenu">
         <div class="createNewUserDiv">
-            <form onsubmit="return createUser()">
+            <form action="javascript:createUser()">
                 <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.newUserInput.username = this.value" required></input>
                 <input type="password" placeholder="Passord" onchange="model.inputs.user.newUserInput.password = this.value" required></input>
                 <input type="text" placeholder="Fornavn" onchange="model.inputs.user.newUserInput.name = this.value" required></input>

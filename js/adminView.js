@@ -23,7 +23,7 @@ function showAdmin() {
         <div class="products">
             <h3>Products</h3>
             <div id="addProductDiv">
-                <form onsubmit="return adminAddNewProduct()" ${adminInputs.productIsEditing === true ? 'style="display: none"' : ''}>
+                <form action="javascript:adminAddNewProduct()" ${adminInputs.productIsEditing === true ? 'style="display: none"' : ''}>
                     <button type="submit">Add Product</button>
                     <input type="text" placeholder="name" onchange="model.inputs.admin.newProductInputs.name = this.value" required></input>
                     <input type="text" placeholder="productInfo" onchange="model.inputs.admin.newProductInputs.productInfo = this.value" required></input>
@@ -36,7 +36,7 @@ function showAdmin() {
                 </form>
             </div>
             <div id="editProductDiv">
-                <form onsubmit="return updateProduct(true)" ${adminInputs.productIsEditing === false ? 'style="display: none"' : ''}>
+                <form action="javascript:updateProduct(true)" ${adminInputs.productIsEditing === false ? 'style="display: none"' : ''}>
                     <button type="submit">Edit Product</button> <button type="button" onclick="updateProduct(false)">Cancel</button>
                     <input type="text" placeholder="name" value="${adminInputs.editProductInputs.name}" onchange="model.inputs.admin.editProductInputs.name = this.value" required></input>
                     <input type="text" placeholder="productInfo" value="${adminInputs.editProductInputs.productInfo}" onchange="model.inputs.admin.editProductInputs.productInfo = this.value" required></input>
@@ -71,7 +71,7 @@ function showAdmin() {
         <div>
             <h3>Users</h3>
             <div id="addUsersDiv">
-                <form onsubmit="return adminAddUser()" ${adminInputs.userIsEditing === true ? 'style="display: none"' : ''}>
+                <form action="javascript:adminAddUser()" ${adminInputs.userIsEditing === true ? 'style="display: none"' : ''}>
                     <button type="submit">Add User</button>
                     <input type="text" placeholder="Username" onchange="model.inputs.admin.newUserInputs.username = this.value" required></input>
                     <input type="text" placeholder="First name" onchange="model.inputs.admin.newUserInputs.name = this.value" required></input>
@@ -86,7 +86,7 @@ function showAdmin() {
                 </form>
             </div>
             <div id="editUsersDiv">
-                <form onsubmit="return updateUser(true)" ${adminInputs.userIsEditing === false ? 'style="display: none"' : ''}>
+                <form action="javascript:updateUser(true)" ${adminInputs.userIsEditing === false ? 'style="display: none"' : ''}>
                         <button type="submit">Edit User</button> <button type="button" onclick="updateUser(false)">Cancel</button>
                         <input type="text" placeholder="Username" value="${adminInputs.editUserInputs.username}" onchange="model.inputs.admin.editUserInputs.username = this.value" required></input>
                         <input type="text" placeholder="First name" value="${adminInputs.editUserInputs.name}" onchange="model.inputs.admin.editUserInputs.name = this.value" required></input>

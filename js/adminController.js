@@ -10,10 +10,10 @@ function adminAddNewProduct() {
         allergies: newProductInputs.allergies,
         price: newProductInputs.price,
         images: newProductInputs.images,
-        });
-        
-        model.inputs.newProductId++
-        showAdmin()
+    });
+
+    model.inputs.newProductId++
+    showAdmin()
 }
 
 function adminRemoveProduct(id) {
@@ -28,7 +28,7 @@ function adminEditProduct(id) {
     let index = searchProductIndex(id);
     let stringified = JSON.stringify(model.products[index]);
     let parsed = JSON.parse(stringified);
-    adminInputs.editProductInputs = parsed; 
+    adminInputs.editProductInputs = parsed;
     adminInputs.productIsEditing = true;
     console.log(index);
     showAdmin();
@@ -45,14 +45,14 @@ function updateProduct(really) {
 function adminAddUser() {
     const newUserInputs = model.inputs.admin.newUserInputs;
     model.users.push({
-        id: model.inputs.newUserId, 
-        username: newUserInputs.username, 
-        name: newUserInputs.name, 
-        surname: newUserInputs.surname, 
-        email: newUserInputs.email, 
+        id: model.inputs.newUserId,
+        username: newUserInputs.username,
+        name: newUserInputs.name,
+        surname: newUserInputs.surname,
+        email: newUserInputs.email,
         phoneNumber: newUserInputs.phoneNumber,
         address: newUserInputs.address,
-        password: newUserInputs.password, 
+        password: newUserInputs.password,
         isAdmin: document.getElementById('adminCheckboxNew').checked ? true : false,
     });
 
@@ -86,7 +86,6 @@ function adminEditUser(id) {
 
 function updateUser(really) {
     const adminInputs = model.inputs.admin;
-
     let userIndex = searchUserIndex(adminInputs.editUserInputs.id);
     document.getElementById('adminCheckboxEdit').checked ? adminInputs.editUserInputs.isAdmin = true : adminInputs.editUserInputs.isAdmin = false;
     really === true ? model.users[userIndex] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];

@@ -5,6 +5,7 @@ function login() {
             return showF()
         }
     }
+    showLogin()
     alert('Brukeren er ikke gjenkjent eller du har skrivd feil!')
 }
 

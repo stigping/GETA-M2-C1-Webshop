@@ -111,19 +111,21 @@ function showContactInformation() {
     model.inputs.user.editUserInput = currentUser;
     let html = `
     <div class="accountBox">
-        <p>Brukernavn</p>  
-        <input value="${currentUser.username}" onchange="model.inputs.user.editUserInput.username = this.value">
-        <p>Navn</p>
-        <input value="${currentUser.name}" onchange="model.inputs.user.editUserInput.name = this.value">>
-        <p>Etternavn</p>
-        <input value="${currentUser.surname}" onchange="model.inputs.user.editUserInput.surname = this.value">>
-        <p>Leverings Adresse</p>
-        <input value="${currentUser.address}" onchange="model.inputs.user.editUserInput.address = this.value">>
-        <p>Email</p>
-        <input value="${currentUser.email}" onchange="model.inputs.user.editUserInput.email = this.value">>
-        <p>Mobil Nummer</p>
-        <input value="${currentUser.phoneNumber}" onchange="model.inputs.user.editUserInput.phoneNumber = this.value">> <br>
-        <button onclick="updateContactInformation()">Lagre</button>
+        <form action="javascript:updateContactInformation()">
+            <p>Brukernavn</p>  
+            <input type="text" value="${currentUser.username}" onchange="model.inputs.user.editUserInput.username = this.value" required>
+            <p>Navn</p>
+            <input type="text" value="${currentUser.name}" onchange="model.inputs.user.editUserInput.name = this.value" required>
+            <p>Etternavn</p>
+            <input type="text" value="${currentUser.surname}" onchange="model.inputs.user.editUserInput.surname = this.value" required>
+            <p>Leverings Adresse</p>
+            <input type="text" value="${currentUser.address}" onchange="model.inputs.user.editUserInput.address = this.value" required>
+            <p>Email</p>
+            <input type="text" value="${currentUser.email}" onchange="model.inputs.user.editUserInput.email = this.value" required>
+            <p>Mobil Nummer</p>
+            <input type="text" value="${currentUser.phoneNumber}" onchange="model.inputs.user.editUserInput.phoneNumber = this.value" required> <br>
+            <button type="submit">Lagre</button>
+        </form>
     </div>
     `;
     document.getElementById('accountBox').innerHTML = html
@@ -132,9 +134,11 @@ function showContactInformation() {
 function showChangePassword() {
     let html = `
     <div class="accountBox">
-        <input placeholder="Gammelt Passord" value="" onchange="model.inputs.user.editPassword.oldPassword = this.value"></input> <br>
-        <input placeholder="Nytt Passord" value="" onchange="model.inputs.user.editPassword.newPassword = this.value"></input> <br>
-        <button onclick="updatePassword()">Lagre</button>
+        <form action="javascript:updatePassword()">
+            <input type="text" placeholder="Gammelt Passord" value="" onchange="model.inputs.user.editPassword.oldPassword = this.value" required></input> <br>
+            <input type="text" placeholder="Nytt Passord" value="" onchange="model.inputs.user.editPassword.newPassword = this.value" required></input> <br>
+            <button type="submit">Lagre</button>
+        </form>
     </div>
     `;
 
