@@ -1,7 +1,4 @@
 function showBasket() {
-    const basket = model.shoppingBasket;
-    const product = model.products;
-    const productShownId = model.inputs.productShownId;
     appDiv.innerHTML = `
 ${productShow()}
 <div id="grid-container">
@@ -48,9 +45,9 @@ ${productShow()}
 </div>
 </div>
 `;
-window.addEventListener('scroll', () => {
-    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-})
+    window.addEventListener('scroll', () => {
+        document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    })
 }
 
 function listBasketProducts(id) {
@@ -58,8 +55,8 @@ function listBasketProducts(id) {
     const product = model.products;
     let html = '';
     for (i = 0; i < basket.products.length; i++) {
-    const productsBasket = product[basket.products[i].id];
-    html += `
+        const productsBasket = product[basket.products[i].id];
+        html += `
 <li>
     <div class="frame">
         <img onclick="selectProduct(${productsBasket.id})" src="${productsBasket.images[0]}">
@@ -85,5 +82,5 @@ function listBasketProducts(id) {
         <button onclick="removeProduct(${productsBasket.id})">Remove</button>
     </div>
 </li>`}
-return html
+    return html
 }
