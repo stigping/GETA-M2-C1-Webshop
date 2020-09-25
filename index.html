@@ -87,6 +87,7 @@ function showF(addToHistory = true) {
 }
 
 function showG(addToHistory = true) {
+  if (model.currentUserId != null) return showH()
   if (addToHistory && location.hash.substring(1) != 'g') addHistory('g');
   model.currentPage = 'Login';
   showLogin();
