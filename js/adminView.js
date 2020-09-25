@@ -147,7 +147,7 @@ function adminShowUsersList() {
 
 function adminShowOrderHistory() {
     if (model.inputs.admin.editUserInputs.id === null) return
-    const orderList = model.orderHistory[searchUserIndex(model.inputs.admin.editUserInputs.id)].orderList;
+    const orderList = model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList;
     let list = '';
     if (orderList.length <= 0) {
         list = `<p>Brukern har ingen bestillinger</p>`
@@ -156,13 +156,11 @@ function adminShowOrderHistory() {
             list += adminGetOrderList(index)
         }
     }
-
     return list
 }
 
 function adminGetOrderList(id) {
     const orderList = model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList;
-    if (orderList.length <= 0) return '<p>Brukern har ingen bestillinger</p>'
     let list = `
     <div class="orderDiv"><h1>Order Number: ${orderList[id].orderId + 1}</h1>`;
     for (i = 0; i < orderList[id].productsId.length; i++) {
@@ -172,7 +170,6 @@ function adminGetOrderList(id) {
         `;
     }
     list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p></div>`
-    console.log(orderList)
     return list
 }
 

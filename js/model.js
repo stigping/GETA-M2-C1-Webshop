@@ -33,7 +33,7 @@ const model = {
         {
             id: 1,
             orderList: [{ orderId: 0, delivered: true, productsId: [3], productsAmount: [2] }],
-            nextOrderId: 0,
+            nextOrderId: 1,
         },
         {
             id: 2,
