@@ -20,6 +20,7 @@ function createUser() {
         address: newUserInput.address,
         password: newUserInput.password,
         phoneNumber: newUserInput.phoneNumber,
+        isAdmin: false,
     })
 
     model.orderHistory.push({
