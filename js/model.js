@@ -15,7 +15,7 @@ const model = {
         { id: 4, amount: 20},
     ],
     shoppingBasket: { products: [], priceTotalAll: null },
-    currentUserId: 0,
+    currentUserId: null,
     users: [
         { id: 0, username: 'jorn', name: 'Jørn', surname: 'Haga', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Gokrysset 6', password: 'test', isAdmin: true },
         { id: 1, username: 'karl', name: 'Karl', surname: 'Johann', email: 'gmail@mail.no', phoneNumber: 123456789, address: 'Krølveien 4', password: 'test', isAdmin: false },

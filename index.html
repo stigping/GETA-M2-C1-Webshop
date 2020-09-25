@@ -24,8 +24,6 @@
 <script src="js/howToView.js"></script>
 <script src="js/accountView.js"></script>
 <script src="js/accountController.js"></script>
-<script src="js/createAccountView.js"></script>
-<script src="js/createAccountController.js"></script>
 <script src="js/loginView.js"></script>
 <script src="js/adminView.js"></script>
 <script src="js/adminController.js"></script>
@@ -39,6 +37,7 @@ const pageToFunctionMap = {
   d:showD,
   f:showF,
   g:showG,
+  h:showH,
 }
 
 window.onpopstate = function () {
@@ -86,6 +85,12 @@ function showG(addToHistory = true) {
   if (addToHistory && location.hash.substring(1) != 'g') addHistory('g');
   model.currentPage = 'CreateAccount';
   showCreateAccount();
+}
+
+function showH(addToHistory = true) {
+  if (addToHistory && location.hash.substring(1) != 'h') addHistory('h');
+  model.currentPage = 'CreateAccount';
+  showLogin();
 }
 
 function addHistory(page) {
