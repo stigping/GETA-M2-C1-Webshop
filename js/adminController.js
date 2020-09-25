@@ -36,9 +36,8 @@ function adminEditProduct(id) {
 
 function updateProduct(really) {
     const adminInputs = model.inputs.admin;
-    const adminInputsEditProduct = adminInputs.editProductInputs;
-    let index = searchProductIndex(adminInputsEditProduct.id);
-    really === true ? model.products[index] = adminInputsEditProduct : adminInputsEditProduct = [];
+    let index = searchProductIndex(adminInputs.editProductInputs.id);
+    really === true ? model.products[index] = adminInputs.editProductInputs : adminInputs.editProductInputs = [];
     adminInputs.productIsEditing = false;
     showAdmin()
 }
