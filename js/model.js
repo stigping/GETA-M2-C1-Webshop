@@ -8,9 +8,9 @@ const model = {
         { id: 4, name: 'Stor Fin Fisk', productInfo: 'Hei jeg er en test setning! Hei jeg er en test setning! Hei jeg er en test setning! Hei jeg er en test setning!', contents: ['Fisk', 'Bønner', 'Krydder'], moms: '0%', calories: '999', price: '54', allergies: 'Hai', stock: '6', images: ['https://www.hooked.no/wp-content/uploads/2017/01/Store-agn-for-stor-fisk-4.jpg', 'https://www.pngmart.com/files/1/Grilled-Chicken-Caesar-Salad-PNG.png', 'https://pngriver.com/wp-content/uploads/2018/04/Download-Food-PNG.png', 'https://www.pngmart.com/files/8/Grilled-Food-PNG-Transparent-Image.png', 'https://www.pngkit.com/png/full/112-1129683_shoyu-ramen-ramen-png.png'] },
     ],
     purchaseHistory: [
-        { id: 0, amount: 7},
-        { id: 1, amount: 10},
-        { id: 2, amount: 5},
+        { id: 0, amount: 1},
+        { id: 1, amount: 5},
+        { id: 2, amount: 10},
         { id: 3, amount: 15},
         { id: 4, amount: 20},
     ],

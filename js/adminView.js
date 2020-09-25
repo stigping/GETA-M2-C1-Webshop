@@ -109,7 +109,7 @@ function showAdmin() {
 
             <div class="showUsersOrders">
                 <ul>
-                    <li>Hei</li>
+                    <li>User sin orderlist her</li>
                 </ul>
             </div>
         </div>
@@ -170,6 +170,13 @@ function showChart() {
 
         // Configuration options go here
         options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
             legend: {
                 display: true,
                 labels: {
