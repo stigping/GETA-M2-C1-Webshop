@@ -78,6 +78,7 @@ function showAdmin() {
                     <input type="text" placeholder="Surname" onchange="model.inputs.admin.newUserInputs.surname = this.value"></input>
                     <input type="text" placeholder="E-mail" onchange="model.inputs.admin.newUserInputs.email = this.value"></input>
                     <input type="text" placeholder="Phone Number" onchange="model.inputs.admin.newUserInputs.phoneNumber = this.value"></input>
+                    <input type="text" placeholder="Address" onchange="model.inputs.admin.newUserInputs.address = this.value"></input>
                     <input type="text" placeholder="Password" onchange="model.inputs.admin.newUserInputs.password = this.value"></input>
                     <label for="admin">Admin
                     <input type="checkbox" id="adminCheckboxNew">
@@ -92,6 +93,7 @@ function showAdmin() {
                         <input type="text" placeholder="Surname" value="${adminInputs.editUserInputs.surname}" onchange="model.inputs.admin.editUserInputs.surname = this.value"></input>
                         <input type="text" placeholder="E-mail" value="${adminInputs.editUserInputs.email}" onchange="model.inputs.admin.editUserInputs.email = this.value"></input>
                         <input type="text" placeholder="Phone Number" value="${adminInputs.editUserInputs.phoneNumber}" onchange="model.inputs.admin.editUserInputs.phoneNumber = this.value"></input>
+                        <input type="text" placeholder="Address" value="${adminInputs.editUserInputs.address}" onchange="model.inputs.admin.editUserInputs.address = this.value"></input>
                         <input type="text" placeholder="Password" value="${adminInputs.editUserInputs.password}" onchange="model.inputs.admin.editUserInputs.password = this.value"></input>
                         <label for="adminCheckboxEdit">Admin
                         <input type="checkbox" id="adminCheckboxEdit" ${adminInputs.editUserInputs.isAdmin === true ? 'checked' : ''}>

@@ -52,6 +52,7 @@ function adminAddUser() {
         surname: newUserInputs.surname, 
         email: newUserInputs.email, 
         phoneNumber: newUserInputs.phoneNumber,
+        address: newUserInputs.address,
         password: newUserInputs.password, 
         isAdmin: document.getElementById('adminCheckboxNew').checked ? true : false,
     });
