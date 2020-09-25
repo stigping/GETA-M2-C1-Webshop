@@ -433,6 +433,14 @@ iframe {
 	margin: 0 auto ;
 	padding: 15px;
 }
+
+#loginMenu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+}
+
 /* --- BASE CSS END --- */
 
 /* For all sizes up to 576 */

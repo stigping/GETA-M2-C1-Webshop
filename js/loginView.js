@@ -17,7 +17,9 @@ function showLogin() {
 </div>
 <div id="mainContent">
 
-${loginMenu()}
+<div id="loginMenu">
+    ${loginMenu()}
+</div>
 
 <div class="questionButtons">
                 <ul>
