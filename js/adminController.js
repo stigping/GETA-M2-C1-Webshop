@@ -100,3 +100,14 @@ function updateUser(really) {
     adminInputs.userIsEditing = false;
     showAdmin()
 }
+
+function adminOrderHistoryRemove(index) {
+    model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList.splice(index, 1);
+    showAdmin();
+}
+
+function adminOrderHistoryDeliveredChange(index, delivered) {
+    if (delivered === true) model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList[index].delivered = false;
+    if (delivered === false) model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList[index].delivered = true;
+    showAdmin();
+}

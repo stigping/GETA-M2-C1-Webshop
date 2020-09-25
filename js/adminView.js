@@ -170,8 +170,8 @@ function adminGetOrderList(id) {
         `;
     }
     list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p></div>
-            <button>Slett</button>
-            <button>Endre leverings status</button>
+            <button onclick="adminOrderHistoryRemove(${id})">Slett</button>
+            <button onclick="adminOrderHistoryDeliveredChange(${id}, ${orderList[id].delivered === true ? 'true' : 'false'})">Endre leverings status</button>
             `
     return list
 }
