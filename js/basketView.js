@@ -11,8 +11,8 @@ ${productShow()}
             <li class='active'><a href="javascript:showA()">HOME</a></li>
             <li><a href="javascript:showB()">CART</a></li>
             <li><a href="javascript:showD()">HOW TO MAKE</a></li>
-            ${userVerify() === true ? '<li><a href="javascript:showF()">ACCOUNT</a></li>' : '<li><a href="javascript:showG()">Logg inn</a></li>'}
-            ${userVerify() === true ? '<li><a href="javascript:showC()">ADMIN</a></li>' : ''}
+            ${userVerify(true, false) === true ? '<li><a href="javascript:showF()">ACCOUNT</a></li>' : '<li><a href="javascript:showG()">Logg inn</a></li>'}
+            ${userVerify(false, true) === true ? '<li><a href="javascript:showC()">ADMIN</a></li>' : ''}
         </ul>
     </div>
 </div>
@@ -23,7 +23,7 @@ ${productShow()}
             <div>Antall</div>
         </div>
         <div class="col2">
-            <div>Totalpris</div>
+            <div>${model.shoppingBasket.priceTotalAll === null ? 'Totalpris' : model.shoppingBasket.priceTotalAll}</div>
         </div>
         <div class="col3">
             <div>Moms</div>
@@ -33,7 +33,7 @@ ${productShow()}
         </div>
     </div>
     <ul class="basketList">
-        ${listBasketProducts(model.currentUserId)}
+        ${listBasketProducts(searchUserIndex(model.currentUserId))}
     </ul>
         
 </div>

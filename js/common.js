@@ -57,9 +57,9 @@ function searchOrderHistoryIndex(id) {
     return search
 }
 
-function userVerify() {
-    if (model.currentUserId === null) return false;
-    if (searchUserIndex(model.currentUserId) === -1) return false;
+function userVerify(existing, admin) {
+    if (existing === true && model.currentUserId === null || searchUserIndex(model.currentUserId) === -1) return false
+    if (admin === true && model.users[searchUserIndex(model.currentUserId)].isAdmin === false) return false
     return true
 }
 
