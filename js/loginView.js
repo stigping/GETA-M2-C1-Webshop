@@ -54,8 +54,8 @@ function loginMenu() {
             <form>
                 <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.loginInput.username = this.value"></input>
                 <input type="text" placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value"></input>
-                <button type="button" onclick="login()">Log Inn</button>
-                <button type="button" onclick="changeMenu(false, true)">Lag Ny Bruker</button>
+                <button type="button" onclick="login()">Log inn</button>
+                <button type="button" onclick="changeMenu(false, true)">Lag ny bruker</button>
             </form>
         </div>
     </div>
