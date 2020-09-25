@@ -63,14 +63,14 @@ function loginMenu() {
     <div ${model.inputs.user.createNewUserEdit === true ? '' : 'style="display:none;"'} id="createUserMenu">
         <div class="createNewUserDiv">
             <form>
-                <input type="text" placeholder="Brukernavn"></input>
-                <input type="text" placeholder="Passord"></input>
-                <input type="text" placeholder="Fornavn"></input>
-                <input type="text" placeholder="Etternavn"></input>
-                <input type="text" placeholder="Email"></input>
-                <input type="text" placeholder="Telefon Nummer"></input>
-                <input type="text" placeholder="Addresse"></input>
-                <button type="button">Lag bruker</button>
+                <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.newUserInput.username = this.value"></input>
+                <input type="text" placeholder="Passord" onchange="model.inputs.user.newUserInput.password = this.value"></input>
+                <input type="text" placeholder="Fornavn" onchange="model.inputs.user.newUserInput.name = this.value"></input>
+                <input type="text" placeholder="Etternavn" onchange="model.inputs.user.newUserInput.surname = this.value"></input>
+                <input type="text" placeholder="Email" onchange="model.inputs.user.newUserInput.email = this.value"></input>
+                <input type="text" placeholder="Telefon nummer" onchange="model.inputs.user.newUserInput.phoneNumber = this.value"></input>
+                <input type="text" placeholder="Addresse" onchange="model.inputs.user.newUserInput.address = this.value"></input>
+                <button type="button" onclick="createUser()">Lag bruker</button>
                 <button type="button" onclick="changeMenu(true, false)">Logg inn istedenfor?</button>
             </form>
         </div>

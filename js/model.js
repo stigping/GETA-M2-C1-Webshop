@@ -71,14 +71,16 @@ const model = {
                 name: null,
                 surname: null,
                 email: null,
+                address: null,
                 password: null,
                 phoneNumber: null,
             },
-            newUserInputs: {
+            newUserInput: {
                 username: null,
                 name: null,
                 surname: null,
                 email: null,
+                address: null,
                 password: null,
                 phoneNumber: null,
             },
@@ -118,6 +120,7 @@ const model = {
                 surname: null,
                 email: null,
                 phoneNumber: null,
+                address: null,
                 password: null,
                 isAdmin: null,
             },
@@ -128,6 +131,7 @@ const model = {
                 surname: null,
                 email: null,
                 phoneNumber: null,
+                address: null,
                 password: null,
                 isAdmin: null,
             }
