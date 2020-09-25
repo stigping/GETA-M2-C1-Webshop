@@ -107,7 +107,8 @@ function adminOrderHistoryRemove(index) {
 }
 
 function adminOrderHistoryDeliveredChange(index, delivered) {
-    if (delivered === true) model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList[index].delivered = false;
-    if (delivered === false) model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList[index].delivered = true;
+    const orderHistory = model.orderHistory;
+    const orderHistoryIndex = searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id);
+    delivered === true ? orderHistory[orderHistoryIndex].orderList[index].delivered = false : orderHistory[orderHistoryIndex].orderList[index].delivered = true;
     showAdmin();
 }
