@@ -1262,7 +1262,8 @@ iframe {
 		width: 50px;
 	}
 	
-	.showusers {
+	.showusers,
+	.showUsersOrders {
 		overflow-y: auto;
 		height: 207px;
 		max-height: 450px;
@@ -1275,16 +1276,19 @@ iframe {
 		top: -20px;
 		right: 10px;
 	}
-	.showusers ul{
+	.showusers ul,
+	.showUsersOrders ul{
 		padding-left: 0;
 		width: 100%;
 		list-style-type: none;
 	}
-	.showusers li {
+	.showusers li,
+	.showUsersOrders li{
 		margin: 5px;
 		padding: 2px;
 	}
-	.showusers ul li button{
+	.showusers ul li button,
+	.showUsersOrders ul li button{
 		float: right;
 	}
 	#addProductDiv,

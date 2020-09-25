@@ -50,7 +50,7 @@ function showAdmin() {
             </div>
             <div class="showproducts">
                 <ul>
-                ${showProducts()}
+                ${adminShowProductsList()}
                 </ul>
             </div>
         </div>
@@ -103,7 +103,13 @@ function showAdmin() {
         </div>
             <div class="showusers">
                 <ul>
-                ${showUsers()}
+                ${adminShowUsersList()}
+                </ul>
+            </div>
+
+            <div class="showUsersOrders">
+                <ul>
+                <li>Hei</li>
                 </ul>
             </div>
         </div>
@@ -118,25 +124,30 @@ function showAdmin() {
     showChart();
 }
 
-function showProducts() {
-    let html = '';
+function adminShowProductsList() {
+    let list = '';
     for (i = 0; i < model.products.length; i++) {
-        html += `<li>${model.products[i].name} 
+        list += `<li>${model.products[i].name} 
              <button class="removeBtn" onclick="adminRemoveProduct(${model.products[i].id})">Remove</button> 
              <button class="editBtn" onclick="adminEditProduct(${model.products[i].id})">Edit</button>
              </li>`
     }
-    return html
+    return list
 }
 
-function showUsers() {
-    let html = '';
+function adminShowUsersList() {
+    let list = '';
     for (i = 0; i < model.users.length; i++) {
-        html += `<li>${model.users[i].name + ' ' + model.users[i].surname} 
+        list += `<li>${model.users[i].name + ' ' + model.users[i].surname} 
              <button class="removeBtn" onclick="adminRemoveUser(${model.users[i].id})">Remove</button> 
              <button class="editBtn" onclick="adminEditUser(${model.users[i].id})">Edit</button></li>`
     }
-    return html
+    return list
+}
+
+function adminShowUsersOrdersList() {
+    let list = '';
+
 }
 
 function showChart() {
