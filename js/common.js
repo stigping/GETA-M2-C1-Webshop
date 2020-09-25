@@ -57,6 +57,12 @@ function searchOrderHistoryIndex(id) {
     return search
 }
 
+function userVerify() {
+    if (model.currentUserId === null) return false;
+    if (searchUserIndex(model.currentUserId) === -1) return false;
+    return true
+}
+
 function showMobileMenu() {
     html = `     
 <div class="mobileMenu">
