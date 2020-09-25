@@ -28,6 +28,7 @@
 <script src="js/loginController.js"></script>
 <script src="js/adminView.js"></script>
 <script src="js/adminController.js"></script>
+<script src="js/errorView.js"></script>
 
 <script>
 let appDiv = document.getElementById('app');
@@ -65,6 +66,7 @@ function showB(addToHistory = true) {
 }
 
 function showC(addToHistory = true) {
+  if (model.currentUserId === null) return showH()
   if (addToHistory && location.hash.substring(1) != 'c') addHistory('c');
   model.currentPage = 'Admin';
   showAdmin();
@@ -77,6 +79,7 @@ function showD(addToHistory = true) {
 }
 
 function showF(addToHistory = true) {
+  if (model.currentUserId === null) return showH()
   if (addToHistory && location.hash.substring(1) != 'f') addHistory('f');
   model.currentPage = 'Account';
   showAccount();
@@ -86,6 +89,12 @@ function showG(addToHistory = true) {
   if (addToHistory && location.hash.substring(1) != 'g') addHistory('g');
   model.currentPage = 'Login';
   showLogin();
+}
+
+function showH(addToHistory = true) {
+  if (addToHistory && location.hash.substring(1) != 'h') addHistory('h');
+  model.currentPage = 'Error';
+  showError();
 }
 
 function addHistory(page) {

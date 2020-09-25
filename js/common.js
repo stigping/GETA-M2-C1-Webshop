@@ -99,5 +99,5 @@ function showMobileMenu() {
 
 function logout() {
     model.currentUserId = null;
-    showH()
+    showG()
 }
