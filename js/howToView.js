@@ -7,7 +7,7 @@ function showHowTo() {
     <div class='inner-menu'>
         <ul class='menuWrap'>
             <li class='active'><a href="javascript:showA()">HOME</a></li>
-            <li><a href="javascript:showB()">CART</a></li>
+            <li><a href="javascript:showB()">CART(${model.shoppingBasket.products.length})</a></li>
             <li><a href="javascript:showD()">HOW TO MAKE</a></li>
             ${userVerify(true, false) === true ? '<li><a href="javascript:showF()">ACCOUNT</a></li>' : '<li><a href="javascript:showG()">Logg inn</a></li>'}
             ${userVerify(false, true) === true ? '<li><a href="javascript:showC()">ADMIN</a></li>' : ''}
