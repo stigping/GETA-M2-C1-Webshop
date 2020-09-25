@@ -53,7 +53,7 @@ function loginMenu() {
         <div class="createNewUserDiv">
             <form>
                 <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.loginInput.username = this.value"></input>
-                <input type="text" placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value"></input>
+                <input type="password" placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value"></input>
                 <button type="button" onclick="login()">Log inn</button>
                 <button type="button" onclick="changeMenu(false, true)">Lag ny bruker</button>
             </form>
@@ -64,7 +64,7 @@ function loginMenu() {
         <div class="createNewUserDiv">
             <form>
                 <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.newUserInput.username = this.value"></input>
-                <input type="text" placeholder="Passord" onchange="model.inputs.user.newUserInput.password = this.value"></input>
+                <input type="password" placeholder="Passord" onchange="model.inputs.user.newUserInput.password = this.value"></input>
                 <input type="text" placeholder="Fornavn" onchange="model.inputs.user.newUserInput.name = this.value"></input>
                 <input type="text" placeholder="Etternavn" onchange="model.inputs.user.newUserInput.surname = this.value"></input>
                 <input type="text" placeholder="Email" onchange="model.inputs.user.newUserInput.email = this.value"></input>
