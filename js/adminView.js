@@ -12,7 +12,7 @@ function showAdmin() {
                 <li class='active'><a href="javascript:showA()">HOME</a></li>
                 <li><a href="javascript:showB()">CART</a></li>
                 <li><a href="javascript:showD()">HOW TO MAKE</a></li>
-                ${userVerify() === true ? '<li><a href="javascript:showF()">ACCOUNT</a></li>' : '<li><a href="javascript:showG()">Logg inn</a></li>'}
+                ${userVerify() === true ? '<li><a href="javascript:showF()">ACCOUNT</a></li>' : '<li><a href="javascript:showH()">Logg inn</a></li>'}
                 <li><a href="javascript:showC()">ADMIN</a></li>
             </ul>
         </div>
@@ -151,7 +151,7 @@ function showChart() {
                 backgroundColor: 'rgb(255, 99, 132)',
                 hoverBorderColor: '#000000',
                 hoverBorderWidth: '1',
-                data: [model.products[0].purchaseHistory, model.products[1].purchaseHistory, model.products[2].purchaseHistory, model.products[3].purchaseHistory, model.products[4].purchaseHistory]
+                data: [model.purchaseHistory[0].amount, model.purchaseHistory[1].amount, model.purchaseHistory[2].amount, model.purchaseHistory[3].amount, model.purchaseHistory[4].amount]
             }]
         },
 
