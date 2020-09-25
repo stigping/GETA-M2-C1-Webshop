@@ -85,7 +85,7 @@ function showOrderHistory() {
 function getOrderList(id) {
     const orderList = model.orderHistory[searchUserIndex(model.currentUserId)].orderList;
     let list = `
-    <div class="orderDiv"><h1>Order Number: ${orderList[id].orderId + 1}</h1>`;
+    <div class="orderDiv"><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>`;
     for (i = 0; i < orderList[id].productsId.length; i++) {
         list += `
              <p>Produkt ${i + 1}: ${model.products[orderList[id].productsId[i]].name}</p>

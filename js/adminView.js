@@ -162,7 +162,7 @@ function adminShowOrderHistory() {
 function adminGetOrderList(id) {
     const orderList = model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList;
     let list = `
-    <div class="orderDiv"><h1>Order Number: ${orderList[id].orderId + 1}</h1>`;
+    <div class="orderDiv"><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>`;
     for (i = 0; i < orderList[id].productsId.length; i++) {
         list += `
         <p>Produkt ${i + 1}: ${model.products[orderList[id].productsId[i]].name}</p>
