@@ -1,3 +1,17 @@
+function orderProducts() {
+    if (model.shoppingBasket.products.length <= 0) return alert('Du har ikke lagt til noen varer!')
+    model.orderHistory[model.currentUserId].orderList.push({
+        orderId: model.orderHistory[model.currentUserId].nextOrderId,
+        delivered: false,
+        productsId: getBasketProductsId(),
+        productsAmount: getBasketProductAmount(),
+    })
+    model.orderHistory[model.currentUserId].nextOrderId++;
+    model.shoppingBasket = { products: [], priceTotalAll: null };
+    showBasket();
+    alert('Takk for kjøpet!');
+}
+
 function removeProduct(id) {
     let index = searchBasketProductIndex(id);
     model.shoppingBasket.products.splice(index, 1);
@@ -19,19 +33,6 @@ function changeProductAmount2(amount, id) {
     product.amount = amount;
     if (amount <= 0) removeProduct(id)
     showBasket()
-}
-
-function orderProducts() {
-    model.orderHistory[model.currentUserId].orderList.push({
-        orderId: model.orderHistory[model.currentUserId].nextOrderId,
-        delivered: false,
-        productsId: getBasketProductsId(),
-        productsAmount: getBasketProductAmount(),
-    })
-    model.orderHistory[model.currentUserId].nextOrderId++;
-    model.shoppingBasket = { products: [], priceTotalAll: null };
-    showBasket();
-    alert('Takk for kjøpet!');
 }
 
 function getBasketProductsId() {
