@@ -17,7 +17,7 @@ ${productShow()}
     </div>
 </div>
 <div id="mainContent">
-    <button id="orderButton" onclick="orderProducts()">Bestill</button>
+    <button id="orderButton" onclick="orderProducts()">BESTILL</button>
     <div class="cartInfo">
         <div class="col1">
             <div>Antall</div>
