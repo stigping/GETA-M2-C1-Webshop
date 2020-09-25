@@ -12,6 +12,11 @@ function adminAddNewProduct() {
         images: newProductInputs.images,
     });
 
+    model.purchaseHistory.push({
+        id: model.inputs.newProductId,
+        amount: 0,
+    })
+
     model.inputs.newProductId++
     showAdmin()
 }

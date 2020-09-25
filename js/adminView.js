@@ -151,6 +151,14 @@ function adminShowUsersOrdersList() {
 }
 
 function showChart() {
+    let data = [];
+    for (i = 0; i < model.purchaseHistory.length; i++) {
+        data.push(model.purchaseHistory[i].amount)
+    };
+    let labels = [];
+    for (index = 0; index < model.products.length; index++) {
+        labels.push(model.products[index].name)
+    }
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -158,13 +166,13 @@ function showChart() {
 
         // The data for our dataset
         data: {
-            labels: ['Kokkejævelens kyllinggryte', 'Alle biffgryters bestemor', 'Tom Peng Pong Asiatisk gryte', 'Lange slappe nudlær', 'Stor Fin Fisk'],
+            labels: labels,
             datasets: [{
                 label: 'Antall Salg',
                 backgroundColor: 'rgb(255, 99, 132)',
                 hoverBorderColor: '#000000',
                 hoverBorderWidth: '1',
-                data: [model.purchaseHistory[0].amount, model.purchaseHistory[1].amount, model.purchaseHistory[2].amount, model.purchaseHistory[3].amount, model.purchaseHistory[4].amount]
+                data: data,
             }]
         },
 
