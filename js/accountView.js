@@ -36,6 +36,11 @@ function showAccount() {
                     <li>Endre Passord</li>
                 </a>
             </span>
+            <span>
+            <a href="javascript:logout()">
+                <li>Logg ut</li>
+            </a>
+        </span>
         </ul>
 
         <div id="accountBox"></div>

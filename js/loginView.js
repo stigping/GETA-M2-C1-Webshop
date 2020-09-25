@@ -16,8 +16,11 @@ function showLogin() {
     </div>
 </div>
 <div id="mainContent">
-            
 
+<input placeholder="Brukernavn" onchange="model.inputs.user.loginInput.username = this.value"></input>
+<input placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value"></input>
+<button onclick="login()">Log Inn</button>
+<button>Lag Ny Bruker</button>
 
 <div class="questionButtons">
                 <ul>
@@ -32,9 +35,6 @@ function showLogin() {
             </div>
 </div>
 
-            
-
-    
 ${showMobileMenu()}
     
 <div id="footerContent">

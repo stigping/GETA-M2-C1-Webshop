@@ -96,3 +96,8 @@ function showMobileMenu() {
 
     return html
 }
+
+function logout() {
+    model.currentUserId = null;
+    showH()
+}

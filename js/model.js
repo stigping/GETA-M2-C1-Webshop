@@ -82,6 +82,10 @@ const model = {
                 password: null,
                 phoneNumber: null,
             },
+            loginInput: {
+                username: null,
+                password: null,
+            }
         },
         admin: {
             productIsEditing: false,
