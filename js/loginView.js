@@ -66,8 +66,8 @@ function loginMenu() {
                 <input type="text" placeholder="Fornavn" onchange="model.inputs.user.newUserInput.name = this.value"></input>
                 <input type="text" placeholder="Etternavn" onchange="model.inputs.user.newUserInput.surname = this.value"></input>
                 <input type="text" placeholder="Email" onchange="model.inputs.user.newUserInput.email = this.value"></input>
-                <input type="text" placeholder= onchange="model.inputs.user.newUserInput.phoneNumber = this.value""Telefon Nummer"></input>
-                <input type="text" placeholder="Addresse"></input>
+                <input type="text" placeholder="Telefon nummer" onchange="model.inputs.user.newUserInput.phoneNumber = this.value"></input>
+                <input type="text" placeholder="Addresse" onchange="model.inputs.user.newUserInput.address = this.value"></input>
                 <button type="button" onclick="createUser()">Lag bruker</button>
                 <button type="button" onclick="changeMenu(true, false)">Logg inn istedenfor?</button>
             </form>
