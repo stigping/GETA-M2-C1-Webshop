@@ -84,13 +84,7 @@ function showF(addToHistory = true) {
 
 function showG(addToHistory = true) {
   if (addToHistory && location.hash.substring(1) != 'g') addHistory('g');
-  model.currentPage = 'CreateAccount';
-  showCreateAccount();
-}
-
-function showH(addToHistory = true) {
-  if (addToHistory && location.hash.substring(1) != 'h') addHistory('h');
-  model.currentPage = 'CreateAccount';
+  model.currentPage = 'Login';
   showLogin();
 }
 
