@@ -24,6 +24,7 @@ function adminAddNewProduct() {
 function adminRemoveProduct(id) {
     let index = searchProductIndex(id);
     model.products.splice(index, 1);
+    updateProduct(false)
     console.log(index);
     return showAdmin();
 }
@@ -74,6 +75,7 @@ function adminAddUser() {
 function adminRemoveUser(id) {
     let userIndex = searchUserIndex(id);
     model.users.splice(userIndex, 1);
+    updateUser(false)
     console.log(userIndex);
     showAdmin();
 }
@@ -94,6 +96,7 @@ function updateUser(really) {
     let userIndex = searchUserIndex(adminInputs.editUserInputs.id);
     document.getElementById('adminCheckboxEdit').checked ? adminInputs.editUserInputs.isAdmin = true : adminInputs.editUserInputs.isAdmin = false;
     really === true ? model.users[userIndex] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];
+    adminInputs.editUserInputs.id = null;
     adminInputs.userIsEditing = false;
     showAdmin()
 }

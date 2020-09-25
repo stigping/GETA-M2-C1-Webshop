@@ -107,9 +107,9 @@ function showAdmin() {
                 </ul>
             </div>
 
-            <div class="showUsersOrders">
+            <div class="showUsersOrders" ${adminInputs.userIsEditing === false ? 'style="display: none"' : ''}>
                 <ul>
-                    <li>User sin orderlist her</li>
+                    ${adminShowOrderHistory()}
                 </ul>
             </div>
         </div>
@@ -145,9 +145,35 @@ function adminShowUsersList() {
     return list
 }
 
-function adminShowUsersOrdersList() {
+function adminShowOrderHistory() {
+    if (model.inputs.admin.editUserInputs.id === null) return
+    const orderList = model.orderHistory[searchUserIndex(model.inputs.admin.editUserInputs.id)].orderList;
     let list = '';
+    if (orderList.length <= 0) {
+        list = `<p>Brukern har ingen bestillinger</p>`
+    } else {
+        for (index = 0; index < orderList.length; index++) {
+            list += adminGetOrderList(index)
+        }
+    }
 
+    return list
+}
+
+function adminGetOrderList(id) {
+    const orderList = model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList;
+    if (orderList.length <= 0) return '<p>Brukern har ingen bestillinger</p>'
+    let list = `
+    <div class="orderDiv"><h1>Order Number: ${orderList[id].orderId + 1}</h1>`;
+    for (i = 0; i < orderList[id].productsId.length; i++) {
+        list += `
+        <p>Produkt ${i + 1}: ${model.products[orderList[id].productsId[i]].name}</p>
+        <p>Mengde: ${orderList[id].productsAmount[i]}</p>
+        `;
+    }
+    list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p></div>`
+    console.log(orderList)
+    return list
 }
 
 function showChart() {

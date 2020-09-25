@@ -67,7 +67,7 @@ function showOrderHistory() {
             list += getOrderList(index)
         }
     }
-    html = `
+    let html = `
     <div class="accountBox">
         <h1>Bruker: ${model.users[model.currentUserId].name}</h1>
         <div id="orderHistory">
