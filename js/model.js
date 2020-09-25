@@ -60,7 +60,7 @@ const model = {
         newUserId: 5,
         newProductId: 5,
         user: {
-            userIsEditing: false,
+            createNewUserEdit: false,
             editPassword: {
                 oldPassword: '',
                 newPassword: '',

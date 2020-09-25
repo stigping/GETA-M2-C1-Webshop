@@ -17,10 +17,7 @@ function showLogin() {
 </div>
 <div id="mainContent">
 
-<input placeholder="Brukernavn" onchange="model.inputs.user.loginInput.username = this.value"></input>
-<input placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value"></input>
-<button onclick="login()">Log Inn</button>
-<button>Lag Ny Bruker</button>
+${loginMenu()}
 
 <div class="questionButtons">
                 <ul>
@@ -46,4 +43,37 @@ ${showMobileMenu()}
     window.addEventListener('scroll', () => {
         document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     })
+}
+
+function loginMenu() {
+    let html = `
+    <div ${model.inputs.user.createNewUserEdit === false ? '' : 'style="display:none;"'} id="loginMenu">
+        <div class="createNewUserDiv">
+            <form>
+                <input type="text" placeholder="Brukernavn" onchange="model.inputs.user.loginInput.username = this.value"></input>
+                <input type="text" placeholder="Passord" onchange="model.inputs.user.loginInput.password = this.value"></input>
+                <button type="button" onclick="login()">Log Inn</button>
+                <button type="button" onclick="changeMenu(false, true)">Lag Ny Bruker</button>
+            </form>
+        </div>
+    </div>
+
+    <div ${model.inputs.user.createNewUserEdit === true ? '' : 'style="display:none;"'} id="createUserMenu">
+        <div class="createNewUserDiv">
+            <form>
+                <input type="text" placeholder="Brukernavn"></input>
+                <input type="text" placeholder="Passord"></input>
+                <input type="text" placeholder="Fornavn"></input>
+                <input type="text" placeholder="Etternavn"></input>
+                <input type="text" placeholder="Email"></input>
+                <input type="text" placeholder="Telefon Nummer"></input>
+                <input type="text" placeholder="Addresse"></input>
+                <button type="button">Lag bruker</button>
+                <button type="button" onclick="changeMenu(true, false)">Logg inn istedenfor?</button>
+            </form>
+        </div>
+    </div>
+    `;
+
+    return html
 }

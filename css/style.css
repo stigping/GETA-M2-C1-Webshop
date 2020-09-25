@@ -416,6 +416,16 @@ html, body {
 	font-weight: bolder;
 }
 
+.createNewUserDiv {
+	width: 500px;
+	float: left;
+	position: relative;
+}
+
+.createNewUserDiv input {
+	width: 100%;
+}
+
 iframe {
 	display: flex;
 	justify-content: center;

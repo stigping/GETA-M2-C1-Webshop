@@ -7,3 +7,9 @@ function login() {
     }
     alert('Du har skrevet feil!')
 }
+
+function changeMenu(login, newUser) {
+    if (login === true) model.inputs.user.createNewUserEdit = false;
+    if (newUser === true) model.inputs.user.createNewUserEdit = true;
+    showLogin()
+}
