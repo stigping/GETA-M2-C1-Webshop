@@ -122,7 +122,8 @@ html, body {
 	width: 100%;
 }
 
-.showusers {
+.showusers,
+.showUsersOrders {
 	background-color: #ffa514;
 	overflow-y: auto;
 	height: 207px;
@@ -135,16 +136,19 @@ html, body {
 	position: relative;
 	top: -20px;
 }
-.showusers ul{
+.showusers ul,
+.showUsersOrders ul{
 	padding-left: 0;
 	width: 100%;
 	list-style-type: none;
 }
-.showusers li {
+.showusers li,
+.showUsersOrders li {
 	margin: 5px;
 	padding: 2px;
 }
-.showusers ul li button{
+.showusers ul li button,
+.showUsersOrders ul li button{
 	float: right;
 }
 
@@ -658,7 +662,8 @@ iframe {
 		width: 100%;
 	}
 	
-	.showusers {
+	.showusers,
+	.showUsersOrders {
 		background-color: #ffa514;
 		overflow-y: auto;
 		height: 235px;
@@ -672,18 +677,25 @@ iframe {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.showusers ul{
+	
+	.showusers ul,
+	.showUsersOrders ul{
 		width: 100%;
 		list-style-type: none;
 	}
-	.showusers li {
+	
+	.showusers li,
+	.showUsersOrders li{
 		margin: 5px;
 		padding: 2px;
 		background-color: #e4e4e4;
 	}
-	.showusers ul li button{
+	
+	.showusers ul li button,
+	.showUsersOrders ul li button{
 		float: right;
 	}
+	
 	#addProductDiv,
 	#addUsersDiv,
 	#editUsersDiv,
@@ -840,7 +852,8 @@ iframe {
 		width: 50px;
 	}
 	
-	.showusers {
+	.showusers,
+	.showUsersOrders {
 		background-color: #ffa514;
 		overflow-y: auto;
 		height: 235px;
@@ -854,16 +867,19 @@ iframe {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.showusers ul{
+	.showusers ul,
+	.showUsersOrders ul{
 		width: 100%;
 		list-style-type: none;
 	}
-	.showusers li {
+	.showusers li,
+	.showUsersOrders li {
 		margin: 5px;
 		padding: 2px;
 		background-color: #e4e4e4;
 	}
-	.showusers ul li button{
+	.showusers ul li button,
+	.showUsersOrders ul li button{
 		float: right;
 	}
 	#addProductDiv,
@@ -1128,7 +1144,8 @@ iframe {
 		width: 50px;
 	}
 	
-	.showusers {
+	.showusers,
+	.showUsersOrders {
 		overflow-y: auto;
 		height: 235px;
 		max-height: 235px;
@@ -1141,15 +1158,18 @@ iframe {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.showusers ul{
+	.showusers ul,
+	.showUsersOrders ul{
 		width: 100%;
 		list-style-type: none;
 	}
-	.showusers li {
+	.showusers li,
+	.showUsersOrders li {
 		margin: 5px;
 		padding: 2px;
 	}
-	.showusers ul li button{
+	.showusers ul li button,
+	.showUsersOrders ul li button{
 		float: right;
 	}
 	#addProductDiv,
