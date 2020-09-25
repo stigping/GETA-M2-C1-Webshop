@@ -50,7 +50,7 @@ ${productShow()}
     })
 }
 
-function listBasketProducts(id) {
+function listBasketProducts() {
     const basket = model.shoppingBasket;
     const product = model.products;
     let html = '';
