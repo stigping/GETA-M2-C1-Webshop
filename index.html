@@ -67,6 +67,7 @@ function showB(addToHistory = true) {
 
 function showC(addToHistory = true) {
   if (model.currentUserId === null) return showH()
+  if (model.users[searchUserIndex(model.currentUserId)].isAdmin != true) return showH()
   if (addToHistory && location.hash.substring(1) != 'c') addHistory('c');
   model.currentPage = 'Admin';
   showAdmin();

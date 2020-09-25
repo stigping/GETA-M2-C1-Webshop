@@ -99,7 +99,7 @@ function getOrderList(id) {
 function showPaymentMethods() {
     let html = `
     <div class="accountBox">
-        Hei
+        <h3>Ingenting her enda</h3>
     </div>
     `;
 
