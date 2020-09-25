@@ -36,8 +36,9 @@ function adminEditProduct(id) {
 
 function updateProduct(really) {
     const adminInputs = model.inputs.admin;
-    let index = searchProductIndex(adminInputs.editProductInputs.id);
-    really === true ? model.products[index] = adminInputs.editProductInputs : adminInputs.editProductInputs = [];
+    const adminInputsEditProduct = adminInputs.editProductInputs;
+    let index = searchProductIndex(adminInputsEditProduct.id);
+    really === true ? model.products[index] = adminInputsEditProduct : adminInputsEditProduct = [];
     adminInputs.productIsEditing = false;
     showAdmin()
 }
@@ -85,9 +86,10 @@ function adminEditUser(id) {
 
 function updateUser(really) {
     const adminInputs = model.inputs.admin;
-    let userIndex = searchUserIndex(adminInputs.editUserInputs.id);
-    document.getElementById('adminCheckboxEdit').checked ? adminInputs.editUserInputs.isAdmin = true : adminInputs.editUserInputs.isAdmin = false;
-    really === true ? model.users[userIndex] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];
+    const adminInputsEditUser = adminInputs.editUserInputs;
+    let userIndex = searchUserIndex(adminInputsEditUser.id);
+    document.getElementById('adminCheckboxEdit').checked ? adminInputsEditUser.isAdmin = true : adminInputsEditUser.isAdmin = false;
+    really === true ? model.users[userIndex] = adminInputsEditUser : adminInputsEditUser = [];
     adminInputs.userIsEditing = false;
     showAdmin()
 }
