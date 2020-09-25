@@ -9,7 +9,7 @@ function addProduct(prodId) {
         model.productShowBox.productShownId = null;
         return showB()
     } else {
-        productIndex = searchBasketProductIndexNew(prodId);
+        productIndex = searchBasketProductIndex(prodId);
         shoppingBasket[productIndex].amount++
         model.productShowBox.productShownId = null;
         return showB()

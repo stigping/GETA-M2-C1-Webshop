@@ -73,7 +73,7 @@ function listBasketProducts() {
         ${product[i].moms}
         </div>
         <div class="itemTotalPrice">
-       T = ${basket.products[i].priceTotal} kr
+       T = ${productsBasket.price * model.shoppingBasket.products[i].amount} kr
         </div>
     <div class="basketButtons">
         <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${productsBasket.id})"></i>
