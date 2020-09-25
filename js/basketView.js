@@ -79,7 +79,7 @@ function listBasketProducts() {
         <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${productsBasket.id})"></i>
         <input type="text" value="${model.shoppingBasket.products[i].amount}" onchange="changeProductAmount2(this.value, ${productsBasket.id})"></input>
         <i class="fas fa-minus-square" onclick="changeProductAmount(false, ${productsBasket.id})"></i>
-        <button onclick="removeProduct(${productsBasket.id})">Remove</button>
+        <button onclick="removeProduct(${productsBasket.id})">Fjern</button>
     </div>
 </li>`}
     return html
