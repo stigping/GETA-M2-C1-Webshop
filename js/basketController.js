@@ -7,10 +7,21 @@ function orderProducts() {
         productsId: getBasketProductsId(),
         productsAmount: getBasketProductAmount(),
     })
+
+    addPurchaseHistory()
+
+    model.purchaseHistory
     model.orderHistory[model.currentUserId].nextOrderId++;
     model.shoppingBasket = { products: [], priceTotalAll: null };
     showBasket();
     alert('Takk for kjøpet!');
+}
+
+function addPurchaseHistory() {
+    let idArray = getBasketProductsId();
+    for (i = 0; i < idArray.length; i++) {
+        model.purchaseHistory[idArray[i]].amount++
+    }
 }
 
 function removeProduct(id) {
