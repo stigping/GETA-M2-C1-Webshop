@@ -28,7 +28,7 @@ function createUser() {
         orderList: [],
         nextOrderId: 0,
     })
-
+    model.inputs.user.createNewUserEdit = false;
     model.currentUserId = newUserId;
     model.inputs.newUserId++;
     showF()
