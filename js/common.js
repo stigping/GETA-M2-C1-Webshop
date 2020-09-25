@@ -6,14 +6,11 @@ function addProduct(prodId) {
             amount: 1,
             priceTotal: null
         });
-        model.productShowBox.productShownId = null;
-        return showB()
     } else {
         productIndex = searchBasketProductIndex(prodId);
-        shoppingBasket[productIndex].amount++
-        model.productShowBox.productShownId = null;
-        return showB()
+        shoppingBasket[productIndex].amount++   
     }
+    model.currentPage === 'Home' ? showHome() : showBasket();
 }
 
 function selectProduct(id) {
