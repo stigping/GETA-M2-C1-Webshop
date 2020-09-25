@@ -82,7 +82,6 @@ const model = {
                 email: null,
                 address: null,
                 password: null,
-                address: null,
                 phoneNumber: null,
             },
             loginInput: {
