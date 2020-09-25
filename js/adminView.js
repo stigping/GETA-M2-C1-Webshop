@@ -169,7 +169,10 @@ function adminGetOrderList(id) {
         <p>Mengde: ${orderList[id].productsAmount[i]}</p>
         `;
     }
-    list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p></div>`
+    list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p></div>
+            <button>Slett</button>
+            <button>Endre leverings status</button>
+            `
     return list
 }
 
