@@ -23,8 +23,11 @@ function adminAddNewProduct() {
 
 function adminRemoveProduct(id) {
     let index = searchProductIndex(id);
+    let productBackup = model.products[index];
+    model.productsArchive.push(productBackup)
     model.products.splice(index, 1);
     updateProduct(false)
+    model.shoppingBasket = { products: [], priceTotalAll: 0 };
     console.log(index);
     return showAdmin();
 }
@@ -74,6 +77,8 @@ function adminAddUser() {
 
 function adminRemoveUser(id) {
     let userIndex = searchUserIndex(id);
+    let userBackup = model.users[userIndex];
+    model.usersArchive.push(userBackup);
     model.users.splice(userIndex, 1);
     updateUser(false)
     console.log(userIndex);
@@ -95,9 +100,11 @@ function updateUser(really) {
     const adminInputs = model.inputs.admin;
     let userIndex = searchUserIndex(adminInputs.editUserInputs.id);
     document.getElementById('adminCheckboxEdit').checked ? adminInputs.editUserInputs.isAdmin = true : adminInputs.editUserInputs.isAdmin = false;
-    really === true ? model.users[userIndex] = adminInputs.editUserInputs : adminInputs.editUserInputs = [];
-    adminInputs.editUserInputs.id = null;
-    adminInputs.userIsEditing = false;
+    let stringified = JSON.stringify(adminInputs.editUserInputs);
+    let parsed = JSON.parse(stringified);
+    really === true ? model.users[userIndex] = parsed : '';
+    searchUserIndex(model.currentUserId) === -1 ? model.currentUserId = null : '';
+    adminInputs.userIsEditing = false
     showAdmin()
 }
 

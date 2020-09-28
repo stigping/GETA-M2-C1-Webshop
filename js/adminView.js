@@ -162,14 +162,17 @@ function adminShowOrderHistory() {
 function adminGetOrderList(id) {
     const orderList = model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList;
     let list = `
-    <div class="orderDiv"><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>`;
-    for (i = 0; i < orderList[id].productsId.length; i++) {
+    <div class="orderDiv"><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>
+    <p>Order Id:${orderList[id].orderId}</p>`;
+    for (i = 0; i < orderList[id].productsName.length; i++) {
         list += `
-        <p>Produkt ${i + 1}: ${model.products[orderList[id].productsId[i]].name}</p>
+        <p>Produkt ${i + 1}: ${orderList[id].productsName[i]}</p>
         <p>Mengde: ${orderList[id].productsAmount[i]}</p>
+        <p>Produkt totalt: ${orderList[id].productsPriceTotal[i]}kr</p>
         `;
     }
-    list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p></div>
+    list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p>
+            <p>Totalpris:${orderList[id].priceTotalAll}kr</p></div>
             <button onclick="adminOrderHistoryRemove(${id})">Slett</button>
             <button onclick="adminOrderHistoryDeliveredChange(${id}, ${orderList[id].delivered === true ? 'true' : 'false'})">Endre leverings status</button>
             `

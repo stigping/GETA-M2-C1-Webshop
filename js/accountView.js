@@ -58,7 +58,7 @@ function showAccount() {
 }
 
 function showOrderHistory() {
-    const orderList = model.orderHistory[searchUserIndex(model.currentUserId)].orderList;
+    const orderList = model.orderHistory[model.currentUserId].orderList;
     let list = '';
     if (orderList.length <= 0) {
         list = `<p>Du har ingen bestillinger</p>`
@@ -69,7 +69,7 @@ function showOrderHistory() {
     }
     let html = `
     <div class="accountBox">
-        <h1>Bruker: ${model.users[model.currentUserId].name}</h1>
+        <h1>Bruker: ${model.users[searchUserIndex(model.currentUserId)].name}</h1>
         <div id="orderHistory">
             <h1>Bestilte Varer</h1>
             <div>
@@ -83,16 +83,18 @@ function showOrderHistory() {
 }
 
 function getOrderList(id) {
-    const orderList = model.orderHistory[searchUserIndex(model.currentUserId)].orderList;
+    const orderList = model.orderHistory[model.currentUserId].orderList;
     let list = `
     <div class="orderDiv"><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>`;
-    for (i = 0; i < orderList[id].productsId.length; i++) {
+    for (i = 0; i < orderList[id].productsName.length; i++) {
         list += `
-             <p>Produkt ${i + 1}: ${model.products[orderList[id].productsId[i]].name}</p>
+             <p>Produkt ${i + 1}: ${orderList[id].productsName[i]}</p>
              <p>Mengde: ${orderList[id].productsAmount[i]}</p>
+             <p>Produkt totalt: ${orderList[id].productsPriceTotal[i]}kr</p>
              `;
     }
-    list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p></div>`
+    list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p>
+             <p>Totalpris for alt: ${orderList[id].priceTotalAll}kr</p></div>`
     return list
 }
 
@@ -107,7 +109,7 @@ function showPaymentMethods() {
 }
 
 function showContactInformation() {
-    const currentUser = model.users[model.currentUserId];
+    const currentUser = model.users[searchUserIndex(model.currentUserId)];
     model.inputs.user.editUserInput = currentUser;
     let html = `
     <div class="accountBox">

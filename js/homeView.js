@@ -58,7 +58,7 @@ const showProductsList = () => {
     let html = `
         <div class="mainImage">
         <img onclick="selectProduct(0)" src="${product[0].images[0]}"></img>
-        <h3>${product[0].name}</h3>
+        <h3 onclick="selectProduct(0)">${product[0].name}</h3>
         </div>
         <div class="gridImages">
     `;
@@ -66,7 +66,7 @@ const showProductsList = () => {
         html += `
         <div>
         <img onclick="selectProduct(${i})" src="${product[i].images === null ? '' : product[i].images[0]}"></img>
-        <h3>${product[i].name}</h3>
+        <h3 onclick="selectProduct(${i})">${product[i].name}</h3>
         </div>
         `;
     }

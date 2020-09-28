@@ -334,13 +334,13 @@ html, body {
 	float: right;
 }
 .cartInfo .col1{
-	width: 180px;
+	width: 100px;
 	text-align: center;
 	border: 1px solid #000000;
 	float: right;
 }
 .cartInfo .col2{
-	width: 100px;
+	width: 130px;
 	text-align: center;
 	border: 1px solid #000000;
 	float: right;
@@ -1714,13 +1714,13 @@ iframe {
 		float: right;
 	}
 	.cartInfo .col1{
-		width: 180px;
+		width: 100px;
 		text-align: center;
 		border: 1px solid #000000;
 		float: right;
 	}
 	.cartInfo .col2{
-		width: 100px;
+		width: 130px;
 		text-align: center;
 		border: 1px solid #000000;
 		float: right;

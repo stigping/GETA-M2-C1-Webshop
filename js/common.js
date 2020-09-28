@@ -4,13 +4,14 @@ function addProduct(prodId) {
         shoppingBasket.push({
             id: prodId,
             amount: 1,
-            priceTotal: null
+            priceTotal: model.products[prodId].price,
         });
     } else {
         productIndex = searchBasketProductIndex(prodId);
         shoppingBasket[productIndex].amount++   
     }
     model.currentPage === 'Home' ? showHome() : showBasket();
+    console.log(prodId)
 }
 
 function selectProduct(id) {

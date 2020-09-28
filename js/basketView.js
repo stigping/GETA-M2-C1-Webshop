@@ -1,4 +1,5 @@
 function showBasket() {
+    priceTotalCalculation()
     appDiv.innerHTML = `
 ${productShow()}
 <div id="grid-container">
@@ -23,7 +24,7 @@ ${productShow()}
             <div>Antall</div>
         </div>
         <div class="col2">
-            <div>${model.shoppingBasket.priceTotalAll === null ? 'Totalpris' : model.shoppingBasket.priceTotalAll}</div>
+            <div>${model.shoppingBasket.priceTotalAll === 0 ? 'Totaltmva: 0' + 'kr' : 'Totaltmva: ' + model.shoppingBasket.priceTotalAll + 'kr'} </div>
         </div>
         <div class="col3">
             <div>Moms</div>
@@ -51,37 +52,36 @@ ${productShow()}
 }
 
 function listBasketProducts() {
-    const basket = model.shoppingBasket;
-    const product = model.products;
-    let html = '';
-    for (i = 0; i < basket.products.length; i++) {
-        const productsBasket = product[basket.products[i].id];
+    let html = ``;
+    for (i = 0; i < model.shoppingBasket.products.length; i++) {
+        // model.shoppingBasket.products[i].priceTotal = model.products[model.shoppingBasket.products[i].id].price * model.shoppingBasket.products[i].amount
         html += `
-<li>
-    <div class="frame">
-        <img onclick="selectProduct(${productsBasket.id})" src="${productsBasket.images[0]}">
-    </div>
-    <div class="infoText">
-        <div class="itemName">
-        <span onclick="selectProduct(${productsBasket.id})">
-        ${productsBasket.name}</span>
-        </div>
-        <div class="itemPrice">
-      per:${productsBasket.price} kr
-        </div>
-        <div class="itemInfo">
-        ${product[i].moms}
-        </div>
-        <div class="itemTotalPrice">
-        ${productsBasket.price * model.shoppingBasket.products[i].amount} kr
-        </div>
-    <div class="basketButtons">
-        <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${productsBasket.id})"></i>
-        <input type="text" value="${model.shoppingBasket.products[i].amount}" onchange="changeProductAmount2(this.value, ${productsBasket.id})"></input>
-        <i class="fas fa-minus-square" onclick="changeProductAmount(false, ${productsBasket.id})"></i>
-        <button onclick="removeProduct(${productsBasket.id})">Fjern</button>
-    </div>
-</li>`
-}
+        <li>
+            <div class="frame">
+                <img onclick="selectProduct(${model.shoppingBasket.products[i].id})" src="${model.products[model.shoppingBasket.products[i].id].images[0]}">
+            </div>
+            <div class="infoText">
+                <div class="itemName">
+                    <span onclick="selectProduct(${model.shoppingBasket.products[i].id})">${model.products[model.shoppingBasket.products[i].id].name}</span>
+                </div>
+                <div class="itemPrice">
+                    ${model.products[model.shoppingBasket.products[i].id].price} kr
+                </div>
+                <div class="itemInfo">
+                    ${model.products[model.shoppingBasket.products[i].id].moms}%
+                </div>
+                <div class="itemTotalPrice">
+                    ${model.shoppingBasket.products[i].priceTotal} kr
+                </div>
+            <div class="basketButtons">
+                <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${model.shoppingBasket.products[i].id})"></i>
+                <input type="text" value="${model.shoppingBasket.products[i].amount}" onchange="changeProductAmount2(this.value, ${model.shoppingBasket.products[i].id})"></input>
+                <i class="fas fa-minus-square" onclick="changeProductAmount(false, ${model.shoppingBasket.products[i].id})"></i>
+                <button onclick="removeProduct(${model.shoppingBasket.products[i].id})">Fjern</button>
+            </div>
+        </li>
+        `;
+    }
+
     return html
 }
