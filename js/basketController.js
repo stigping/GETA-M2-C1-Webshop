@@ -49,7 +49,7 @@ function changeProductAmount2(amount, id) {
 
 function priceTotal() {
     for (i = 0; 0 < model.shoppingBasket.products.length; i++) {
-        model.shoppingBasket.priceTotalAll = model.products[i].
+        model.shoppingBasket.priceTotalAll = model.products[i].id
     }
 }
 
