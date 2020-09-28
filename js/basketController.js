@@ -52,10 +52,12 @@ function changeProductAmount2(amount, id) {
 
 function priceTotal() {
     let id = getBasketProductsId();
+    let price = 0;
     for (i = 0; i < model.shoppingBasket.products.length; i++) {
-        model.shoppingBasket.priceTotalAll = model.products[i].price
+        price += parseInt(model.products[id[i]].price);
     }
-    return console.log(id)
+    model.shoppingBasket.priceTotalAll = price
+    return console.log(price)
 }
 
 function getBasketProductsId() {
