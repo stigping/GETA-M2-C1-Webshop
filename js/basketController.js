@@ -54,7 +54,7 @@ function priceTotal() {
     let id = getBasketProductsId();
     let price = 0;
     for (i = 0; i < model.shoppingBasket.products.length; i++) {
-        price += parseInt(model.products[id[i]].price);
+        price += parseInt(model.products[id[i]].price) * parseInt(model);
     }
     model.shoppingBasket.priceTotalAll = price
     return console.log(price)
