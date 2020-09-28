@@ -794,6 +794,8 @@ iframe {
 		max-height: 100%;
 		vertical-align: middle;
 	}
+	.basketList .infoText{
+	}
 	.basketList .frame{
 		display: inline-block;
 		height: 100%;

@@ -1,6 +1,6 @@
 function orderProducts() {
-    if (model.currentUserId === null) return alert('Du er ikke logga inn! (Bytt denne if setninga seinere)')
-    if (model.shoppingBasket.products.length <= 0) return alert('Du har ikke lagt til noen varer!')
+    if (model.currentUserId === null) return alert('Du er ikke logga inn! (Bytt denne if setninga seinere)');
+    if (model.shoppingBasket.products.length <= 0) return alert('Du har ikke lagt til noen varer!');
     model.orderHistory[model.currentUserId].orderList.push({
         orderId: model.orderHistory[model.currentUserId].nextOrderId,
         delivered: false,
@@ -12,7 +12,10 @@ function orderProducts() {
 
     model.purchaseHistory
     model.orderHistory[model.currentUserId].nextOrderId++;
-    model.shoppingBasket = { products: [], priceTotalAll: null };
+    model.shoppingBasket = {
+        products: [],
+        priceTotalAll: null
+    };
     showBasket();
     alert('Takk for kjøpet!');
 }
@@ -48,11 +51,15 @@ function changeProductAmount2(amount, id) {
 }
 
 function priceTotal() {
+    let id = null;
+    let amount = null;
     let price = '';
-    for (i = 0; 0 < model.shoppingBasket.products.length; i++) {
-       price =  model.products[i]
+    for (i = 0; i < model.shoppingBasket.products.length; i++) {
+        id += model.shoppingBasket.products[i].id
+        amount += model.shoppingBasket.products[i].amount
+        model.shoppingBasket += model.products[id].price * amount
     }
-    return price
+    return console.log(id, amount)
 }
 
 function getBasketProductsId() {
