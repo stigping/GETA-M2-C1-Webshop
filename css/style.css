@@ -762,7 +762,6 @@ iframe {
 		font-size: 12px;
 		border: 1px solid #000000;
 		background-color: #f7f7f5;
-		/* background-color: rgb(67, 81, 155); */
 		text-align: center;
 		overflow-y: auto;
 	}
@@ -807,7 +806,7 @@ iframe {
 	}
 	.basketList .ItemName{
 	}
-	.basketList .itemPrice, .itemInfo, .itemTotalPrice{
+	.itemPrice, .itemInfo, .itemTotalPrice{
 	}
 }
 
@@ -1095,6 +1094,46 @@ iframe {
 	.accountBox p{
 		font-size: 21px;
 	}
+	.basketList {
+		background-color: #023EA5;
+		color: #e9e9e9;
+		padding: 0px;
+		height: 240px;
+		width: 350px;
+		margin: 0 auto;
+	}
+	.basketList ul {
+		padding: 0px;
+		height: 240px;
+		width: 100px;
+	}
+	.basketList li {
+		border-style: solid;
+		border-color: black;
+		height: 80px;
+		list-style-type: none;
+		list-style-position: inside;
+		padding:0px;
+		margin:10px;
+	}
+	.basketList li img{
+		max-height: 100%;
+		vertical-align: middle;
+	}
+	.basketList .frame{
+		display: inline-block;
+		height: 100%;
+		width: 140px;
+		float: left;
+	}
+	.basketList .frame img{
+		max-width: 140px;
+		max-height: 100%;
+	}
+	.basketList .ItemName{
+	}
+	.itemPrice, .itemInfo, .itemTotalPrice{
+	}
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1247,6 +1286,39 @@ iframe {
 	.accountBox h3{
 		font-size: 14px;
 	}
+	.basketList {
+		background-color: #023EA5;
+		color: #e9e9e9;
+		padding: 0px;
+}
+.basketList ul {
+	padding: 0px;
+	height: 80px;
+	width: 100px;
+}
+.basketList li {
+	border-style: solid;
+	border-color: black;
+	height: 80px;
+	list-style-type: none;
+	list-style-position: inside;
+	padding:0px;
+	margin:10px;
+}
+.basketList li img{
+	max-height: 100%;
+	vertical-align: middle;
+}
+.basketList .frame{
+	display: inline-block;
+	height: 100%;
+	width: 140px;
+	float: left;
+}
+.basketList .frame img{
+	max-width: 140px;
+	max-height: 100%;
+}
 }
 
 /* Large devices (desktops, 992px and up) */

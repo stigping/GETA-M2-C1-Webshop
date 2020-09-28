@@ -74,7 +74,6 @@ function listBasketProducts() {
         </div>
         <div class="itemTotalPrice">
         ${productsBasket.price * model.shoppingBasket.products[i].amount} kr
-        ${model.shoppingBasket.priceTotalAll = productsBasket.price * model.shoppingBasket.products[i].amount;}
         </div>
     <div class="basketButtons">
         <i class="fas fa-plus-square" onclick="changeProductAmount(true, ${productsBasket.id})"></i>
