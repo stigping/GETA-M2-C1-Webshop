@@ -51,15 +51,11 @@ function changeProductAmount2(amount, id) {
 }
 
 function priceTotal() {
-    let id = null;
-    let amount = null;
-    let price = '';
+    let id = getBasketProductsId();
     for (i = 0; i < model.shoppingBasket.products.length; i++) {
-        id += model.shoppingBasket.products[i].id
-        amount += model.shoppingBasket.products[i].amount
-        model.shoppingBasket += model.products[id].price * amount
+        model.shoppingBasket.priceTotalAll = model.products[i].price
     }
-    return console.log(id, amount)
+    return console.log(id)
 }
 
 function getBasketProductsId() {
