@@ -47,6 +47,10 @@ function changeProductAmount2(amount, id) {
     showBasket()
 }
 
+function priceTotal() {
+
+}
+
 function getBasketProductsId() {
     let idList = [];
     for (index = 0; index < model.shoppingBasket.products.length; index++) {
