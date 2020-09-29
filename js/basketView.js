@@ -54,7 +54,6 @@ ${productShow()}
 function listBasketProducts() {
     let html = ``;
     for (i = 0; i < model.shoppingBasket.products.length; i++) {
-        // model.shoppingBasket.products[i].priceTotal = model.products[model.shoppingBasket.products[i].id].price * model.shoppingBasket.products[i].amount
         html += `
         <li>
             <div class="frame">
