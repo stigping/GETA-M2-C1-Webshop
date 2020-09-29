@@ -8,11 +8,13 @@ function updateContactInformation() {
 
 function updatePassword() {
     const editPasswordInput = model.inputs.user.editPassword;
-    if (editPasswordInput.oldPassword === model.users[model.currentUserId].password) {
+    if (editPasswordInput.newPassword.length < 3) return alert('Passordet er for kort!')
+    if (editPasswordInput.newPassword != editPasswordInput.confirmPassword) return alert ('Bekreftet passord er ulikt!')
+    if (editPasswordInput.oldPassword === model.users[model.currentUserId].password && editPasswordInput.newPassword === editPasswordInput.confirmPassword) {
         model.users[model.currentUserId].password = editPasswordInput.newPassword
         showChangePassword()
         return alert('Passord er bytta!') 
     }
     showChangePassword()
-    alert('Du har fylt inn feil!')
+    alert('Gammelt passord er feil!')
 }

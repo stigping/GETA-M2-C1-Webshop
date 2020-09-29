@@ -219,6 +219,7 @@ function showChart() {
                 backgroundColor: 'rgb(255, 99, 132)',
                 hoverBorderColor: '#000000',
                 hoverBorderWidth: '1',
+
                 data: data,
             }]
         },
@@ -228,17 +229,25 @@ function showChart() {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        fontColor: 'black',
+                    },
+
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: 'black',
+                        fontSize: 15,
                     }
                 }]
             },
             legend: {
                 display: true,
                 labels: {
-                    fontColor: '#ffffff'
+                    fontColor: 'black'
                 }
             },
-            maintainAspectRatio: false
+            maintainAspectRatio: false,
         }
     });
 }

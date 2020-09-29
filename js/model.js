@@ -66,6 +66,7 @@ const model = {
             editPassword: {
                 oldPassword: '',
                 newPassword: '',
+                confirmPassword: '',
             },
             editUserInput: {
                 id: null,

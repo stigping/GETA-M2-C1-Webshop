@@ -15,33 +15,15 @@ function showAccount() {
         </div>
     </div>
     <div id="mainContent">
-        <ul id="optionsList">
-            <span>
-                <a href="javascript:showOrderHistory()">
-                    <li>Dine Bestillinger</li>
-                </a>
-            </span>
-            <span>
-                <a href="javascript:showContactInformation()">
-                    <li>Kontakt Informasjon</li>
-                </a>
-            </span>
-            <span>
-                <a href="javascript:showPaymentMethods()">
-                    <li>Lagrede Betalings Metoder</li>
-                </a>
-            </span>
-            <span>
-                <a href="javascript:showChangePassword()">
-                    <li>Endre Passord</li>
-                </a>
-            </span>
-            <span>
-            <a href="javascript:logout()">
-                <li>Logg ut</li>
-            </a>
-        </span>
-        </ul>
+        <div class="optionsListDiv" id="optionsListDiv">
+            <ul id="optionsList">
+                <li onclick="showOrderHistory()">Dine Bestillinger</li>
+                <li onclick="showContactInformation()">Kontakt Informasjon</li>
+                <li onclick="showPaymentMethods()">Lagrede Betalings Metoder</li>
+                <li onclick="showChangePassword()">Endre Passord</li>
+                <li onclick="logout()">Logg ut</li>
+            </ul>
+        </div>
 
         <div id="accountBox"></div>
 
@@ -144,6 +126,10 @@ function showChangePassword() {
         <form action="javascript:updatePassword()">
             <input type="text" placeholder="Gammelt Passord" value="" onchange="model.inputs.user.editPassword.oldPassword = this.value" required></input> <br>
             <input type="text" placeholder="Nytt Passord" value="" onchange="model.inputs.user.editPassword.newPassword = this.value" required></input> <br>
+                <p>Husk passordet</p>
+                <p>Passordet må bestå av minst 3 tegn</p>
+                <p>Ikke bruk et passord du bruker ofte</p>
+            <input type="text" placeholder="Bekreft nytt passord" value="" onchange="model.inputs.user.editPassword.confirmPassword = this.value" required></input> <br>
             <button type="submit">Lagre</button>
         </form>
     </div>
