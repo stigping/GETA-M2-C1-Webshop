@@ -75,7 +75,8 @@ function adminShowProductsDiv() {
     <div id="addProductDiv">
         <form action="javascript:adminAddNewProduct()" ${adminInputs.productIsEditing === true ? 'style="display: none"' : ''}>
             <button type="submit">Add Product</button>
-            <input type="text" placeholder="name" onchange="model.inputs.admin.newProductInputs.name = this.value" required></input>
+            <label for="productName">Name:</label>
+            <input id="productName" type="text" placeholder="name" onchange="model.inputs.admin.newProductInputs.name = this.value" required></input>
             <input type="text" placeholder="productInfo" onchange="model.inputs.admin.newProductInputs.productInfo = this.value" required></input>
             <input type="text" placeholder="contents" onchange="model.inputs.admin.newProductInputs.contents = this.value" required></input> <br>
             <input type="text" placeholder="price" onchange="model.inputs.admin.newProductInputs.price = this.value" required></input>
@@ -179,7 +180,7 @@ function adminShowOrderHistory() {
 function adminGetOrderList(id) {
     const orderList = model.orderHistory[searchOrderHistoryIndex(model.inputs.admin.editUserInputs.id)].orderList;
     let list = `
-    <div class="orderDiv"><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>
+    <div><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>
     <p>Order Id:${orderList[id].orderId}</p>`;
     for (i = 0; i < orderList[id].productsName.length; i++) {
         list += `

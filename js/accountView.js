@@ -69,7 +69,7 @@ function showOrderHistory() {
     }
     let html = `
     <div class="accountBox">
-        <h1>Bruker: ${model.users[searchUserIndex(model.currentUserId)].name}</h1>
+        <h1>${model.users[searchUserIndex(model.currentUserId)].name} ${model.users[searchUserIndex(model.currentUserId)].surname}</h1>
         <div id="orderHistory">
             <h1>Bestilte Varer</h1>
             <div>
@@ -85,16 +85,21 @@ function showOrderHistory() {
 function getOrderList(id) {
     const orderList = model.orderHistory[model.currentUserId].orderList;
     let list = `
-    <div class="orderDiv"><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>`;
+    <div class="orderDiv"><h1>Order Nummer: ${orderList[id].orderId + 1}</h1>
+    `;
     for (i = 0; i < orderList[id].productsName.length; i++) {
         list += `
              <p>Produkt ${i + 1}: ${orderList[id].productsName[i]}</p>
-             <p>Mengde: ${orderList[id].productsAmount[i]}</p>
-             <p>Produkt totalt: ${orderList[id].productsPriceTotal[i]}kr</p>
-             `;
+             <ul>
+             <li>Mengde: ${orderList[id].productsAmount[i]}</li>
+             <li>Produkt totalt: ${orderList[id].productsPriceTotal[i]}kr</li>
+             </ul>
+            `;
     }
-    list += `<p>Levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</p>
-             <p>Totalpris for alt: ${orderList[id].priceTotalAll}kr</p></div>`
+    list += `<h2>Totalpris for alt: ${orderList[id].priceTotalAll}kr</h2>
+             <h2>Order levert: ${orderList[id].delivered === true ? 'Ja' : 'Nei'}</h2>
+             </div>
+             `;
     return list
 }
 

@@ -444,6 +444,17 @@ iframe {
 	padding: 15px;
 }
 
+.orderDiv {
+	float: left;
+	border-style: inset;
+	width: 100%;
+}
+
+.orderDiv ul {
+	list-style: none;
+	font-size: medium;
+}
+
 /* --- BASE CSS END --- */
 
 /* For all sizes up to 576 */
