@@ -43,7 +43,7 @@ function productShow() {
         </div>
         <div class="shopBtns">
             <input class="addBtn" type="button" value="${searchBasketProductIndex(productShownId || 0) === -1 ? 'Legg til i handlekurv' : 'Legg til igjen'}" onclick="addProduct(${productShownId || 0})">
-            <input class="continueBtn" type="button" value="Fortsett å handle" onclick="deselectProduct()">
+            <input class="continueBtn" type="button" value="Fortsett å handle" onclick="deselectProduct(), showA()">
             ${model.shoppingBasket.products.length <= 0 ? '' : '<input class="continueBtn" type="button" value="Gå til handlekurv" onclick="deselectProduct(), showB()">'}
         </div>
     </div>
