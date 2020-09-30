@@ -69,15 +69,6 @@ function showMobileMenu() {
             <i class="footer-text fas fa-home fa-lg"></i>
         </a>
     </span>
-    <span>
-        <a href="javascript:_blank">
-            <i class="footer-text fas fa-dragon fa-lg"></i>
-        </a>
-    </span>
-    <span>
-        <a href="javascript:_blank">
-            <i class="footer-text fas fa-bed fa-lg"></i>
-        </a>
     </span>
     <span>
         <a href="javascript:showF()">

@@ -584,7 +584,7 @@ iframe {
 	}
 	.shopBtns {
 		width: 100%;
-		display: flex;
+		display: flexbox;
 		justify-content: center;
 		position: absolute;
 		left: 0;
@@ -1101,7 +1101,6 @@ iframe {
 		background-color: rgb(197, 197, 197);
 	}
 	.mobileMenu {
-		display: flex;
 		position: fixed;
 		bottom: 0;
 		grid-area: footer;
