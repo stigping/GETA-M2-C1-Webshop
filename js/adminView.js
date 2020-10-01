@@ -75,7 +75,6 @@ function adminShowProductsDiv() {
     <div id="addProductDiv">
         <form action="javascript:adminAddNewProduct()" ${adminInputs.productIsEditing === true ? 'style="display: none"' : ''}>
             <button type="submit">Add Product</button>
-            <label for="productName">Name:</label>
             <input id="productName" type="text" placeholder="name" onchange="model.inputs.admin.newProductInputs.name = this.value" required></input>
             <input type="text" placeholder="productInfo" onchange="model.inputs.admin.newProductInputs.productInfo = this.value" required></input>
             <input type="text" placeholder="contents" onchange="model.inputs.admin.newProductInputs.contents = this.value" required></input> <br>
